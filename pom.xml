@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>Preschool</name>
-	<description>Preschool application</description>
+	<description>Preschool application backend</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
