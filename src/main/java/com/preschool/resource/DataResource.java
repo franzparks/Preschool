@@ -20,7 +20,7 @@ public class DataResource {
 	
 	@RequestMapping(value = "/schools/all", method = RequestMethod.GET)
     public String schoolsList() {
-		return "[ { id: 1, name: 'Zambia', author: 'Francis Phiri' } ]";
+		return "{[ { id: 1, name: 'Zambia', author: 'Francis Phiri' } ]}";
 	}
 
 }
