@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class DataResource {
 	
-	@RequestMapping(value = "/schools", method = RequestMethod.GET)
-    public String schoolsList() {
-		return "{[ { id: 1, name: 'Zambia', author: 'Francis Phiri' } ]}";
+	@RequestMapping(value = "/bookList", method = RequestMethod.GET)
+    public String bookList() {
+		return "[ { id: 1, name: 'Zambia', author: 'Francis Phiri' } ]";
 	}
 
 }
