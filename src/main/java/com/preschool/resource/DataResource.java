@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.preschool.domain.School;
+
 /**
  * @author francis
  *
@@ -19,10 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class DataResource {
 	
-	@RequestMapping(value = "/bookList", method = RequestMethod.GET)
-    public List<String> bookList() {
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("{ id: 1, name: 'Zambia', author: 'Francis Phiri' }");
+	@RequestMapping(value = "/schoolList", method = RequestMethod.GET)
+    public List<School> bookList() {
+		ArrayList<School> list = new ArrayList<School>();
+		//list.add();
 		return list;
 	}
 
