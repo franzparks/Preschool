@@ -3,6 +3,29 @@
  */
 package com.preschool.search;
 
+import static com.google.common.base.CharMatcher.WHITESPACE;
+import static com.google.common.base.Strings.isNullOrEmpty;
+import static java.lang.String.format;
+import static org.apache.commons.lang.StringUtils.isBlank;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import com.google.gson.Gson;
+import com.preschool.domain.MetaData;
+import com.preschool.domain.Queries;
+import com.preschool.domain.Result;
+import com.preschool.domain.School;
+
 /**
  * @author francis
  *
@@ -69,15 +92,15 @@ public class CustomSearch {
 	public Result execute(String query) {
 		Result result = getSearchResult(query);
 		
-		if (result.getItems().size() < getNum()) {
-			List<Item> items = getSearchResult(query).getItems();
+		if (result.getSchools().size() < getNum()) {
+			List<School> schools = getSearchResult(query).getSchools();
 			
-			for (Item item : items) {
+			for (School school : schools) {
 				
-				if (result.getItems().size() < getNum()) { result.getItems().add(item); }
+				if (result.getSchools().size() < getNum()) { result.getSchools().add(school); }
 			}
 		} else {			
-			result.getItems().subList(getNum(), result.getItems().size()).clear();
+			result.getSchools().subList(getNum(), result.getSchools().size()).clear();
 		}
 
 		return result;
@@ -87,10 +110,10 @@ public class CustomSearch {
 	 * Some items are not a web page. They could be images or something else. Here is where we remove them.
 	 */
 	private Result filterItems(Result result) {
-		Iterator<Item> items = result.getItems().iterator();
+		Iterator<School> schools = result.getSchools().iterator();
 		
-		while (items.hasNext()) {
-			if (isBlank(items.next().getFormattedUrl())) { items.remove(); }
+		while (schools.hasNext()) {
+			if (isBlank(schools.next().getFormattedUrl())) { schools.remove(); }
 		}
 		
 		return result;
@@ -100,7 +123,7 @@ public class CustomSearch {
 		HttpResponse response = getResponse(query);
 		String json = getJson(response);
 
-		Queries queries = new Meta(json).getQueries();
+		Queries queries = new MetaData(json).getQueries();
 		setStart(queries.getNextPage().get(0).getStartIndex());
 		
 		return filterItems(new Gson().fromJson(json, Result.class));
