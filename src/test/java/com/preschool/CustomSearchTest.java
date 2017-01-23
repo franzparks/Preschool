@@ -56,5 +56,12 @@ public class CustomSearchTest {
         assertNotNull(result);
         assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
+    
+    @Test
+    public void testSearchTime() {
+        Result result = $.execute("android");
+        assertTrue(result.getSearchInformation().getSearchTime() > 0);
+    }
+
 
 }
