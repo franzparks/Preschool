@@ -42,10 +42,11 @@ public class CustomSearchTest {
         assertNotNull($.getApiKey());
     }
     
-    @Test
+    //@Test
     public void testResultAvailable() {
-        Result result = $.execute("Inferno");
+        Result result = $.execute("Preschools");
         assertNotNull(result);
+        //System.out.println("total : "+result.getSearchInformation().getTotalResults());
         assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
 
