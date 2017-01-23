@@ -30,59 +30,47 @@ public class School {
 	private String snippet;
 	private String formattedUrl;
 	
-	
-	
 	public School(){}
-	/**
-	 * @return the id
-	 */
+
 	public Long getId() {
 		return id;
 	}
-	/**
-	 * @return the title
-	 */
+
 	public String getTitle() {
 		return title;
 	}
-	/**
-	 * @return the snippet
-	 */
+
+	public String getLink() {
+		return link;
+	}
+
 	public String getSnippet() {
 		return snippet;
 	}
-	/**
-	 * @return the imageUrl
-	 */
-	public String getImageUrl() {
-		return imageUrl;
+
+	public String getFormattedUrl() {
+		return formattedUrl;
 	}
-	/**
-	 * @param id the id to set
-	 */
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	/**
-	 * @param title the title to set
-	 */
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	/**
-	 * @param snippet the snippet to set
-	 */
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
 	public void setSnippet(String snippet) {
 		this.snippet = snippet;
 	}
-	/**
-	 * @param imageUrl the imageUrl to set
-	 */
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+
+	public void setFormattedUrl(String formattedUrl) {
+		this.formattedUrl = formattedUrl;
 	}
-	
-	
 	
 
 }
