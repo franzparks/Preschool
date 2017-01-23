@@ -8,5 +8,8 @@ package com.preschool.domain;
  *
  */
 public class SearchInformation {
+	
+	private float searchTime;
+	private String totalResults;
 
 }
