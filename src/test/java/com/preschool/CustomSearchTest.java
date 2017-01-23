@@ -3,6 +3,8 @@
  */
 package com.preschool;
 
+import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +34,11 @@ public class CustomSearchTest {
     @Test(expected = IllegalArgumentException.class)
     public void testIllegalArgumentException() {
         new CustomSearch(null, null,0);
+    }
+    
+    @Test
+    public void testApiKeyAvailable() {
+        assertNotNull($.getApiKey());
     }
 
 }
