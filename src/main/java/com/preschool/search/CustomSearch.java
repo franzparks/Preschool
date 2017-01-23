@@ -19,6 +19,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 
 import com.google.gson.Gson;
 import com.preschool.domain.MetaData;
@@ -56,7 +58,10 @@ public class CustomSearch {
 	private HttpResponse getResponse(String query) {
 		String uri = getUri(query);
 
-		HttpClient client = new DefaultHttpClient();
+		//HttpClient client = new DefaultHttpClient();
+		//HttpClient client = HttpClients.createDefault();
+		HttpClient client = HttpClientBuilder.create().build();
+				
 		HttpGet request = new HttpGet(uri);
 		request.addHeader("accept", "application/json");
 
