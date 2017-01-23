@@ -49,5 +49,12 @@ public class CustomSearchTest {
         //System.out.println("total : "+result.getSearchInformation().getTotalResults());
         assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
+    
+    @Test
+    public void testMultipleKeywords() {
+        Result result = $.execute("bob marley");
+        assertNotNull(result);
+        assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
+    }
 
 }
