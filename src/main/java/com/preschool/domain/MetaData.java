@@ -8,5 +8,8 @@ package com.preschool.domain;
  *
  */
 public class MetaData {
+	
+	private String json;
+	private Queries queries;
 
 }
