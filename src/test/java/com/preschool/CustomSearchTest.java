@@ -70,6 +70,14 @@ public class CustomSearchTest {
         Result result = search.execute("Preschools");
         assertEquals(total, result.getSchools().size());
     }
+    
+    @Test
+    public void testSetTotalResultLesserThanDefault() {
+        int total = 7;
+        CustomSearch search = new CustomSearch(cx, apiKey, total);
+        Result result = search.execute("Android");
+        assertEquals(total, result.getSchools().size());
+    }
 
 
 }
