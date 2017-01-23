@@ -11,5 +11,7 @@ public class SearchInformation {
 	
 	private float searchTime;
 	private String totalResults;
+	
+	public SearchInformation() {}
 
 }
