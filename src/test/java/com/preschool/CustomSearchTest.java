@@ -12,6 +12,7 @@ import org.junit.runners.JUnit4;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.preschool.domain.Result;
 import com.preschool.search.CustomSearch;
 
 /**
@@ -39,6 +40,13 @@ public class CustomSearchTest {
     @Test
     public void testApiKeyAvailable() {
         assertNotNull($.getApiKey());
+    }
+    
+    @Test
+    public void testResultAvailable() {
+        Result result = $.execute("Inferno");
+        assertNotNull(result);
+        assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
 
 }
