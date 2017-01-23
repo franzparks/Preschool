@@ -62,6 +62,14 @@ public class CustomSearchTest {
         Result result = $.execute("android");
         assertTrue(result.getSearchInformation().getSearchTime() > 0);
     }
+    
+    @Test
+    public void testSetTotalResult() {
+        int total = 15;
+        CustomSearch search = new CustomSearch(cx, apiKey, total);
+        Result result = search.execute("Preschools");
+        assertEquals(total, result.getSchools().size());
+    }
 
 
 }
