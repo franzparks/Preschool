@@ -3,6 +3,8 @@
  */
 package com.preschool.domain;
 
+import com.google.gson.JsonObject;
+
 /**
  * @author francis
  *
