@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.preschool;
+package com.preschool.search;
 
 import static org.junit.Assert.*;
 
@@ -29,7 +29,7 @@ public class CustomSearchTest {
     
     @Before
     public void setUp() throws Exception {
-        $ = new CustomSearch(cx, apiKey, 2);
+        $ = new CustomSearch(cx, apiKey, 25);
     }
     
     @Test(expected = IllegalArgumentException.class)
