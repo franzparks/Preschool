@@ -4,6 +4,7 @@
 package com.preschool;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
@@ -24,6 +25,11 @@ public class CustomSearchTest {
     @Before
     public void setUp() throws Exception {
         $ = new CustomSearch(cx, apiKey, 2);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testIllegalArgumentException() {
+        new CustomSearch(null, null,0);
     }
 
 }
