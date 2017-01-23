@@ -9,24 +9,29 @@ package com.preschool.domain;
  */
 public class School {
 	
-	private Long id;
-	private String title;
-	private String snippet;
-	private String imageUrl;
-	
 	/**
 	 * @param id
 	 * @param title
+	 * @param link
 	 * @param snippet
-	 * @param imageUrl
+	 * @param formattedUrl
 	 */
-	public School(Long id, String title, String snippet, String imageUrl) {
+	public School(Long id, String title, String link, String snippet, String formattedUrl) {
 		super();
 		this.id = id;
 		this.title = title;
+		this.link = link;
 		this.snippet = snippet;
-		this.imageUrl = imageUrl;
+		this.formattedUrl = formattedUrl;
 	}
+	private Long id;
+	private String title;
+	private String link;
+	private String snippet;
+	private String formattedUrl;
+	
+	
+	
 	public School(){}
 	/**
 	 * @return the id
