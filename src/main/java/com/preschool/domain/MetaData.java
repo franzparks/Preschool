@@ -3,7 +3,9 @@
  */
 package com.preschool.domain;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 /**
  * @author francis
@@ -17,6 +19,7 @@ public class MetaData {
 	public MetaData(String json) {
 		setJson(json);
 		setQueries();
+	}
 		
 		private String getJson() {
 			return json;
@@ -37,6 +40,5 @@ public class MetaData {
 		public Queries getQueries() {
 			return queries;
 		}
-	}
 
 }
