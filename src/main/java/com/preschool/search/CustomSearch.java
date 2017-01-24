@@ -1,7 +1,10 @@
 package com.preschool.search;
 
+import org.springframework.stereotype.Component;
+
 import com.preschool.domain.Result;
 
+@Component
 public interface CustomSearch {
 
 	Result execute(String query);
