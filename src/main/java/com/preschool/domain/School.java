@@ -22,13 +22,13 @@ public class School {
 	private String formattedUrl;
 	
 	
-	public School(String title, String link, String snippet, String formattedUrl) {
+	/*public School(String title, String link, String snippet, String formattedUrl) {
 		super();
 		this.title = title;
 		this.link = link;
 		this.snippet = snippet;
 		this.formattedUrl = formattedUrl;
-	}
+	}*/
 	
 	
 	public School(){}

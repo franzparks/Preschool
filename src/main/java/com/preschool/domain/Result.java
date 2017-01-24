@@ -21,14 +21,14 @@ public class Result {
 	 * @return the searchInformation
 	 */
 	public SearchInformation getSearchInformation() {
-		return this.searchInformation;
+		return searchInformation;
 	}
 
 	/**
 	 * @return the schools
 	 */
 	public List<School> getSchools() {
-		return this.schools;
+		return schools;
 	}
 
 	/**

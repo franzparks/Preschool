@@ -95,11 +95,11 @@ public class CustomSearch {
 	}
 	
 	public Result execute(String query) {
-		
+			
 		
 		Result result = getSearchResult(query);
-		
-		//System.out.println("results size ------------ : "+result.getSchools().size());
+		//System.out.println("reached here ------------ : ");
+		System.out.println("results size ------------ : "+result.getSchools().size());
 		System.out.println("given size ------------ : "+getNum());
 		if (result.getSchools().size() < getNum()) {
 			List<School> schools = getSearchResult(query).getSchools();
@@ -119,6 +119,7 @@ public class CustomSearch {
 	 * Some items are not a web page. They could be images or something else. Here is where we remove them.
 	 */
 	private Result filterItems(Result result) {
+		System.out.println("got these ------------------------------------"+result.getSchools());
 		Iterator<School> schools = result.getSchools().iterator();
 		
 		while (schools.hasNext()) {
@@ -131,7 +132,8 @@ public class CustomSearch {
 	private Result getSearchResult(String query) {
 		HttpResponse response = getResponse(query);
 		String json = getJson(response);
-		//System.out.println("got these ------------------------------------"+json);
+		System.out.println("reached here ------------ : ");
+		System.out.println("got this json ------------------------------------"+json);
 		Queries queries = new MetaData(json).getQueries();
 		setStart(queries.getNextPage().get(0).getStartIndex());
 		

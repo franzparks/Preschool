@@ -8,6 +8,7 @@ package com.preschool.domain;
  *
  */
 public class NextPage {
+	
 	private String title;
 	private String totalResults;
 	private String searchTerms;
