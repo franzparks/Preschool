@@ -32,7 +32,7 @@ public class DataResource {
 		    String apiKey = "AIzaSyBFnKBQPESdi2sP1twKp59-3mBscTVw99k";
 		    CustomSearch $ = new CustomSearch(cx, apiKey, 10);
 		    
-			Result result = $.execute("Preschools");
+			Result result = $.execute("Santa Clara Preschools");
 			list.addAll(result.getItems());
 		}
 		
