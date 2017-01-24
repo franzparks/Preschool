@@ -13,7 +13,7 @@ import java.util.List;
 public class Result {
 	
 	private SearchInformation searchInformation;
-	private List<School> schools;
+	private List<School> items;
 	
 	public Result() {}
 
@@ -27,8 +27,8 @@ public class Result {
 	/**
 	 * @return the schools
 	 */
-	public List<School> getSchools() {
-		return schools;
+	public List<School> getItems() {
+		return items;
 	}
 
 	/**
@@ -41,8 +41,8 @@ public class Result {
 	/**
 	 * @param schools the schools to set
 	 */
-	public void setSchools(List<School> schools) {
-		this.schools = schools;
+	public void setSchools(List<School> items) {
+		this.items = items;
 	}
 	
 	

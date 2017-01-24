@@ -44,11 +44,11 @@ public class CustomSearchTest {
     
     @Test
     public void testResultAvailable() {
-        Result result = $.execute("Preschools");
+        Result result = $.execute("Android");
         assertNotNull(result);
-        //System.out.println("total : "+result.getSearchInformation().getTotalResults());
-        //System.out.println("total------------------ : "+result);
-        //assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
+        System.out.println("total : "+result.getSearchInformation().getTotalResults());
+        System.out.println("total------------------ : "+result);
+        assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
     
     //@Test
@@ -69,7 +69,7 @@ public class CustomSearchTest {
         int total = 15;
         CustomSearch search = new CustomSearch(cx, apiKey, total);
         Result result = search.execute("Preschools");
-        assertEquals(total, result.getSchools().size());
+        assertEquals(total, result.getItems().size());
     }
     
     //@Test
@@ -77,7 +77,7 @@ public class CustomSearchTest {
         int total = 7;
         CustomSearch search = new CustomSearch(cx, apiKey, total);
         Result result = search.execute("Android");
-        assertEquals(total, result.getSchools().size());
+        assertEquals(total, result.getItems().size());
     }
 
 

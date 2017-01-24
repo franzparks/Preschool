@@ -24,9 +24,11 @@ import org.apache.http.impl.client.HttpClients;
 
 import com.google.gson.Gson;
 import com.preschool.domain.MetaData;
+import com.preschool.domain.NextPage;
 import com.preschool.domain.Queries;
 import com.preschool.domain.Result;
 import com.preschool.domain.School;
+import com.preschool.domain.Tester;
 
 /**
  * @author francis
@@ -99,17 +101,17 @@ public class CustomSearch {
 		
 		Result result = getSearchResult(query);
 		//System.out.println("reached here ------------ : ");
-		System.out.println("results size ------------ : "+result.getSchools().size());
-		System.out.println("given size ------------ : "+getNum());
-		if (result.getSchools().size() < getNum()) {
-			List<School> schools = getSearchResult(query).getSchools();
+		//System.out.println("results size ------------ : "+result.getSchools().size());
+		//System.out.println("given size ------------ : "+getNum());
+		if (result.getItems().size() < getNum()) {
+			List<School> schools = getSearchResult(query).getItems();
 			
 			for (School school : schools) {
 				
-				if (result.getSchools().size() < getNum()) { result.getSchools().add(school); }
+				if (result.getItems().size() < getNum()) { result.getItems().add(school); }
 			}
 		} else {			
-			result.getSchools().subList(getNum(), result.getSchools().size()).clear();
+			result.getItems().subList(getNum(), result.getItems().size()).clear();
 		}
 
 		return result;
@@ -119,8 +121,8 @@ public class CustomSearch {
 	 * Some items are not a web page. They could be images or something else. Here is where we remove them.
 	 */
 	private Result filterItems(Result result) {
-		System.out.println("got these ------------------------------------"+result.getSchools());
-		Iterator<School> schools = result.getSchools().iterator();
+		System.out.println("got these ------------------------------------"+result.getItems());
+		Iterator<School> schools = result.getItems().iterator();
 		
 		while (schools.hasNext()) {
 			if (isBlank(schools.next().getFormattedUrl())) { schools.remove(); }
@@ -132,10 +134,13 @@ public class CustomSearch {
 	private Result getSearchResult(String query) {
 		HttpResponse response = getResponse(query);
 		String json = getJson(response);
-		System.out.println("reached here ------------ : ");
+		//System.out.println("reached here ------------ : ");
 		System.out.println("got this json ------------------------------------"+json);
 		Queries queries = new MetaData(json).getQueries();
 		setStart(queries.getNextPage().get(0).getStartIndex());
+		
+		Tester sku = new Gson().fromJson(json, Tester.class);
+		System.out.println("got this school -----------------------"+sku);
 		
 		return filterItems(new Gson().fromJson(json, Result.class));
 		//return new Gson().fromJson(json, Result.class);
