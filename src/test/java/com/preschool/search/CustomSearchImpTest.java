@@ -23,7 +23,7 @@ public class CustomSearchImpTest {
 	
 	private final String cx = "014723624719242706501:ky6zn2teax4";
     private final String apiKey = "AIzaSyBFnKBQPESdi2sP1twKp59-3mBscTVw99k";
-    CustomSearchImp $;
+    CustomSearch $;
     
     @Before
     public void setUp() throws Exception {
@@ -63,7 +63,7 @@ public class CustomSearchImpTest {
     @Test
     public void testSetTotalResult() {
         int total = 15;
-        CustomSearchImp search = new CustomSearchImp(cx, apiKey, total);
+        CustomSearch search = new CustomSearchImp(cx, apiKey, total);
         Result result = search.execute("Preschools");
         assertEquals(total, result.getItems().size());
     }
@@ -71,7 +71,7 @@ public class CustomSearchImpTest {
     @Test
     public void testSetTotalResultLesserThanDefault() {
         int total = 7;
-        CustomSearchImp search = new CustomSearchImp(cx, apiKey, total);
+        CustomSearch search = new CustomSearchImp(cx, apiKey, total);
         Result result = search.execute("Android");
         assertEquals(total, result.getItems().size());
     }

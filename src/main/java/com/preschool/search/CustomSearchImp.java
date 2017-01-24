@@ -32,7 +32,7 @@ import com.preschool.domain.School;
  * @author francis
  *
  */
-public class CustomSearchImp {
+public class CustomSearchImp implements CustomSearch {
 	
 	private String cx;
 	private String apiKey;
@@ -94,6 +94,9 @@ public class CustomSearchImp {
 		return null;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#execute(java.lang.String)
+	 */
 	public Result execute(String query) {
 				
 		Result result = getSearchResult(query);
@@ -135,34 +138,58 @@ public class CustomSearchImp {
 		return filterItems(new Gson().fromJson(json, Result.class));
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#getCx()
+	 */
 	public String getCx() {
 		return cx;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#setCx(java.lang.String)
+	 */
 	public void setCx(String cx) {
 		this.cx = cx;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#getApiKey()
+	 */
 	public String getApiKey() {
 		return apiKey;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#setApiKey(java.lang.String)
+	 */
 	public void setApiKey(String apiKey) {
 		this.apiKey = apiKey;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#getNum()
+	 */
 	public int getNum() {
 		return this.num;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#setNum(int)
+	 */
 	public void setNum(int num) {
 		this.num = num;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#getStart()
+	 */
 	public int getStart() {
 		return start;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.preschool.search.CustomSearch#setStart(int)
+	 */
 	public void setStart(int start) {
 		this.start = start;
 	}
