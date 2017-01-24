@@ -32,39 +32,37 @@ public class CustomSearchTest {
         $ = new CustomSearch(cx, apiKey, 10);
     }
     
-    //@Test(expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testIllegalArgumentException() {
         new CustomSearch(null, null,0);
     }
     
-    //@Test
+    @Test
     public void testApiKeyAvailable() {
         assertNotNull($.getApiKey());
     }
     
     @Test
     public void testResultAvailable() {
-        Result result = $.execute("Android");
+        Result result = $.execute("Preschools");
         assertNotNull(result);
-        System.out.println("total : "+result.getSearchInformation().getTotalResults());
-        System.out.println("total------------------ : "+result);
         assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
     
-    //@Test
+    @Test
     public void testMultipleKeywords() {
         Result result = $.execute("bob marley");
         assertNotNull(result);
         assertTrue(Long.valueOf(result.getSearchInformation().getTotalResults()) > 0);
     }
     
-    //@Test
+    @Test
     public void testSearchTime() {
         Result result = $.execute("android");
         assertTrue(result.getSearchInformation().getSearchTime() > 0);
     }
     
-    //@Test
+    @Test
     public void testSetTotalResult() {
         int total = 15;
         CustomSearch search = new CustomSearch(cx, apiKey, total);
@@ -72,7 +70,7 @@ public class CustomSearchTest {
         assertEquals(total, result.getItems().size());
     }
     
-    //@Test
+    @Test
     public void testSetTotalResultLesserThanDefault() {
         int total = 7;
         CustomSearch search = new CustomSearch(cx, apiKey, total);
