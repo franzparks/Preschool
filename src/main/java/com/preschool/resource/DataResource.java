@@ -32,14 +32,11 @@ public class DataResource {
     public List<School> bookList() {
 		ArrayList<School> list = new ArrayList<School>();
 		
-		/*if(list.size() < 1){
-			String cx = "014723624719242706501:ky6zn2teax4";
-		    String apiKey = "AIzaSyBFnKBQPESdi2sP1twKp59-3mBscTVw99k";
-		    CustomSearch $ = new CustomSearch(cx, apiKey, 10);
-		    
-			Result result = $.execute("Santa Clara Preschools");
+		if(list.size() < 1){
+			
+			Result result = search.execute("Santa Clara Preschools");
 			list.addAll(result.getItems());
-		}*/
+		}
 		
 		return list;
 	}
