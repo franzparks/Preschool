@@ -3,12 +3,8 @@
  */
 package com.preschool.config;
 
-import java.util.ArrayList;
-
 import org.springframework.context.annotation.Configuration;
 
-import com.preschool.domain.Result;
-import com.preschool.domain.School;
 import com.preschool.search.CustomSearch;
 import com.preschool.search.CustomSearchImp;
 
@@ -24,14 +20,7 @@ public class GeneralConfig {
 	
 	public CustomSearch makeCustomSearch(){
 		
-			ArrayList<School> list = new ArrayList<School>();
-		
-		    CustomSearch $ = new CustomSearchImp(cx, apiKey, 10);
-		    
-			Result result = $.execute("Santa Clara Preschools");
-			list.addAll(result.getItems());
-		
-		return null;
+		   return new CustomSearchImp(cx, apiKey, 10);
 	}
 
 }
