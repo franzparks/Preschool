@@ -21,6 +21,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
+import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
 import com.preschool.domain.MetaData;
@@ -32,6 +33,8 @@ import com.preschool.domain.School;
  * @author francis
  *
  */
+
+
 public class CustomSearchImp implements CustomSearch {
 	
 	private String cx;
@@ -133,7 +136,7 @@ public class CustomSearchImp implements CustomSearch {
 		HttpResponse response = getResponse(query);
 		String json = getJson(response);
 		Queries queries = new MetaData(json).getQueries();
-		setStart(queries.getNextPage().get(0).getStartIndex());
+		//setStart(queries.getNextPage().get(0).getStartIndex());
 		
 		return filterItems(new Gson().fromJson(json, Result.class));
 	}

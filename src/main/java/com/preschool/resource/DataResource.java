@@ -33,8 +33,9 @@ public class DataResource {
 		ArrayList<School> list = new ArrayList<School>();
 		
 		if(list.size() < 1){
-			
+			System.out.println("am here---------------------");
 			Result result = search.execute("Santa Clara Preschools");
+			System.out.println("results---------------------"+result.getItems());
 			list.addAll(result.getItems());
 		}
 		
