@@ -32,14 +32,14 @@ import com.preschool.domain.School;
  * @author francis
  *
  */
-public class CustomSearch {
+public class CustomSearchImp {
 	
 	private String cx;
 	private String apiKey;
 	private int num;
 	private int start = 1;
 	
-	public CustomSearch(String cx, String apiKey, int num) {
+	public CustomSearchImp(String cx, String apiKey, int num) {
 		if (isNullOrEmpty(cx) || isNullOrEmpty(apiKey)) { throw new IllegalArgumentException("CX and API Key are required"); }
 		
 		setApiKey(apiKey);

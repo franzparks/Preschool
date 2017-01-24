@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.preschool.domain.Result;
 import com.preschool.domain.School;
-import com.preschool.search.CustomSearch;
+import com.preschool.search.CustomSearchImp;
 
 /**
  * @author francis
@@ -27,14 +27,14 @@ public class DataResource {
     public List<School> bookList() {
 		ArrayList<School> list = new ArrayList<School>();
 		
-		if(list.size() < 1){
+		/*if(list.size() < 1){
 			String cx = "014723624719242706501:ky6zn2teax4";
 		    String apiKey = "AIzaSyBFnKBQPESdi2sP1twKp59-3mBscTVw99k";
 		    CustomSearch $ = new CustomSearch(cx, apiKey, 10);
 		    
 			Result result = $.execute("Santa Clara Preschools");
 			list.addAll(result.getItems());
-		}
+		}*/
 		
 		return list;
 	}
