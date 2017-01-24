@@ -95,8 +95,12 @@ public class CustomSearch {
 	}
 	
 	public Result execute(String query) {
+		
+		
 		Result result = getSearchResult(query);
 		
+		//System.out.println("results size ------------ : "+result.getSchools().size());
+		System.out.println("given size ------------ : "+getNum());
 		if (result.getSchools().size() < getNum()) {
 			List<School> schools = getSearchResult(query).getSchools();
 			
@@ -127,11 +131,12 @@ public class CustomSearch {
 	private Result getSearchResult(String query) {
 		HttpResponse response = getResponse(query);
 		String json = getJson(response);
-
+		//System.out.println("got these ------------------------------------"+json);
 		Queries queries = new MetaData(json).getQueries();
 		setStart(queries.getNextPage().get(0).getStartIndex());
 		
 		return filterItems(new Gson().fromJson(json, Result.class));
+		//return new Gson().fromJson(json, Result.class);
 	}
 	
 	public String getCx() {
@@ -151,7 +156,7 @@ public class CustomSearch {
 	}
 
 	public int getNum() {
-		return num;
+		return this.num;
 	}
 
 	public void setNum(int num) {
