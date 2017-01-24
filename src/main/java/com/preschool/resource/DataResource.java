@@ -27,12 +27,15 @@ public class DataResource {
     public List<School> bookList() {
 		ArrayList<School> list = new ArrayList<School>();
 		
-		String cx = "014723624719242706501:ky6zn2teax4";
-	    String apiKey = "AIzaSyBFnKBQPESdi2sP1twKp59-3mBscTVw99k";
-	    CustomSearch $ = new CustomSearch(cx, apiKey, 10);
-	    
-		Result result = $.execute("Preschools");
-		list.addAll(result.getItems());
+		if(list.size() < 1){
+			String cx = "014723624719242706501:ky6zn2teax4";
+		    String apiKey = "AIzaSyBFnKBQPESdi2sP1twKp59-3mBscTVw99k";
+		    CustomSearch $ = new CustomSearch(cx, apiKey, 10);
+		    
+			Result result = $.execute("Preschools");
+			list.addAll(result.getItems());
+		}
+		
 		return list;
 	}
 
