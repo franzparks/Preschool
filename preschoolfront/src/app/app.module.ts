@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import { MdToolbarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule
+    MdButtonModule, MdCheckboxModule,
+    MdToolbarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
