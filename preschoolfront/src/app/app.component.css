@@ -1,12 +1,13 @@
 .nav{
   background: rgba(189, 189, 189, 0.25);
+  overflow: hidden;
 }
 .navbar-brand {
     font-family: "Titillium Web", sans-serif;
     font-size: 1.5rem !important;
     padding-top: 0rem !important;
     margin-right: 2rem !important;
-    color: #5CB85C !important;
+    color: #5c96b8!important;
 }
 .app-content {
   padding: 20px;
