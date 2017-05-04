@@ -1,8 +1,12 @@
 .nav{
   background: rgba(189, 189, 189, 0.25);
+  margin: 0;
   overflow: hidden;
+  padding: 0.5rem 1rem;
+  display: block;
 }
 .navbar-brand {
+    float: left;
     font-family: "Titillium Web", sans-serif;
     font-size: 1.5rem !important;
     padding-top: 0rem !important;
