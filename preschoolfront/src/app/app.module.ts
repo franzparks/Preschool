@@ -20,7 +20,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule,
-    MdToolbarModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

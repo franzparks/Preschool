@@ -1,9 +1,10 @@
-.nav{
-  background: rgba(189, 189, 189, 0.25);
+
+.nav {
   margin: 0;
-  overflow: hidden;
-  padding: 0.5rem 1rem;
-  display: block;
+  padding: 30px;
+   display: block;
+   box-shadow: 1px 4px 1px #888888;
+   text-align: center;
 }
 .navbar-brand {
     float: left;
@@ -109,5 +110,6 @@
 .nav-tem{
   float: right !important;
 }
+
 
 
