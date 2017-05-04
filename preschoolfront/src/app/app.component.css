@@ -1,7 +1,13 @@
-md-sidenav-layout.m2app-dark {
-  background: black;
+.nav{
+  background: rgba(189, 189, 189, 0.25);
 }
-
+.navbar-brand {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.5rem !important;
+    padding-top: 0rem !important;
+    margin-right: 2rem !important;
+    color: #5CB85C !important;
+}
 .app-content {
   padding: 20px;
 }
