@@ -92,5 +92,8 @@ md-sidenav-layout.m2app-dark {
     font-weight: 300 !important;
     margin-bottom: 0px;
 }
+.banner .material-icons {
+  font-size: larger;
+}
 
 
