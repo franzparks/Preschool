@@ -100,9 +100,10 @@
 .banner p {
     color: #fff;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 300 !important;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 .banner .material-icons {
   font-size: larger;
