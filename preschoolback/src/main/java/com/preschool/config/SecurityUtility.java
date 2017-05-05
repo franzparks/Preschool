@@ -8,5 +8,5 @@ package com.preschool.config;
  *
  */
 public class SecurityUtility {
-	
+	private static final String SALT = "salt"; //Salt should be protected carefully	
 }
