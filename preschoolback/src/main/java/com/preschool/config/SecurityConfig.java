@@ -3,10 +3,15 @@
  */
 package com.preschool.config;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+
 /**
  * @author francisphiri
  *
  */
-public class SecurityConfig {
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 }
