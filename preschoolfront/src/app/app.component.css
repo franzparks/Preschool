@@ -1,9 +1,5 @@
 .nav {
-  margin: 0;
-  padding-bottom: 38px;
-   display: block;
-   box-shadow: 1px 4px 1px #888888;
-   text-align: center;
+  box-shadow: 1px 4px 1px #888888;
 }
 .navbar-brand {
     float: left;
