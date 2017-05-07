@@ -2,12 +2,10 @@
   box-shadow: 1px 4px 1px #888888;
 }
 .navbar-brand {
-    float: left;
     font-family: "Titillium Web", sans-serif;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     font-size: 1.5rem !important;
     font-style: italic;
-    padding-top: 0rem !important;
     margin-left: 4rem !important;
     color: #5c96b8!important;
 }
