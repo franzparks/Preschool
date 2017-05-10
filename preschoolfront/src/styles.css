@@ -15,7 +15,7 @@ hr {
   box-shadow: 1px 4px 1px #888888;
 }
 .navbar-brand {
-    font-family: FontAwesome;
+    /*font-family: FontAwesome;*/
     font-size: 2.2rem !important;
     font-weight: bold;
     font-style: italic;
