@@ -133,3 +133,6 @@ hr {
 .alerts {
   margin-top: 20px;
 }
+.error-entry-alert {
+  color:red;
+}
