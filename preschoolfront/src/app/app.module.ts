@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { MyAccountComponent } from './components/my-account/my-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    MyAccountComponent
     
   ],
   imports: [
