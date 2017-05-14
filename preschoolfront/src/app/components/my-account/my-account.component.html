@@ -1,3 +1,75 @@
-<p>
-  my-account works!
-</p>
+<hr />
+<div class="row" >
+       <!-- <div class="col-xs-3"></div>-->
+    <div >
+        <div class="col-xs-9 col-md-offset-1">
+            <div class="panel-group">
+                <div class="panel panel-default" >
+                    <div class="panel-body" >
+                        <md-tab-group >
+                            <md-tab label="Edit">
+                                <div class="alerts">
+                                    <div class="alert alert-danger" >
+                                        <strong>Incorrect Password!</strong> Please enter the correct password for the current user.
+                                    </div>
+                                    <div class="alert alert-success" >
+                                        <strong>Update Success!</strong>
+                                    </div>
+                                </div>
+                                <form >
+                                    <input type="hidden" name="id" />
+                                    <div class="bg-info" >User info updated.</div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <label for="firstName">First Name</label>
+                                                <input type="text" class="form-control" id="firstName" name="firstName"  />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <label for="lastName">Last Name</label>
+                                                <input type="text" class="form-control" id="lastName" name="lastName"  />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username">
+                                            Username *
+                                        </label>&nbsp;<span  class="error-entry-alert">Username already exists. Choose a different one.</span>
+                                        <input required="required" type="text" class="form-control" id="username" name="username"  />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="currentPassword">
+                                            Current Password
+                                        </label>
+                                        <input type="password" class="form-control" id="password" name="password" />
+                                        <p class="entry-prompt-alert">Enter your current password to change the E-mail address or Password.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Email Address *
+                                        </label>&nbsp;<span  class="error-entry-alert">Email already exists. Choose a different one.</span>
+                                        <input required="required" type="email" class="form-control" id="email" name="email"  />
+                                        <p class="entry-prompt-alert">A valid e-mail address. All e-mails from the system will be sent to this address.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtNewPassword">
+                                            New Password *
+                                        </label>&nbsp;<span id="checkPasswordMatch" class="error-entry-alert"></span>
+                                        <input type="password" class="form-control" id="txtNewPassword" name="txtNewPassword" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtConfirmPassword">
+                                            Confirm New Password *
+                                        </label>
+                                        <input type="password" class="form-control" id="txtConfirmPassword" name="txtNewPassword" />
+                                    </div>
+                                    <button md-raised-button type="submit" class="mat-primary" id="udpateuserInfoButton">Save</button>
+                                </form>
+                            </md-tab>
+                        </md-tab-group>
+                    </div>        
+                </div>
+             </div>
+        </div>
+    </div>                
+</div>    
