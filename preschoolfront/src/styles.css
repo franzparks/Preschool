@@ -3,7 +3,10 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 
-
+body {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
 hr {
     border: none;
     height: 1px;
