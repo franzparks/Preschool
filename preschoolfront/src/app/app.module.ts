@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule,MdTabsModule} from '@angular/material';
+import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
 import { MdToolbarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -30,7 +30,8 @@ import { MyAccountComponent } from './components/my-account/my-account.component
     routing,
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule,
-    MdTabsModule
+    MdTabsModule,
+    MdCardModule
     
   ],
   providers: [],
