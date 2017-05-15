@@ -3,6 +3,7 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 
+
 hr {
     border: none;
     height: 1px;
