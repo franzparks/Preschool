@@ -35,7 +35,9 @@
   		<md-card-actions>
     		<button md-button>LIKE</button>
     		<button md-button>SHARE</button>
-    		<button md-button>Ratings And Reviews coming soon</button>
+    		<rating [(ngModel)]="starsCount"
+            [titles]="['one', 'two', 'three', 'four', 'five']">
+    		</rating>
   		</md-card-actions>
     </md-card>
 
