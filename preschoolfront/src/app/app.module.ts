@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
+import {RatingModule} from "ngx-rating";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
@@ -29,6 +30,7 @@ import { MyAccountComponent } from './components/my-account/my-account.component
     HttpModule,
     routing,
     BrowserAnimationsModule,
+    RatingModule,
     MdButtonModule, MdCheckboxModule,
     MdTabsModule,
     MdCardModule
