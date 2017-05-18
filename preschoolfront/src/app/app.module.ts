@@ -33,7 +33,8 @@ import { MyAccountComponent } from './components/my-account/my-account.component
     RatingModule,
     MdButtonModule, MdCheckboxModule,
     MdTabsModule,
-    MdCardModule
+    MdCardModule,
+    MdMenuModule
     
   ],
   providers: [],
