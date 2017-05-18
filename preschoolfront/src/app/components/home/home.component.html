@@ -33,11 +33,16 @@
 		    <p><strong>Phone : </strong> (408) 553-5700</p>
   		</md-card-content>
   		<md-card-actions>
-    		<button md-button>LIKE</button>
-    		<button md-button>SHARE</button>
-    		<rating [(ngModel)]="starsCount"
-            	[titles]="['one', 'two', 'three', 'four', 'five']">
-    		</rating>
+	  		<div>
+	    		<button md-button>LIKE</button>
+	    		<button md-button>SHARE</button>
+	    		
+	    			<rating [(ngModel)]="starsCount"
+	            		[titles]="['one', 'two', 'three', 'four', 'five']">
+	    			</rating>
+	    			<span class="reviews-text">1000 reviews</span>
+			</div>
+    		
   		</md-card-actions>
     </md-card>
 
