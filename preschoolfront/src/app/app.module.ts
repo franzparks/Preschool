@@ -40,3 +40,6 @@ import { MyAccountComponent } from './components/my-account/my-account.component
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+/*References
+https://github.com/pleerock/ngx-rating
+*/
