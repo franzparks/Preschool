@@ -7,7 +7,7 @@ import {RatingModule} from "ngx-rating";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
-import { MdToolbarModule } from '@angular/material';
+import { MdToolbarModule, MdMenuModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
