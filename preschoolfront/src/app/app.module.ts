@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
+import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MyAccountComponent } from './components/my-account/my-account.component
     HomeComponent,
     NavBarComponent,
     MyProfileComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    SchoolDetailsComponent
     
   ],
   imports: [
