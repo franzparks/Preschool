@@ -4,6 +4,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
+import { SchoolDetailsComponent } from './components/school-details/school-details.component';
+
 
 
 const appRoutes: Routes = [
@@ -23,6 +25,9 @@ const appRoutes: Routes = [
 	{
 		path: 'my-account',
 		component: MyAccountComponent
+	},{
+		path: 'school-details/:id',
+		component: SchoolDetailsComponent
 	}
 ];
 
