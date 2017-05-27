@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import  {School} from '../models/school';
+import {AppConst} from '../constants/app-consts';
 
 @Injectable()
 export class SchoolService {
@@ -18,7 +19,7 @@ export class SchoolService {
 
   	getSchool(id:number) {
 
-  	let url = '';//AppConst.serverPath+"/school/"+id;
+  	let url = AppConst.serverPath+"/school/"+id;
 
   	let tokenHeader = new Headers({
   		'Content-Type' : 'application/json',

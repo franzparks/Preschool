@@ -5,6 +5,7 @@ import {Params, ActivatedRoute, Router} from '@angular/router';
 import {SchoolService } from '../../services/school.service';
 import  {School} from '../../models/school';
 
+
 @Component({
   selector: 'app-school-details',
   templateUrl: './school-details.component.html',
