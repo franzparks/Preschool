@@ -10,6 +10,9 @@ import {SchoolService } from '../../services/school.service';
 })
 export class SchoolDetailsComponent implements OnInit {
 
+	private schoolId : number;
+	private school : School;
+	
 	constructor(
 		private schoolService: SchoolService,
 		private router:Router,
