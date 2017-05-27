@@ -10,9 +10,14 @@ import {SchoolService } from '../../services/school.service';
 })
 export class SchoolDetailsComponent implements OnInit {
 
-  constructor() { }
+	constructor(
+		private schoolService: SchoolService,
+		private router:Router,
+		private http:Http,
+		private route:ActivatedRoute
+	) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }
