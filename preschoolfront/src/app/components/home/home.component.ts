@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
 
 	starsCount : number = 3;
 
+	schools: School[] = [];
+
 	constructor(private schoolService : SchoolService) { }
 
 	ngOnInit() {
