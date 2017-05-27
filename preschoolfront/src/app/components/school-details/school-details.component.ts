@@ -28,6 +28,15 @@ export class SchoolDetailsComponent implements OnInit {
   			this.schoolId = Number.parseInt(params['id']);
   		});
 
+  		this.schoolService.getSchool(this.schoolId).subscribe(
+  		res => {
+  			this.school=res.json();
+  		},
+  		error => {
+  			console.log(error);
+  		}
+  	);
+
 	}
 
 }
