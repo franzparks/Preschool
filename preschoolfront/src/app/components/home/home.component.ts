@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { School } from '../models/school';
+import {SchoolService } from '../services/school.service';
 
 @Component({
   selector: 'app-home',
