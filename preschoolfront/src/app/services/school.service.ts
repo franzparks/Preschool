@@ -8,7 +8,7 @@ import  {School} from '../models/school';
 @Injectable()
 export class SchoolService {
 
-	private schoolsUrl = './mock-schools.ts';
+	private schoolsUrl = 'app/schools';
 
   	constructor(private http: Http) { }
 
