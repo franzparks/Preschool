@@ -16,10 +16,15 @@ export class SchoolService {
     	return this.http.get(this.schoolsUrl, { withCredentials: true });
   	}
 
-  	/*getSchool(id: number): Observable<School> {
-	  	return this.getSchoolList(){
-	  		schools => schools.find(school => school.id === id))
-	  	}
-	}*/
+  	getSchool(id:number) {
+
+  	let url = '';//AppConst.serverPath+"/school/"+id;
+
+  	let tokenHeader = new Headers({
+  		'Content-Type' : 'application/json',
+  		'x-auth-token' : localStorage.getItem("xAuthToken")
+  	});
+  	return this.http.get(url, {headers: tokenHeader});
+  }
 
 }
