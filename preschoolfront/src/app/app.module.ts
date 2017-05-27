@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import {RatingModule} from "ngx-rating";
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
 import { MdToolbarModule, MdMenuModule } from '@angular/material';
