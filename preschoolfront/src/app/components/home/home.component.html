@@ -19,26 +19,24 @@
 	<md-card  *ngFor="let school of schools">
 	<a href="/school-details/1">
       	<md-card-header>
-	    	<md-card-title>The Harker School - Preschool</md-card-title>
-	    	<md-card-subtitle>The bay's best</md-card-subtitle>
+	    	<md-card-title>{{school.title}}</md-card-title>
+	    	<md-card-subtitle>{{school.subTitle}}</md-card-subtitle>
 	  	</md-card-header>
 	  	<img md-card-image src="assets/image/wood.png">
 		 <md-card-content>
 		    <p>
-		      At Harker’s preschool, our early learning program for 3-, 4- and young 5-year-olds emphasizes hands-on learning, intentional play and developmentally appropriate classroom activities.
+		      {{school.summary}}
 		    </p>
-		    <p>
-		    	Beginnings matter. At Harker, we understand the importance of giving your child the best possible foundation for an outstanding academic career. That starts with choosing the right preschool to excite, nurture and challenge children so they are not only ready for the next step but excited to get there.
-		    </p>
-		    <p><strong>Address : </strong> 4525 Union Ave, San Jose, CA 95124</p>
-		    <p><strong>Phone : </strong> (408) 553-5700</p>
+		    
+		    <p><strong>Address : </strong>{{school.address}}</p>
+		    <p><strong>Phone : </strong>{{school.phone}}</p>
   		</md-card-content>
   		<md-card-actions>
 	  		<div>
 	    		<button md-button color="primary">LIKE</button>
 	    		<button md-button color="primary" [mdMenuTriggerFor]="menu">SHARE</button>
 	    		
-	    			<rating [(ngModel)]="starsCount"
+	    			<rating [(ngModel)]="school.rating"
 	            		[titles]="['one', 'two', 'three', 'four', 'five']">
 	    			</rating>
 	    			<span class="reviews-text">1000 reviews</span>
@@ -61,7 +59,7 @@
     </md-card>
 
    
-   
+
  </div>
 
 
