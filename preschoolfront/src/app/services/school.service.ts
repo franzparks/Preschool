@@ -8,6 +8,8 @@ import  {School} from '../models/school';
 @Injectable()
 export class SchoolService {
 
-  constructor() { }
+	private schoolsUrl = './mock-schools.ts';
+
+  	constructor() { }
 
 }
