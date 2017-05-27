@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
 	starsCount : number = 3;
 
-	constructor() { }
+	constructor(private schoolService : SchoolService) { }
 
 	ngOnInit() {
 
