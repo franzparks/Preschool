@@ -17,7 +17,13 @@ export class HomeComponent implements OnInit {
 	constructor(private schoolService : SchoolService) { }
 
 	ngOnInit() {
-
+		this.schoolService.getSchoolList().subscribe(
+			res => {
+        		this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		console.log(JSON.parse(JSON.stringify(res)));	
+      		},
+      		error => console.log(error)
+		)
 	}
 	  
 
