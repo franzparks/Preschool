@@ -13,18 +13,39 @@ export const SCHOOLS = [
 		  the next step but excited to get there.',
 		address: '4525 Union Ave, San Jose, CA 95124', 
 		phone: ' (408) 553-5700', 
-		rating: 3
+		rating: 4
 	},
 	{
 		id: 2,
-		name : 'Challenger'
+		title : 'Challenger',
+		subTitle: 'The  best of the bay',
+		summary:
+		'Challenger is the best preschool for your child in the SF bay area.\
+		      Our dedication to quality education is matched by none.',
+		address: '4525 Union Ave, San Jose, CA 95324', 
+		phone: ' (408) 553-5700', 
+		rating: 4
 	},
 	{
 		id: 3,
-		name : 'South Bay'
+		title : 'South Bay',
+		subTitle: 'The  best of the bay',
+		summary:
+		'South Bay is the best preschool for your child in the SF bay area.\
+		      Our dedication to quality education is matched by none.',
+		address: '4525 Union Ave, San Jose, CA 95324', 
+		phone: ' (408) 553-5700', 
+		rating: 3
 	},
 	{
 		id: 4,
-		name : 'Montessori'
+		title : 'Montessori',
+		subTitle: 'The  best of the bay',
+		summary:
+		'Montessori is the best preschool for your child in the SF bay area.\
+		      Our dedication to quality education is matched by none.',
+		address: '4525 Union Ave, San Jose, CA 95324', 
+		phone: ' (408) 553-5700', 
+		rating: 3
 	},
 ];
