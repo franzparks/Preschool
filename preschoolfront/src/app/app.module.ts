@@ -41,6 +41,7 @@ import { SchoolService } from './services/school.service';
     MdTabsModule,
     MdCardModule,
     MdMenuModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
   providers: [SchoolService],
