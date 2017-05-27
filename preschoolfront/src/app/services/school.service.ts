@@ -16,9 +16,10 @@ export class SchoolService {
     	return this.http.get(this.schoolsUrl, { withCredentials: true });
   	}
 
-  	getSchool(id: number): Promise<School> {
-	  	return this.getSchools()
-	  		.then(schools => schools.find(school => school.id === id));
-	}
+  	/*getSchool(id: number): Observable<School> {
+	  	return this.getSchoolList(){
+	  		schools => schools.find(school => school.id === id))
+	  	}
+	}*/
 
 }
