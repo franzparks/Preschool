@@ -15,6 +15,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
+import { SchoolService } from './services/school.service;
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { SchoolDetailsComponent } from './components/school-details/school-detai
     MdMenuModule
     
   ],
-  providers: [],
+  providers: [SchoolService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
