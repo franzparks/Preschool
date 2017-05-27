@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Headers, Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
 import {SchoolService } from '../../services/school.service';
-import  {School} from '../models/school';
+import  {School} from '../../models/school';
 
 @Component({
   selector: 'app-school-details',
