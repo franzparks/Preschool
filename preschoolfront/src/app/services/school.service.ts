@@ -10,6 +10,10 @@ export class SchoolService {
 
 	private schoolsUrl = './mock-schools.ts';
 
-  	constructor() { }
+  	constructor(private http: Http) { }
+
+  	getSchoolList() {
+    	return this.http.get(this.schoolsUrl, { withCredentials: true });
+  	}
 
 }
