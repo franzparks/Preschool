@@ -15,7 +15,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
-import { SchoolService } from './services/school.service;
+import { SchoolService } from './services/school.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { SchoolService } from './services/school.service;
     MdButtonModule, MdCheckboxModule,
     MdTabsModule,
     MdCardModule,
-    MdMenuModule
+    MdMenuModule,
     
   ],
   providers: [SchoolService],
