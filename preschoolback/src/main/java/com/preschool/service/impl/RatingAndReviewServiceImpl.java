@@ -25,13 +25,10 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 		return ratingAndReviewRepository.findAll();
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.preschool.service.RatingAndReviewService#findOne(java.lang.Long)
-	 */
+
 	@Override
 	public RatingAndReview findOne(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return ratingAndReviewRepository.findOne(id);
 	}
 	
 	/* (non-Javadoc)
