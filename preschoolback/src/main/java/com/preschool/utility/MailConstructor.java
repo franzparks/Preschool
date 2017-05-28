@@ -54,7 +54,7 @@ public class MailConstructor {
 			public void prepare(MimeMessage mimeMessage) throws Exception {
 				MimeMessageHelper email = new MimeMessageHelper(mimeMessage);
 				email.setTo(user.getEmail());
-				email.setSubject("School Registration Confirmation - ");
+				email.setSubject("School Registration Confirmation");
 				email.setText(text,true);
 				email.setFrom(new InternetAddress("nursery.express@gmail.com"));
 			}
