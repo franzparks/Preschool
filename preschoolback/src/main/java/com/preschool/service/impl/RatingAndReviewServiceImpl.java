@@ -36,13 +36,10 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 		return ratingAndReviewRepository.save(review);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.preschool.service.RatingAndReviewService#blurrySearch(java.lang.String)
-	 */
+	
 	@Override
-	public List<RatingAndReview> blurrySearch(String title) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<RatingAndReview> blurrySearch(String message) {
+		return ratingAndReviewRepository.findByMessageContaining(message);
 	}
 	
 	/* (non-Javadoc)
