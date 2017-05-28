@@ -5,6 +5,9 @@ package com.preschool.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.preschool.config.repository.SchoolRepository;
 import com.preschool.domain.School;
 import com.preschool.service.SchoolService;
 
@@ -13,6 +16,9 @@ import com.preschool.service.SchoolService;
  *
  */
 public class SchoolServiceImpl implements SchoolService{
+	
+	@Autowired
+	private SchoolRepository schoolRepository;
 
 	@Override
     public List<School> findAll() {
