@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.preschool.config.repository.RoleRepository;
 import com.preschool.config.repository.UserRepository;
 import com.preschool.domain.User;
 import com.preschool.domain.security.UserRole;
@@ -27,6 +28,9 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private RoleRepository roleRepository;
 	
 	@Transactional
 	public User createUser(User user, Set<UserRole> userRoles) {
