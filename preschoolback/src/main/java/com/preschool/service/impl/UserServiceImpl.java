@@ -7,8 +7,10 @@ import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.preschool.config.repository.UserRepository;
 import com.preschool.domain.User;
 import com.preschool.domain.security.UserRole;
 import com.preschool.service.UserService;
@@ -21,6 +23,9 @@ import com.preschool.service.UserService;
 public class UserServiceImpl implements UserService{
 
 	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@Override
     public User createUser(User user, Set<UserRole> userRoles) {
