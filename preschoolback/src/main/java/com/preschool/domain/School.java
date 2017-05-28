@@ -9,11 +9,14 @@ package com.preschool.domain;
  */
 public class School {
 	
-	
+	private Long id;
 	private String title;
-	private String link;
+	private String subTitle;
 	private String snippet;
-	private String formattedUrl;
+	private String summary;
+	private String address;
+	private String phone;
+	private Integer rating;
 	
 	
 	
