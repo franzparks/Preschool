@@ -17,9 +17,9 @@ export class SchoolService {
     	return this.http.get(this.schoolsUrl, { withCredentials: true });
   	}
 
-  	getSchool(id:number) {
+  	getSchool(school: School) {
 
-  	let url = AppConst.serverPath+"/school/"+id;
+  	let url = AppConst.serverPath+"/school/"+school.id;
 
   	let tokenHeader = new Headers({
   		'Content-Type' : 'application/json',
