@@ -43,8 +43,7 @@ public class SchoolServiceImpl implements SchoolService{
 
 	@Override
     public void removeOne(Long id) {
-	    // TODO Auto-generated method stub
-	    
+		schoolRepository.delete(id); 
     }
 	
 }
