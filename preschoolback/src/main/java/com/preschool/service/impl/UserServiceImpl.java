@@ -5,6 +5,8 @@ package com.preschool.service.impl;
 
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.preschool.domain.User;
@@ -18,6 +20,8 @@ import com.preschool.service.UserService;
 @Service
 public class UserServiceImpl implements UserService{
 
+	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
+	
 	@Override
     public User createUser(User user, Set<UserRole> userRoles) {
 	    // TODO Auto-generated method stub
