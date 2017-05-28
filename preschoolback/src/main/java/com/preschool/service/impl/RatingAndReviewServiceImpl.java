@@ -5,6 +5,9 @@ package com.preschool.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.preschool.config.repository.RatingAndReviewRepository;
 import com.preschool.domain.RatingAndReview;
 import com.preschool.service.RatingAndReviewService;
 
@@ -14,13 +17,12 @@ import com.preschool.service.RatingAndReviewService;
  */
 public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 	
-	/* (non-Javadoc)
-	 * @see com.preschool.service.RatingAndReviewService#findAll()
-	 */
+	@Autowired
+	private RatingAndReviewRepository ratingAndReviewRepository;
+	
 	@Override
 	public List<RatingAndReview> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return ratingAndReviewRepository.findAll();
 	}
 	
 	/* (non-Javadoc)

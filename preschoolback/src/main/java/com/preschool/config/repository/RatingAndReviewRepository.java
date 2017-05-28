@@ -20,4 +20,5 @@ public interface RatingAndReviewRepository extends CrudRepository<RatingAndRevie
 	List<RatingAndReview> findByUser(User user);
 	List<RatingAndReview> findBySchool(School school);
 	List<RatingAndReview> findByMessageContaining(String message);
+	List<RatingAndReview> findAll();
 }
