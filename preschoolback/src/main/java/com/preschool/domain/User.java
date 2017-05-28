@@ -20,6 +20,7 @@ import javax.persistence.OneToMany;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.preschool.domain.security.UserRole;
 
 /**
  * @author francisphiri
@@ -49,6 +50,8 @@ private static final long serialVersionUID = 902783495L;
 	private Set<UserRole> userRoles = new HashSet<>();
 	
 	@OneToMany(mappedBy="user")
-	private List<RatingAndReview> orderList;
+	private List<RatingAndReview> reviewsList;
+	
+	
 	
 }
