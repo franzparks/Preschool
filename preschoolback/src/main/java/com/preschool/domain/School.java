@@ -13,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
  */
 public class School {
 	
+	private static final long serialVersionUID=425345L;
+	
 	private Long id;
 	private String title;
 	private String subTitle;
