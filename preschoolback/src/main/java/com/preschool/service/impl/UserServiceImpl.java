@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService{
 	
 	@Transactional
 	public User createUser(User user, Set<UserRole> userRoles) {
+		
 		User localUser = userRepository.findByUsername(user.getUsername());
 		
 		if(localUser != null) {
@@ -53,8 +54,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
     public User findByUsername(String username) {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return userRepository.findByUsername(username);
     }
 
 	@Override
