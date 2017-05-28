@@ -23,4 +23,13 @@ export class LoginService {
   	return this.http.get(url, {headers: headers});
   }
 
+  checkSession() {
+  	let url = this.serverPath+'/checkSession';
+  	let headers = new Headers({
+  		'x-auth-token' : localStorage.getItem('xAuthToken')
+  	});
+
+  	return this.http.get(url, {headers: headers});
+  }
+
 }
