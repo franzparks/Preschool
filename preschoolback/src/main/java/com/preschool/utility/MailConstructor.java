@@ -9,6 +9,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 
+import com.preschool.domain.User;
+
 /**
  * @author francisphiri
  *
@@ -28,7 +30,7 @@ public class MailConstructor {
 		
 		SimpleMailMessage email = new SimpleMailMessage();
 		email.setTo(user.getEmail());
-		email.setSubject("Le's Bookstore - New User");
+		email.setSubject("Nursary Express - New User");
 		email.setText(message);
 		email.setFrom(env.getProperty("support.email"));
 		return email;
