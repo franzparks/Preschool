@@ -6,7 +6,6 @@ package com.preschool.service;
 import java.util.List;
 
 import com.preschool.domain.RatingAndReview;
-import com.preschool.domain.School;
 
 /**
  * @author francisphiri
