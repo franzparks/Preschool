@@ -36,6 +36,38 @@ private static final long serialVersionUID=425345L;
 	
 	private String message;
 	private Date date;
+	public Long getId() {
+		return id;
+	}
+	public School getSchool() {
+		return school;
+	}
+	public User getUser() {
+		return user;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public void setSchool(School school) {
+		this.school = school;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+	
 	
 	
 	
