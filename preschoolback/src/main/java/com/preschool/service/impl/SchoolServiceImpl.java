@@ -22,8 +22,8 @@ public class SchoolServiceImpl implements SchoolService{
 
 	@Override
     public List<School> findAll() {
-	    // TODO Auto-generated method stub
-	    return null;
+	    
+	    return (List<School>) schoolRepository.findAll();
     }
 
 	@Override
