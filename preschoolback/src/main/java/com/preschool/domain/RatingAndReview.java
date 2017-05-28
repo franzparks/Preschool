@@ -20,5 +20,8 @@ private static final long serialVersionUID=425345L;
 	private Long id;
 	
 	
+	private School school;
+	
+	
 	
 }
