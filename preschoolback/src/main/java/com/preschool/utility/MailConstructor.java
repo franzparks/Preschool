@@ -3,11 +3,17 @@
  */
 package com.preschool.utility;
 
+import java.util.Locale;
+
+import javax.mail.internet.MimeMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
 import com.preschool.domain.User;
 
@@ -34,5 +40,24 @@ public class MailConstructor {
 		email.setText(message);
 		email.setFrom(env.getProperty("support.email"));
 		return email;
+	}
+	
+	public MimeMessagePreparator constructOrderConfirmationEmail (User user, Locale locale) {
+		Context context = new Context();
+		context.setVariable("user", user);
+		String text = templateEngine.process("orderConfirmationEmailTemplate", context);
+		
+		MimeMessagePreparator messagePreparator = new MimeMessagePreparator() {
+			@Override
+			public void prepare(MimeMessage mimeMessage) throws Exception {
+				MimeMessageHelper email = new MimeMessageHelper(mimeMessage);
+				email.setTo(user.getEmail());
+				email.setSubject("School Registration Confirmation - "+order.getId());
+				email.setText(text,true);
+				email.setFrom(new InternetAddress("nursery.express@gmail.com"));
+			}
+		};
+		
+		return messagePreparator;
 	}
 }
