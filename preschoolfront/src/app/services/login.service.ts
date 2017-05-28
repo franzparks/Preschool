@@ -32,4 +32,13 @@ export class LoginService {
   	return this.http.get(url, {headers: headers});
   }
 
+  logout() {
+  	let url = this.serverPath+'/user/logout';
+  	let headers = new Headers({
+  		'x-auth-token' : localStorage.getItem('xAuthToken')
+  	});
+
+  	return this.http.post(url, '', {headers: headers});
+  }
+
 }
