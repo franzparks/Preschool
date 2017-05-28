@@ -3,6 +3,7 @@
  */
 package com.preschool.resource;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -158,6 +159,16 @@ public class UserResource {
 		userService.save(currentUser);
 		
 		return new ResponseEntity("Update Success", HttpStatus.OK);
+	}
+	
+	@RequestMapping("/getCurrentUser")
+	public User getCurrentUser(Principal principal) {
+		User user = new User();
+		if (null != principal) {
+			user = userService.findByUsername(principal.getName());
+		}
+
+		return user;
 	}
 	
 }
