@@ -5,11 +5,13 @@ package com.preschool.utility;
 
 import java.util.Locale;
 
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
@@ -52,7 +54,7 @@ public class MailConstructor {
 			public void prepare(MimeMessage mimeMessage) throws Exception {
 				MimeMessageHelper email = new MimeMessageHelper(mimeMessage);
 				email.setTo(user.getEmail());
-				email.setSubject("School Registration Confirmation - "+order.getId());
+				email.setSubject("School Registration Confirmation - ");
 				email.setText(text,true);
 				email.setFrom(new InternetAddress("nursery.express@gmail.com"));
 			}
