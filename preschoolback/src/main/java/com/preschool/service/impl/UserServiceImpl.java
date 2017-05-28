@@ -69,8 +69,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
     public User findById(Long id) {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return userRepository.findOne(id);
     }
 	
 }
