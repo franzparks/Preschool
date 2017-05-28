@@ -38,8 +38,7 @@ public class SchoolServiceImpl implements SchoolService{
 
 	@Override
     public List<School> blurrySearch(String title) {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return schoolRepository.findByTitleContaining(title);
     }
 
 	@Override
