@@ -21,15 +21,14 @@ public class SchoolServiceImpl implements SchoolService{
 	private SchoolRepository schoolRepository;
 
 	@Override
-    public List<School> findAll() {
-	    
+    public List<School> findAll() {    
 	    return  schoolRepository.findAll();
     }
+	
 
 	@Override
     public School findOne(Long id) {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return schoolRepository.findOne(id);
     }
 
 	@Override
