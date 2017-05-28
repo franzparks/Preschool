@@ -16,11 +16,7 @@ public class School {
 	private String summary;
 	private String address;
 	private String phone;
-	private Integer rating;
-	
-	
-	
-	public School(){}
+	private int averageRating;
 
 	
 	
