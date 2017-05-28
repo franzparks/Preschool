@@ -17,8 +17,8 @@
  <div class="app-content">
 
 	<md-card  *ngFor="let school of schools">
-	<a href="/school-details/1">
-      	<md-card-header>
+	
+      	<md-card-header (click)="getSchoolDetails(school)">
 	    	<md-card-title>{{school.title}}</md-card-title>
 	    	<md-card-subtitle>{{school.subTitle}}</md-card-subtitle>
 	  	</md-card-header>
@@ -55,7 +55,7 @@
 			</md-menu>
     		
   		</md-card-actions>
-  		</a>
+  		
     </md-card>
 
    
