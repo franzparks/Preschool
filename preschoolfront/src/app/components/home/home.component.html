@@ -18,7 +18,7 @@
 
 	<md-card  *ngFor="let school of schools">
 	
-      	<md-card-header (click)="getSchoolDetails(school)">
+      	<md-card-header (click)="getSchoolDetails(school.id)">
 	    	<md-card-title>{{school.title}}</md-card-title>
 	    	<md-card-subtitle>{{school.subTitle}}</md-card-subtitle>
 	  	</md-card-header>

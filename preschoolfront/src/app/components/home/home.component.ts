@@ -35,8 +35,8 @@ export class HomeComponent implements OnInit {
 		)
 	}
 
-	getSchoolDetails(school: School){
-		this.router.navigate(['/school-details/', school.id]);
+	getSchoolDetails(id: String){
+		this.router.navigate(['/school-details/', id]);
 	}
 	  
 
