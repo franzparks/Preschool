@@ -16,4 +16,7 @@ public class MailConstructor {
 	
 	@Autowired
 	private Environment env;
+	
+	@Autowired
+	private TemplateEngine templateEngine;
 }
