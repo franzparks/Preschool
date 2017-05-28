@@ -48,13 +48,9 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 		return ratingAndReviewRepository.save(ratingAndReview);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.preschool.service.RatingAndReviewService#removeOne(java.lang.Long)
-	 */
 	@Override
 	public void removeOne(Long id) {
-		// TODO Auto-generated method stub
-		
+		ratingAndReviewRepository.delete(id);	
 	}
 	
 }
