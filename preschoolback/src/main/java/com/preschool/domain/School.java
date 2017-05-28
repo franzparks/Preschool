@@ -4,6 +4,7 @@
 package com.preschool.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +29,8 @@ public class School implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	private RatingAndReview ratingAndReview;
+	
+	private List<RatingAndReview> ratingAndReviewsList;
 	
 	private String title;
 	private String subTitle;
