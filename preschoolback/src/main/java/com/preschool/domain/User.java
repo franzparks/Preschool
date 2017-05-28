@@ -5,6 +5,7 @@ package com.preschool.domain;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -46,5 +47,8 @@ private static final long serialVersionUID = 902783495L;
 	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonIgnore
 	private Set<UserRole> userRoles = new HashSet<>();
+	
+	@OneToMany(mappedBy="user")
+	private List<RatingAndReview> orderList;
 	
 }
