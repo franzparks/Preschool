@@ -3,10 +3,13 @@
  */
 package com.preschool.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * @author francisphiri
  *
  */
-public interface UserSecurityService {
+@Service
+public interface UserSecurityService implements UserDetailsService{
 	
 }
