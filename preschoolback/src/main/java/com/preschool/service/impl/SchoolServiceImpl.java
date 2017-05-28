@@ -33,8 +33,7 @@ public class SchoolServiceImpl implements SchoolService{
 
 	@Override
     public School save(School book) {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return schoolRepository.save(book);
     }
 
 	@Override
