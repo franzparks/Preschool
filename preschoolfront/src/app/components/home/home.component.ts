@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Params, ActivatedRoute, Router} from '@angular/router';
+
 import { School } from '../../models/school';
 import {SchoolService } from '../../services/school.service';
 
@@ -14,7 +16,12 @@ export class HomeComponent implements OnInit {
 
 	schools: School[] = [];
 
-	constructor(private schoolService : SchoolService) { }
+	constructor(
+		private schoolService : SchoolService,
+		private router:Router,
+		private http:Http,
+		private route:ActivatedRoute
+	) { }
 
 	ngOnInit() {
 		this.schoolService.getSchoolList().subscribe(
@@ -25,6 +32,10 @@ export class HomeComponent implements OnInit {
       		},
       		error => console.log(error)
 		)
+	}
+
+	getSchoolDetails(school: School){
+		this.router.navigate(['/school-details/', school.id]);
 	}
 	  
 
