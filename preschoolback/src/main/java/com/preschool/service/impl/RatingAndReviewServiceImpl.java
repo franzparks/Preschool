@@ -42,13 +42,10 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 		return ratingAndReviewRepository.findByMessageContaining(message);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.preschool.service.RatingAndReviewService#updateRatingAndReview(com.preschool.domain.RatingAndReview)
-	 */
+	
 	@Override
 	public RatingAndReview updateRatingAndReview(RatingAndReview ratingAndReview) {
-		// TODO Auto-generated method stub
-		return null;
+		return ratingAndReviewRepository.save(ratingAndReview);
 	}
 	
 	/* (non-Javadoc)
