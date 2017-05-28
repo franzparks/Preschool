@@ -6,15 +6,11 @@ package com.preschool.resource;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.preschool.domain.Result;
 import com.preschool.domain.School;
-import com.preschool.search.CustomSearch;
-import com.preschool.search.CustomSearchImp;
 
 /**
  * @author francis
@@ -25,20 +21,13 @@ import com.preschool.search.CustomSearchImp;
 @RequestMapping("/api")
 public class DataResource {
 	
-	@Autowired
-	private CustomSearch search;
+	//@Autowired
+	//private CustomSearch search;
 	
 	@RequestMapping(value = "/schoolList", method = RequestMethod.GET)
-    public List<School> bookList() {
+    public List<School> schoolList() {
 		ArrayList<School> list = new ArrayList<School>();
-		
-		if(list.size() < 1){
-			System.out.println("am here---------------------");
-			Result result = search.execute("Santa Clara Preschools");
-			System.out.println("results---------------------"+result.getItems());
-			list.addAll(result.getItems());
-		}
-		
+
 		return list;
 	}
 
