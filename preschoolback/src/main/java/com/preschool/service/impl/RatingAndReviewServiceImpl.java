@@ -31,13 +31,9 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 		return ratingAndReviewRepository.findOne(id);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.preschool.service.RatingAndReviewService#save(com.preschool.domain.RatingAndReview)
-	 */
 	@Override
-	public RatingAndReview save(RatingAndReview book) {
-		// TODO Auto-generated method stub
-		return null;
+	public RatingAndReview save(RatingAndReview review) {
+		return ratingAndReviewRepository.save(review);
 	}
 	
 	/* (non-Javadoc)
