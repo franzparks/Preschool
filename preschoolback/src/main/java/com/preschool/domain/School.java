@@ -3,6 +3,8 @@
  */
 package com.preschool.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Transient;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -11,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @author francis
  *
  */
-public class School {
+public class School implements Serializable{
 	
 	private static final long serialVersionUID=425345L;
 	
