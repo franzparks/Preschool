@@ -15,4 +15,5 @@ import com.preschool.domain.School;
  */
 public interface SchoolRepository extends CrudRepository<School, Long>{
 	List<School> findByTitleContaining(String keyword);
+	List<School> findAll();
 }

@@ -23,7 +23,7 @@ public class SchoolServiceImpl implements SchoolService{
 	@Override
     public List<School> findAll() {
 	    
-	    return (List<School>) schoolRepository.findAll();
+	    return  schoolRepository.findAll();
     }
 
 	@Override
