@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.preschool.config.repository.RatingAndReviewRepository;
 import com.preschool.domain.RatingAndReview;
+import com.preschool.domain.School;
 import com.preschool.service.RatingAndReviewService;
 
 /**
@@ -52,5 +53,12 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 	public void removeOne(Long id) {
 		ratingAndReviewRepository.delete(id);	
 	}
+
+
+	@Override
+    public List<RatingAndReview> findBySchool(School school) {
+	    
+	    return ratingAndReviewRepository.findBySchool(school);
+    }
 	
 }

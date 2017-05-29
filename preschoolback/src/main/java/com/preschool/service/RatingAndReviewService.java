@@ -6,6 +6,7 @@ package com.preschool.service;
 import java.util.List;
 
 import com.preschool.domain.RatingAndReview;
+import com.preschool.domain.School;
 
 /**
  * @author francisphiri
@@ -14,6 +15,8 @@ import com.preschool.domain.RatingAndReview;
 public interface RatingAndReviewService {
 	
 	List<RatingAndReview> findAll();
+	
+	List<RatingAndReview> findBySchool(School school);
 	
 	RatingAndReview findOne(Long id);
 	
