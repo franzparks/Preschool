@@ -58,8 +58,8 @@
 
 							<md-tab label="Forgot Password">
 								<div style="margin-top: 20px;">
-									<div class="alert alert-warning" >Email doesn't exists.</div>
-									<div class="alert alert-success" >Email sent.</div>
+									<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
+									<div class="alert alert-success" *ngIf="forgetPasswordEmailSent">Email sent.</div>
 									<form >
 										<div class="form-group">
 											<label for="recoverEmail">Your Email Address *</label>
