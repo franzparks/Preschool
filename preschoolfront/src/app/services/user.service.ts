@@ -13,17 +13,39 @@ export class UserService {
   	) { }
 
   	newUser(username: string, email:string) {
-  	let url = this.serverPath+'/user/newUser';
-  	let userInfo = {
-  		"username" : username,
-  		"email" : email
-  	}
-  	let tokenHeader = new Headers({
-  		'Content-Type' : 'application/json',
-  		'x-auth-token' : localStorage.getItem('xAuthToken')
-  	});
+	  	let url = this.serverPath+'/user/newUser';
+	  	let userInfo = {
+	  		"username" : username,
+	  		"email" : email
+	  	}
+	  	let tokenHeader = new Headers({
+	  		'Content-Type' : 'application/json',
+	  		'x-auth-token' : localStorage.getItem('xAuthToken')
+	  	});
 
-  	return this.http.post(url, JSON.stringify(userInfo), {headers : tokenHeader});
-  }
+  		return this.http.post(url, JSON.stringify(userInfo), {headers : tokenHeader});
+ 	}
+
+ 	updateUserInfo(user: User, newPassword: string, currentPassword: string) {
+	    let url = this.serverPath + "/user/updateUserInfo";
+	    let userInfo = {
+	      "id" : user.id,
+	      "firstName" : user.firstName,
+	      "lastName" : user.lastName,
+	      "username" : user.username,
+	      "currentPassword" : currentPassword,
+	      "email" : user.email,
+	      "newPassword" :newPassword
+	    };
+
+	    let tokenHeader = new Headers({
+	      'Content-Type' : 'application/json',
+	      'x-auth-token' : localStorage.getItem("xAuthToken")
+	    });
+	    return this.http.post(url, JSON.stringify(userInfo), {headers:tokenHeader});
+  	}
+
+
+
 
 }
