@@ -60,7 +60,7 @@
 								<div style="margin-top: 20px;">
 									<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
 									<div class="alert alert-success" *ngIf="forgetPasswordEmailSent">Email sent.</div>
-									<form >
+									<form (ngSubmit)="onForgetPassword()">
 										<div class="form-group">
 											<label for="recoverEmail">Your Email Address *</label>
 											<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" 
