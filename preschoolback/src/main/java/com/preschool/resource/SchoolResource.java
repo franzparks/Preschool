@@ -125,5 +125,12 @@ public class SchoolResource {
 		return book;
 	}
 	
+	@RequestMapping(value="/searchSchool", method=RequestMethod.POST)
+	public List<School> searchBook (@RequestBody String keyword) {
+		List<School> bookList = schoolService.blurrySearch(keyword);
+		
+		return bookList;
+	}
+	
 	
 }
