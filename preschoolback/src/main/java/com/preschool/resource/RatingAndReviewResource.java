@@ -70,5 +70,14 @@ public class RatingAndReviewResource {
 		return ratingAndReviewService.save(ratingAndReview);
 	}
 	
+	@RequestMapping(value="/remove", method=RequestMethod.POST)
+	public ResponseEntity removeReviewPost(
+			@RequestBody String id,
+			Principal principal
+			) {
+		ratingAndReviewService.removeOne(Long.parseLong(id));
+		return new ResponseEntity("Review Removed Successfully!", HttpStatus.OK);
+	}
+	
 	
 }
