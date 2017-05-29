@@ -101,4 +101,9 @@ public class SchoolResource {
 		return schoolService.findAll();
 	}
 	
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	public School updateSchoolPost(@RequestBody School school) {
+		return schoolService.save(school);
+	}
+	
 }
