@@ -136,8 +136,11 @@ private static final long serialVersionUID = 902783495L;
 
 	@Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-	    // TODO Auto-generated method stub
-	    return null;
+		
+		Set<GrantedAuthority> authorities = new HashSet<>();
+		userRoles.forEach(ur -> authorities.add(new Authority(ur.getRole().getName())));
+		
+		return authorities;
     }
 
 	@Override
