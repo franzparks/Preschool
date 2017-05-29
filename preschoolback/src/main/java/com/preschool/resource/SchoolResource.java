@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -93,6 +94,11 @@ public class SchoolResource {
 			e.printStackTrace();
 			return new ResponseEntity("Upload failed!", HttpStatus.BAD_REQUEST);
 		}
+	}
+	
+	@RequestMapping("/schoolList")
+	public List<School> getSchoolList() {
+		return schoolService.findAll();
 	}
 	
 }
