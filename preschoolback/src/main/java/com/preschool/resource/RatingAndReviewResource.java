@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.preschool.domain.RatingAndReview;
 import com.preschool.domain.School;
+import com.preschool.domain.User;
 import com.preschool.service.RatingAndReviewService;
 
 /**
@@ -30,8 +31,8 @@ public class RatingAndReviewResource {
 	}
 	
 	@RequestMapping (value="/byUser", method=RequestMethod.POST)
-	public List<RatingAndReview> findAllByUser(@RequestBody School school){
-		return null;
+	public List<RatingAndReview> findAllByUser(@RequestBody User user){
+		return ratingAndReviewService.findByUser(user);
 	}
 	
 }
