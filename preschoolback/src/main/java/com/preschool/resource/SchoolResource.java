@@ -68,4 +68,31 @@ public class SchoolResource {
 		}
 	}
 	
+	@RequestMapping(value="/update/image", method=RequestMethod.POST)
+	public ResponseEntity updateImagePost(
+			@RequestParam("id") Long id,
+			HttpServletResponse response, HttpServletRequest request
+			){
+		try {
+			School school = schoolService.findOne(id);
+			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+			Iterator<String> it = multipartRequest.getFileNames();
+			MultipartFile multipartFile = multipartRequest.getFile(it.next());
+			String fileName = id+".png";
+			
+			Files.delete(Paths.get("src/main/resources/static/image/school/"+fileName));
+			
+			byte[] bytes = multipartFile.getBytes();
+			BufferedOutputStream stream = new BufferedOutputStream(
+					new FileOutputStream(new File("src/main/resources/static/image/school/"+fileName)));
+			stream.write(bytes);
+			stream.close();
+			
+			return new ResponseEntity("Upload Success!", HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity("Upload failed!", HttpStatus.BAD_REQUEST);
+		}
+	}
+	
 }
