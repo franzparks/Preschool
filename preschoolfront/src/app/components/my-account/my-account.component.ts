@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {UserService} from '../../services/user.service';
-import {AppConst} from '../../constants/app-const';
+import {AppConst} from '../../constants/app-consts';
 
 
 @Component({
