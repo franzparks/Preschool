@@ -12,13 +12,28 @@ import {AppConst} from '../../constants/app-const';
 })
 export class MyAccountComponent implements OnInit {
 
-  constructor(
-  	private loginService: LoginService,
-  	private userService: UserService,
-  	private router: Router
-  ) { }
+	private serverPath = AppConst.serverPath;
+  	private loginError:boolean = false;
+  	private loggedIn = false;
+  	private credential = {'username':'', 'password':''};
 
-  ngOnInit() {
-  }
+  	private emailSent: boolean =false;
+  	private usernameExists:boolean;
+  	private emailExists:boolean;
+  	private username:string;
+  	private email:string;
+
+  	private emailNotExists: boolean =false;
+  	private forgetPasswordEmailSent: boolean;
+  	private recoverEmail:string;  
+
+  	constructor(
+  		private loginService: LoginService,
+  		private userService: UserService,
+  		private router: Router
+  	) { }
+
+  	ngOnInit() {
+  	}
 
 }
