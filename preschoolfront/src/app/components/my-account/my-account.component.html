@@ -7,6 +7,7 @@
                 <div class="panel panel-default panel-faq" style="border:none;">
 					<div class="panel-body" style="background-color: #ededed; margin-top:20px;">
 						<md-tab-group>
+
 							<md-tab label="Login">
 								<div style="margin-top:20px;">
 									<div  *ngIf="loginError" style="color:red;">
@@ -30,9 +31,12 @@
 									</form>
 								</div>
 							</md-tab>
+
+
 							<md-tab label="New Account">
 								<div style="margin-top: 20px;">
-									<div class="alert alert-info" >An email has been sent to the email address you just registered. Please validate your email adderss and update your password info.</div>
+									<div class="alert alert-info" *ngIf="emailSent">An email has been sent to the email address you just registered. Please validate your email adderss and update your password info.
+									</div>
 									<form >
 										<div class="form-group">
 											<label for="newUsername">Username *</label>&nbsp;<span *ngIf="usernameExists" style="color:red;">Username already exists. Choose a different one.</span>
