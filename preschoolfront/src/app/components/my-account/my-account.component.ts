@@ -12,7 +12,11 @@ import {AppConst} from '../../constants/app-const';
 })
 export class MyAccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  	private loginService: LoginService,
+  	private userService: UserService,
+  	private router: Router
+  ) { }
 
   ngOnInit() {
   }
