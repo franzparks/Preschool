@@ -16,12 +16,14 @@
 									<form (ngSubmit)="onLogin()">
 										<div class="form-group">
 											<label for ="username">Username *</label>
-											<input type="text" class="form-control" id="username" name="username" required="required" autofocus="autofocus">
+											<input type="text" class="form-control" id="username" name="username" 
+											[(ngModel)]="credential.username" required="required" autofocus="autofocus">
 											<p class="entry-prompt-alert">Enter your username</p>
 										</div>
 										<div class="form-group">
 											<label for ="password">Password *</label>
-											<input type="password" class="form-control" id="password" name="password"  required="required" autofocus="autofocus">
+											<input type="password" class="form-control" id="password" name="password" 
+											[(ngModel)]="credential.password" required="required" autofocus="autofocus">
 											<p class="entry-prompt-alert">Enter your password</p>
 										</div>
 										<button md-raised-button type="submit" class="mat-primary">Log In</button>
