@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
-import {AppConst} from '../constants/app-const';
+import {AppConst} from '../constants/app-consts';
 import {User} from '../models/user';
 
 @Injectable()
