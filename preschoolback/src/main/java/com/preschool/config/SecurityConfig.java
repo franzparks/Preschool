@@ -15,6 +15,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.session.web.http.HeaderHttpSessionStrategy;
 import org.springframework.session.web.http.HttpSessionStrategy;
 
+import com.preschool.service.UserSecurityService;
+
 /**
  * @author francisphiri
  *
@@ -26,8 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private Environment env;
 	
-	//@Autowired
-	//private UserSecurityService userSecurityService;
+	@Autowired
+	private UserSecurityService userSecurityService;
 	
 	private BCryptPasswordEncoder passwordEncoder() {
 		return SecurityUtility.passwordEncoder();
