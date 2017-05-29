@@ -106,6 +106,18 @@ public class SchoolResource {
 		return schoolService.save(school);
 	}
 	
+	@RequestMapping(value="/remove", method=RequestMethod.POST)
+	public ResponseEntity remove(
+			@RequestBody String id
+			) throws IOException {
+		schoolService.removeOne(Long.parseLong(id));
+		String fileName = id+".png";
+		
+		Files.delete(Paths.get("src/main/resources/static/image/school/"+fileName));
+		
+		return new ResponseEntity("Remove Success!", HttpStatus.OK);
+	}
+	
 	
 	
 }
