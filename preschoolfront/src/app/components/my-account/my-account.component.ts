@@ -66,6 +66,22 @@ export class MyAccountComponent implements OnInit {
 	  		});
 	}
 
+	onForgotPassword() {
+  	this.forgetPasswordEmailSent = false;
+  	this.emailNotExists = false;
+
+  	this.userService.retrievePassword(this.recoverEmail).subscribe(
+  		res => {
+  			console.log(res);
+  			this.forgetPasswordEmailSent = true;
+  		},
+  		error => {
+  			console.log(error.text());
+  			let errorMessage = error.text();
+  			if(errorMessage==="Email not found") this.emailNotExists=true;
+  		});
+    }
+
 
   	ngOnInit() {
   	}
