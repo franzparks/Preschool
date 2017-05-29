@@ -23,6 +23,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.preschool.domain.security.UserRole;
+import com.preschool.domain.security.Authority;
 
 /**
  * @author francisphiri
