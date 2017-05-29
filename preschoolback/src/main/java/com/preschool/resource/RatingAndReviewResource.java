@@ -65,5 +65,10 @@ public class RatingAndReviewResource {
 		return new ResponseEntity("Review Added Successfully!", HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	public RatingAndReview updateReviewPost(@RequestBody RatingAndReview ratingAndReview) {
+		return ratingAndReviewService.save(ratingAndReview);
+	}
+	
 	
 }
