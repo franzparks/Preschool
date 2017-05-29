@@ -63,13 +63,15 @@
 									<form >
 										<div class="form-group">
 											<label for="recoverEmail">Your Email Address *</label>
-											<input type="email" class="form-control" id="recoverEmail" name="recoverEmail"  required="required" >
+											<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" 
+											[(ngModel)]="recoverEmail"  required="required" >
 											<p class="entry-prompt-alert">Enter your registered email address.</p>
 										</div>
 										<button md-raised-button type="submit" class="mat-primary">Submit</button>
 									</form>
 								</div>
 							</md-tab>
+
 						</md-tab-group>
 					</div>
 				</div>
