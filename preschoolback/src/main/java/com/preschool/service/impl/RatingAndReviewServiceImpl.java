@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.preschool.config.repository.RatingAndReviewRepository;
 import com.preschool.domain.RatingAndReview;
 import com.preschool.domain.School;
+import com.preschool.domain.User;
 import com.preschool.service.RatingAndReviewService;
 
 /**
@@ -56,9 +57,14 @@ public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 
 
 	@Override
-    public List<RatingAndReview> findBySchool(School school) {
-	    
+    public List<RatingAndReview> findBySchool(School school) {    
 	    return ratingAndReviewRepository.findBySchool(school);
+    }
+
+
+	@Override
+    public List<RatingAndReview> findByUser(User user) {    
+	    return ratingAndReviewRepository.findByUser(user);
     }
 	
 }
