@@ -20,6 +20,7 @@ import { MyAccountComponent } from './components/my-account/my-account.component
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 import { SchoolService } from './services/school.service';
 import { UserService } from './services/user.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { UserService } from './services/user.service';
     InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
-  providers: [SchoolService,UserService],
+  providers: [SchoolService,UserService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
