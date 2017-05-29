@@ -49,6 +49,26 @@ export class MyAccountComponent implements OnInit {
   	);
   }
 
+  onNewAccount() {
+  	this.usernameExists = false;
+  	this.emailExists = false;
+  	this.emailSent = false;
+
+  	this.userService.newUser(this.username, this.email).subscribe(
+  		res => {
+  			console.log(res);
+  			this.emailSent = true;
+  		}, 
+  		error => {
+  			console.log(error.text());
+  			let errorMessage = error.text();
+  			if(errorMessage==="usernameExists") this.usernameExists=true;
+  			if(errorMessage==="emailExists") this.emailExists=true;
+  		}
+  	);
+  }
+
+
   	ngOnInit() {
   	}
 
