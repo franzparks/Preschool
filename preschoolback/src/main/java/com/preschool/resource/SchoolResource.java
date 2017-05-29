@@ -40,12 +40,12 @@ public class SchoolResource {
 	@Autowired
 	private SchoolService schoolService;
 	
-	@RequestMapping (value="/addSchool", method=RequestMethod.POST)
+	@RequestMapping (value="/add", method=RequestMethod.POST)
 	public School addSchoolPost(@RequestBody School school) {
 		return schoolService.save(school);
 	}
 	
-	@RequestMapping(value="/addSchool/image", method=RequestMethod.POST)
+	@RequestMapping(value="/add/image", method=RequestMethod.POST)
 	public ResponseEntity upload(
 			@RequestParam("id") Long id,
 			HttpServletResponse response, HttpServletRequest request){
@@ -105,5 +105,7 @@ public class SchoolResource {
 	public School updateSchoolPost(@RequestBody School school) {
 		return schoolService.save(school);
 	}
+	
+	
 	
 }
