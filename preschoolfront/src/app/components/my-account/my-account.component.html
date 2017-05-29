@@ -40,7 +40,8 @@
 									<form (ngSubmit)="onNewAccount()">
 										<div class="form-group">
 											<label for="newUsername">Username *</label>&nbsp;<span *ngIf="usernameExists" style="color:red;">Username already exists. Choose a different one.</span>
-											<input type="text" class="form-control" id="newUsername" name="username"  required="required" >
+											<input type="text" class="form-control" id="newUsername" name="username" 
+											[(ngModel)]="username" required="required" >
 											<p class="entry-prompt-alert">Enter your username</p>
 										</div>
 										<div class="form-group">
