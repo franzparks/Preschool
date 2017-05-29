@@ -5,9 +5,11 @@ package com.preschool.resource;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.preschool.domain.RatingAndReview;
@@ -35,4 +37,9 @@ public class RatingAndReviewResource {
 		return ratingAndReviewService.findByUser(user);
 	}
 	
+	@RequestMapping (value="/{id}", method=RequestMethod.GET)
+	RatingAndReview findById(@PathVariable("id") Long id){
+		RatingAndReview ratingAndReview = ratingAndReviewService.findOne(id);
+		return ratingAndReview;	
+	}
 }
