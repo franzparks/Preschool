@@ -6,6 +6,7 @@ package com.preschool.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.preschool.config.repository.RatingAndReviewRepository;
 import com.preschool.domain.RatingAndReview;
@@ -17,6 +18,7 @@ import com.preschool.service.RatingAndReviewService;
  * @author francisphiri
  *
  */
+@Service
 public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 	
 	@Autowired
