@@ -5,6 +5,8 @@ import {User} from '../models/user';
 
 @Injectable()
 export class UserService {
+	
+	private serverPath: string = AppConst.serverPath;
 
   	constructor(
   		private http:Http
