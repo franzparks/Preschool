@@ -42,4 +42,12 @@ public class RatingAndReviewResource {
 		RatingAndReview ratingAndReview = ratingAndReviewService.findOne(id);
 		return ratingAndReview;	
 	}
+	
+	@RequestMapping (value="/save", method=RequestMethod.POST)
+	RatingAndReview save(@RequestBody RatingAndReview ratingAndReview){
+		RatingAndReview ratingAndReviewOutPut = ratingAndReviewService.save(ratingAndReview);
+		return 	ratingAndReviewOutPut;
+	}
+	
+	
 }

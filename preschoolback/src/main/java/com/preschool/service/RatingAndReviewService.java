@@ -23,7 +23,7 @@ public interface RatingAndReviewService {
 	
 	RatingAndReview findOne(Long id);
 	
-	RatingAndReview save(RatingAndReview book);
+	RatingAndReview save(RatingAndReview ratingAndReview);
 	
 	List<RatingAndReview> blurrySearch(String title);
 	
