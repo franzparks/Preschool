@@ -42,8 +42,8 @@ import { LoginService } from './services/login.service';
     MdButtonModule, MdCheckboxModule,
     MdTabsModule,
     MdCardModule,
-    MdMenuModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    MdMenuModule
+    //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
   providers: [SchoolService,UserService,LoginService],
