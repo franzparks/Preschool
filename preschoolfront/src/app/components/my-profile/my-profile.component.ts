@@ -46,6 +46,18 @@ export class MyProfileComponent implements OnInit {
   			let errorMessage = error.text();
   			if(errorMessage==="Incorrect current password!") this.incorrectPassword=true;
   		});
-  }
+  	}
+
+  	getCurrentUser() {
+  	this.userService.getCurrentUser().subscribe(
+  		res => {
+  			this.user = res.json();
+
+  			this.dataFetched = true;
+  		},
+  		err => {
+  			console.log(err);
+  		});
+    }
 
 }
