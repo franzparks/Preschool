@@ -24,6 +24,7 @@ export class NavBarComponent implements OnInit {
   	ngOnInit() {
   		this.loginService.checkSession().subscribe(
   		res => {
+  			console.log("successfully logged in: "+ res);
   			this.loggedIn = true;
   		},
   		err => {
