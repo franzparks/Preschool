@@ -12,9 +12,13 @@ import { Router } from '@angular/router';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor() { }
+	constructor(
+		private loginService: LoginService,
+  		private userService: UserService,
+  		private router: Router
+	) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }
