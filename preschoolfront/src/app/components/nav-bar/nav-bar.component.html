@@ -6,22 +6,22 @@
 		Nursery Express
 	</span>
 	</a>
-	<a  md-button aria-disabled="false" *ngIf="loggedIn" (click)="logout()"
+	<a *ngIf="loggedIn" md-button aria-disabled="false"  (click)="logout()"
 		 tabindex="0" class="nav-tem">
 		<span >LOGOUT</span>
 	</a>
 	<a  md-button="" aria-disabled="false" *ngIf="loggedIn"
 		routerlink="/my-profile" href="/my-profile" tabindex="0" class="nav-tem">
-		<span >MY PROFILE</span>
+		<span>MY PROFILE</span>
 	</a>
-	<a  md-button="" aria-disabled="false" *ngIf="!loggedIn"
+	<!--<a  md-button="" aria-disabled="false" *ngIf="!loggedIn"
 		routerlink="/my-profile" href="/my-profile" tabindex="0" class="nav-tem">
 		<span >Sign up</span>
-	</a>
+	</a>-->
 
 	<a  md-button="" aria-disabled="false" *ngIf="!loggedIn"
 		routerlink="/my-account" href="/my-account" tabindex="0" class="nav-tem">
-		<span >Sign in</span>
+		<span >My ACCOUNT</span>
 	</a>
 	<a  md-button="" aria-disabled="false" routerlink="/" href="/" tabindex="0" class="nav-tem">
 		<span >Home</span>
