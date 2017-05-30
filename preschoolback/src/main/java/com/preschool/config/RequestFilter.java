@@ -47,7 +47,8 @@ public class RequestFilter implements Filter{
             response.setHeader("Access-Control-Allow-Methods", "POST,GET,DELETE,OPTIONS");
             response.setHeader("Access-Control-Max-Age", "3600");
             response.setHeader("Access-Control-Allow-Headers", "authorization, content-type," +
-                    "access-control-request-headers,access-control-request-method,accept,origin,authorization,x-requested-with");
+                    "access-control-request-headers,access-control-request-method,accept,origin,authorization,x-requested-with,"
+                    + "x-auth-token");
             response.setStatus(HttpServletResponse.SC_OK);
         }
 
