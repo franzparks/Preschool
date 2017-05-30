@@ -19,4 +19,14 @@ export class NavBarComponent implements OnInit {
   	ngOnInit() {
   	}
 
+  	logout() {
+	  	this.loginService.logout().subscribe(
+	  		res => {
+	  			location.reload();
+	  		},
+	  		err => {
+	  			console.log(err);
+  		});
+  	}
+
 }
