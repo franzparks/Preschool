@@ -70,7 +70,7 @@
                                         <div class="form-group">
                                             <label for="email">
                                                 Email Address *
-                                            </label>&nbsp;<span  class="error-entry-alert">Email already exists. Choose a different one.</span>
+                                            </label>&nbsp;<span *ngIf="emailExists" class="error-entry-alert">Email already exists. Choose a different one.</span>
                                             <input required="required" type="email" class="form-control" id="email" name="email" 
                                             [(ngModel)]="user.email" />
                                             <p class="entry-prompt-alert">A valid e-mail address. All e-mails from the system will be sent to this address.</p>
