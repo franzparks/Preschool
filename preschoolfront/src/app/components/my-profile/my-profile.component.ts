@@ -32,8 +32,6 @@ export class MyProfileComponent implements OnInit {
   		private router: Router
 	) { }
 
-	ngOnInit() {
-	}
 
 	onUpdateUserInfo () {
   	this.userService.updateUserInfo(this.user, this.newPassword, this.currentPassword).subscribe(
@@ -59,5 +57,20 @@ export class MyProfileComponent implements OnInit {
   			console.log(err);
   		});
     }
+
+    ngOnInit() {
+		this.loginService.checkSession().subscribe(
+  		res => {
+  			this.loggedIn = true;
+  		},
+  		error => {
+  			this.loggedIn = false;
+  			console.log("inactive session");
+  			this.router.navigate(['/my-account']);
+  		});
+
+  		this.getCurrentUser();
+  	}
+
 
 }
