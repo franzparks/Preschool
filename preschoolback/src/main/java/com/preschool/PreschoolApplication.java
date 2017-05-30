@@ -34,7 +34,7 @@ public class PreschoolApplication implements CommandLineRunner{
 		user1.setLastName("Adams");
 		user1.setUsername("j");
 		user1.setPassword(SecurityUtility.passwordEncoder().encode("p"));
-		user1.setEmail("JAdams@gmail.com");
+		user1.setEmail("nursery.express@gmail.com");
 		Set<UserRole> userRoles = new HashSet<>();
 		Role role1 = new Role();
 		role1.setRoleId(1);
