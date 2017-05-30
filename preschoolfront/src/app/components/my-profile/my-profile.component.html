@@ -55,7 +55,7 @@
                                         <div class="form-group">
                                             <label for="username">
                                                 Username *
-                                            </label>&nbsp;<span  class="error-entry-alert">Username already exists. Choose a different one.</span>
+                                            </label>&nbsp;<span *ngIf="usernameExists" class="error-entry-alert">Username already exists. Choose a different one.</span>
                                             <input required="required" type="text" class="form-control" id="username" name="username"  />
                                         </div>
                                         <div class="form-group">
