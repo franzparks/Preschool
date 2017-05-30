@@ -10,9 +10,13 @@ import {SchoolService} from '../../services/school.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  	constructor(
+  		private loginService: LoginService,
+    	private router: Router,
+    	private bookService: BookService
+  	) { }
 
-  ngOnInit() {
-  }
+  	ngOnInit() {
+  	}
 
 }
