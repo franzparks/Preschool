@@ -9,7 +9,7 @@ import {AppConst} from '../constants/app-consts';
 @Injectable()
 export class SchoolService {
 
-	private schoolsUrl = 'app/schools';
+	private schoolsUrl = AppConst.serverPath+"/schools";
 
   	constructor(private http: Http) { }
 
