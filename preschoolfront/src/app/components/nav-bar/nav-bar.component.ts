@@ -27,6 +27,7 @@ export class NavBarComponent implements OnInit {
   			this.loggedIn = true;
   		},
   		err => {
+  			console.log("error loggin in: "+ err);
   			this.loggedIn =false;
   		});
  	}
