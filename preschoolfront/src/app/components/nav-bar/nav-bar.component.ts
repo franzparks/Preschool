@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { Router, NavigationExtras } from '@angular/router';
 import {SchoolService} from '../../services/school.service';
+import {School} from '../../models/school';
 
 @Component({
   selector: 'app-nav-bar',
