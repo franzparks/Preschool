@@ -10,6 +10,10 @@ import {SchoolService} from '../../services/school.service';
 })
 export class NavBarComponent implements OnInit {
 
+	private loggedIn = false;
+  	private keyword: string;
+  	private schoolList:School[] =[];
+
   	constructor(
   		private loginService: LoginService,
     	private router: Router,
