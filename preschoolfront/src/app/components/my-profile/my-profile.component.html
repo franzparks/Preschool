@@ -28,10 +28,10 @@
                             <md-tab-group [selectedIndex]="selectedProfileTab">
                                 <md-tab label="Edit">
                                     <div class="alerts">
-                                        <div class="alert alert-danger" >
+                                        <div class="alert alert-danger" *ngIf="incorrectPassword">
                                             <strong>Incorrect Password!</strong> Please enter the correct password for the current user.
                                         </div>
-                                        <div class="alert alert-success" >
+                                        <div class="alert alert-success" *ngIf="updateSuccess">
                                             <strong>Update Success!</strong>
                                         </div>
                                     </div>
