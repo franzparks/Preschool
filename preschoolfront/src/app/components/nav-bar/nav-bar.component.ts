@@ -13,7 +13,7 @@ export class NavBarComponent implements OnInit {
   	constructor(
   		private loginService: LoginService,
     	private router: Router,
-    	private bookService: BookService
+    	private schoolService: SchoolService
   	) { }
 
   	ngOnInit() {
@@ -28,5 +28,7 @@ export class NavBarComponent implements OnInit {
 	  			console.log(err);
   		});
   	}
+
+  	
 
 }
