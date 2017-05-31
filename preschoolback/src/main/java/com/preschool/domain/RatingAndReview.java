@@ -39,7 +39,10 @@ private static final long serialVersionUID=425345L;
 	private User user;
 	
 	private String message;
+	
 	private Date date;
+	
+	
 	public Long getId() {
 		return id;
 	}
