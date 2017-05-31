@@ -16,7 +16,7 @@ public interface SchoolService {
 	
 	School findOne(Long id);
 	
-	School save(School book);
+	School save(School school);
 	
 	List<School> blurrySearch(String title);
 	
