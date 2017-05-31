@@ -7,5 +7,5 @@ export class School {
 	summary: string;
 	address: string;
 	phone: string;
-	rating: number;
+	averageRating: number;
 }
