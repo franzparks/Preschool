@@ -108,8 +108,7 @@ public class PreschoolApplication implements CommandLineRunner{
 		school3.setTitle("South Bay Community Preschool");
 		school3.setSubTitle("Discovering that learning is fun!");
 		school3.setSnippet("South Bay Community Preschool is a non-profit "
-				+ "organization supported by tuition only. ... "
-				+ "Our Preschool is affiliated with South Bay Baptist Church located on the");
+				+ "organization supported by tuition only.");
 		school3.setSummary("South Bay Community Preschool is a non-profit organization supported by tuition "
 				+ "only. We do not discriminate in regards to race, color, or creed. SBCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
 		school3.setAddress("1180 Murphy Ave, San Jose, CA 95131");
