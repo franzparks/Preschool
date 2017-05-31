@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.preschool.config.SecurityUtility;
+import com.preschool.domain.School;
 import com.preschool.domain.User;
 import com.preschool.domain.security.Role;
 import com.preschool.domain.security.UserRole;
@@ -60,6 +61,26 @@ public class PreschoolApplication implements CommandLineRunner{
 		role2.setName("ROLE_ADMIN");
 		userRoles.add(new UserRole(user2, role2));
 		
-		userService.createUser(user2, userRoles); 
+		userService.createUser(user2, userRoles);
+		
+		School school1 =  new School();
+		school1.setTitle("The Harker School - Preschool");
+		school1.setSubTitle("The bay\'s best");
+		school1.setSnippet("At Harker’s preschool, our early learning program for 3-, 4- and young"
+				+ " 5-year-olds emphasizes hands-on learning,"
+				+ " intentional play and developmentally appropriate classroom activities.");
+		
+		school1.setSummary("Beginnings matter. At Harker, we understand the importance of giving your "
+				+ "child the best possible foundation for an outstanding academic career. That starts with "
+				+ "choosing the right preschool to excite, nurture and challenge children so they are "
+				+ "not only ready for the next step but excited to get there.");
+		
+		school1.setAddress("4525 Union Ave, San Jose, CA 95124");
+		
+		school1.setPhone("(408) 553-5700");
+		
+		school1.setAverageRating(4);
+		
+		schoolService.save(school1);
     }
 }
