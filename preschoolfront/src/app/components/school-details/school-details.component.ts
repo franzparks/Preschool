@@ -15,7 +15,7 @@ export class SchoolDetailsComponent implements OnInit {
 
 	private schoolId : number;
 	private school : School;
-  private averageRating: number;
+ // private averageRating: number;
 
 	constructor(
 		private schoolService: SchoolService,
@@ -33,7 +33,7 @@ export class SchoolDetailsComponent implements OnInit {
   		this.schoolService.getSchool(this.schoolId).subscribe(
   		res => {
   			this.school=res.json();
-        averageRating = this.school.averageRating;
+        //this.averageRating = this.school.averageRating;
   		},
   		error => {
   			console.log(error);
