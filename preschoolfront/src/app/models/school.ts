@@ -8,4 +8,5 @@ export class School {
 	address: string;
 	phone: string;
 	averageRating: number;
+	schoolImage: string;
 }
