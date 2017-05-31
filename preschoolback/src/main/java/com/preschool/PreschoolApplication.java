@@ -15,6 +15,7 @@ import com.preschool.config.SecurityUtility;
 import com.preschool.domain.User;
 import com.preschool.domain.security.Role;
 import com.preschool.domain.security.UserRole;
+import com.preschool.service.SchoolService;
 import com.preschool.service.UserService;
 
 @SpringBootApplication
@@ -22,6 +23,9 @@ public class PreschoolApplication implements CommandLineRunner{
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private SchoolService schoolService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(PreschoolApplication.class, args);
