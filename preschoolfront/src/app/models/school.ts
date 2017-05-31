@@ -3,6 +3,7 @@ export class School {
 	ratingAndReviewsList: RatingAndReview;
 	title: string;
 	subTitle: string;
+	snippet: string;
 	summary: string;
 	address: string;
 	phone: string;
