@@ -81,6 +81,29 @@ public class PreschoolApplication implements CommandLineRunner{
 		
 		school1.setAverageRating(4);
 		
+		School school2 =  new School();
+		school2.setTitle("Challenger School");
+		school2.setSubTitle("The premier school in the country");
+		school2.setSnippet("Challenger School is an independent, "
+				+ "non-profit private school. To preserve our independence,"
+				+ " we do not accept public funds. However, as a non-profit entity, "
+				+ "we accept private, tax-deductible donations from those wishing to"
+				+ " contribute to our educational mission.");
+		
+		school2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
+				+ "and Texas, with more than 10,000 preschool to 8th grade students enrolled annually."
+				+"Challenger emphasizes the bedrock of knowledge: reading, composition, math, "
+				+ "and history. We promote individual and independent thinking, teach traditional American "
+				+ "history and values, and inspire children to embrace challenge and find joy and"
+				+ " self-worth through achievement.");
+		
+		school2.setAddress("18811 Cox Avenue Saratoga	CA 95070");
+		
+		school2.setPhone("(408) 378-0444");
+		
+		school2.setAverageRating(4);
+		
 		schoolService.save(school1);
+		schoolService.save(school2);
     }
 }
