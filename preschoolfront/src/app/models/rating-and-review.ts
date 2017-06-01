@@ -1,5 +1,5 @@
 export class RatingAndReview {
-	school: string;
+	schoolId: number;
 	user: string;
 	message: string;
 	rating:number;

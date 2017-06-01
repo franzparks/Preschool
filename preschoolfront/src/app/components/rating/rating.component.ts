@@ -25,7 +25,7 @@ export class RatingComponent implements OnInit {
   	) { }
 
   	onSubmit(){
-
+  		
   		this.newRatingAndReview.user = this.user.username;
   		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
   		res => {
