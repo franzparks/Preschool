@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RatingComponent implements OnInit {
 
+	private ratingAdded: boolean;
+
   constructor() { }
 
   ngOnInit() {
