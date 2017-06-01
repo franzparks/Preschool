@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AddRatingService } from '../../services/add-rating.service';
+import { LoginService } from '../../services/login.service';
+
+import { User } from '../../models/user';
 
 import{RatingAndReview} from '../../models/rating-and-review';
 
@@ -26,8 +29,7 @@ export class RatingComponent implements OnInit {
   		},
   		error => {
   			console.log(error);
-  		}
-  	);
+  		});
   	}
 
   	ngOnInit() {
