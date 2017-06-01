@@ -9,8 +9,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-//import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
-//import { MdToolbarModule, MdMenuModule,MdGridListModule,MdGridTileModule,MdInputContainerModule } from '@angular/material';
 import {MaterialModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -19,13 +17,14 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 import { SchoolService } from './services/school.service';
 import { UserService } from './services/user.service';
 import { LoginService } from './services/login.service';
 import { AddRatingService } from './services/add-rating.service';
 
-import { RatingComponent } from './components/rating/rating.component';
+
 
 @NgModule({
   declarations: [
@@ -46,13 +45,6 @@ import { RatingComponent } from './components/rating/rating.component';
     BrowserAnimationsModule,
     RatingModule,
     MaterialModule
-  //  MdButtonModule, MdCheckboxModule,
-   // MdTabsModule,
-    //MdCardModule,
-    //MdMenuModule,
-    //MdGridListModule,
-    //MdGridTileModule,
-    //MdInputContainerModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
