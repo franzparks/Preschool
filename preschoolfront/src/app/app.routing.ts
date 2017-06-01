@@ -28,6 +28,9 @@ const appRoutes: Routes = [
 	},{
 		path: 'school-details/:id',
 		component: SchoolDetailsComponent
+	},
+	{
+		path: 'write-review'
 	}
 ];
 
