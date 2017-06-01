@@ -19,7 +19,15 @@ export class RatingComponent implements OnInit {
   	) { }
 
   	onSubmit(){
-  		
+  		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
+  		res => {
+  			this.ratingAdded=true;
+  			this.newRatingAndReview = new RatingAndReview();
+  		},
+  		error => {
+  			console.log(error);
+  		}
+  	);
   	}
 
   	ngOnInit() {
