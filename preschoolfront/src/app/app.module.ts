@@ -44,7 +44,8 @@ import { RatingComponent } from './components/rating/rating.component';
     MdButtonModule, MdCheckboxModule,
     MdTabsModule,
     MdCardModule,
-    MdMenuModule
+    MdMenuModule,
+    MdGridListModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
