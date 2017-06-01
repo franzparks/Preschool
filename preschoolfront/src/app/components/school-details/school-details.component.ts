@@ -14,8 +14,16 @@ import  {School} from '../../models/school';
 export class SchoolDetailsComponent implements OnInit {
 
 	private schoolId : number;
-	school : School;
-  private averageRating: number;
+	
+  ratingAndReviewsList: RatingAndReview;
+  title: string;
+  subTitle: string;
+  snippet: string;
+  summary: string;
+  address: string;
+  phone: string;
+  averageRating: number;
+  schoolImage: string;
 
 	constructor(
 		private schoolService: SchoolService,
