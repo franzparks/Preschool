@@ -9,8 +9,9 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
-import { MdToolbarModule, MdMenuModule,MdGridListModule,MdGridTileModule } from '@angular/material';
+//import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
+//import { MdToolbarModule, MdMenuModule,MdGridListModule,MdGridTileModule,MdInputContainerModule } from '@angular/material';
+import {MaterialModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -41,12 +42,14 @@ import { RatingComponent } from './components/rating/rating.component';
     routing,
     BrowserAnimationsModule,
     RatingModule,
-    MdButtonModule, MdCheckboxModule,
-    MdTabsModule,
-    MdCardModule,
-    MdMenuModule,
-    MdGridListModule,
-    MdGridTileModule
+    MaterialModule
+  //  MdButtonModule, MdCheckboxModule,
+   // MdTabsModule,
+    //MdCardModule,
+    //MdMenuModule,
+    //MdGridListModule,
+    //MdGridTileModule,
+    //MdInputContainerModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
