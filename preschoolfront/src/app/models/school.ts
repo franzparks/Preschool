@@ -1,3 +1,4 @@
+import {RatingAndReview} from './rating-and-review';
 export class School {
 	id: number;
 	ratingAndReviewsList: RatingAndReview;

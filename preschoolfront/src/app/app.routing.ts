@@ -30,7 +30,8 @@ const appRoutes: Routes = [
 		component: SchoolDetailsComponent
 	},
 	{
-		path: 'write-review'
+		path: 'write-review',
+		component: SchoolDetailsComponent
 	}
 ];
 
