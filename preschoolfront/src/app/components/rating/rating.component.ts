@@ -17,6 +17,7 @@ export class RatingComponent implements OnInit {
 	private ratingAdded: boolean;
 	private newRatingAndReview: RatingAndReview = new RatingAndReview();
 	private user: User = new User();
+	private schoolId: number;
 
   	constructor(
   		private addRatingService:AddRatingService,
@@ -24,7 +25,7 @@ export class RatingComponent implements OnInit {
   	) { }
 
   	onSubmit(){
-  		
+
   		this.newRatingAndReview.user = this.user.username;
   		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
   		res => {
