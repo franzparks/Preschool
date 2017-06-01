@@ -10,11 +10,11 @@ export class RatingComponent implements OnInit {
 
 	private ratingAdded: boolean;
 	private newRatingAndReview: RatingAndReview = new RatingAndReview();
-
+	
   	constructor() { }
 
   	onSubmit(){
-  		
+
   	}
 
   	ngOnInit() {
