@@ -27,7 +27,7 @@ export class MyProfileComponent implements OnInit {
 	private selectedProfileTab: number = 0;
 
 	constructor(
-		private loginService: LoginService,
+		  private loginService: LoginService,
   		private userService: UserService,
   		private router: Router
 	) { }
