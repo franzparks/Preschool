@@ -20,10 +20,11 @@
 	    		<button md-button color="primary">LIKE</button>
 	    		<button md-button color="primary" [mdMenuTriggerFor]="menu">SHARE</button>
 	    		
-	    			<rating [(ngModel)]="school.averageRating"
-	            		[titles]="['one', 'two', 'three', 'four', 'five']">
-	    			</rating>
-	    			<span class="reviews-text">1000 reviews</span>
+    			<rating [(ngModel)]="school.averageRating"
+            		[titles]="['one', 'two', 'three', 'four', 'five']">
+    			</rating>
+    			<span class="reviews-text">1000 reviews</span>
+    			<button md-button color="primary">Write a Review</button>
 			</div>
 
 			<md-menu #menu="mdMenu">
