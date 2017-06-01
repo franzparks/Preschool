@@ -16,15 +16,6 @@ export class SchoolDetailsComponent implements OnInit {
 
 	private schoolId : number;
 	private school: School = new School();
-  /*ratingAndReviewsList: RatingAndReview;
-  private school.title: string;
-  private school.subTitle: string;
-  private school.snippet: string;
-  private school.summary: string;
-  private school.address: string;
-  private school.phone: string;
-  private school.averageRating: number;
-  private school.schoolImage: string;*/
 
 	constructor(
 		private schoolService: SchoolService,
@@ -41,15 +32,7 @@ export class SchoolDetailsComponent implements OnInit {
 
   		this.schoolService.getSchool(this.schoolId).subscribe(
   		res => {
-  			//this.school=res.json();
-        this.school = JSON.parse(JSON.stringify(res))._body);
-        /*this.school.subTitle = JSON.parse(JSON.stringify(res))._body["subTitle"];
-        this.school.snippet = JSON.parse(JSON.stringify(res))._body["snippet"];
-        this.school.summary = JSON.parse(JSON.stringify(res))._body["summary"];
-        this.school.address = JSON.parse(JSON.stringify(res))._body["address"];
-        this.school.phone = JSON.parse(JSON.stringify(res))._body["phone"];
-        this.school.averageRating = JSON.parse(JSON.stringify(res))._body["averageRating"];
-        this.school.schoolImage = JSON.parse(JSON.stringify(res))._body["schoolImage"];*/
+  			this.school=res.json(); 
   		},
   		error => {
   			console.log(error);
