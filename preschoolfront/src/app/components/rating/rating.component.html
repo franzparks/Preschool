@@ -3,11 +3,12 @@
 	<div [hidden]="ratingAdded">
 		<!--<h4 style="margin-top: 30px;">Write A Review <span style="font-size:small">* is a required field</span></h3>-->
 		<h4 align="center">Write A Review</h4>
+		
 		<form (ngSubmit)="onSubmit()">
 			<md-grid-list cols="4" rowHeight="60px">
 				<md-grid-tile [colspan]="4" [rowspan]="1">
 					<md-input-container>
-						<input mdInput id="message" type="text" required [(ngModel)]="newRatingAndReview.message" name="message" placeholder="Review">
+						<textarea mdInput id="message" type="text" required [(ngModel)]="newRatingAndReview.message" name="message" placeholder="Review"></textarea> 
 					</md-input-container>
 				</md-grid-tile>
 			</md-grid-list>
