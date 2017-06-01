@@ -17,7 +17,8 @@
 			<md-grid-list cols="8" rowHeight="60px">
 				<md-grid-tile [colspan]="8" [rowspan]="1">
 					<md-input-container>
-						<textarea id="message"  [(ngModel)]="newRatingAndReview.message" name="message" placeholder="Review"></textarea> 
+						<textarea id="message"  aria-label="message"
+							[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Review"></textarea> 
 					</md-input-container>
 				</md-grid-tile>
 			</md-grid-list>
