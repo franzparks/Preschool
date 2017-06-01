@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AddRatingService } from '../../services/add-rating.service';
 import { UserService } from '../../services/user.service';
@@ -21,7 +22,8 @@ export class RatingComponent implements OnInit {
 
   	constructor(
   		private addRatingService:AddRatingService,
-  		private userService: UserService
+  		private userService: UserService,
+  		private router: Router
   	) { }
 
   	onSubmit(){
