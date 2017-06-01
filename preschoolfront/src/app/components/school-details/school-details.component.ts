@@ -14,8 +14,8 @@ import  {School} from '../../models/school';
 export class SchoolDetailsComponent implements OnInit {
 
 	private schoolId : number;
-	private school : School;
- // private averageRating: number;
+	school : School;
+  private averageRating: number;
 
 	constructor(
 		private schoolService: SchoolService,
@@ -32,8 +32,10 @@ export class SchoolDetailsComponent implements OnInit {
 
   		this.schoolService.getSchool(this.schoolId).subscribe(
   		res => {
-  			this.school=res.json();
-        //this.averageRating = this.school.averageRating;
+  			//this.school=res.json();
+        this.school = JSON.parse(JSON.stringify(res))._body;
+        this.averageRating = JSON.parse(JSON.stringify(res))._body["averageRating"];
+        console.log("single results : "+this.school);
   		},
   		error => {
   			console.log(error);

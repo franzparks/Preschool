@@ -1,25 +1,26 @@
 <hr />
 <div class="app-content">
+
 <md-card>
       	<md-card-header>
-	    	<md-card-title>The Harker School - Preschool</md-card-title>
-	    	<md-card-subtitle>The bay's best</md-card-subtitle>
+	    	<md-card-title>{{title}}</md-card-title>
+	    	<md-card-subtitle>{{subTitle}}</md-card-subtitle>
 	  	</md-card-header>
-	  	<img md-card-image src="{{school.schoolImage}}">
+	  	<img md-card-image src="{{schoolImage}}">
 		 <md-card-content>
 		    
 		    <p>
-		    	{{school.summary}}
+		    	{{summary}}
 		    </p>
-		    <p><strong>Address : </strong>{{school.address}}</p>
-		    <p><strong>Phone : </strong>{{school.phone}}</p>
+		    <p><strong>Address : </strong>{{address}}</p>
+		    <p><strong>Phone : </strong>{{phone}}</p>
   		</md-card-content>
   		<md-card-actions>
 	  		<div>
 	    		<button md-button color="primary">LIKE</button>
 	    		<button md-button color="primary" [mdMenuTriggerFor]="menu">SHARE</button>
 	    		
-	    			<rating [(ngModel)]="school.averageRating"
+	    			<rating [(ngModel)]="averageRating"
 	            		[titles]="['one', 'two', 'three', 'four', 'five']">
 	    			</rating>
 	    			<span class="reviews-text">1000 reviews</span>
