@@ -14,20 +14,28 @@
 				</md-grid-tile>
 			</md-grid-list>
 
-			<md-grid-list cols="4" rowHeight="30px" >
+			<md-grid-list cols="4" rowHeight="60px" >
 				<md-grid-tile  [colspan]="4" [rowspan]="4">
 					<md-input-container>
+					    
 						<textarea mdInput id="message"  aria-label="message" md-no-resize rows="7" cols="70" 
-							[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... "></textarea> 
+						[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
 							
+						</textarea>
+						<br><br>
+						<div>
+							<button class="mat-primary" md-raised-button type="submit">Submit Review</button>
+						
+							<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
+						</div>	
+
 					</md-input-container>
-					
 				</md-grid-tile>
 			</md-grid-list>
 
 			
 
-			<md-grid-list cols="20" rowHeight="60px">
+			<!--<md-grid-list cols="20" rowHeight="60px">
 				<md-grid-tile [colspan]="2" [rowspan]="1" flex>
 						<button class="mat-primary" md-raised-button type="submit">Submit Review</button>
 
@@ -35,7 +43,7 @@
 				<md-grid-tile [colspan]="2" [rowspan]="1">
 					<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
 				</md-grid-tile>
-			</md-grid-list>
+			</md-grid-list>-->
 		</form>
 	</div>
 </div>
