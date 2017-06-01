@@ -6,10 +6,11 @@
 		<hr />
 		<form (ngSubmit)="onSubmit()">
 			<md-grid-list cols="8" rowHeight="30px">
-				<md-grid-tile [colspan]="8" [rowspan]="1">
+				<md-grid-tile [colspan]="8" [rowspan]="2">
 					<rating
             			[titles]="['one', 'two', 'three', 'four', 'five']">
     				</rating>
+
 				</md-grid-tile>
 			</md-grid-list>
 
@@ -18,7 +19,20 @@
 					<md-input-container>
 						<textarea mdInput id="message"  aria-label="message" md-no-resize rows="7" cols="70"
 							[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Review"></textarea> 
+							
 					</md-input-container>
+					
+				</md-grid-tile>
+			</md-grid-list>
+
+			<br><br>
+
+			<md-grid-list cols="20" rowHeight="60px">
+				<md-grid-tile [colspan]="4" [rowspan]="1">
+						<button class="mat-primary" md-raised-button type="submit">Submit Review</button>
+				</md-grid-tile>
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
 				</md-grid-tile>
 			</md-grid-list>
 		</form>
