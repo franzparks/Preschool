@@ -36,6 +36,13 @@ export class RatingComponent implements OnInit {
 
   	ngOnInit() {
   		this.ratingAdded=false;
+  		this.userService.getCurrentUser().subscribe(
+  		res => {
+  			this.user = res.json();
+  		},
+  		err => {
+  			console.log(err);
+  		});
   	}
 
 }
