@@ -5,8 +5,17 @@
 		<h4 align="center">Write A Review</h4>
 		<hr />
 		<form (ngSubmit)="onSubmit()">
-			<md-grid-list cols="4" rowHeight="60px">
-				<md-grid-tile [colspan]="4" [rowspan]="1">
+			<md-grid-list cols="8" rowHeight="60px">
+				<md-grid-tile [colspan]="8" [rowspan]="1">
+					
+						<rating
+            		[titles]="['one', 'two', 'three', 'four', 'five']">
+    			</rating>
+					
+				</md-grid-tile>
+			</md-grid-list>
+			<md-grid-list cols="8" rowHeight="60px">
+				<md-grid-tile [colspan]="8" [rowspan]="1">
 					<md-input-container>
 						<textarea mdInput id="message" type="text" required [(ngModel)]="newRatingAndReview.message" name="message" placeholder="Review"></textarea> 
 					</md-input-container>
