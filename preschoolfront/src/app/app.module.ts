@@ -10,7 +10,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
-import { MdToolbarModule, MdMenuModule } from '@angular/material';
+import { MdToolbarModule, MdMenuModule,MdGridListModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
