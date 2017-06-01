@@ -46,6 +46,9 @@ export class RatingComponent implements OnInit {
   		err => {
   			console.log(err);
   		});
+  		this.route.params.forEach((params: Params) => {
+  			this.schoolId = Number.parseInt(params['id']);
+  		});
   	}
 
 }
