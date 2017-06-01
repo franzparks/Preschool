@@ -41,9 +41,14 @@ export class SchoolDetailsComponent implements OnInit {
   		this.schoolService.getSchool(this.schoolId).subscribe(
   		res => {
   			//this.school=res.json();
-        this.school = JSON.parse(JSON.stringify(res))._body;
+        this.title = JSON.parse(JSON.stringify(res))._body["title"];
+        this.subTitle = JSON.parse(JSON.stringify(res))._body["subTitle"];
+        this.snippet = JSON.parse(JSON.stringify(res))._body["snippet"];
+        this.summary = JSON.parse(JSON.stringify(res))._body["summary"];
+        this.address = JSON.parse(JSON.stringify(res))._body["address"];
+        this.phone = JSON.parse(JSON.stringify(res))._body["phone"];
         this.averageRating = JSON.parse(JSON.stringify(res))._body["averageRating"];
-        console.log("single results : "+this.school);
+        this.schoolImage = JSON.parse(JSON.stringify(res))._body["schoolImage"];
   		},
   		error => {
   			console.log(error);
