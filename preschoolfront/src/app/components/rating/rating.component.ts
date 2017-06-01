@@ -13,6 +13,10 @@ export class RatingComponent implements OnInit {
 
   	constructor() { }
 
+  	onSubmit(){
+  		
+  	}
+
   	ngOnInit() {
   	}
 
