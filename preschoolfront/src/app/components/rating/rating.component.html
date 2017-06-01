@@ -5,7 +5,7 @@
 		<h4 align="center">Write A Review</h4>
 		<hr />
 		<form (ngSubmit)="onSubmit()">
-			<md-grid-list cols="8" rowHeight="30px">
+			<md-grid-list cols="8" rowHeight="20px">
 				<md-grid-tile [colspan]="8" [rowspan]="2">
 					<rating [(ngModel)]="newRatingAndReview.rating" name="rating"
             			[titles]="['one', 'two', 'three', 'four', 'five']">
