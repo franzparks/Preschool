@@ -1,5 +1,5 @@
 textarea{
-    border: .7px solid grey;
+    border: .7px solid #d3d3d3;
     border-radius: 3px;
-    background-color: lightgrey;
+    background-color: rgba(209, 209, 209, 0.4);
 }
