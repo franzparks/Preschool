@@ -16,6 +16,7 @@ export class RatingComponent implements OnInit {
 
 	private ratingAdded: boolean;
 	private newRatingAndReview: RatingAndReview = new RatingAndReview();
+	private user: User = new User();
 
   	constructor(
   		private addRatingService:AddRatingService,
