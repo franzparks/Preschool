@@ -15,7 +15,7 @@
 </md-tab-group> 	
  
  <div class="app-content">
-
+ {{schools}}
 	<md-card  *ngFor="let school of schools">
 	
       	<md-card-header (click)="getSchoolDetails(school.id)">

@@ -40,6 +40,8 @@ public class School implements Serializable{
 	
 	private String title;
 	private String subTitle;
+	
+	@Column(columnDefinition="text")
 	private String snippet;
 	
 	@Column(columnDefinition="text")
