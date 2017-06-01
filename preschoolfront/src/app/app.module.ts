@@ -10,7 +10,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule,MdTabsModule,MdCardModule} from '@angular/material';
-import { MdToolbarModule, MdMenuModule,MdGridListModule } from '@angular/material';
+import { MdToolbarModule, MdMenuModule,MdGridListModule,MdGridTileModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -45,7 +45,8 @@ import { RatingComponent } from './components/rating/rating.component';
     MdTabsModule,
     MdCardModule,
     MdMenuModule,
-    MdGridListModule
+    MdGridListModule,
+    MdGridTileModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
