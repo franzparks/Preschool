@@ -31,6 +31,7 @@ export class RatingComponent implements OnInit {
   	}
 
   	ngOnInit() {
+  		this.ratingAdded=false;
   	}
 
 }
