@@ -15,11 +15,11 @@ export class RatingComponent implements OnInit {
 	private newRatingAndReview: RatingAndReview = new RatingAndReview();
 
   	constructor(
-  		private ratingAndReview:RatingAndReview
+  		private addRatingService:AddRatingService
   	) { }
 
   	onSubmit(){
-
+  		
   	}
 
   	ngOnInit() {
