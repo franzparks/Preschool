@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AddRatingService } from '../../services/add-rating.service';
-import { LoginService } from '../../services/login.service';
+import { UserService } from '../../services/user.service';
 
 import { User } from '../../models/user';
 
@@ -18,7 +18,8 @@ export class RatingComponent implements OnInit {
 	private newRatingAndReview: RatingAndReview = new RatingAndReview();
 
   	constructor(
-  		private addRatingService:AddRatingService
+  		private addRatingService:AddRatingService,
+  		private userService: UserService
   	) { }
 
   	onSubmit(){
