@@ -4,6 +4,7 @@ import {Params, ActivatedRoute, Router} from '@angular/router';
 
 import {SchoolService } from '../../services/school.service';
 import  {RatingAndReview} from '../../models/rating-and-review';
+import  {School} from '../../models/school';
 
 
 @Component({
@@ -14,16 +15,16 @@ import  {RatingAndReview} from '../../models/rating-and-review';
 export class SchoolDetailsComponent implements OnInit {
 
 	private schoolId : number;
-	
-  ratingAndReviewsList: RatingAndReview;
-  private title: string;
-  private subTitle: string;
-  private snippet: string;
-  private summary: string;
-  private address: string;
-  private phone: string;
-  private averageRating: number;
-  private schoolImage: string;
+	private school: School = new School();
+  /*ratingAndReviewsList: RatingAndReview;
+  private school.title: string;
+  private school.subTitle: string;
+  private school.snippet: string;
+  private school.summary: string;
+  private school.address: string;
+  private school.phone: string;
+  private school.averageRating: number;
+  private school.schoolImage: string;*/
 
 	constructor(
 		private schoolService: SchoolService,
@@ -41,14 +42,14 @@ export class SchoolDetailsComponent implements OnInit {
   		this.schoolService.getSchool(this.schoolId).subscribe(
   		res => {
   			//this.school=res.json();
-        this.title = JSON.parse(JSON.stringify(res))._body["title"];
-        this.subTitle = JSON.parse(JSON.stringify(res))._body["subTitle"];
-        this.snippet = JSON.parse(JSON.stringify(res))._body["snippet"];
-        this.summary = JSON.parse(JSON.stringify(res))._body["summary"];
-        this.address = JSON.parse(JSON.stringify(res))._body["address"];
-        this.phone = JSON.parse(JSON.stringify(res))._body["phone"];
-        this.averageRating = JSON.parse(JSON.stringify(res))._body["averageRating"];
-        this.schoolImage = JSON.parse(JSON.stringify(res))._body["schoolImage"];
+        this.school = JSON.parse(JSON.stringify(res))._body);
+        /*this.school.subTitle = JSON.parse(JSON.stringify(res))._body["subTitle"];
+        this.school.snippet = JSON.parse(JSON.stringify(res))._body["snippet"];
+        this.school.summary = JSON.parse(JSON.stringify(res))._body["summary"];
+        this.school.address = JSON.parse(JSON.stringify(res))._body["address"];
+        this.school.phone = JSON.parse(JSON.stringify(res))._body["phone"];
+        this.school.averageRating = JSON.parse(JSON.stringify(res))._body["averageRating"];
+        this.school.schoolImage = JSON.parse(JSON.stringify(res))._body["schoolImage"];*/
   		},
   		error => {
   			console.log(error);
