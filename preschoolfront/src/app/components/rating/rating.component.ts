@@ -9,10 +9,11 @@ import{RatingAndReview} from '../../models/rating-and-review';
 export class RatingComponent implements OnInit {
 
 	private ratingAdded: boolean;
+	private ratingAndReview: RatingAndReview = new RatingAndReview();
 
-  constructor() { }
+  	constructor() { }
 
-  ngOnInit() {
-  }
+  	ngOnInit() {
+  	}
 
 }
