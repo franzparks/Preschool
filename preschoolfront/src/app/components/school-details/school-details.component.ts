@@ -16,14 +16,14 @@ export class SchoolDetailsComponent implements OnInit {
 	private schoolId : number;
 	
   ratingAndReviewsList: RatingAndReview;
-  title: string;
-  subTitle: string;
-  snippet: string;
-  summary: string;
-  address: string;
-  phone: string;
-  averageRating: number;
-  schoolImage: string;
+  private title: string;
+  private subTitle: string;
+  private snippet: string;
+  private summary: string;
+  private address: string;
+  private phone: string;
+  private averageRating: number;
+  private schoolImage: string;
 
 	constructor(
 		private schoolService: SchoolService,
