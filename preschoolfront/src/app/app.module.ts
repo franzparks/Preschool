@@ -21,7 +21,7 @@ import { SchoolDetailsComponent } from './components/school-details/school-detai
 import { SchoolService } from './services/school.service';
 import { UserService } from './services/user.service';
 import { LoginService } from './services/login.service';
-import { RatingComponent } from './rating/rating.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 @NgModule({
   declarations: [
