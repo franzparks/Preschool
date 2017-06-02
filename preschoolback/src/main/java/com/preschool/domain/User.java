@@ -52,8 +52,8 @@ private static final long serialVersionUID = 902783495L;
 	@JsonIgnore
 	private Set<UserRole> userRoles = new HashSet<>();
 	
-	//@OneToMany(mappedBy="user")
-	//private List<RatingAndReview> reviewsList;
+	@OneToMany(mappedBy="user")
+	private List<RatingAndReview> reviewsList;
 
 	public Long getId() {
 		return id;
@@ -91,9 +91,9 @@ private static final long serialVersionUID = 902783495L;
 		return userRoles;
 	}
 
-	/*public List<RatingAndReview> getReviewsList() {
+	public List<RatingAndReview> getReviewsList() {
 		return reviewsList;
-	}*/
+	}
 
 	public void setId(Long id) {
 		this.id = id;
@@ -131,9 +131,9 @@ private static final long serialVersionUID = 902783495L;
 		this.userRoles = userRoles;
 	}
 
-	/*public void setReviewsList(List<RatingAndReview> reviewsList) {
+	public void setReviewsList(List<RatingAndReview> reviewsList) {
 		this.reviewsList = reviewsList;
-	}*/
+	}
 
 	@Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
