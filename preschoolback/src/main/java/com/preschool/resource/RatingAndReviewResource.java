@@ -64,7 +64,8 @@ public class RatingAndReviewResource {
 		User user = userService.findByUsername(principal.getName());
 		
 		ratingAndReview.setUser(user);
-		//ratingAndReview.setSchool(schoolService.findOne(id));
+		ratingAndReview.setSchool(
+				schoolService.findOne(new Long(ratingAndReview.getGivenSchoolId())));
 		
 		//ratingAndReviewService.save(ratingAndReview);
 		System.out.println("sent review :: "+ratingAndReview);
