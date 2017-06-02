@@ -84,12 +84,7 @@ private static final long serialVersionUID=425345L;
 	public void setGivenSchoolId(int givenSchoolId){
 		this.givenSchoolId = givenSchoolId;
 	}
-	@Override
-    public String toString() {
-	    return "RatingAndReview [school=" + school + ", user=" + user
-	            + ", message=" + message + ", date=" + date
-	            + ", givenSchoolId=" + givenSchoolId + "]";
-    }
+	
 	
 	
 	
