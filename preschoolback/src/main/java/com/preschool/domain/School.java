@@ -133,9 +133,19 @@ public class School implements Serializable{
 	public void setSchoolImage(MultipartFile schoolImage) {
 		this.schoolImage = schoolImage;
 	}
-	
-	
 
+	@Override
+    public String toString() {
+	    return "School [id=" + id + ", ratingAndReviewsList="
+	            + ratingAndReviewsList + ", title=" + title + ", subTitle="
+	            + subTitle + ", snippet=" + snippet + ", summary=" + summary
+	            + ", address=" + address + ", phone=" + phone
+	            + ", averageRating=" + averageRating + ", schoolImage="
+	            + schoolImage + "]";
+    }
+	
+	
+	
 	
 	
 
