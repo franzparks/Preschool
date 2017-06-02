@@ -34,6 +34,7 @@ export class RatingComponent implements OnInit {
   		res => {
   			this.ratingAdded=true;
   			this.newRatingAndReview = new RatingAndReview();
+  			this.router.navigate(['/school/', this.schoolId]);
   		},
   		error => {
   			console.log(error);
