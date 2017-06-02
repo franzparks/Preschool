@@ -23,7 +23,7 @@ export class RatingComponent implements OnInit {
   	) { }
 
   	onSubmit(){
-  		this.newRatingAndReview.schoolId = this.schoolId;
+  		this.newRatingAndReview.givenSchoolId = this.schoolId;
   		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
   		res => {
   			this.ratingAdded=true;
