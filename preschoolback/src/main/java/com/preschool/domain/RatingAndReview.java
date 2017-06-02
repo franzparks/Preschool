@@ -73,6 +73,11 @@ private static final long serialVersionUID=425345L;
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	@Override
+    public String toString() {
+	    return "RatingAndReview [school=" + school + ", user=" + user
+	            + ", message=" + message + ", date=" + date + "]";
+    }
 	
 	
 	
