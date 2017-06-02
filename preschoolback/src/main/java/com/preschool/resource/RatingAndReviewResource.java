@@ -60,7 +60,8 @@ public class RatingAndReviewResource {
 		
 		ratingAndReview.setUser(user);
 		
-		ratingAndReviewService.save(ratingAndReview);
+		//ratingAndReviewService.save(ratingAndReview);
+		System.out.println("sent review :: "+ratingAndReview);
 		
 		return new ResponseEntity("Review Added Successfully!", HttpStatus.OK);
 	}
