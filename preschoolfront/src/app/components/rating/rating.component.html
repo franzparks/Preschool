@@ -7,7 +7,7 @@
 		<form (ngSubmit)="onSubmit()">
 			<md-grid-list cols="8" rowHeight="20px">
 				<md-grid-tile [colspan]="8" [rowspan]="2">
-					<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true"
+					<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" validate
             			[titles]="['one', 'two', 'three', 'four', 'five']">
     				</rating>
 
