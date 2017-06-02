@@ -27,7 +27,7 @@ const appRoutes: Routes = [
 		path: 'my-account',
 		component: MyAccountComponent
 	},{
-		path: 'school-details/:id',
+		path: 'school/:id',
 		component: SchoolDetailsComponent
 	},
 	{
