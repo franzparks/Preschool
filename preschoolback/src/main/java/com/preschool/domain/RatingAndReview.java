@@ -85,9 +85,12 @@ private static final long serialVersionUID=425345L;
 	}
 	@Override
     public String toString() {
-	    return "RatingAndReview [id=" + id + ", message=" + message + ", date="
-	            + date + ", givenSchoolId=" + givenSchoolId + "]";
+	    return "RatingAndReview [school=" + school + ", user=" + user
+	            + ", message=" + message + ", date=" + date
+	            + ", givenSchoolId=" + givenSchoolId + "]";
     }
+	
+	
 	
 	
 	
