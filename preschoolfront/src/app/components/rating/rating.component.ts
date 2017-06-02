@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Params, ActivatedRoute,Router } from '@angular/router';
 
 import { AddRatingService } from '../../services/add-rating.service';
-import { UserService } from '../../services/user.service';
-
-import { User } from '../../models/user';
 
 import{RatingAndReview} from '../../models/rating-and-review';
 
@@ -21,7 +18,6 @@ export class RatingComponent implements OnInit {
 
   	constructor(
   		private addRatingService:AddRatingService,
-  		private userService: UserService,
   		private router: Router,
   		private route:ActivatedRoute
   	) { }
@@ -42,13 +38,6 @@ export class RatingComponent implements OnInit {
 
   	ngOnInit() {
   		this.ratingAdded=false;
-  		this.userService.getCurrentUser().subscribe(
-  		res => {
-  			this.user = res.json();
-  		},
-  		err => {
-  			console.log(err);
-  		});
   		this.route.params.forEach((params: Params) => {
   			this.schoolId = Number.parseInt(params['id']);
   		});
