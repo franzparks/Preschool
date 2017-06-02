@@ -158,6 +158,13 @@ private static final long serialVersionUID = 902783495L;
     public boolean isCredentialsNonExpired() {
 	    return true;
     }
+
+	@Override
+    public String toString() {
+	    return "User [id=" + id + ", username=" + username + ", firstName="
+	            + firstName + ", lastName=" + lastName + ", email=" + email
+	            + ", phone=" + phone + ", reviewsList=" + reviewsList + "]";
+    }
 	
 	
 	
