@@ -68,7 +68,7 @@ public class RatingAndReviewResource {
 		ratingAndReview.setSchool(
 				schoolService.findOne(new Long(ratingAndReview.getGivenSchoolId())));
 		ratingAndReview.setDate(new Date());
-		//ratingAndReviewService.save(ratingAndReview);
+		ratingAndReviewService.save(ratingAndReview);
 		System.out.println("sent review :: "+ratingAndReview);
 		
 		return new ResponseEntity("Review Added Successfully!", HttpStatus.OK);

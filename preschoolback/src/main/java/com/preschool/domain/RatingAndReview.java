@@ -36,6 +36,7 @@ private static final long serialVersionUID=425345L;
 	private School school;
 	
 	@ManyToOne
+	@JsonIgnore
 	private User user;
 	
 	private String message;
