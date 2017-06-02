@@ -4,6 +4,7 @@
 package com.preschool.resource;
 
 import java.security.Principal;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,7 @@ public class RatingAndReviewResource {
 		ratingAndReview.setUser(user);
 		ratingAndReview.setSchool(
 				schoolService.findOne(new Long(ratingAndReview.getGivenSchoolId())));
-		
+		ratingAndReview.setDate(new Date());
 		//ratingAndReviewService.save(ratingAndReview);
 		System.out.println("sent review :: "+ratingAndReview);
 		
