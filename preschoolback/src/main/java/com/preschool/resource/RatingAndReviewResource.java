@@ -20,6 +20,7 @@ import com.preschool.domain.RatingAndReview;
 import com.preschool.domain.School;
 import com.preschool.domain.User;
 import com.preschool.service.RatingAndReviewService;
+import com.preschool.service.SchoolService;
 import com.preschool.service.UserService;
 
 /**
@@ -35,6 +36,9 @@ public class RatingAndReviewResource {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private SchoolService schoolService;
 	
 	@RequestMapping (value="/all", method=RequestMethod.POST)
 	public List<RatingAndReview> findAllBySchool(@RequestBody School school){
@@ -56,9 +60,11 @@ public class RatingAndReviewResource {
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public ResponseEntity addNewReviewPost(
 			@RequestBody RatingAndReview ratingAndReview, Principal principal) {
+		
 		User user = userService.findByUsername(principal.getName());
 		
 		ratingAndReview.setUser(user);
+		//ratingAndReview.setSchool(schoolService.findOne(id));
 		
 		//ratingAndReviewService.save(ratingAndReview);
 		System.out.println("sent review :: "+ratingAndReview);
