@@ -4,6 +4,8 @@ import { Headers, Http } from '@angular/http';
 @Injectable()
 export class RatingAndReviewService {
 
-  constructor() { }
+  	constructor(
+  		private http: Http
+  	) { }
 
 }
