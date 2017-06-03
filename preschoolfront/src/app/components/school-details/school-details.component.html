@@ -1,7 +1,7 @@
 <hr />
 <div class="app-content">
 
-<md-card>
+	<md-card>
       	<md-card-header>
 	    	<md-card-title>{{school.title}}</md-card-title>
 	    	<md-card-subtitle>{{school.subTitle}}</md-card-subtitle>
@@ -40,6 +40,44 @@
 			</md-menu>
     		
   		</md-card-actions>
-    </md-card>
-    {{reviewsList}}
+   	</md-card>
+   
+    <md-card *ngFor="let review of reviewsList">
+      	<md-card-header>
+	    	<md-card-title></md-card-title>
+	    	<md-card-subtitle></md-card-subtitle>
+	  	</md-card-header>
+	  	
+		 <md-card-content>
+		    
+		    <p>
+		    	{{school.summary}}
+		    </p>
+		    
+  		</md-card-content>
+  		<md-card-actions>
+	  		<div>
+	    		<button md-button color="primary">LIKE</button>
+	    		<button md-button color="primary" [mdMenuTriggerFor]="menu">SHARE</button>
+	    		
+    			<rating [(ngModel)]="school.averageRating"
+            		[titles]="['one', 'two', 'three', 'four', 'five']">
+    			</rating>
+   
+			</div>
+
+			<md-menu #menu="mdMenu">
+				<button md-menu-item>
+				    <span>Facebook</span>
+				  </button>
+				  <button md-menu-item>
+				    <span>Google+</span>
+				  </button>
+				  <button md-menu-item>
+				    <span>Twitter</span>
+				  </button>
+			</md-menu>
+    		
+  		</md-card-actions>
+   	</md-card>
 </div>
