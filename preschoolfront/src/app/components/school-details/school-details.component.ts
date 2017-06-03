@@ -40,8 +40,15 @@ export class SchoolDetailsComponent implements OnInit {
   		},
   		error => {
   			console.log(error);
-  		}
-  	);
+  		});
+
+      this.ratingAndReviewService.getReviewsList(this.schoolId).subscribe(
+      res => {
+        this.reviewsList=res.json(); 
+      },
+      error => {
+        console.log(error);
+      });
 
 	}
 
