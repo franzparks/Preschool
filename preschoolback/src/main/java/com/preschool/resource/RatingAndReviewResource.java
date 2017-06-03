@@ -42,7 +42,7 @@ public class RatingAndReviewResource {
 	private SchoolService schoolService;
 	
 	@RequestMapping (value="{id}/all", method=RequestMethod.POST)
-	public List<RatingAndReview> findAllBySchool(@RequestBody School school){
+	public List<RatingAndReview> findAllBySchool(@PathVariable("id") Long id){
 		return ratingAndReviewService.findBySchool(school);
 	}
 	
