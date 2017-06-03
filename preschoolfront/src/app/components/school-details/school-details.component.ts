@@ -16,6 +16,7 @@ export class SchoolDetailsComponent implements OnInit {
 
 	private schoolId : number;
 	private school: School = new School();
+  private reviewsList: RatingAndReview[];
 
 	constructor(
 		private schoolService: SchoolService,
