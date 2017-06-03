@@ -21,10 +21,11 @@ export class SchoolDetailsComponent implements OnInit {
   private reviewsList: RatingAndReview[];
 
 	constructor(
-		private schoolService: SchoolService,
 		private router:Router,
 		private http:Http,
-		private route:ActivatedRoute
+		private route:ActivatedRoute,
+    private schoolService: SchoolService,
+    private ratingAndReviewService: RatingAndReviewService
 	) { }
 
 	ngOnInit() {
