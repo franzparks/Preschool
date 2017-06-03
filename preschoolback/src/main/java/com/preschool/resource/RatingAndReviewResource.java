@@ -41,7 +41,7 @@ public class RatingAndReviewResource {
 	@Autowired
 	private SchoolService schoolService;
 	
-	@RequestMapping (value="/all", method=RequestMethod.POST)
+	@RequestMapping (value="{id}/all", method=RequestMethod.POST)
 	public List<RatingAndReview> findAllBySchool(@RequestBody School school){
 		return ratingAndReviewService.findBySchool(school);
 	}
