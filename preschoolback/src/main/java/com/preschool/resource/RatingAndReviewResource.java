@@ -43,6 +43,7 @@ public class RatingAndReviewResource {
 	
 	@RequestMapping (value="{id}/all", method=RequestMethod.POST)
 	public List<RatingAndReview> findAllBySchool(@PathVariable("id") Long id){
+		School school = schoolService.findOne(id);
 		return ratingAndReviewService.findBySchool(school);
 	}
 	
