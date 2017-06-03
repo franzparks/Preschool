@@ -23,6 +23,9 @@ import { SchoolService } from './services/school.service';
 import { UserService } from './services/user.service';
 import { LoginService } from './services/login.service';
 import { AddRatingService } from './services/add-rating.service';
+import { RatingAndReviewService } from './services/rating-and-review.service';
+
+
 
 
 
@@ -48,7 +51,7 @@ import { AddRatingService } from './services/add-rating.service';
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
-  providers: [SchoolService,UserService,LoginService,AddRatingService],
+  providers: [SchoolService,UserService,LoginService,AddRatingService,RatingAndReviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
