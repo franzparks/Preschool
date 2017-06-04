@@ -52,7 +52,7 @@ import { UploadImageService } from './services/upload-image.service';
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
-  providers: [SchoolService,UserService,LoginService,AddRatingService,RatingAndReviewService],
+  providers: [SchoolService,UserService,LoginService,AddRatingService,RatingAndReviewService,UploadImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
