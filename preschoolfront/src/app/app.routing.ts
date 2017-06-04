@@ -6,6 +6,7 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 import { RatingComponent } from './components/rating/rating.component';
+import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
 
 
 
@@ -33,6 +34,9 @@ const appRoutes: Routes = [
 	{
 		path: 'school/:id/write-review',
 		component: RatingComponent
+	},{
+		path: 'add-new-school',
+		component: AddNewSchoolComponent
 	}
 ];
 
