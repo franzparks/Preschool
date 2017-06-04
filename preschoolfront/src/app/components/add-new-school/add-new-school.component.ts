@@ -34,6 +34,7 @@ export class AddNewSchoolComponent implements OnInit {
   }
 
   	ngOnInit() {
+  		this.schoolAdded=false;
   	}
 
 }
