@@ -24,16 +24,9 @@
 				</md-grid-tile>
 			</md-grid-list>
 
-			<md-grid-list cols="4" rowHeight="60px">
-				<md-grid-tile [colspan]="4" [rowspan]="1">
-					<md-input-container>
-						<input mdInput id="summary" type="text" required [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary">
-					</md-input-container>
-				</md-grid-tile>
-			</md-grid-list>
 
 			<md-input-container>
-				<textarea mdInput id="description" [(ngModel)]="newSchool.summary" name="description" placeholder="Description" required></textarea>
+				<textarea mdInput id="summary" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
 			</md-input-container>
 
 			<md-grid-list cols="4" rowHeight="60px">
