@@ -12,6 +12,9 @@ import {UploadImageService} from '../../services/upload-image.service';
 })
 export class AddNewSchoolComponent implements OnInit {
 
+	private newSchool: School = new School();
+  	private schoolAdded: boolean;	
+
   	constructor(
   		private schoolService:SchoolService,
   		private uploadImageService:UploadImageService
