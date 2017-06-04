@@ -1,3 +1,75 @@
-<p>
-  add-new-school works!
-</p>
+<div class="container">
+	<div [hidden]="schoolAdded">
+		<h3 style="margin-top: 30px;">New School Information <span style="font-size:small">* is a required field</span></h3>
+
+		<form (ngSubmit)="onSubmit()">
+			<md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="4" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="title" type="text" required [(ngModel)]="newSchool.title" name="title" placeholder="Title">
+					</md-input-container>
+				</md-grid-tile>
+			</md-grid-list>
+			
+			<md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="subTitle" type="text" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
+					</md-input-container>
+				</md-grid-tile>
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="snippet" type="text" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">
+					</md-input-container>
+				</md-grid-tile>
+			</md-grid-list>
+
+			<md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="4" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="summary" type="text" required [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary">
+					</md-input-container>
+				</md-grid-tile>
+			</md-grid-list>
+
+			<md-input-container>
+				<textarea mdInput id="description" [(ngModel)]="newSchool.summary" name="description" placeholder="Description" required></textarea>
+			</md-input-container>
+
+			<md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="4" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="address" type="text" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">
+					</md-input-container>
+				</md-grid-tile>
+			</md-grid-list>
+
+			<md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone"  placeholder="Phone Number">
+					</md-input-container>
+				</md-grid-tile>
+				
+			</md-grid-list>
+
+			
+			Image &nbsp;
+			<input id="tile" type="file" id="schoolImage" name="schoolImage" (change)="uploadImageService.fileChangeEvent($event)">
+			<br><br>
+
+			<md-grid-list cols="20" rowHeight="60px">
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+						<button class="mat-primary" md-raised-button type="submit">Add School</button>
+				</md-grid-tile>
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
+				</md-grid-tile>
+			</md-grid-list>
+		</form>
+	</div>
+	<div class="row" [hidden]="!schoolAdded"
+	>
+		<h3>School added successfully!</h3>
+	</div>
+</div>
