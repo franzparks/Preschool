@@ -12,9 +12,12 @@ import {UploadImageService} from '../../services/upload-image.service';
 })
 export class AddNewSchoolComponent implements OnInit {
 
-  constructor() { }
+  	constructor(
+  		private schoolService:SchoolService,
+  		private uploadImageService:UploadImageService
+  	) { }
 
-  ngOnInit() {
-  }
+  	ngOnInit() {
+  	}
 
 }
