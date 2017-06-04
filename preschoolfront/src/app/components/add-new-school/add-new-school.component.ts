@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { School } from '../../models/school';
+
 @Component({
   selector: 'app-add-new-school',
   templateUrl: './add-new-school.component.html',
