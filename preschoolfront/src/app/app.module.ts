@@ -25,6 +25,7 @@ import { LoginService } from './services/login.service';
 import { AddRatingService } from './services/add-rating.service';
 import { RatingAndReviewService } from './services/rating-and-review.service';
 import { UploadImageService } from './services/upload-image.service';
+import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
 
 
 
@@ -38,7 +39,8 @@ import { UploadImageService } from './services/upload-image.service';
     MyProfileComponent,
     MyAccountComponent,
     SchoolDetailsComponent,
-    RatingComponent
+    RatingComponent,
+    AddNewSchoolComponent
     
   ],
   imports: [
