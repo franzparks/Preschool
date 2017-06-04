@@ -20,6 +20,19 @@ export class AddNewSchoolComponent implements OnInit {
   		private uploadImageService:UploadImageService
   	) { }
 
+  	onSubmit() {
+  	this.schoolService.sendSchool(this.newSchool).subscribe(
+  		res => {
+  			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
+  			this.schoolAdded=true;
+  			this.newSchool = new School();
+  		},
+  		error => {
+  			console.log(error);
+  		}
+  	);
+  }
+
   	ngOnInit() {
   	}
 
