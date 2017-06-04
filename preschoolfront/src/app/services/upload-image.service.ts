@@ -3,6 +3,11 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class UploadImageService {
 
-  constructor() { }
+	filesToUpload: Array<File>;
+
+
+  	constructor() {
+  		this.filesToUpload = [];
+  	}
 
 }
