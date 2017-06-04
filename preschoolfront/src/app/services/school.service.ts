@@ -36,7 +36,7 @@ export class SchoolService {
       'x-auth-token' : localStorage.getItem('xAuthToken')
     });
 
-    return this.http.post(url, JSON.stringify(review), {headers: headers});
+    return this.http.post(url, JSON.stringify(school), {headers: headers});
   }
 
 }
