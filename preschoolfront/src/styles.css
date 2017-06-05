@@ -8,6 +8,11 @@
     margin-top: 1rem;
     margin-bottom: 2.5rem;
 }
+
+main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
 /*body {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
