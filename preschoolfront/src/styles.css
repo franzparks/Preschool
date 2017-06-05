@@ -26,6 +26,10 @@ main {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
+
+.flex-center {
+    color: #fff;
+}
 /*body {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
