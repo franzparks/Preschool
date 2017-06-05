@@ -32,9 +32,7 @@ main {
 .flex-center {
     color: #fff;
 }
-.login {
-  float: right !important;
-}
+
 /*body {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
