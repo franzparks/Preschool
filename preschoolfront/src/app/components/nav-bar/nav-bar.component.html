@@ -53,6 +53,12 @@
                     <li class="nav-right" *ngIf="!loggedIn">
                         <a class="nav-link" routerlink="/my-account" href="/my-account" >Login</a>
                     </li>
+                    <li class="nav-right" *ngIf="loggedIn">
+                        <a class="nav-link" routerlink="/my-profile" href="/my-profile" >My Profile</a>
+                    </li>
+                    <li class="nav-right" *ngIf="loggedIn">
+                        <a class="nav-link" (click)="logout()" >Logout</a>
+                    </li>
                 </ul>
                
             </div>
