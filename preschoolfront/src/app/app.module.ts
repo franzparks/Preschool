@@ -26,6 +26,7 @@ import { AddRatingService } from './services/add-rating.service';
 import { RatingAndReviewService } from './services/rating-and-review.service';
 import { UploadImageService } from './services/upload-image.service';
 import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -40,7 +41,8 @@ import { AddNewSchoolComponent } from './components/add-new-school/add-new-schoo
     MyAccountComponent,
     SchoolDetailsComponent,
     RatingComponent,
-    AddNewSchoolComponent
+    AddNewSchoolComponent,
+    FooterComponent
     
   ],
   imports: [
