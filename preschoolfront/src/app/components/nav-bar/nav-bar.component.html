@@ -1,40 +1,40 @@
 
 <header>
  <!--Navbar-->
-    <nav class="navbar navbar-toggleable-md navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapseEx2" aria-controls="collapseEx2" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-                <strong>EYAS</strong>
-            </a>
-            <div class="collapse navbar-collapse" id="collapseEx2">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link">School Reviews <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Parenting</a>
-                    </li>
-                    
-                </ul>
-                <ul class="navbar-nav">
-                   
-                    <li  class="nav-right" *ngIf="loggedIn">
-                        <a class="nav-link" routerlink="/my-profile" href="/my-profile" >My Profile</a>
-                    </li>
+	<nav class="navbar navbar-toggleable-md navbar-dark bg-primary fixed-top">
+	    <div class="container">
+	        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapseEx2" aria-controls="collapseEx2" aria-expanded="false" aria-label="Toggle navigation">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <a class="navbar-brand" href="/">
+	            <strong>EYAS</strong>
+	        </a>
+	        <div class="collapse navbar-collapse" id="collapseEx2">
+	            <ul class="navbar-nav mr-auto">
+	                <li class="nav-item active">
+	                    <a class="nav-link">School Reviews <span class="sr-only">(current)</span></a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link">Parenting</a>
+	                </li>
+	                
+	            </ul>
+	            <ul class="navbar-nav">
+	               
+	                <li  class="nav-right" *ngIf="loggedIn">
+	                    <a class="nav-link" routerlink="/my-profile" href="/my-profile" >My Profile</a>
+	                </li>
 
-                    <li  class="nav-right" *ngIf="loggedIn">
-                        <a class="nav-link" (click)="logout()" >Logout</a>
-                    </li>
-                    <li class="nav-right" *ngIf="!loggedIn">
-                        <a class="nav-link" routerlink="/my-account" href="/my-account" >Login</a>
-                    </li>
-                </ul>
-               
-            </div>
-        </div>
-    </nav>
+	                <li  class="nav-right" *ngIf="loggedIn">
+	                    <a class="nav-link" (click)="logout()" >Logout</a>
+	                </li>
+	                <li class="nav-right" *ngIf="!loggedIn">
+	                    <a class="nav-link" routerlink="/my-account" href="/my-account" >Login</a>
+	                </li>
+	            </ul>
+	           
+	        </div>
+	    </div>
+	</nav>
     <!--/.Navbar-->
 </header>
