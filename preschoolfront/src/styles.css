@@ -33,6 +33,19 @@ main {
     color: #fff;
 }
 
+.btn-ptc {
+  background-color: #45526E !important;
+}
+
+.btn-ptc:hover {
+  background-color: #59698d !important;
+}
+
+.btn-ptc:focus {
+  background-color: #59698d !important;
+}
+
+
 /*body {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
