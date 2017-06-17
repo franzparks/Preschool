@@ -73,6 +73,22 @@ footer.page-footer {
     font-size: .8rem;
 }
 
+.product-card .action-buttons .btn-floating .fa, .product-card .action-buttons .btn-floating .material-icons {
+    font-size: 14px;
+    margin-top: 1px;
+}
+.btn-floating i {
+    width: inherit;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.btn-floating, .btn-floating i {
+    color: #fff;
+    display: inline-block;
+    line-height: 37px;
+}
+
 .card .rating {
     color: #ffa000;
 }
@@ -87,6 +103,23 @@ footer.page-footer {
     z-index: 1;
     display: none;
     padding: 1rem;
+}
+
+.card .card-reveal .content, .card .card-share {
+    position: relative;
+}
+
+.text-xs-center {
+    text-align: center!important;
+}
+
+.card .card-reveal .content h4 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-floating, .card .card-reveal .card-title, .card-wrapper .back .card-title, .dropdown-content li, .file-field span, input[type=range], input[type=range]+.thumb {
+    cursor: pointer;
 }
 
 /*body {
@@ -243,3 +276,26 @@ md-card a,a:hover{
   float: right;
 }
 */
+
+
+.alert, .author-box, .breadcrumb, .card, .card .card-header, .dropdown-menu, .file-custom, .input-group-addon, .jumbotron, .list-group .list-group-item, .modal-content, .nav .nav-link, .nav-tabs, .navbar, .navbar-toggler, .page-item:first-child .page-link, .page-item:last-child .page-link, .pagination-lg .page-item:first-child .page-link, .pagination-lg .page-item:last-child .page-link, .pagination-sm .page-item:first-child .page-link, .pagination-sm .page-item:last-child .page-link, .popover, .tag, .tooltip-inner, img {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#toast-container>div, .author-box, .btn, .btn-floating, .card, .card-cascade-2 .card-block, .card-cascade.wider .card-block, .card-wrapper .back, .card-wrapper .front, .chip, .dropdown-content, .dropdown-menu, .jumbotron, .list-group, .navbar, .pager li a, .pagination .active .page-link, .popover, .pricing-card .price .version, .side-nav, .social-list, .tag, .z-depth-1 {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.card {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.card, .card-title {
+    margin-bottom: .75rem;
+}
