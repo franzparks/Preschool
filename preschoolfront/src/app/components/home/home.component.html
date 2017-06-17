@@ -67,11 +67,12 @@
             <!--/.Rating-->
            
             <div class="action-buttons">
-                <a class="btn-floating  activator waves-effect waves-light" ><i class="fa fa-share-alt"></i></a>
+                <a class="btn-floating  activator waves-effect waves-light" [mdMenuTriggerFor]="menu"><i class="fa fa-share-alt"></i></a>
                 <a class="btn-floating red waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" 
                 title="Add to wishlist" 
                  data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a>
             </div>
+
             
             <!--Card content-->
             <div class="card-block">
@@ -84,15 +85,8 @@
                 Read more</a>
             </div>
 
-            <!--<div class="cta">
-                <p>$500 <span>$700</span></p>
-
-                <button class="btn btn-primary waves-effect waves-light">Buy now</button>
-                <button class="btn btn-default waves-effect waves-light" data-toggle="modal" data-target="#quick-look-ex">Quick look</button>
-            </div>-->
-
-            <div class="card-reveal" id="social">
-                <!--Content-->
+             <md-menu #menu="mdMenu" class="card-reveal">
+            <!--Content-->
                 <div class="content text-center">
                     <h4 class="card-title">Social shares <i class="fa fa-close"></i></h4>
                     <hr>
@@ -117,7 +111,7 @@
                     </ul>
                 </div>
                 <!--/.Content-->
-            </div>
+            </md-menu>
 
         </md-card>
         <!--/.Card-->
@@ -187,3 +181,4 @@
     <!--/.Main layout-->
 
 </main>
+
