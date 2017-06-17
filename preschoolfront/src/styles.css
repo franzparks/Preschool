@@ -81,6 +81,85 @@ footer.page-footer {
     font-size: 14px;
     margin-top: 1px;
 }
+.product-card .action-buttons .btn-floating {
+    display: block;
+    background-color: #4285F4;
+    height: 37px;
+    width: 37px;
+    line-height: 0;
+}
+
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn-floating {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    background-color: #a6c;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    transition: .3s;
+    margin: 10px;
+}
+
+.btn-floating, .btn-floating i {
+    color: #fff;
+    display: inline-block;
+    line-height: 37px;
+}
+
+.btn-floating, .card .card-reveal .card-title, .card-wrapper .back .card-title, .dropdown-content li, .file-field span, input[type=range], input[type=range]+.thumb {
+    cursor: pointer;
+}
+
+.btn-floating, .picker__box, .product-table td, .switch label .lever {
+    vertical-align: middle;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
+}
+
+#toast-container>div, .author-box, .btn, .btn-floating, .card, .card-cascade-2 .card-block, .card-cascade.wider .card-block, .card-wrapper .back, .card-wrapper .front, .chip, .dropdown-content, .dropdown-menu, .jumbotron, .list-group, .navbar, .pager li a, .pagination .active .page-link, .popover, .pricing-card .price .version, .side-nav, .social-list, .tag, .z-depth-1 {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.red {
+    background-color: #F44336!important;
+}
+
+.pswp__container, .pswp__img, .waves-effect, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: #0275d8;
+    cursor: pointer;
+}
+
+.btn-flat, a, a:focus, a:hover {
+    text-decoration: none;
+}
+[role=button], a, area, button, input, label, select, summary, textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
 .btn-floating i {
     width: inherit;
     text-align: center;
