@@ -48,6 +48,10 @@ footer.page-footer {
     background-color: #1C2331;
 }
 
+.section-title {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 /*body {
   background-color: #fafafa;
