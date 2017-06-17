@@ -27,6 +27,10 @@ body,
  
 }
 
+.material-icons{
+  font-size: 14px;
+}
+
 main {
     padding-top: 3rem;
     padding-bottom: 2rem;
