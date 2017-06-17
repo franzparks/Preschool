@@ -3,7 +3,6 @@
 @import '../node_modules/mdbootstrap/css/bootstrap.min.css';
 @import '../node_modules/mdbootstrap/css/mdb.min.css';
 
-
 html,
 body,
 .view {
@@ -20,6 +19,12 @@ body,
 .extra-margins {
     margin-top: 1rem;
     margin-bottom: 2.5rem;
+}
+
+.mat-card {
+  padding: 0px !important;
+ border-radius: 0px !important;
+ 
 }
 
 main {
