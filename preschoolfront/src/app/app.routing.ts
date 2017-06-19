@@ -7,6 +7,7 @@ import { MyAccountComponent } from './components/my-account/my-account.component
 import { SchoolDetailsComponent } from './components/school-details/school-details.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
+import { SchoolListComponent } from './components/school-list/school-list.component';
 
 
 
@@ -27,6 +28,9 @@ const appRoutes: Routes = [
 	{
 		path: 'my-account',
 		component: MyAccountComponent
+	},{
+		path: 'school-reviews',
+		component: SchoolListComponent
 	},{
 		path: 'school/:id',
 		component: SchoolDetailsComponent
