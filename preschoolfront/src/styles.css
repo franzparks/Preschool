@@ -243,6 +243,9 @@ a {
   height: auto;
 }
 
+.card.container{
+  flex-direction: row;
+}
 
 /*body {
   background-color: #fafafa;
