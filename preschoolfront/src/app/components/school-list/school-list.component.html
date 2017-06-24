@@ -20,7 +20,7 @@
             <h4 class="card-title">{{school.title}}</h4>
             <!--Text-->
             <p class="card-text">{{school.snippet}}</p>
-            <a href="#" class="btn btn-ptc">Read more</a>
+            <button class="btn btn-ptc" (click)="getSchoolDetails(school.id)" >Read more</button>
             <rating [(ngModel)]="school.averageRating" [readonly]="true"
                     [titles]="['one', 'two', 'three', 'four', 'five']">
             </rating>
