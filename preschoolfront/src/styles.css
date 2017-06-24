@@ -205,6 +205,35 @@ a {
     cursor: pointer;
 }
 
+.horizontal-listing .row:first-of-type {
+    border-top: none;
+}
+
+.horizontal-listing .row {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.horizontal-listing a {
+    color: #000;
+    font-weight: 300;
+}
+.horizontal-listing img {
+    margin: 16px 10px 15px 5px;
+}
+
+.horizontal-listing .title {
+    padding-bottom: 10px;
+    color: #000;
+}
+
+.horizontal-listing .item-details a {
+    color: #9e9e9e;
+}
+.horizontal-listing ul li {
+    display: inline;
+}
+
 /*body {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
