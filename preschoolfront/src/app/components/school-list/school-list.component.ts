@@ -12,14 +12,18 @@ import {SchoolService } from '../../services/school.service';
 })
 export class SchoolListComponent implements OnInit {
 
-  constructor(
-  	private schoolService : SchoolService,
-	private router:Router,
-	private http:Http,
-	private route:ActivatedRoute
-  ) { }
+	starsCount : number = 3;
 
-  ngOnInit() {
-  }
+	schools: School[] = [];
+
+	constructor(
+	  	private schoolService : SchoolService,
+		private router:Router,
+		private http:Http,
+		private route:ActivatedRoute
+	) { }
+
+  	ngOnInit() {
+  	}
 
 }
