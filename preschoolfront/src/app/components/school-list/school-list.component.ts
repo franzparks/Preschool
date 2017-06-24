@@ -34,4 +34,8 @@ export class SchoolListComponent implements OnInit {
 		)
   	}
 
+  	getSchoolDetails(id: String){
+		this.router.navigate(['/school/', id]);
+	}
+
 }
