@@ -245,6 +245,7 @@ a {
 
 .card.container{
   flex-direction: row;
+  margin-bottom: 15px;
 }
 
 /*body {
