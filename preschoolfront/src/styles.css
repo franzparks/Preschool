@@ -238,10 +238,11 @@ a {
 }
 
 .horizontal-size{
-  float: left;
+  padding: 0;
   width: 200px;
-  height: 150px;
+  height: auto;
 }
+
 
 /*body {
   background-color: #fafafa;
@@ -296,7 +297,7 @@ a {
 .nav-tem{
   float: right !important;
 }
-
+*/
 .app-content {
   padding: 20px;
 }
@@ -396,6 +397,6 @@ md-card a,a:hover{
 .review-button {
   float: right;
 }
-*/
+
 
 
