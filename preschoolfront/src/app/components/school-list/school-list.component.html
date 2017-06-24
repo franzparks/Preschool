@@ -1,30 +1,52 @@
  <!--1 Coulm horizontal listing-->
  <div class="divider"></div>
+
+
+<div class="app-content">
  
-<div class="card-panel horizontal-listing ">
-    <div class="container-fluid">
-    <div class="card">
+    <md-card  *ngFor="let school of schools">
+    
+        <md-card-header (click)="getSchoolDetails(school.id)">
+            <md-card-title>{{school.title}}</md-card-title>
+            <md-card-subtitle>{{school.subTitle}}</md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="assets/image/wood.png"><!--{{school.schoolImage}}-->
+         <md-card-content>
+            <p>
+              {{school.snippet}}
+            </p>
+            
+            <p><strong>Address : </strong>{{school.address}}</p>
+            <p><strong>Phone : </strong>{{school.phone}}</p>
+        </md-card-content>
+        <md-card-actions>
+            <div>
+                <button md-button color="primary">LIKE</button>
+                <button md-button color="primary" [mdMenuTriggerFor]="menu">SHARE</button>
+                
+                    <rating [(ngModel)]="school.averageRating" [readonly]="true"
+                        [titles]="['one', 'two', 'three', 'four', 'five']">
+                    </rating>
+                    <span class="reviews-text">1000 reviews</span>
+            </div>
 
-    <!--Card image-->
-    <div class="view1 overlay1 hm-white-slight2">
-        <img src="https://mdbootstrap.com/images/regular/city/img%20(4).jpg" class="img-fluid horizontal-size" alt="">
-        <a href="#">
-            <div class="mask1"></div>
-        </a>
+            <md-menu #menu="mdMenu">
+                <button md-menu-item>
+                    <span>Facebook</span>
+                  </button>
+                  <button md-menu-item>
+                    <span>Google+</span>
+                  </button>
+                  <button md-menu-item>
+                    <span>Twitter</span>
+                  </button>
+            </md-menu>
+            
+        </md-card-actions>
         
-    </div>
-    <!--/.Card image-->
+    </md-card>
 
-    <!--Card content-->
-    <div class="card-block1">
-        <!--Title-->
-        <h4 class="card-title">Challenger School</h4>
-        <!--Text-->
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-ptc">Read more</a>
-    </div>
-    <!--/.Card content-->
+   
 
-</div>
-        <!--/.Card-->
-    </div>      
+ </div>
+  
