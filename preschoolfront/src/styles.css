@@ -237,12 +237,6 @@ a {
     display: inline;
 }
 
-.horizontal-size{
-  padding: 0;
-  width: 200px;
-  height: auto;
-}
-
 .card.container{
   flex-direction: row;
   flex-wrap: nowrap; 
