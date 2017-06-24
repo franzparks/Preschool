@@ -24,6 +24,14 @@ export class SchoolListComponent implements OnInit {
 	) { }
 
   	ngOnInit() {
+  		this.schoolService.getSchoolList().subscribe(
+			res => {
+				this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		//console.log(JSON.parse(JSON.stringify(res))._body);
+      		},
+      		error => console.log(error)
+		)
   	}
 
 }
