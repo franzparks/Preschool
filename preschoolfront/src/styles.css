@@ -251,16 +251,10 @@ a {
 }
 
 .flex-item {
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+  width: 40%;
+  height: auto;
+
   
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
 }
 
 /*body {
