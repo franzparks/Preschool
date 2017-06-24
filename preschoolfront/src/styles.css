@@ -245,8 +245,22 @@ a {
 
 .card.container{
   flex-direction: row;
+  flex-wrap: nowrap; 
   justify-content: space-between;
   margin-bottom: 15px;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
 }
 
 /*body {
