@@ -41,14 +41,18 @@ body,
     
 }*/
 
+.socialsGrandParent{
+  position: fixed;
+  /*transform: translateZ(0);*/
+}
 
 .socialsParent{
-  position: relative !important;
-  transform: translateZ(0);
+  position: relative;
+  /*transform: translateZ(0);*/
 }
 
 .socialsChildren{
-  position: relative;
+  position: absolute;
   z-index: 2;
   background: white;
   top: 33%;
