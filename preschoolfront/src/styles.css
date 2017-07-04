@@ -30,9 +30,18 @@ body,
  
 }
 
+div.mat-menu-panel{
+    position: relative;
+    z-index: 2000;
+    background: white;
+    top: -600px;
+    left: 180px;
+}
+
 .material-icons{
   font-size: 14px;
 }
+
 
 main {
     padding-top: 3rem;
