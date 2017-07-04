@@ -10,54 +10,43 @@
 				</div>
 			</div>
 			
-			<md-grid-list cols="4" rowHeight="60px">
-				<md-grid-tile [colspan]="2" [rowspan]="1">
-					<md-input-container>
-						<input mdInput id="subTitle" type="text" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
-					</md-input-container>
-				</md-grid-tile>
-				<md-grid-tile [colspan]="2" [rowspan]="1">
-					<md-input-container>
-						<input mdInput id="snippet" type="text" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">
-					</md-input-container>
-				</md-grid-tile>
-			</md-grid-list>
-
-
-			<md-input-container>
-				<textarea mdInput id="summary" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
-			</md-input-container>
-
-			<md-grid-list cols="4" rowHeight="60px">
-				<md-grid-tile [colspan]="4" [rowspan]="1">
-					<md-input-container>
-						<input mdInput id="address" type="text" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">
-					</md-input-container>
-				</md-grid-tile>
-			</md-grid-list>
-
-			<md-grid-list cols="4" rowHeight="60px">
-				<md-grid-tile [colspan]="2" [rowspan]="1">
-					<md-input-container>
-						<input mdInput id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone"  placeholder="Phone Number">
-					</md-input-container>
-				</md-grid-tile>
+			<div class="form-group">
 				
-			</md-grid-list>
-
+				<input mdInput id="subTitle" type="text" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
 			
+				<input mdInput id="snippet" type="text" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">
+					
+			</div>
+
+
+			<div class="form-group">
+				<textarea mdInput id="summary" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
+			</div>
+
+			<div class="form-group">
+				
+				<input mdInput id="address" type="text" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">
+					
+			</div>
+
+			<div class="form-group">
+				<input mdInput id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone"  placeholder="Phone Number">
+			</div>
+
+			<div class="form-group">
 			Image &nbsp;
 			<input id="tile" type="file" id="schoolImage" name="schoolImage" (change)="uploadImageService.fileChangeEvent($event)">
 			<br><br>
 
-			<md-grid-list cols="20" rowHeight="60px">
-				<md-grid-tile [colspan]="2" [rowspan]="1">
-						<button class="mat-primary" md-raised-button type="submit">Add School</button>
-				</md-grid-tile>
-				<md-grid-tile [colspan]="2" [rowspan]="1">
-					<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
-				</md-grid-tile>
-			</md-grid-list>
+			</div>
+
+			<div class="form-group">
+				
+				<button class="mat-primary" md-raised-button type="submit">Add School</button>
+				
+				<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
+				
+			</div>
 		</form>
 	</div>
 	<div class="row" [hidden]="!schoolAdded"
