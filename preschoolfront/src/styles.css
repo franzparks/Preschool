@@ -38,6 +38,10 @@ img.mat-card-image {
     margin: 0;
 }
 
+.mat-card-actions {
+  margin: 16px;
+}
+
 /*@media screen and (min-width: 480px) {
   div.mat-menu-panel {
       position: relative;
