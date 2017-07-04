@@ -1,15 +1,13 @@
-<div class="app-content">
+<div class="add-new-school-content">
 	<div [hidden]="schoolAdded">
 		<h3 style="margin-top: 30px;">New School Information <span style="font-size:small">* is a required field</span></h3>
 
 		<form (ngSubmit)="onSubmit()">
-			<md-grid-list cols="4" rowHeight="60px">
-				<md-grid-tile [colspan]="4" [rowspan]="1">
-					<md-input-container>
-						<input mdInput id="title" type="text" required [(ngModel)]="newSchool.title" name="title" placeholder="Title">
-					</md-input-container>
-				</md-grid-tile>
-			</md-grid-list>
+			<div class="form-group">
+				<div class="form-control">
+					<input mdInput id="title" type="text" required [(ngModel)]="newSchool.title" name="title" placeholder="Title">
+				</div>
+			</div>
 			
 			<md-grid-list cols="4" rowHeight="60px">
 				<md-grid-tile [colspan]="2" [rowspan]="1">
