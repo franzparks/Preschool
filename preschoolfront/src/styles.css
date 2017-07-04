@@ -496,5 +496,14 @@ md-card a,a:hover{
   padding-left: 16px;
 }
 
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+  padding-left: 16px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
 
 
