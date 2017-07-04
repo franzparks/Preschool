@@ -30,16 +30,30 @@ body,
  
 }
 
-@media screen and (min-width: 480px) {
-    div.mat-menu-panel {
+/*@media screen and (min-width: 480px) {
+  div.mat-menu-panel {
       position: relative;
       z-index: 2;
       background: white;
       top: -600px;
       left: 180px;
   }
+    
+}*/
+
+
+.socialsParent{
+  position: relative !important;
+  transform: translateZ(0);
 }
 
+.socialsChildren{
+  position: relative;
+  z-index: 2;
+  background: white;
+  top: 33%;
+  left: 10%;
+}
 
 
 .material-icons{
