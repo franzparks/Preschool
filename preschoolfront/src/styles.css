@@ -501,12 +501,13 @@ md-card a,a:hover{
   flex-direction: row;
   padding-top: 16px;
   padding-left: 16px;
-  font-family: cursive;
-  font-weight: bold;
+  
 }
 
 .mat-card-header .mat-card-title {
-    font-size: 18px;
+    font-size: 17px !important;
+    font-family: cursive;
+    font-weight: bold;
 }
 
 
