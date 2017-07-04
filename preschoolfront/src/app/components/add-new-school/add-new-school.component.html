@@ -12,30 +12,32 @@
 			
 			<div class="form-group">
 				
-				<input mdInput id="subTitle" type="text" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
+				<input mdInput id="subTitle" class="form-control" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
 			
-				<input mdInput id="snippet" type="text" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">
+				<input mdInput id="snippet" class="form-control" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">
 					
 			</div>
 
 
 			<div class="form-group">
-				<textarea mdInput id="summary" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
+				<textarea mdInput id="summary" class="form-control" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
 			</div>
 
 			<div class="form-group">
 				
-				<input mdInput id="address" type="text" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">
+				<input mdInput id="address" class="form-control" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">
 					
 			</div>
 
 			<div class="form-group">
-				<input mdInput id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone"  placeholder="Phone Number">
+				<input mdInput id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
+				 placeholder="Phone Number">
 			</div>
 
 			<div class="form-group">
 			Image &nbsp;
-			<input id="tile" type="file" id="schoolImage" name="schoolImage" (change)="uploadImageService.fileChangeEvent($event)">
+			<input id="tile" type="file" id="schoolImage" name="schoolImage" class="form-control" 
+			(change)="uploadImageService.fileChangeEvent($event)">
 			<br><br>
 
 			</div>
