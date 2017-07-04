@@ -2,7 +2,7 @@
 	<div [hidden]="schoolAdded">
 		<h3 style="margin-top: 30px;">New School Information <span style="font-size:small">* is a required field</span></h3>
 
-		<form (ngSubmit)="onSubmit()">
+		<form (ngSubmit)="onSubmit()" class="form-horizontal1">
 			<div class="form-group">
 				<div >
 					<input mdInput id="title"  class="form-control" [(ngModel)]="newSchool.title" 
@@ -44,9 +44,9 @@
 
 			<div class="form-group">
 				
-				<button class="mat-primary" md-raised-button type="submit">Add School</button>
+				<button class="submit-review" md-raised-button type="submit">Add School</button>
 				
-				<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
+				<a class="submit-review" md-raised-button routerLink="/">Cancel</a>
 				
 			</div>
 		</form>
