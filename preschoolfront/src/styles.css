@@ -195,6 +195,15 @@ a {
     font-size: 1.6rem;
 }
 
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .btn-fb {
     background-color: #3B5998;
 }
