@@ -2,6 +2,7 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/mdbootstrap/css/bootstrap.min.css';
 @import '../node_modules/mdbootstrap/css/mdb.min.css';
+/*@import './morestyles.css';*/
 
 html,
 body,
@@ -42,21 +43,31 @@ body,
 }*/
 
 .socialsGrandParent{
-  position: fixed;
-  /*transform: translateZ(0);*/
+  position: relative;
+  /*transform: translateZ(0);
+  display: block;*/
+  
 }
 
-.socialsParent{
+#socialsParent{
   position: relative;
-  /*transform: translateZ(0);*/
+  /*transform: translateZ(0);
+  transform: translateY(-100%);*/
 }
 
 .socialsChildren{
-  position: absolute;
-  z-index: 2;
-  background: white;
-  top: 33%;
-  left: 10%;
+  
+  /*position: element(#socialsParent);
+  z-index: 2;*/
+    transform: translateY(-100%) !important;
+    display: block !important;
+
+}
+
+.mat-menu-panel13 {
+  transform: translateY(-199%) !important;
+  display: block !important;
+  z-index: 1; 
 }
 
 
@@ -336,6 +347,11 @@ a {
   float: right !important;
 }
 */
+
+/*more optionals*/
+
+
+/*end optionals*/
 .app-content {
   padding: 20px;
 }

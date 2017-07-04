@@ -45,7 +45,7 @@
             <!--First columnn-->
     <div class="col-md-4">
         <!--Card-->
-        <md-card class="card  product-card ovf-hidden hoverable socialsGrandParent">      
+        <md-card id="socialsParent" class="card  product-card ovf-hidden hoverable socialsGrandParent1">      
 
             <!--Card image-->
             <div class="view overlay hm-white-slight">
@@ -67,13 +67,12 @@
             <!--/.Rating-->
            
             <div class="action-buttons">
-                <a class="btn-floating  activator waves-effect waves-light" [mdMenuTriggerFor]="menu"><i class="fa fa-share-alt"></i></a>
+                <a class="btn-floating  activator waves-effect waves-light" (click)="isClassVisible = !isClassVisible;" ><i class="fa fa-share-alt"></i></a>
                 <a class="btn-floating red waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" 
                 title="Add to wishlist" 
                  data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a>
                  
             </div>
-            
             
             
             <!--Card content-->
@@ -87,35 +86,28 @@
                 Read more</a>
             </div>
 
-            <div class="socialsParent">
-                 <md-menu #menu="mdMenu" class="card-reveal socialsChildren">
-                        <!--Content-->
-                            <div class="content text-center">
-                                <h4 class="card-title">Social shares <i class="fa fa-close"></i></h4>
-                                <hr>
-                                <!--Social Icons-->
-                                <ul class="inline-ul">
-                                    <li><a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
-                                    <li><a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
-                                    <li><a class="btn-floating btn-small btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
-                                    <li><a class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
-                                    <li><a class="btn-floating btn-small btn-pin"><i class="fa fa-pinterest"> </i></a></li>
-                                    <li><a class="btn-floating btn-small btn-ins"><i class="fa fa-instagram"> </i></a></li>
-                                </ul>
-                                <!--<h5>Join our community</h5>
-                                <hr>-->
-                                <!--Social Icons-->
-                                <!--<ul class="inline-ul">
-                                    <li><a class="btn btn-fb"><i class="fa fa-facebook"> </i></a></li>
-                                    <li><a class="btn btn-tw"><i class="fa fa-twitter"> </i></a></li>
-                                    <li><a class="btn btn-li"><i class="fa fa-linkedin"> </i></a></li>
-                                    <li><a class="btn btn-ins"><i class="fa fa-instagram"> </i></a></li>
-                                </ul>-->
-                            </div>
-                        <!--/.Content-->
-                    </md-menu>
-                </div>
+            <div class="cta"></div>
+            <div class="card-reveal " [ngClass]="{'socialsChildren': isClassVisible }">
+                <div class="content text-xs-center">
 
+                    <h4 class="card-title">Social shares <i class="fa fa-close" (click)="isClassVisible = !isClassVisible;"></i></h4>
+                    <hr>
+
+                    <!--Social Icons-->
+                    <ul class="inline-ul">
+                        <li><a class="btn-floating btn-small btn-fb waves-effect waves-light"><i class="fa fa-facebook"> </i></a></li>
+                        <li><a class="btn-floating btn-small btn-tw waves-effect waves-light"><i class="fa fa-twitter"> </i></a></li>
+                        <li><a class="btn-floating btn-small btn-gplus waves-effect waves-light"><i class="fa fa-google-plus"> </i></a></li>
+                        <li><a class="btn-floating btn-small btn-li waves-effect waves-light"><i class="fa fa-linkedin"> </i></a></li>
+                        <li><a class="btn-floating btn-small btn-git waves-effect waves-light"><i class="fa fa-github"> </i></a></li>
+                        <li><a class="btn-floating btn-small btn-pin waves-effect waves-light"><i class="fa fa-pinterest"> </i></a></li>
+                        <li><a class="btn-floating btn-small btn-ins waves-effect waves-light"><i class="fa fa-instagram"> </i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!--Card Reveal-->
+           
              
         </md-card>
         <!--/.Card-->
@@ -125,28 +117,7 @@
     <!--Second columnn-->
     <div class="col-md-4">
         <!--Card-->
-        <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay hm-white-slight">
-                <img src="https://mdbootstrap.com/images/regular/city/img%20(4).jpg" class="img-fluid" alt="">
-                <a href="#">
-                    <div class="mask"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-
-            <!--Card content-->
-            <div class="card-block">
-                <!--Title-->
-                <h4 class="card-title">Challenger School</h4>
-                <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-ptc">Read more</a>
-            </div>
-            <!--/.Card content-->
-
-        </div>
+        
         <!--/.Card-->
     </div>
     <!--Second columnn-->
@@ -154,28 +125,7 @@
     <!--Third columnn-->
     <div class="col-md-4">
         <!--Card-->
-        <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay hm-white-slight">
-                <img src="https://mdbootstrap.com/images/regular/city/img%20(8).jpg" class="img-fluid" alt="">
-                <a href="#">
-                    <div class="mask"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-
-            <!--Card content-->
-            <div class="card-block">
-                <!--Title-->
-                <h4 class="card-title">South Bay Preschool</h4>
-                <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-ptc">Read more</a>
-            </div>
-            <!--/.Card content-->
-
-        </div>
+        
         <!--/.Card-->
     </div>
     <!--Third columnn-->

@@ -13,6 +13,8 @@ import {SchoolService } from '../../services/school.service';
 })
 export class HomeComponent implements OnInit {
 
+	isClassVisible = false;
+
 	starsCount : number = 3;
 
 	schools: School[] = [];
