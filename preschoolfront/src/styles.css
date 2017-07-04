@@ -39,7 +39,7 @@ img.mat-card-image {
 }
 
 .mat-card-actions {
-  margin: 16px;
+  margin: 16px !important;
 }
 
 /*@media screen and (min-width: 480px) {
