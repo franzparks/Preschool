@@ -42,6 +42,12 @@ img.mat-card-image {
   margin: 16px !important;
 }
 
+.star-icon {
+    color: #2c70ca;
+    font-size: 1.6em;
+    position: relative;
+}
+
 /*@media screen and (min-width: 480px) {
   div.mat-menu-panel {
       position: relative;
