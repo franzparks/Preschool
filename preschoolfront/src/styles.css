@@ -98,6 +98,16 @@ main {
 
 }
 
+.submit-review{
+  float: left;
+  background-color: blue; 
+}
+
+.cancel-submit-review{
+  float: right;
+  background-color:red; 
+}
+
 .mat-grid-tile .mat-figure {
   align-items: flex-start !important;
 }
