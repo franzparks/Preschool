@@ -103,6 +103,10 @@ main {
   background-color: #b4b4ce;
   min-width: 180px !important; 
 }
+.reg-form-input-group{
+  padding: 16px;
+  margin: 16px;
+}
 
 .cancel-submit-review{
   float: right;
