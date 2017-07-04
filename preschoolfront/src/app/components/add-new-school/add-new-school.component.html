@@ -4,8 +4,9 @@
 
 		<form (ngSubmit)="onSubmit()">
 			<div class="form-group">
-				<div class="form-control">
-					<input mdInput id="title" type="text" required [(ngModel)]="newSchool.title" name="title" placeholder="Title">
+				<div >
+					<input mdInput id="title"  class="form-control" [(ngModel)]="newSchool.title" 
+					name="title" placeholder="Title" required="">
 				</div>
 			</div>
 			
