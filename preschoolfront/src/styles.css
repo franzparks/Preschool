@@ -32,6 +32,12 @@ body,
  
 }
 
+img.mat-card-image {
+    width: 100%;
+    max-height: 400px; 
+    margin: 0;
+}
+
 /*@media screen and (min-width: 480px) {
   div.mat-menu-panel {
       position: relative;
