@@ -491,5 +491,10 @@ md-card a,a:hover{
   background: #a1bcef;
 }
 
+.mat-card-content p{
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
 
 
