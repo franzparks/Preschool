@@ -44,7 +44,7 @@ img.mat-card-image {
 
 .star-icon {
     color: #2c70ca !important;
-    font-size: 1.6em !important;
+    /*font-size: 1.6em*/;
 }
 
 .actions-wrapper{
@@ -391,7 +391,11 @@ a {
 
 /*end optionals*/
 .app-content {
-  padding: 20px;
+  padding: 16px;
+}
+
+.app-content h4{
+  padding-top: 16px;
 }
 
 .app-content md-card {
