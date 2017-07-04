@@ -185,14 +185,8 @@ a {
 }
 .btn-floating i {
     width: inherit;
-    text-align: center;
-    font-size: 1.6rem;
-}
-
-.btn-floating, .btn-floating i {
-    color: #fff;
-    display: inline-block;
-    line-height: 37px;
+    text-align: center !important;
+    font-size: 1.3rem;
 }
 
 .btn-fb {
