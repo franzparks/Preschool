@@ -106,8 +106,8 @@ main {
 
 .cancel-submit-review{
   float: right;
-  background-color:#e26969; 
-  min-width: 180px !important;
+  background-color:#dc7b7b; 
+  min-width: 140px !important;
 }
 
 .mat-grid-tile .mat-figure {
