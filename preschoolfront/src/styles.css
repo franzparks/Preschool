@@ -183,10 +183,16 @@ a {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
+
+.btn-floating.btn-small .fa, .btn-floating.btn-small .material-icons, .btn-floating.wishlist .fa, .btn-floating.wishlist .material-icons, .card .card-share .social-reveal .btn-floating .fa, .card .card-share .social-reveal .btn-floating .material-icons {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
 .btn-floating i {
     width: inherit;
     text-align: center !important;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .btn-fb {
