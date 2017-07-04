@@ -42,33 +42,11 @@ body,
     
 }*/
 
-.socialsGrandParent{
-  position: relative;
-  /*transform: translateZ(0);
-  display: block;*/
-  
-}
-
-#socialsParent{
-  position: relative;
-  /*transform: translateZ(0);
-  transform: translateY(-100%);*/
-}
-
-.socialsChildren{
-  
-  /*position: element(#socialsParent);
-  z-index: 2;*/
-    transform: translateY(-100%) !important;
-    display: block !important;
-
-}
-
-.mat-menu-panel13 {
-  transform: translateY(-199%) !important;
+.socialsShares{
+  transform: translateY(-100%) !important;
   display: block !important;
-  z-index: 1; 
 }
+
 
 
 .material-icons{
