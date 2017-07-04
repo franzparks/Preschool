@@ -2,6 +2,7 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/mdbootstrap/css/bootstrap.min.css';
 @import '../node_modules/mdbootstrap/css/mdb.min.css';
+@import url(https://cdn.jsdelivr.net/mdbootstrap/4.3.2/mdb.min.css);
 /*@import './morestyles.css';*/
 
 html,
@@ -194,6 +195,34 @@ a {
     line-height: 37px;
 }
 
+.btn-fb {
+    background-color: #3B5998;
+}
+
+.btn-tw {
+    background-color: #55ACEE;
+}
+
+.btn-gplus {
+    background-color: #DD4B39;
+}
+
+.btn-li {
+    background-color: #0082CA;
+}
+
+.btn-git {
+    background-color: #4183C4;
+}
+
+.btn-pin {
+    background-color: #C61118;
+}
+
+.btn-ins {
+    background-color: #3F729B;
+}
+
 .card .rating {
     color: #ffa000;
 }
@@ -225,6 +254,12 @@ a {
 
 .btn-floating, .card .card-reveal .card-title, .card-wrapper .back .card-title, .dropdown-content li, .file-field span, input[type=range], input[type=range]+.thumb {
     cursor: pointer;
+}
+
+.btn-floating.btn-small, .btn-floating.wishlist, .card .card-share .social-reveal .btn-floating {
+    height: 47px;
+    width: 47px;
+    line-height: 0;
 }
 
 .horizontal-listing .row:first-of-type {
@@ -266,8 +301,6 @@ a {
 .flex-item {
   width: 40%;
   height: auto;
-
-  
 }
 
 /*body {
