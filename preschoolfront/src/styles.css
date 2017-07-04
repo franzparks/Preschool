@@ -94,6 +94,14 @@ main {
   background-color: #59698d !important;
 }
 
+.review-textarea{
+
+}
+
+.mat-grid-tile .mat-figure {
+  align-items: flex-start !important;
+}
+
 
 footer.page-footer {
     background-color: #1C2331;
