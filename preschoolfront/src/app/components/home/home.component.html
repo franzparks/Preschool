@@ -45,7 +45,7 @@
             <!--First columnn-->
     <div class="col-md-4">
         <!--Card-->
-        <md-card id="socialsParent" class="card  product-card ovf-hidden hoverable socialsGrandParent1">      
+        <md-card class="card  product-card ovf-hidden hoverable">      
 
             <!--Card image-->
             <div class="view overlay hm-white-slight">
@@ -87,7 +87,7 @@
             </div>
 
             <div class="cta"></div>
-            <div class="card-reveal " [ngClass]="{'socialsChildren': isClassVisible }">
+            <div class="card-reveal " [ngClass]="{'socialShares': isClassVisible }">
                 <div class="content text-xs-center">
 
                     <h4 class="card-title">Social shares <i class="fa fa-close" (click)="isClassVisible = !isClassVisible;"></i></h4>

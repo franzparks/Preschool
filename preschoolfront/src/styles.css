@@ -42,11 +42,10 @@ body,
     
 }*/
 
-.socialsShares{
+.socialShares{
   transform: translateY(-100%) !important;
   display: block !important;
 }
-
 
 
 .material-icons{
