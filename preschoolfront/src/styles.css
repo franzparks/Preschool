@@ -528,7 +528,8 @@ md-card a,a:hover{
 
 .review-button {
   float: right;
-  background: #a1bcef;
+  background: #45526E !important;
+  color: #fff !important;
 }
 
 .mat-card-content p{
