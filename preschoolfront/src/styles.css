@@ -539,6 +539,9 @@ md-card a,a:hover{
   background: #b1b9c7 !important;
   /*color: #fff !important;*/
 }
+.panel-body {
+  margin-top:20px;
+}
 
 .mat-card-content p{
   padding-top: 16px;
