@@ -117,6 +117,11 @@ main {
 .mat-grid-tile .mat-figure {
   align-items: flex-start !important;
 }
+.mat-tab-body{
+  padding-left: 16px; 
+  padding-right: 16px;
+  padding-bottom: 16px;  
+}
 
 
 footer.page-footer {
