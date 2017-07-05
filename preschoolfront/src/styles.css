@@ -109,7 +109,8 @@ main {
 
 .cancel-submit-review{
   float: right;
-  background-color:#dc7b7b; 
+  background:#1f80bb;
+  color: #fff !important; 
   min-width: 140px !important;
 }
 
