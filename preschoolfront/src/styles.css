@@ -361,6 +361,14 @@ a {
   height: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .flex-item {
+  width: 100%;
+  height: auto;
+}
+    
+}
+
 /*body {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
