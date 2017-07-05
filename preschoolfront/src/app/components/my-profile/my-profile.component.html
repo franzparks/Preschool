@@ -11,15 +11,15 @@
     <hr/>
     -->
 
-<div *ngIf="!dataFetched" style="margin-top: 50px;">
-    <div class="row">
+<div *ngIf="!dataFetched" class="top-margin">
+    <div class="reg-form-input-group">
         <div class="col-md-2 col-md-offset-5">
             <md-spinner></md-spinner>
         </div>
     </div>
 </div>
  
-   <div class="reg-form-input-group" >
+   <div class="reg-form-input-group top-margin">
        <!-- <div class="col-xs-3"></div>-->
         <div *ngIf="dataFetched">
             <div class="col-xs-9 col-md-offset-1">
