@@ -535,6 +535,11 @@ md-card a,a:hover{
   color: #fff !important;
 }
 
+.tab-header-color {
+  background: #b1b9c7 !important;
+  /*color: #fff !important;*/
+}
+
 .mat-card-content p{
   padding-top: 16px;
   padding-left: 16px;
