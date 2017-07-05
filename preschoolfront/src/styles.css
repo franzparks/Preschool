@@ -528,6 +528,9 @@ md-card a,a:hover{
 
 .review-button {
   float: right;
+}
+
+.button-color {
   background: #45526E !important;
   color: #fff !important;
 }
