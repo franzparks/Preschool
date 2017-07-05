@@ -120,7 +120,8 @@ main {
 .mat-tab-body{
   padding-left: 16px; 
   padding-right: 16px;
-  padding-bottom: 16px;  
+  padding-bottom: 16px;
+  background-color: ghostwhite;  
 }
 
 
