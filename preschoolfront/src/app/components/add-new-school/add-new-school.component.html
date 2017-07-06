@@ -2,7 +2,7 @@
 	<div [hidden]="schoolAdded">
 		<h3 style="margin-top: 30px;">New School Information <span style="font-size:small">* is a required field</span></h3>
 
-		<form (ngSubmit)="onSubmit()" class="">
+		<form (ngSubmit)="onSubmit()" class="waves-effect waves-light">
 			<div class="form-group">
 				<div >
 					<input mdInput id="title"  class="form-control" [(ngModel)]="newSchool.title" 
