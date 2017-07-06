@@ -99,7 +99,7 @@ public class SchoolResource {
 	
 	@RequestMapping("/schoolList")
 	public List<School> getSchoolList() {
-		return schoolService.findAll();
+		return schoolService.findAll().subList(0, 5);
 	}
 	
 	@RequestMapping(value="/update", method=RequestMethod.POST)
