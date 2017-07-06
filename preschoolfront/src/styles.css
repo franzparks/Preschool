@@ -606,3 +606,12 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     box-shadow: 0 1px 0 0 #4285F4;
 }
 
+input {
+    line-height: normal;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
