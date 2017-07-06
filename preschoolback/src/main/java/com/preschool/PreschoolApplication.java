@@ -46,7 +46,7 @@ public class PreschoolApplication implements CommandLineRunner{
 		role1.setName("ROLE_USER");
 		userRoles.add(new UserRole(user1, role1));
 		
-		userService.createUser(user1, userRoles);
+		//userService.createUser(user1, userRoles);
 		
 		userRoles.clear();
 		
@@ -61,7 +61,7 @@ public class PreschoolApplication implements CommandLineRunner{
 		role2.setName("ROLE_ADMIN");
 		userRoles.add(new UserRole(user2, role2));
 		
-		userService.createUser(user2, userRoles);
+		//userService.createUser(user2, userRoles);
 		
 		School school1 =  new School();
 		school1.setTitle("The Harker School - Preschool");
@@ -116,8 +116,8 @@ public class PreschoolApplication implements CommandLineRunner{
 		school3.setAverageRating(3);
 
 		
-		schoolService.save(school1);
-		schoolService.save(school2);
-		schoolService.save(school3);
+		//schoolService.save(school1);
+		//schoolService.save(school2);
+		//schoolService.save(school3);
     }
 }
