@@ -141,12 +141,26 @@ footer.page-footer {
 }
 
 .product-card .rating {
-    position: absolute;
-    margin-top: -16px;
-    right: 10px;
-    background-color: #0d47a1;
-    padding: .4rem 1rem;
-    font-size: .8rem;
+  /*position: absolute;
+  margin-top: -16px;
+  right: 10px;
+  background-color: #0d47a1;
+  padding: .4rem 1rem;
+  font-size: .8rem;*/
+
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
 .product-card .action-buttons .btn-floating .fa, .product-card .action-buttons .btn-floating .material-icons {

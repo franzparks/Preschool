@@ -57,13 +57,16 @@
             </div>
             <!--/.Card image-->
             <!--Rating-->
-            <a class="btn btn-small rating btn-primary waves-effect waves-light">
+            <!--<a class="btn btn-small rating btn-primary waves-effect waves-light">
                 <i class="material-icons">star</i>
                 <i class="material-icons">star</i>
                 <i class="material-icons">star</i>
                 <i class="material-icons">star</i>
                 <i class="material-icons">star_border</i>
-            </a>
+            </a>-->
+            <rating [(ngModel)]="school.averageRating" [readonly]="true" class="btn btn-small rating btn-primary waves-effect waves-light"
+                    [titles]="['one', 'two', 'three', 'four', 'five']">
+            </rating>
             <!--/.Rating-->
            
             <div class="action-buttons">
