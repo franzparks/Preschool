@@ -14,7 +14,7 @@
 										Incorrect username or password.
 									</div>
 
-									<form (ngSubmit)="onLogin()">
+									<form (ngSubmit)="onLogin()" class="waves-effect waves-light">
 										<div class="form-group">
 											<label for ="username">Username *</label>
 											<input type="text" class="form-control" id="username" name="username" 
@@ -37,7 +37,7 @@
 								<div style="margin-top: 20px;">
 									<div class="alert alert-info" *ngIf="emailSent">An email has been sent to the email address you just registered. Please validate your email address and update your password info.
 									</div>
-									<form (ngSubmit)="onNewAccount()">
+									<form (ngSubmit)="onNewAccount()" class="waves-effect waves-light">
 										<div class="form-group">
 											<label for="newUsername">Username *</label>&nbsp;<span *ngIf="usernameExists" style="color:red;">Username already exists. Choose a different one.</span>
 											<input type="text" class="form-control" id="newUsername" name="username" 
@@ -60,7 +60,7 @@
 								<div style="margin-top: 20px;">
 									<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
 									<div class="alert alert-success" *ngIf="forgetPasswordEmailSent">Email sent.</div>
-									<form (ngSubmit)="onForgetPassword()">
+									<form (ngSubmit)="onForgetPassword()" class="waves-effect waves-light">
 										<div class="form-group">
 											<label for="recoverEmail">Your Email Address *</label>
 											<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" 
