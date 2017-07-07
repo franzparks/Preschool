@@ -636,3 +636,8 @@ button, input, optgroup, select, textarea {
     box-sizing: content-box;
     transition: all .3s;
 }
+
+label {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
