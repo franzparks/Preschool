@@ -64,9 +64,11 @@
                 <i class="material-icons">star</i>
                 <i class="material-icons">star_border</i>
             </a>-->
-            <rating [(ngModel)]="school.averageRating" [readonly]="true" class="btn btn-small rating btn-primary waves-effect waves-light"
-                    [titles]="['one', 'two', 'three', 'four', 'five']">
+            <a class="btn btn-small rating btn-primary waves-effect waves-light">
+            <rating [(ngModel)]="school.averageRating" [readonly]="true" 
+                    [titles]="['one', 'two', 'three', 'four', 'five']" [iconClass]="star-icon-new">
             </rating>
+            </a>
             <!--/.Rating-->
            
             <div class="action-buttons">

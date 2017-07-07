@@ -163,6 +163,12 @@ footer.page-footer {
   -webkit-font-smoothing: antialiased;
 }
 
+.star-icon-new {
+  font-size: 50px;
+  line-height: 34px;
+  color: red;
+}
+
 .product-card .action-buttons .btn-floating .fa, .product-card .action-buttons .btn-floating .material-icons {
     font-size: 14px;
     margin-top: 1px;
