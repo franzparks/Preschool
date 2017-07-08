@@ -47,6 +47,11 @@ img.mat-card-image {
     /*font-size: 1.6em*/;
 }
 
+.product-card .star-icon {
+    /*color: #2c70ca !important;*/
+    font-size: 1.0em !important;
+}
+
 .actions-wrapper{
   padding-bottom: 15px;
 }
@@ -163,11 +168,6 @@ footer.page-footer {
   -webkit-font-smoothing: antialiased;
 }
 
-.star-icon-new {
-  font-size: 50px;
-  line-height: 34px;
-  color: red;
-}
 
 span.rating {
     color: #ffa000;
