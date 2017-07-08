@@ -64,10 +64,12 @@
                 <i class="material-icons">star</i>
                 <i class="material-icons">star_border</i>
             </a>-->
+            <a class="btn btn-small rating1 btn-primary waves-effect waves-light">
+                <rating [(ngModel)]="starsCount"  [readonly]="true" 
+                        [titles]="['one', 'two', 'three', 'four', 'five']" >
+                </rating>
+            </a>    
             
-            <rating [(ngModel)]="starsCount"  [readonly]="true" 
-                    [titles]="['one', 'two', 'three', 'four', 'five']" >
-            </rating>
             
             <!--/.Rating-->
            
