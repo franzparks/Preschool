@@ -169,7 +169,7 @@ footer.page-footer {
   color: red;
 }
 
-.card .rating {
+span.rating {
     color: #ffa000;
     font-family: 'Material Icons';
     font-weight: normal;

@@ -45,14 +45,14 @@
             <!--First columnn-->
     <div class="col-md-4">
         <!--Card-->
-        <md-card class="card  product-card ovf-hidden hoverable">      
+        <md-card class="card1  product-card1 ovf-hidden hoverable1">      
 
             <!--Card image-->
-            <div class="view overlay hm-white-slight">
+            <div class="view1 overlay1 hm-white-slight1">
                 <img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">
                 
                 <a href="#">
-                    <div class="mask waves-effect waves-light"></div>
+                    <div class="mask1 waves-effect1 waves-light1"></div>
                 </a>
             </div>
             <!--/.Card image-->
@@ -64,11 +64,11 @@
                 <i class="material-icons">star</i>
                 <i class="material-icons">star_border</i>
             </a>-->
-            <a class="btn btn-small rating btn-primary waves-effect waves-light">
-            <rating [(ngModel)]="school.averageRating" [readonly]="true" 
-                    [titles]="['one', 'two', 'three', 'four', 'five']" [iconClass]="star-icon-new">
+            
+            <rating [(ngModel)]="starsCount"  [readonly]="true" 
+                    [titles]="['one', 'two', 'three', 'four', 'five']" >
             </rating>
-            </a>
+            
             <!--/.Rating-->
            
             <div class="action-buttons">
