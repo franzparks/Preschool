@@ -12,6 +12,8 @@ import {SchoolService } from '../../services/school.service';
 })
 export class SchoolListComponent implements OnInit {
 
+	Math: any;
+	
 	starsCount : number = 3;
 
 	schools: School[] = [];
@@ -24,6 +26,7 @@ export class SchoolListComponent implements OnInit {
 	) { }
 
   	ngOnInit() {
+  		this.Math = Math;
   		this.schoolService.getSchoolList().subscribe(
 			res => {
 				this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
