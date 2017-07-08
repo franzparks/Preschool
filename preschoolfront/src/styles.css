@@ -43,13 +43,17 @@ img.mat-card-image {
 }
 
 .star-icon {
-    color: #2c70ca !important;
-    /*font-size: 1.6em*/;
+  color: #2c70ca !important;
+  /*font-size: 1.6em*/;
 }
 
 .product-card .star-icon {
-    /*color: #2c70ca !important;*/
-    font-size: 1.0em !important;
+  /*color: #2c70ca !important;*/
+  font-size: 1.0em !important;
+}
+
+form .star-icon {
+  font-size: 1.0em !important;
 }
 
 .actions-wrapper{
