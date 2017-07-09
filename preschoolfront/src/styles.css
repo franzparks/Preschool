@@ -42,14 +42,14 @@ img.mat-card-image {
   margin: 16px !important;
 }
 
-/*.star-icon {
+.star-icon {
   color: #2c70ca !important;
   font-size: 1.2em !important;
-}*/
+}
 
 .product-card .star-icon {
   /*color: #2c70ca !important;*/
-  font-size: 1.0em !important;
+  font-size: 1.6em !important;
 }
 
 form .star-icon {
