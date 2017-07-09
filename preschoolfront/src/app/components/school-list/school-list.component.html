@@ -21,7 +21,7 @@
             <!--Text-->
             <p class="card-text">{{school.snippet}}</p>
             <button class="btn btn-ptc" (click)="getSchoolDetails(school.id)" >Read more</button>
-            <rating [(ngModel)]="school.averageRating" [readonly]="true"
+            <rating [(ngModel)]="starsCount" [readonly]="false"
                     [titles]="['one', 'two', 'three', 'four', 'five']">
             </rating>
             <span class="reviews-text">1000 reviews</span>
