@@ -158,7 +158,7 @@ footer.page-footer {
   font-size: .8rem;*/
 
   line-height: 1;
-
+  display: inline-block;
   /*font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
