@@ -38,9 +38,8 @@ body,
 }
 
 .school-search {
-  background: whitesmoke;
-  border-radius: 16px;
-  width: 100%;
+  background: whitesmoke !important;
+  border-radius: 16px !important;
   text-align: center;
 }
 
