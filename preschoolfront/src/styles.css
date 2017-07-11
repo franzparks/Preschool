@@ -18,6 +18,11 @@ body,
     -o-background-size: cover;
     background-size: cover;
 }
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
 .divider {
   border-top: 65px solid rgba(0,0,0,.1);
 }
