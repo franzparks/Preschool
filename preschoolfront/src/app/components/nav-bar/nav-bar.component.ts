@@ -16,6 +16,8 @@ export class NavBarComponent implements OnInit {
   	private keyword: string;
   	private schoolList:School[] =[];
 
+    isIn = false;   // store state
+
   	constructor(
   		private loginService: LoginService,
     	private router: Router,
@@ -34,6 +36,10 @@ export class NavBarComponent implements OnInit {
   		});
  	}
   	
+    toggleState() { // click handler
+        let bool = this.isIn;
+        this.isIn = bool === false ? true : false; 
+    }
 
   	logout() {
 	  	this.loginService.logout().subscribe(
