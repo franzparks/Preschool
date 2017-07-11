@@ -10,6 +10,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -54,7 +55,8 @@ import { SchoolListComponent } from './components/school-list/school-list.compon
     routing,
     BrowserAnimationsModule,
     RatingModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
