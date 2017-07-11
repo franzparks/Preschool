@@ -16,7 +16,7 @@ export class SchoolListComponent implements OnInit {
 	
 	starsCount : number = 3;
 
-	imageNumber : number = 1;
+	imageNumber : number = Math.floor((Math.random() * 20) + 1);
 
 	schools: School[] = [];
 
