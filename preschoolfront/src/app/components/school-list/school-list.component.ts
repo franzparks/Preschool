@@ -44,7 +44,7 @@ export class SchoolListComponent implements OnInit {
 	}
 
 	getImageNumber(){
-		this.number = Math.floor((Math.random() * 20) + 1);
+		this.imageNumber = Math.floor((Math.random() * 20) + 1);
 		return this.imageNumber;
 	}
 
