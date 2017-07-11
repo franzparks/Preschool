@@ -118,7 +118,7 @@ main {
 
 .submit-review{
   float: left;
-  min-width: 180px !important; 
+  min-width: 40% !important; 
 }
 .reg-form-input-group{
   padding: 16px;
@@ -129,7 +129,7 @@ main {
   float: right;
   background:#1f80bb;
   color: #fff !important; 
-  min-width: 140px !important;
+  min-width: 40% !important;
 }
 
 .mat-grid-tile .mat-figure {
