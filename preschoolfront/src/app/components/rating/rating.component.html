@@ -5,33 +5,26 @@
 		<h4 align="center">Write A Review</h4>
 		<hr />
 		<form (ngSubmit)="onSubmit()">
-			<md-grid-list cols="8" rowHeight="20px">
-				<md-grid-tile [colspan]="8" [rowspan]="2">
-					<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" validate
-            			[titles]="['one', 'two', 'three', 'four', 'five']">
-    				</rating>
+			<div cols="form-group">
+				<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" validate
+        			[titles]="['one', 'two', 'three', 'four', 'five']">
+				</rating>
+			</div>
 
-				</md-grid-tile>
-			</md-grid-list>
+			<div cols="form-group">
+								    
+				<textarea mdInput id="message"  aria-label="message" md-no-resize rows="7" cols="70"  maxlength="150"
+				[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
+					
+				</textarea>
+				<br><br>
+				<div class="review-submission">
+					<button class="submit-review button-color " md-raised-button type="submit">Submit Review</button>
+				
+					<a class="cancel-submit-review" md-raised-button routerLink="/">Cancel</a>
+				</div>	
 
-			<md-grid-list cols="4" rowHeight="60px" >
-				<md-grid-tile  [colspan]="4" [rowspan]="4">
-					<md-input-container>
-					    
-						<textarea mdInput id="message"  aria-label="message" md-no-resize rows="7" cols="70"  maxlength="150"
-						[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
-							
-						</textarea>
-						<br><br>
-						<div class="review-submission">
-							<button class="submit-review button-color " md-raised-button type="submit">Submit Review</button>
-						
-							<a class="cancel-submit-review" md-raised-button routerLink="/">Cancel</a>
-						</div>	
-
-					</md-input-container>
-				</md-grid-tile>
-			</md-grid-list>
+			</div>
 
 		</form>
 	</div>
