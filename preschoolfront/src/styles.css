@@ -64,9 +64,6 @@ img.mat-card-image {
   font-size: 1.6em !important;
 }
 
-form .star-icon {
-  font-size: 1.0em !important;
-}
 
 .actions-wrapper{
   padding-bottom: 15px;
@@ -169,7 +166,7 @@ footer.page-footer {
   padding: .4rem 1rem;
   font-size: .8rem;*/
 
-  line-height: 1;
+  /*line-height: 1;*/
   display: inline-block;
   /*font-family: 'Material Icons';
   font-weight: normal;
