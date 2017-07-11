@@ -4,28 +4,31 @@
 		<!--<h4 style="margin-top: 30px;">Write A Review <span style="font-size:small">* is a required field</span></h3>-->
 		<h4 align="center">Write A Review</h4>
 		<hr />
-		<form (ngSubmit)="onSubmit()">
-			<div cols="form-group">
-				<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" validate
-        			[titles]="['one', 'two', 'three', 'four', 'five']">
-				</rating>
-			</div>
+		<div class="container">
+			<form (ngSubmit)="onSubmit()" class="waves-effect waves-light">
+				<div cols="form-group">
+					<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" validate
+	        			[titles]="['one', 'two', 'three', 'four', 'five']" class="form-input">
+					</rating>
+				</div>
 
-			<div cols="form-group">
-								    
-				<textarea mdInput id="message"  aria-label="message" md-no-resize rows="7" cols="70"  maxlength="150"
-				[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
+				<div cols="form-group">
+									    
+					<textarea mdInput id="message"  aria-label="message" md-no-resize rows="7" cols="70"  maxlength="150"
+					class="form-input" 
+					[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
+						
+					</textarea>
+					<br><br>
+					<div class="review-submission">
+						<button class="submit-review button-color " md-raised-button type="submit">Submit Review</button>
 					
-				</textarea>
-				<br><br>
-				<div class="review-submission">
-					<button class="submit-review button-color " md-raised-button type="submit">Submit Review</button>
-				
-					<a class="cancel-submit-review" md-raised-button routerLink="/">Cancel</a>
-				</div>	
+						<a class="cancel-submit-review" md-raised-button routerLink="/">Cancel</a>
+					</div>	
 
-			</div>
+				</div>
 
-		</form>
+			</form>
+		</div>	
 	</div>
 </div>
