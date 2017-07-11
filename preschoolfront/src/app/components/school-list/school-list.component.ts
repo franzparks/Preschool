@@ -16,6 +16,8 @@ export class SchoolListComponent implements OnInit {
 	
 	starsCount : number = 3;
 
+	imageNumber : number = 1;
+
 	schools: School[] = [];
 
 	constructor(
@@ -39,6 +41,11 @@ export class SchoolListComponent implements OnInit {
 
   	getSchoolDetails(id: String){
 		this.router.navigate(['/school/', id]);
+	}
+
+	getImageNumber(){
+		this.number = Math.floor((Math.random() * 20) + 1);
+		return this.imageNumber;
 	}
 
 }
