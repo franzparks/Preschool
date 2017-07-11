@@ -2,26 +2,27 @@
  <div class="divider"></div>
 <div class="card-panel horizontal-listing">
     <div class="container-fluid">
-        <div class="card container" *ngFor="let school of schools">
+        <div class="card product-card ovf-hidden container" *ngFor="let school of schools">
+        
         <!--Card image-->
         <div class="overlay hm-white-slight flex-item">
             <img 
             src="https://mdbootstrap.com/images/regular/city/img%20({{Math.floor((Math.random() * 20) + 1)}}).jpg" class="img-fluid" alt="">
             <a href="#">
-                <div class="mask"></div>
+                <div class="mask waves-effect waves-light"></div>
             </a>
             
         </div>
         <!--/.Card image-->
 
         <!--Card content-->
-        <div class="card-block flex-item" >
+        <div class="card-block flex-item">
             <!--Title-->
             <h4 class="card-title">{{school.title}}</h4>
             <!--Text-->
             <p class="card-text">{{school.snippet}}</p>
             <button class="btn btn-ptc" (click)="getSchoolDetails(school.id)" >Read more</button>
-            <rating [(ngModel)]="school.averageRating" 
+            <rating [(ngModel)]="starsCount" 
                     [titles]="['one', 'two', 'three', 'four', 'five']">
             </rating>
 
