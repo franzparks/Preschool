@@ -65,7 +65,7 @@ img.mat-card-image {
   
 @media screen and (max-width: 480px) {
   .product-card .star-icon {
-    font-size: 1.2em !important;
+    font-size: 1.4em !important;
   }
 
 }
@@ -73,6 +73,11 @@ img.mat-card-image {
 @media screen and (max-width: 480px) {
   rating {
     display: block;
+  }
+
+  md-card-actions {
+    margin: 0 !important;
+    padding-bottom: 10px !important;
   }
 }
 
