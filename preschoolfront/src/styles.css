@@ -60,8 +60,13 @@ img.mat-card-image {
 }*/
 
 .product-card .star-icon {
-  /*color: #2c70ca !important;*/
   font-size: 1.6em !important;
+}
+
+@media screen and (max-width: 480px) {
+  .product-card .star-icon {
+  font-size: 1.2em !important;
+}
 }
 
 
