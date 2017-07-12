@@ -82,7 +82,13 @@ img.mat-card-image {
     display: block;
   }
 
+  .app-content h4 {
+    padding-top: 26px !important;
+  }
 
+  .app-content .star-icon {
+  font-size: 1.6em !important;
+}
   .mat-card-actions .mat-button, .mat-card-actions .mat-raised-button {
 
     margin: 10px -16px !important;
