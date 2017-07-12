@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
   	private keyword: string;
   	private schoolList:School[] =[];
 
-    isIn = false;   // store state
+    public isIn = true;   // store state
 
   	constructor(
   		private loginService: LoginService,
@@ -39,6 +39,7 @@ export class NavBarComponent implements OnInit {
     toggleState() { // click handler
         let bool = this.isIn;
         this.isIn = bool === false ? true : false; 
+        console.log("toggled: "+ this.isIn);
     }
 
   	logout() {
