@@ -62,11 +62,25 @@ img.mat-card-image {
 .product-card .star-icon {
   font-size: 1.6em !important;
 }
-
+  
 @media screen and (max-width: 480px) {
   .product-card .star-icon {
-  font-size: 1.2em !important;
+    font-size: 1.2em !important;
+  }
+
 }
+
+@media screen and (max-width: 480px) {
+  rating {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .reviews-text1 {
+    display: inline-block;
+  }
 }
 
 
