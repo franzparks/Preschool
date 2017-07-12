@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
   	private keyword: string;
   	private schoolList:School[] =[];
 
-    public isIn = true;   // store state
+    public isIn = true;
 
   	constructor(
   		private loginService: LoginService,
