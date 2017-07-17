@@ -11,15 +11,14 @@ export class SchoolService {
 
   private serverUrl = AppConst.serverPath;
 
-	private schoolsUrl = AppConst.serverPath+"/school/schoolList";
 
-  	constructor(private http: Http) { }
+	constructor(private http: Http) { }
 
-  	getSchoolList() {
-    	return this.http.get(this.serverUrl+ '/school/schoolList', { withCredentials: true });
-  	}
+	getSchoolList() {
+  	return this.http.get(this.serverUrl+ '/school/schoolList', { withCredentials: true });
+	}
 
-  	getSchool(id: number) {
+	getSchool(id: number) {
 
   	let url = serverUrl+'/school/'+id;
 
@@ -31,7 +30,8 @@ export class SchoolService {
   }
 
   sendSchool(school:School) {
-    let url = "http://localhost:8080/school/add";
+
+    let url = serverUrl+ '/school/add';
     
     let headers = new Headers ({
       'Content-Type': 'application/json',
