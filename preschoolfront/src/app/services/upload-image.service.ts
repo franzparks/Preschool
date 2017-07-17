@@ -14,7 +14,7 @@ export class UploadImageService {
 	}
 
 	upload(schoolId: number) {
-		this.makeFileRequest("http://localhost:8080/school/add/image?id="+schoolId, [], this.filesToUpload).then((result) => {
+		this.makeFileRequest(serverUrl+"/school/add/image?id="+schoolId, [], this.filesToUpload).then((result) => {
 			console.log(result);
 		}, (error) => {
 			console.log(error);
