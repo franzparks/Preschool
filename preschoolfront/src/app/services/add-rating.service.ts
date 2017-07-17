@@ -11,7 +11,7 @@ export class AddRatingService {
   	constructor(private http:Http) { }
 
   	sendReview(review:RatingAndReview) {
-	  	let url = this.serverPath + "/reviews/add";
+	  	let url = this.serverPath + '/reviews/add';
 	    
 	    let headers = new Headers ({
 	      'Content-Type': 'application/json',
