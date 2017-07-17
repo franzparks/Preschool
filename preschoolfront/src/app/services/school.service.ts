@@ -20,7 +20,7 @@ export class SchoolService {
 
 	getSchool(id: number) {
 
-  	let url = serverUrl+'/school/'+id;
+  	let url = this.serverUrl+'/school/'+id;
 
   	let tokenHeader = new Headers({
   		'Content-Type' : 'application/json',
@@ -31,7 +31,7 @@ export class SchoolService {
 
   sendSchool(school:School) {
 
-    let url = serverUrl+ '/school/add';
+    let url = this.serverUrl+ '/school/add';
     
     let headers = new Headers ({
       'Content-Type': 'application/json',
