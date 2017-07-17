@@ -7,18 +7,19 @@ export class UploadImageService {
 
 	filesToUpload: Array<File>;
 
+  private serverUrl = AppConst.serverPath;
 
-  	constructor() {
-  		this.filesToUpload = [];
-  	}
+	constructor() {
+		this.filesToUpload = [];
+	}
 
-  	upload(schoolId: number) {
-  		this.makeFileRequest("http://localhost:8080/school/add/image?id="+schoolId, [], this.filesToUpload).then((result) => {
-  			console.log(result);
-  		}, (error) => {
-  			console.log(error);
-  		});
-  	}
+	upload(schoolId: number) {
+		this.makeFileRequest("http://localhost:8080/school/add/image?id="+schoolId, [], this.filesToUpload).then((result) => {
+			console.log(result);
+		}, (error) => {
+			console.log(error);
+		});
+	}
 
   	modify(schoolId: number) {
     	console.log(this.filesToUpload);
