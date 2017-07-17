@@ -21,7 +21,7 @@ export class SchoolService {
 
   	getSchool(id: number) {
 
-  	let url = AppConst.serverPath+"/school/"+id;
+  	let url = serverUrl+'/school/'+id;
 
   	let tokenHeader = new Headers({
   		'Content-Type' : 'application/json',
