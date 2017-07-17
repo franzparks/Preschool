@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import {AppConst} from '../constants/app-consts';
+
 @Injectable()
 export class UploadImageService {
 
