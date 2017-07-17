@@ -9,12 +9,14 @@ import {AppConst} from '../constants/app-consts';
 @Injectable()
 export class SchoolService {
 
+  private serverUrl = AppConst.serverPath;
+
 	private schoolsUrl = AppConst.serverPath+"/school/schoolList";
 
   	constructor(private http: Http) { }
 
   	getSchoolList() {
-    	return this.http.get(this.schoolsUrl, { withCredentials: true });
+    	return this.http.get(this.serverUrl+ '/school/schoolList', { withCredentials: true });
   	}
 
   	getSchool(id: number) {
