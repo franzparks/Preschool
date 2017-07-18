@@ -12,20 +12,20 @@ import {AppConst} from '../../constants/app-consts';
 })
 export class MyAccountComponent implements OnInit {
 
-	private serverPath = AppConst.serverPath;
-  	private loginError:boolean = false;
-  	private loggedIn = false;
-  	private credential = {'username':'', 'password':''};
+	  private serverPath = AppConst.serverPath;
+  	loginError:boolean = false;
+  	loggedIn = false;
+  	credential = {'username':'', 'password':''};
 
-  	private emailSent: boolean =false;
-  	private usernameExists:boolean;
-  	private emailExists:boolean;
-  	private username:string;
-  	private email:string;
+  	emailSent: boolean =false;
+  	usernameExists:boolean;
+  	emailExists:boolean;
+  	username:string;
+  	email:string;
 
-  	private emailNotExists: boolean =false;
-  	private forgetPasswordEmailSent: boolean;
-  	private recoverEmail:string;  
+  	emailNotExists: boolean =false;
+  	forgetPasswordEmailSent: boolean;
+  	recoverEmail:string;  
 
   	constructor(
   		private loginService: LoginService,
