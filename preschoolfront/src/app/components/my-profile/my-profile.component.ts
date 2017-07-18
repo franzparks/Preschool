@@ -28,7 +28,7 @@ export class MyProfileComponent implements OnInit {
 
 	constructor(
 		  private loginService: LoginService,
-  		private serService: UserService,
+  		private userService: UserService,
   		private router: Router
 	) { }
 
