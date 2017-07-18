@@ -11,10 +11,10 @@ import {School} from '../../models/school';
 })
 export class NavBarComponent implements OnInit {
 
-    public isCollapsed = false;
-	   private loggedIn:boolean;
-  	private keyword: string;
-  	private schoolList:School[] =[];
+    public  sCollapsed = false;
+	  loggedIn:boolean;
+  	keyword: string;
+  	schoolList:School[] =[];
 
     public isIn = true;
 
