@@ -59,8 +59,8 @@
 							<md-tab label="Forgot Password">
 								<div style="margin-top: 20px;">
 									<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
-									<div class="alert alert-success" *ngIf="forgetPasswordEmailSent">Email sent.</div>
-									<form (ngSubmit)="onForgetPassword()" class="waves-effect waves-light">
+									<div class="alert alert-success" *ngIf="forgotPasswordEmailSent">Email sent.</div>
+									<form (ngSubmit)="onForgotPassword()" class="waves-effect waves-light">
 										<div class="form-group">
 											<label for="recoverEmail">Your Email Address *</label>
 											<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" 
