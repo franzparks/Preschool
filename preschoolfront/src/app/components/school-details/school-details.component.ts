@@ -16,9 +16,9 @@ import  {School} from '../../models/school';
 })
 export class SchoolDetailsComponent implements OnInit {
 
-	private schoolId : number;
-	private school: School = new School();
-  private reviewsList: RatingAndReview[];
+	schoolId : number;
+	school: School = new School();
+  reviewsList: RatingAndReview[];
 
 	constructor(
 		private router:Router,
