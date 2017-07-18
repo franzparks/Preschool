@@ -12,9 +12,9 @@ import{RatingAndReview} from '../../models/rating-and-review';
 })
 export class RatingComponent implements OnInit {
 
-	private ratingAdded: boolean;
-	private newRatingAndReview: RatingAndReview = new RatingAndReview();
-	private schoolId: number;
+	  ratingAdded: boolean;
+	  newRatingAndReview: RatingAndReview = new RatingAndReview();
+	  schoolId: number;
 
   	constructor(
   		private addRatingService:AddRatingService,
