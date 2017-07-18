@@ -12,24 +12,24 @@ import { Router } from '@angular/router';
 })
 export class MyProfileComponent implements OnInit {
 
-	private serverPath = AppConst.serverPath;
-	private dataFetched = false;
-	private loginError:boolean;
-	private loggedIn:boolean;
-	private credential = {'username':'', 'password':''};
+	serverPath = AppConst.serverPath;
+	dataFetched = false;
+	loginError:boolean;
+	loggedIn:boolean;
+	credential = {'username':'', 'password':''};
 
-	private user: User = new User();
-	private updateSuccess: boolean;
-	private newPassword: string;
-	private incorrectPassword: boolean;
-	private currentPassword: string;
+	user: User = new User();
+	updateSuccess: boolean;
+	newPassword: string;
+	incorrectPassword: boolean;
+	currentPassword: string;
 
-	private selectedProfileTab: number = 0;
+	selectedProfileTab: number = 0;
 
 	constructor(
-		  private loginService: LoginService,
-  		private userService: UserService,
-  		private router: Router
+		  loginService: LoginService,
+  		userService: UserService,
+  		router: Router
 	) { }
 
 
