@@ -17,7 +17,7 @@ export class AddNewSchoolComponent implements OnInit {
 
   	constructor(
   		private schoolService:SchoolService,
-  		private uploadImageService:UploadImageService
+  		uploadImageService:UploadImageService
   	) { }
 
   	onSubmit() {
