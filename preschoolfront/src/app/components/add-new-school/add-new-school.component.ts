@@ -13,11 +13,12 @@ import {UploadImageService} from '../../services/upload-image.service';
 export class AddNewSchoolComponent implements OnInit {
 
 	  newSchool: School = new School();
-  	schoolAdded: boolean;	
+  	schoolAdded: boolean;
+    uploadImageService = this.uploadImageService	
 
   	constructor(
   		private schoolService:SchoolService,
-  		uploadImageService:UploadImageService
+  		private uploadImageService:UploadImageService
   	) { }
 
   	onSubmit() {
