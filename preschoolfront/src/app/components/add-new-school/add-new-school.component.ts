@@ -14,11 +14,10 @@ export class AddNewSchoolComponent implements OnInit {
 
 	  newSchool: School = new School();
   	schoolAdded: boolean;
-    uploadImageService = this.uploadImageService	
 
   	constructor(
   		private schoolService:SchoolService,
-  		private uploadImageService:UploadImageService
+  		public uploadImageService:UploadImageService
   	) { }
 
   	onSubmit() {
