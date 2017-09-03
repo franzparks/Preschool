@@ -38,7 +38,7 @@ public class MailConstructor {
 		
 		SimpleMailMessage email = new SimpleMailMessage();
 		email.setTo(user.getEmail());
-		email.setSubject("Nursary Express - New User");
+		email.setSubject("Eyas Eyes - New User");
 		email.setText(message);
 		email.setFrom(env.getProperty("support.email"));
 		return email;

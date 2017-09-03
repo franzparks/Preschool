@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @author francis
  *
  */
-@Configuration
+//@Configuration
 public class GeneralConfig {
 	
 	private final String cx = "011574434131380974972:2k8f1wfzm4w";//"014723624719242706501:ky6zn2teax4";
