@@ -15,7 +15,15 @@ export class SchoolService {
 	constructor(private http: Http) { }
 
 	getSchoolList() {
-  	return this.http.get(this.serverPath+ '/school/schoolList', { withCredentials: true });
+  	//return this.http.get(this.serverPath+ '/school/schoolList', { withCredentials: true });
+    let url = this.serverPath+ '/school/schoolList';
+
+    let tokenHeader = new Headers({
+      'Content-Type' : 'application/json',
+      'Access-Control-Allow-Origin': '*'
+      //'x-auth-token' : localStorage.getItem("xAuthToken")
+    });
+    return this.http.get(url, {headers: tokenHeader});
 	}
 
 	getSchool(id: number) {
