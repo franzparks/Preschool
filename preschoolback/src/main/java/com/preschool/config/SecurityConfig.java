@@ -21,8 +21,8 @@ import com.preschool.service.UserSecurityService;
  * @author francisphiri
  *
  */
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired

@@ -28,8 +28,8 @@ import com.preschool.service.UserService;
  * @author francisphiri
  *
  */
-@RestController
-@RequestMapping("/reviews")
+//@RestController
+//@RequestMapping("/reviews")
 public class RatingAndReviewResource {
 	
 	@Autowired

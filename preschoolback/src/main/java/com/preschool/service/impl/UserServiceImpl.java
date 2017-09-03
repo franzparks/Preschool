@@ -21,7 +21,7 @@ import com.preschool.service.UserService;
  * @author francisphiri
  *
  */
-@Service
+//@Service
 public class UserServiceImpl implements UserService{
 
 	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);

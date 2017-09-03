@@ -33,8 +33,8 @@ import com.preschool.utility.MailConstructor;
  * @author francisphiri
  *
  */
-@RestController
-@RequestMapping("/user")
+//@RestController
+//@RequestMapping("/user")
 public class UserResource {
 	
 	@Autowired

@@ -34,8 +34,8 @@ import com.preschool.service.SchoolService;
  * @author francisphiri
  *
  */
-@RestController
-@RequestMapping("/school")
+//@RestController
+//@RequestMapping("/school")
 public class SchoolResource {
 	
 	@Autowired

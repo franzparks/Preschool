@@ -23,7 +23,7 @@ import com.preschool.service.UserService;
  * @author francisphiri
  *
  */
-@RestController
+//@RestController
 public class LoginResource {
 	
 	@Autowired

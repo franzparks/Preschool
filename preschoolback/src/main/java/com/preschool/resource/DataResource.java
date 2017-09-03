@@ -17,7 +17,7 @@ import com.preschool.domain.School;
  *
  */
 
-@RestController
+//@RestController
 //@RequestMapping("/api")
 public class DataResource {
 	

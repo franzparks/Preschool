@@ -18,7 +18,7 @@ import com.preschool.service.RatingAndReviewService;
  * @author francisphiri
  *
  */
-@Service
+//@Service
 public class RatingAndReviewServiceImpl implements RatingAndReviewService {
 	
 	@Autowired

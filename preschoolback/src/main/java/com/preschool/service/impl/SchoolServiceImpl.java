@@ -16,7 +16,7 @@ import com.preschool.service.SchoolService;
  * @author francisphiri
  *
  */
-@Service
+//@Service
 public class SchoolServiceImpl implements SchoolService{
 	
 	@Autowired

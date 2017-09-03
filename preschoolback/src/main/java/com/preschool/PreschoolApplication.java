@@ -22,10 +22,10 @@ import com.preschool.service.UserService;
 @SpringBootApplication
 public class PreschoolApplication implements CommandLineRunner{
 
-	@Autowired
+	//@Autowired
 	private UserService userService;
 	
-	@Autowired
+	//@Autowired
 	private SchoolService schoolService;
 	
 	public static void main(String[] args) {
