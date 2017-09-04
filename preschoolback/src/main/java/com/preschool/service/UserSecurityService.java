@@ -18,7 +18,7 @@ import com.preschool.domain.User;
  * @author francisphiri
  *
  */
-//@Service
+@Service
 public class UserSecurityService implements UserDetailsService{
 	
 	private static final Logger LOG = LoggerFactory.getLogger(UserSecurityService.class);

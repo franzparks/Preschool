@@ -23,6 +23,7 @@ import com.preschool.domain.User;
 @Entity
 @Table(name="user_role")
 public class UserRole implements Serializable{
+	
 private static final long serialVersionUID = 890345L;
 	
 	@Id

@@ -20,21 +20,21 @@ import com.preschool.service.SchoolService;
 import com.preschool.service.UserService;
 
 @SpringBootApplication
-public class PreschoolApplication implements CommandLineRunner{
+public class PreschoolApplication { //implements CommandLineRunner
 
 	//@Autowired
-	private UserService userService;
+	//private UserService userService;
 	
 	//@Autowired
-	private SchoolService schoolService;
+	//private SchoolService schoolService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(PreschoolApplication.class, args);
 	}
 
-	@Override
-    public void run(String... arg0) throws Exception {
-		User user1 = new User();
+	//@Override
+    //public void run(String... arg0) throws Exception {
+		/*User user1 = new User();
 		user1.setFirstName("John");
 		user1.setLastName("Adams");
 		user1.setUsername("j");
@@ -118,6 +118,6 @@ public class PreschoolApplication implements CommandLineRunner{
 		
 		//schoolService.save(school1);
 		//schoolService.save(school2);
-		//schoolService.save(school3);
-    }
+		//schoolService.save(school3);*/
+    //}
 }
