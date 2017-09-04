@@ -22,9 +22,9 @@ import org.springframework.stereotype.Component;
  * @author francis
  *
  */
-//@Component
-//@Order(Ordered.HIGHEST_PRECEDENCE)
-/*public class RequestFilter implements Filter{
+@Component
+@Order(Ordered.HIGHEST_PRECEDENCE)
+public class RequestFilter implements Filter{
 
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) {
         HttpServletResponse response = (HttpServletResponse) res;
@@ -62,4 +62,3 @@ import org.springframework.stereotype.Component;
 
 
 }
-*/

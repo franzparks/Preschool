@@ -13,7 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * @author francisphiri
  *
  */
-/*public class SecurityUtility {
+public class SecurityUtility {
 	private static final String SALT = "salt"; //Salt should be protected carefully	
 	
 	@Bean
@@ -36,4 +36,3 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 		return saltStr;
 	}
 }
-*/

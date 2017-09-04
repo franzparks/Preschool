@@ -11,14 +11,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-//import com.preschool.config.repository.UserRepository;
-//import com.preschool.domain.User;
+import com.preschool.config.repository.UserRepository;
+import com.preschool.domain.User;
 
 /**
  * @author francisphiri
  *
  */
-/*@Service
+@Service
 public class UserSecurityService implements UserDetailsService{
 	
 	private static final Logger LOG = LoggerFactory.getLogger(UserSecurityService.class);
@@ -37,4 +37,3 @@ public class UserSecurityService implements UserDetailsService{
 	}
 	
 }
-*/

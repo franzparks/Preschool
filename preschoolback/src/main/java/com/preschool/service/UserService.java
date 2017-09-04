@@ -5,14 +5,14 @@ package com.preschool.service;
 
 import java.util.Set;
 
-//import com.preschool.domain.User;
-//import com.preschool.domain.security.UserRole;
+import com.preschool.domain.User;
+import com.preschool.domain.security.UserRole;
 
 /**
  * @author francisphiri
  *
  */
-/*public interface UserService {
+public interface UserService {
 	
 	User createUser(User user, Set<UserRole> userRoles);
 
@@ -24,4 +24,3 @@ import java.util.Set;
 	
 	User findById(Long id);
 }
-*/

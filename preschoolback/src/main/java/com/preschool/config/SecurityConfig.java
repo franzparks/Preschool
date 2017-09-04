@@ -12,16 +12,16 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-//import org.springframework.session.web.http.HeaderHttpSessionStrategy;
-//import org.springframework.session.web.http.HttpSessionStrategy;
+import org.springframework.session.web.http.HeaderHttpSessionStrategy;
+import org.springframework.session.web.http.HttpSessionStrategy;
 
-//import com.preschool.service.UserSecurityService;
+import com.preschool.service.UserSecurityService;
 
 /**
  * @author francisphiri
  *
  */
-/*@Configuration
+@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
@@ -40,13 +40,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			"/js/**",
 			"/image/**",
 			"/school/**",
+			"/schools/**",
+			"/ratingAndReviews/**",
 			"/user/**",
 			"/"
 	};
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().cors().disable().httpBasic().and().authorizeRequests()
+		http.csrf().disable().cors().disable()
+		.formLogin()
+        .and().httpBasic().disable()
+	    .authorizeRequests()
 		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
 	}
 	
@@ -61,4 +66,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	}
 	
 }
-*/

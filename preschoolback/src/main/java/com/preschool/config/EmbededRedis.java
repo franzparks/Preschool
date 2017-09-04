@@ -17,7 +17,7 @@ import redis.embedded.RedisServer;
  * @author francisphiri
  *
  */
-/*@Component
+@Component
 public class EmbededRedis {
 	
 	@Value("${spring.redis.port}")
@@ -36,4 +36,3 @@ public class EmbededRedis {
         redisServer.stop();
     }
 }
-*/

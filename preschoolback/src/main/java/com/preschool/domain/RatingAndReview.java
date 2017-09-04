@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @author francisphiri
  *
  */
-/*@Entity
+@Entity
 @Table(name = "user_review")
 public class RatingAndReview {
 	
@@ -85,4 +85,4 @@ private static final long serialVersionUID=425345L;
 		this.givenSchoolId = givenSchoolId;
 	}
 	
-}*/
+}

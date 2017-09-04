@@ -11,17 +11,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-//import com.preschool.config.repository.RoleRepository;
-//import com.preschool.config.repository.UserRepository;
-//import com.preschool.domain.User;
-//import com.preschool.domain.security.UserRole;
-//import com.preschool.service.UserService;
+import com.preschool.config.repository.RoleRepository;
+import com.preschool.config.repository.UserRepository;
+import com.preschool.domain.User;
+import com.preschool.domain.security.UserRole;
+import com.preschool.service.UserService;
 
 /**
  * @author francisphiri
  *
  */
-/*@Service
+@Service
 public class UserServiceImpl implements UserService{
 
 	private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
@@ -73,4 +73,3 @@ public class UserServiceImpl implements UserService{
     }
 	
 }
-*/

@@ -8,16 +8,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//import com.preschool.config.repository.SchoolRepository;
-//import com.preschool.domain.School;
-//import com.preschool.service.SchoolService;
+import com.preschool.config.repository.SchoolRepository;
+import com.preschool.domain.School;
+import com.preschool.service.SchoolService;
 
 /**
  * @author francisphiri
  *
  */
-//@Service
-/*public class SchoolServiceImpl implements SchoolService{
+@Service
+public class SchoolServiceImpl implements SchoolService{
 	
 	@Autowired
 	private SchoolRepository schoolRepository;
@@ -49,4 +49,3 @@ import org.springframework.stereotype.Service;
     }
 	
 }
-*/

@@ -14,13 +14,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-//import com.preschool.domain.User;
+import com.preschool.domain.User;
 
 /**
  * @author francisphiri
  *
  */
-/*@Entity
+@Entity
 @Table(name="user_role")
 public class UserRole implements Serializable{
 	
@@ -68,4 +68,3 @@ private static final long serialVersionUID = 890345L;
 		this.role = role;
 	}
 }
-*/
