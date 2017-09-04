@@ -23,6 +23,7 @@ import com.preschool.service.UserService;
  * @author francisphiri
  *
  */
+/*
 //@RestController
 public class LoginResource {
 	
@@ -53,3 +54,4 @@ public class LoginResource {
 		return new ResponseEntity("Logged out Successfully!", HttpStatus.OK);
 	}
 }
+*/

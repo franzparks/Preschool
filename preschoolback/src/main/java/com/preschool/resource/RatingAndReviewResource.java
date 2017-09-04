@@ -28,6 +28,7 @@ import com.preschool.service.UserService;
  * @author francisphiri
  *
  */
+/*
 //@RestController
 //@RequestMapping("/reviews")
 public class RatingAndReviewResource {
@@ -91,3 +92,4 @@ public class RatingAndReviewResource {
 	
 	
 }
+*/
