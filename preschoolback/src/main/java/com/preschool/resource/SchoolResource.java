@@ -34,6 +34,7 @@ import com.preschool.service.SchoolService;
  * @author francisphiri
  *
  */
+/*
 //@RestController
 //@RequestMapping("/school")
 public class SchoolResource {
@@ -134,3 +135,4 @@ public class SchoolResource {
 	
 	
 }
+*/

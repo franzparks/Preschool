@@ -33,7 +33,7 @@ import com.preschool.utility.MailConstructor;
  * @author francisphiri
  *
  */
-@RestController
+/*@RestController
 @RequestMapping("/user")
 public class UserResource {
 	
@@ -172,4 +172,4 @@ public class UserResource {
 	}
 	
 }
- 
+*/ 
