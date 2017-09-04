@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
  * @author francisphiri
  *
  */
-@Entity
+/*@Entity
 public class Role implements Serializable{
 	
 private static final long serialVersionUID = 890245234L;
@@ -57,3 +57,4 @@ private static final long serialVersionUID = 890245234L;
 	}
 	
 }
+*/

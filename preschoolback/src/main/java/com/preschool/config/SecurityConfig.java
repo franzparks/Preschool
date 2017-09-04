@@ -12,16 +12,16 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.session.web.http.HeaderHttpSessionStrategy;
-import org.springframework.session.web.http.HttpSessionStrategy;
+//import org.springframework.session.web.http.HeaderHttpSessionStrategy;
+//import org.springframework.session.web.http.HttpSessionStrategy;
 
-import com.preschool.service.UserSecurityService;
+//import com.preschool.service.UserSecurityService;
 
 /**
  * @author francisphiri
  *
  */
-@Configuration
+/*@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
@@ -61,3 +61,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	}
 	
 }
+*/

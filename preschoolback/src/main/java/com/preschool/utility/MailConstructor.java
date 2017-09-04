@@ -10,20 +10,20 @@ import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.mail.javamail.MimeMessagePreparator;
+//import org.springframework.mail.SimpleMailMessage;
+//import org.springframework.mail.javamail.MimeMessageHelper;
+//import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import com.preschool.domain.User;
+//import com.preschool.domain.User;
 
 /**
  * @author francisphiri
  *
  */
-@Component
+/*@Component
 public class MailConstructor {
 	
 	@Autowired
@@ -63,3 +63,4 @@ public class MailConstructor {
 		return messagePreparator;
 	}
 }
+*/

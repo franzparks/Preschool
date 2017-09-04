@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 
-@Entity
+/*@Entity
 public class School implements Serializable{
 	
 	private static final long serialVersionUID=425345L;
@@ -144,9 +144,5 @@ public class School implements Serializable{
 	            + schoolImage + "]";
     }
 	
-	
-	
-	
-	
-
 }
+*/

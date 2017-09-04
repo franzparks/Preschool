@@ -11,7 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
  * @author francisphiri
  *
  */
-public class Authority implements GrantedAuthority, Serializable{
+/*public class Authority implements GrantedAuthority, Serializable{
 	
 	private static final long serialVersionUID = 123123L;
 	
@@ -27,3 +27,4 @@ public class Authority implements GrantedAuthority, Serializable{
 	}
 	
 }
+*/

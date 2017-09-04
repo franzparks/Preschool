@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.preschool.domain.RatingAndReview;
-import com.preschool.domain.School;
-import com.preschool.domain.User;
-import com.preschool.service.RatingAndReviewService;
-import com.preschool.service.SchoolService;
-import com.preschool.service.UserService;
+//import com.preschool.domain.RatingAndReview;
+//import com.preschool.domain.School;
+//import com.preschool.domain.User;
+//import com.preschool.service.RatingAndReviewService;
+//import com.preschool.service.SchoolService;
+//import com.preschool.service.UserService;
 
 /**
  * @author francisphiri

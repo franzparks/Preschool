@@ -5,13 +5,13 @@ package com.preschool.service;
 
 import java.util.List;
 
-import com.preschool.domain.School;
+//import com.preschool.domain.School;
 
 /**
  * @author francisphiri
  *
  */
-public interface SchoolService {
+/*public interface SchoolService {
 	List<School> findAll();
 	
 	School findOne(Long id);
@@ -21,4 +21,4 @@ public interface SchoolService {
 	List<School> blurrySearch(String title);
 	
 	void removeOne(Long id);
-}
+}*/

@@ -11,13 +11,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.preschool.config.SecurityUtility;
-import com.preschool.domain.School;
-import com.preschool.domain.User;
-import com.preschool.domain.security.Role;
-import com.preschool.domain.security.UserRole;
-import com.preschool.service.SchoolService;
-import com.preschool.service.UserService;
+//import com.preschool.config.SecurityUtility;
+//import com.preschool.domain.School;
+//import com.preschool.domain.User;
+//import com.preschool.domain.security.Role;
+//import com.preschool.domain.security.UserRole;
+//import com.preschool.service.SchoolService;
+//import com.preschool.service.UserService;
 
 @SpringBootApplication
 public class PreschoolApplication { //implements CommandLineRunner

@@ -5,15 +5,15 @@ package com.preschool.service;
 
 import java.util.List;
 
-import com.preschool.domain.RatingAndReview;
-import com.preschool.domain.School;
-import com.preschool.domain.User;
+//import com.preschool.domain.RatingAndReview;
+//import com.preschool.domain.School;
+//import com.preschool.domain.User;
 
 /**
  * @author francisphiri
  *
  */
-public interface RatingAndReviewService {
+/*public interface RatingAndReviewService {
 	
 	List<RatingAndReview> findAll();
 	
@@ -31,3 +31,4 @@ public interface RatingAndReviewService {
 	
 	void removeOne(Long id);
 }
+*/
