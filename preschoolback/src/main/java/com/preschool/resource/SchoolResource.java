@@ -27,16 +27,16 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-//import com.preschool.domain.School;
-//import com.preschool.service.SchoolService;
+import com.preschool.domain.School;
+import com.preschool.service.SchoolService;
 
 /**
  * @author francisphiri
  *
  */
-/*
-//@RestController
-//@RequestMapping("/school")
+
+@RestController
+@RequestMapping("/school")
 public class SchoolResource {
 	
 	@Autowired
@@ -135,4 +135,3 @@ public class SchoolResource {
 	
 	
 }
-*/

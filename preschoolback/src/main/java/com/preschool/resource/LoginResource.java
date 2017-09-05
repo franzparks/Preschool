@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-//import com.preschool.service.UserService;
+import com.preschool.service.UserService;
 
 /**
  * @author francisphiri
  *
  */
-/*
-//@RestController
+
+@RestController
 public class LoginResource {
 	
 	@Autowired
@@ -54,4 +54,3 @@ public class LoginResource {
 		return new ResponseEntity("Logged out Successfully!", HttpStatus.OK);
 	}
 }
-*/
