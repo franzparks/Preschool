@@ -32,7 +32,7 @@ public class RequestFilter implements Filter{
 
         //response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");//http://eyaseyes.com.s3.amazonaws.com
         //response.setHeader("Access-Control-Allow-Origin", "*");//
-        response.setHeader("Access-Control-Allow-Origin", "http://eyaseyes.com/");//
+        response.setHeader("Access-Control-Allow-Origin", "http://eyaseyes.com");//
         response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
         response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
         response.setHeader("Access-Control-Max-Age", "3600");
