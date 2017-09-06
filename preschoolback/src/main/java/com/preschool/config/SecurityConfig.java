@@ -42,8 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			"/school/**",
 			"/schoolList/**",
 			"/ratingAndReviews/**",
-			"/user/**",
-			"/"
+			"/user/**"
+			
 	};
 	
 	@Override
