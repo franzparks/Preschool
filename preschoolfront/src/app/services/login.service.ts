@@ -30,7 +30,7 @@ export class LoginService {
   	let headers = new Headers({
   		'x-auth-token' : localStorage.getItem('xAuthToken')
   	});
-
+    console.log("session headers" + headers['x-auth-token']);
   	return this.http.get(url, {headers: headers});
   }
 
