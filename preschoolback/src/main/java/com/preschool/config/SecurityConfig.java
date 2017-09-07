@@ -39,20 +39,30 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			"/css/**",
 			"/js/**",
 			"/image/**",
-			"/school/**",
-			"/schoolList/**",
+			"school/schoolList/**",
 			"/ratingAndReviews/**",
 			"/user/**"
+			//"/checkSession",
+			//"/token"
+			
 			
 	};
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().cors().disable()
-		.formLogin().disable()
+		/*http.csrf().disable().cors().and()
+		.formLogin().and()
         .httpBasic().disable()
 	    .authorizeRequests()
-		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
+		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();*/
+		
+		http.authorizeRequests()
+		.antMatchers(PUBLIC_MATCHERS)
+		.permitAll()
+        //.antMatchers("/api/**").hasRole("USER")
+        .anyRequest().authenticated() 
+        .and().formLogin().disable();
+        //.csrf().disable().cors().disable();
 	}
 	
 	@Autowired

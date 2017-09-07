@@ -11,30 +11,30 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//import com.preschool.config.SecurityUtility;
-//import com.preschool.domain.School;
-//import com.preschool.domain.User;
-//import com.preschool.domain.security.Role;
-//import com.preschool.domain.security.UserRole;
-//import com.preschool.service.SchoolService;
-//import com.preschool.service.UserService;
+import com.preschool.config.SecurityUtility;
+import com.preschool.domain.School;
+import com.preschool.domain.User;
+import com.preschool.domain.security.Role;
+import com.preschool.domain.security.UserRole;
+import com.preschool.service.SchoolService;
+import com.preschool.service.UserService;
 
 @SpringBootApplication
-public class PreschoolApplication { //implements CommandLineRunner
+public class PreschoolApplication implements CommandLineRunner{ //
 
-	//@Autowired
-	//private UserService userService;
+	@Autowired
+	private UserService userService;
 	
-	//@Autowired
-	//private SchoolService schoolService;
+	@Autowired
+	private SchoolService schoolService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(PreschoolApplication.class, args);
 	}
 
-	//@Override
-    //public void run(String... arg0) throws Exception {
-		/*User user1 = new User();
+	@Override
+    public void run(String... arg0) throws Exception {
+		User user1 = new User();
 		user1.setFirstName("John");
 		user1.setLastName("Adams");
 		user1.setUsername("j");
@@ -46,7 +46,7 @@ public class PreschoolApplication { //implements CommandLineRunner
 		role1.setName("ROLE_USER");
 		userRoles.add(new UserRole(user1, role1));
 		
-		//userService.createUser(user1, userRoles);
+		userService.createUser(user1, userRoles);
 		
 		userRoles.clear();
 		
@@ -61,7 +61,7 @@ public class PreschoolApplication { //implements CommandLineRunner
 		role2.setName("ROLE_ADMIN");
 		userRoles.add(new UserRole(user2, role2));
 		
-		//userService.createUser(user2, userRoles);
+		userService.createUser(user2, userRoles);
 		
 		School school1 =  new School();
 		school1.setTitle("The Harker School - Preschool");
@@ -116,8 +116,8 @@ public class PreschoolApplication { //implements CommandLineRunner
 		school3.setAverageRating(3);
 
 		
-		//schoolService.save(school1);
-		//schoolService.save(school2);
-		//schoolService.save(school3);*/
-    //}
+		schoolService.save(school1);
+		schoolService.save(school2);
+		schoolService.save(school3);
+    }
 }
