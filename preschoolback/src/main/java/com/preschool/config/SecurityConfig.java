@@ -37,13 +37,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	private static final String[] PUBLIC_MATCHERS = {
 			"/css/**",
+			"/static/**",
+			"/public/**",
 			"/js/**",
 			"/image/**",
-			"school/schoolList/**",
+			"/school/schoolList/**",
 			"/ratingAndReviews/**",
 			"/user/**"
-			//"/checkSession",
-			//"/token"
 			
 			
 	};
