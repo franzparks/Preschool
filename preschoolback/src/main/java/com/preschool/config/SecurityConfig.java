@@ -44,17 +44,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			"/school/schoolList/**",
 			"/ratingAndReviews/**",
 			"/user/**"
-			
+			//"/token",
+			//"/checkSession"	
 			
 	};
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		/*http.csrf().disable().cors().and()
+		http.csrf().disable().cors().disable().httpBasic().and().authorizeRequests()
+		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
+	}
+	
+	/*@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.csrf().disable().cors().and()
 		.formLogin().and()
         .httpBasic().disable()
 	    .authorizeRequests()
-		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();*/
+		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
 		
 		http.authorizeRequests()
 		.antMatchers(PUBLIC_MATCHERS)
@@ -63,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         .anyRequest().authenticated() 
         .and().formLogin().disable();
         //.csrf().disable().cors().disable();
-	}
+	}*/
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {

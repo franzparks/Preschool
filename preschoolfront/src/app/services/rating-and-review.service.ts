@@ -18,7 +18,7 @@ export class RatingAndReviewService {
   		'Content-Type' : 'application/json',
   		'x-auth-token' : localStorage.getItem("xAuthToken")
   	});
-  	return this.http.get(url, {headers: tokenHeader});
+  	return this.http.get(encodeURI(url), {headers: tokenHeader});
   }
 
 }

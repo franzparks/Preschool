@@ -14,7 +14,7 @@ export class UploadImageService {
 	}
 
 	upload(schoolId: number) {
-		this.makeFileRequest(this.serverPath+"/school/add/image?id="+schoolId, [], this.filesToUpload).then((result) => {
+		this.makeFileRequest(encodeURI(this.serverPath+"/school/add/image?id="+schoolId), [], this.filesToUpload).then((result) => {
 			console.log(result);
 		}, (error) => {
 			console.log(error);
@@ -24,7 +24,7 @@ export class UploadImageService {
   	modify(schoolId: number) {
     	console.log(this.filesToUpload);
     	if (this.filesToUpload.length > 0 ) {
-      		this.makeFileRequest(this.serverPath+"/school/update/image?id="+schoolId, [], this.filesToUpload).then((result) => {
+      		this.makeFileRequest(encodeURI(this.serverPath+"/school/update/image?id="+schoolId), [], this.filesToUpload).then((result) => {
       			console.log(result);
     		}, (error) => {
       			console.log(error);
@@ -53,7 +53,7 @@ export class UploadImageService {
 	  			}
 	  		}
 
-	  		xhr.open("POST", url, true);
+	  		xhr.open("POST", encodeURI(url), true);
 	  		xhr.setRequestHeader("x-auth-token", localStorage.getItem("xAuthToken"));
 	  		xhr.send(formData);
 	  	});

@@ -22,16 +22,17 @@ export class LoginService {
   		'Authorization' : basicHeader
   	});
 
-  	return this.http.get(url, {headers: headers});
+  	return this.http.get(encodeURI(url), {headers: headers});
   }
 
   checkSession() {
   	let url = this.serverPath+'/checkSession';
   	let headers = new Headers({
-  		'x-auth-token' : localStorage.getItem('xAuthToken')
+  		'x-auth-token' : localStorage.getItem('xAuthToken'),
+      //'Access-Control-Allow-Origin' : 'http://localhost:4200'
   	});
-    console.log("session headers" + headers['x-auth-token']);
-  	return this.http.get(url, {headers: headers});
+    console.log("session headers: " + headers['x-auth-token']);
+  	return this.http.get(encodeURI(url), {headers: headers});
   }
 
   logout() {
@@ -40,7 +41,7 @@ export class LoginService {
   		'x-auth-token' : localStorage.getItem('xAuthToken')
   	});
 
-  	return this.http.post(url, '', {headers: headers});
+  	return this.http.post(encodeURI(url), '', {headers: headers});
   }
 
 }

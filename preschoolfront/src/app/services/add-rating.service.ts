@@ -18,7 +18,7 @@ export class AddRatingService {
 	      'x-auth-token' : localStorage.getItem('xAuthToken')
 	    });
 
-	    return this.http.post(url, JSON.stringify(review), {headers: headers});
+	    return this.http.post(encodeURI(url), JSON.stringify(review), {headers: headers});
   	}
 
 }

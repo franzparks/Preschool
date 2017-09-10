@@ -15,26 +15,26 @@ export class SchoolService {
 	constructor(private http: Http) { }
 
 	getSchoolList() {
-  	return this.http.get(this.serverPath+ '/school/schoolList', { withCredentials: true });
+  	return this.http.get(encodeURI(this.serverPath+'/school/schoolList'), { withCredentials: true });
     //let url = this.serverPath+ '/school/schoolList';
 
     //let tokenHeader = new Headers({
     //  'Content-Type' : 'application/json',
     //  'Access-Control-Allow-Origin': '*'
       //'x-auth-token' : localStorage.getItem("xAuthToken")
-    //});
+    //});http://eyaseyes.com
     //return this.http.get(url, {headers: tokenHeader});
 	}
 
 	getSchool(id: number) {
 
   	let url = this.serverPath+'/school/'+id;
-
+  
   	let tokenHeader = new Headers({
   		'Content-Type' : 'application/json',
   		'x-auth-token' : localStorage.getItem("xAuthToken")
   	});
-  	return this.http.get(url, {headers: tokenHeader});
+  	return this.http.get(encodeURI(url), {headers: tokenHeader});
   }
 
   sendSchool(school:School) {
@@ -46,7 +46,7 @@ export class SchoolService {
       'x-auth-token' : localStorage.getItem('xAuthToken')
     });
 
-    return this.http.post(url, JSON.stringify(school), {headers: headers});
+    return this.http.post(encodeURI(url), JSON.stringify(school), {headers: headers});
   }
 
 }

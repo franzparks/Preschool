@@ -23,7 +23,7 @@ export class UserService {
 	  		'x-auth-token' : localStorage.getItem('xAuthToken')
 	  	});
 
-  		return this.http.post(url, JSON.stringify(userInfo), {headers : tokenHeader});
+  		return this.http.post(encodeURI(url), JSON.stringify(userInfo), {headers : tokenHeader});
  	}
 
  	updateUserInfo(user: User, newPassword: string, currentPassword: string) {
@@ -42,7 +42,7 @@ export class UserService {
 	      'Content-Type' : 'application/json',
 	      'x-auth-token' : localStorage.getItem("xAuthToken")
 	    });
-	    return this.http.post(url, JSON.stringify(userInfo), {headers:tokenHeader});
+	    return this.http.post(encodeURI(url), JSON.stringify(userInfo), {headers:tokenHeader});
   	}
 
   	retrievePassword(email:string) {
@@ -55,7 +55,7 @@ export class UserService {
 	  		'x-auth-token' : localStorage.getItem('xAuthToken')
 	  	});
 
-	  	return this.http.post(url, JSON.stringify(userInfo), {headers : tokenHeader});
+	  	return this.http.post(encodeURI(url), JSON.stringify(userInfo), {headers : tokenHeader});
   	}
 
   	getCurrentUser() {
@@ -66,7 +66,7 @@ export class UserService {
 	      'x-auth-token' : localStorage.getItem('xAuthToken')
 	    });
 
-	    return this.http.get(url, {headers : tokenHeader});
+	    return this.http.get(encodeURI(url), {headers : tokenHeader});
 	}
 
 

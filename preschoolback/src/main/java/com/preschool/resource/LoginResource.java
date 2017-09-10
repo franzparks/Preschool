@@ -32,13 +32,13 @@ public class LoginResource {
 	
 	@RequestMapping("/token")
 	public Map<String, String> token(HttpSession session, HttpServletRequest request) {
-		//System.out.println(request.getRemoteHost());
+		System.out.println(request.getRemoteHost());
 		
 		String remoteHost = request.getRemoteHost();
 		int portNumber = request.getRemotePort();
 		
-		//System.out.println(remoteHost+":"+portNumber);
-		//System.out.println(request.getRemoteAddr());
+		System.out.println(remoteHost+":"+portNumber);
+		System.out.println(request.getRemoteAddr());
 		
 		return Collections.singletonMap("token", session.getId());
 	}
