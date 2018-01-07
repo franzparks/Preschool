@@ -20,7 +20,7 @@ export class AddNewSchoolComponent implements OnInit {
 
   	constructor(
   		private schoolService:SchoolService,
-  		public uploadImageService:UploadImageService
+  		public uploadImageService:UploadImageService,
       private loginService: LoginService,
       private router: Router
   	) { }
@@ -40,6 +40,16 @@ export class AddNewSchoolComponent implements OnInit {
 
   	ngOnInit() {
   		this.schoolAdded=false;
+
+      //check if user is logged in
+      this.loginService.checkSession().subscribe(
+        res => {
+        },
+        err => {
+          //got login page if not logged in
+          this.router.navigate(['/my-account']);
+        }
+      );
   	}
 
 }
