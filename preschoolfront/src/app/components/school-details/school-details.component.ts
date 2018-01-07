@@ -4,6 +4,7 @@ import {Params, ActivatedRoute, Router} from '@angular/router';
 
 import {SchoolService } from '../../services/school.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
+import { LoginService } from '../../services/login.service';
 
 import  {RatingAndReview} from '../../models/rating-and-review';
 import  {School} from '../../models/school';
