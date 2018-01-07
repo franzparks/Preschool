@@ -5,6 +5,8 @@ import { School } from '../../models/school';
 import {SchoolService} from '../../services/school.service';
 import {UploadImageService} from '../../services/upload-image.service';
 
+import { LoginService } from '../../services/login.service';
+
 @Component({
   selector: 'app-add-new-school',
   templateUrl: './add-new-school.component.html',
@@ -18,6 +20,7 @@ export class AddNewSchoolComponent implements OnInit {
   	constructor(
   		private schoolService:SchoolService,
   		public uploadImageService:UploadImageService
+      private loginService: LoginService,
   	) { }
 
   	onSubmit() {
