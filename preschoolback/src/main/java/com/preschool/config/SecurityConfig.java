@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			"/public/**",
 			"/js/**",
 			"/image/**",
-			"/school/schoolList/**",
+			"/school/**",
 			"/ratingAndReviews/**",
 			"/user/**"
 			//"/token",
@@ -51,8 +51,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().cors().disable().httpBasic().and().authorizeRequests()
-		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
+		http.csrf().disable().cors().disable()
+		.httpBasic().and()
+		.authorizeRequests()
+		.antMatchers(PUBLIC_MATCHERS).permitAll()
+		//.antMatchers("/api/**").hasRole("USER")
+		.anyRequest().authenticated();
+		
 		http.headers().frameOptions().sameOrigin();
 	}
 	
@@ -71,6 +76,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         .anyRequest().authenticated() 
         .and().formLogin().disable();
         //.csrf().disable().cors().disable();
+         http.headers().frameOptions().sameOrigin();
 	}*/
 	
 	@Autowired
