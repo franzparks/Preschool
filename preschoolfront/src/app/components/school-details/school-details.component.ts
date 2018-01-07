@@ -25,7 +25,8 @@ export class SchoolDetailsComponent implements OnInit {
 		private http:Http,
 		private route:ActivatedRoute,
     private schoolService: SchoolService,
-    private ratingAndReviewService: RatingAndReviewService
+    private ratingAndReviewService: RatingAndReviewService,
+    private loginService: LoginService,
 	) { }
 
 	ngOnInit() {
