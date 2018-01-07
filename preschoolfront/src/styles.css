@@ -2,7 +2,8 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/mdbootstrap/css/bootstrap.min.css';
 @import '../node_modules/mdbootstrap/css/mdb.min.css';
-@import url(https://cdn.jsdelivr.net/mdbootstrap/4.3.2/mdb.min.css);
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/*@import url(https://cdn.jsdelivr.net/mdbootstrap/4.3.2/mdb.min.css);*/
 /*@import './morestyles.css';*/
 
 html,
