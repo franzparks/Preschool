@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 import { School } from '../../models/school';
 
@@ -21,6 +22,7 @@ export class AddNewSchoolComponent implements OnInit {
   		private schoolService:SchoolService,
   		public uploadImageService:UploadImageService
       private loginService: LoginService,
+      private router: Router
   	) { }
 
   	onSubmit() {
