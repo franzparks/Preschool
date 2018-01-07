@@ -19,6 +19,7 @@ export class SchoolDetailsComponent implements OnInit {
 	schoolId : number;
 	school: School = new School();
   reviewsList: RatingAndReview[];
+  loggedIn:boolean;
 
 	constructor(
 		private router:Router,
@@ -50,6 +51,16 @@ export class SchoolDetailsComponent implements OnInit {
       error => {
         console.log(error);
       });
+
+      //check if user is logged in
+      this.loginService.checkSession().subscribe(
+        res => {
+          this.loggedIn = true;
+        },
+        err => {
+          this.loggedIn =false;
+        }
+      );
 
 	}
 
