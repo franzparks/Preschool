@@ -25,6 +25,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 
+
+//age range
+//price range
+//daily schedule
 @Entity
 public class School implements Serializable{
 	
