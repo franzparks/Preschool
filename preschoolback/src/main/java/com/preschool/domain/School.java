@@ -25,10 +25,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 
-
-//age range
-//price range
-//daily schedule
 @Entity
 public class School implements Serializable{
 	
@@ -43,6 +39,7 @@ public class School implements Serializable{
 	private List<RatingAndReview> ratingAndReviewsList;
 	
 	private String title;
+	@Column(columnDefinition="text")
 	private String summary;
 	private String teacherToStudentRatio;
 	private String ageRange;
