@@ -64,6 +64,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		userService.createUser(user2, userRoles);
 		
 		School school1 =  new School();
+		school1.setTeacherToStudentRatio("1 to 4");
 		school1.setTitle("The Harker School - Preschool");
 		
 		school1.setSummary("Beginnings matter. At Harker, we understand the importance of giving your "
@@ -84,6 +85,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		school1.setAverageRating(4);
 		
 		School school2 =  new School();
+		school2.setTeacherToStudentRatio("1 to 5");
 		school2.setTitle("Challenger School");
 		
 		school2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
@@ -93,11 +95,11 @@ public class PreschoolApplication implements CommandLineRunner{ //
 				+ "history and values, and inspire children to embrace challenge and find joy and"
 				+ " self-worth through achievement.");
 		
-		school1.setAgeRange("2 to 5 years");
+		school2.setAgeRange("2 to 5 years");
 		
-		school1.setPriceRange("$2300 to $3000");
+		school2.setPriceRange("$2300 to $3000");
 		
-		school1.setSchedule("07:00 AM to 6:00 PM ");
+		school2.setSchedule("07:00 AM to 6:00 PM ");
 		
 		school2.setAddress("18811 Cox Avenue Saratoga	CA 95070");
 		
@@ -107,16 +109,18 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		School school3 = new School();
 		
+		school3.setTeacherToStudentRatio("1 to 4");
+		
 		school3.setTitle("South Bay Community Preschool");
 		
 		school3.setSummary("South Bay Community Preschool is a non-profit organization supported by tuition "
 				+ "only. We do not discriminate in regards to race, color, or creed. SBCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
 		
-		school1.setAgeRange("1.5 to 4 years");
+		school3.setAgeRange("1.5 to 4 years");
 		
-		school1.setPriceRange("$1800 to $2800");
+		school3.setPriceRange("$1800 to $2800");
 		
-		school1.setSchedule("07:00 AM to 6:00 PM ");
+		school3.setSchedule("07:00 AM to 6:00 PM ");
 		
 		school3.setAddress("1180 Murphy Ave, San Jose, CA 95131");
 		school3.setPhone("(408) 890-5010");
