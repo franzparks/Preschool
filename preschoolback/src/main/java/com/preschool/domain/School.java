@@ -43,18 +43,11 @@ public class School implements Serializable{
 	private List<RatingAndReview> ratingAndReviewsList;
 	
 	private String title;
-	
-	@Column(columnDefinition="text")
 	private String summary;
-	
+	private String teacherToStudentRatio;
 	private String ageRange;
-	
-	@Column(columnDefinition="text")
 	private String priceRange;
-	
-	@Column(columnDefinition="text")
 	private String schedule;
-	
 	private String address;
 	private String phone;
 	private int averageRating;
@@ -69,7 +62,9 @@ public class School implements Serializable{
 	public List<RatingAndReview> getRatingAndReviewsList() {
 		return ratingAndReviewsList;
 	}
-
+	public String getTeacherToStudentRatio() {
+		return teacherToStudentRatio;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -113,7 +108,9 @@ public class School implements Serializable{
 	public void setRatingAndReviewsList(List<RatingAndReview> ratingAndReviewsList) {
 		this.ratingAndReviewsList = ratingAndReviewsList;
 	}
-
+	public void setTeacherToStudentRatio(String teacherToStudentRatio) {
+		this.teacherToStudentRatio = teacherToStudentRatio;
+	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
@@ -153,7 +150,7 @@ public class School implements Serializable{
 	@Override
     public String toString() {
 	    return "School Id : " + id + ", Rating And Reviews List : [ "
-	            + ratingAndReviewsList + "], Title : " + title + ", Age Range : "
+	            + ratingAndReviewsList + "], Teacher To Student Ratio : "+teacherToStudentRatio+ ", Title " + title + ", Age Range : "
 	            + ageRange + ", Price Range : " + priceRange + ", Summary : " + summary
 	            + ", Address : " + address + ", Phone : " + phone
 	            + ", Average Rating : " + averageRating + ", School Image : "
