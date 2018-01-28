@@ -43,13 +43,17 @@ public class School implements Serializable{
 	private List<RatingAndReview> ratingAndReviewsList;
 	
 	private String title;
-	private String subTitle;
-	
-	@Column(columnDefinition="text")
-	private String snippet;
 	
 	@Column(columnDefinition="text")
 	private String summary;
+	
+	private String ageRange;
+	
+	@Column(columnDefinition="text")
+	private String priceRange;
+	
+	@Column(columnDefinition="text")
+	private String schedule;
 	
 	private String address;
 	private String phone;
@@ -70,16 +74,20 @@ public class School implements Serializable{
 		return title;
 	}
 
-	public String getSubTitle() {
-		return subTitle;
-	}
-
-	public String getSnippet() {
-		return snippet;
-	}
-
 	public String getSummary() {
 		return summary;
+	}
+	
+	public String getAgeRange() {
+		return ageRange;
+	}
+
+	public String getPriceRange() {
+		return priceRange;
+	}
+	
+	public String getSchedule() {
+		return schedule;
 	}
 
 	public String getAddress() {
@@ -110,16 +118,20 @@ public class School implements Serializable{
 		this.title = title;
 	}
 
-	public void setSubTitle(String subTitle) {
-		this.subTitle = subTitle;
-	}
-
-	public void setSnippet(String snippet) {
-		this.snippet = snippet;
-	}
-
 	public void setSummary(String summary) {
 		this.summary = summary;
+	}
+	
+	public void setAgeRange(String ageRange) {
+		this.ageRange = ageRange;
+	}
+
+	public void setPriceRange(String priceRange) {
+		this.priceRange = priceRange;
+	}
+	
+	public void setSchedule(String schedule) {
+		this.schedule = schedule;
 	}
 
 	public void setAddress(String address) {
@@ -140,12 +152,12 @@ public class School implements Serializable{
 
 	@Override
     public String toString() {
-	    return "School [id=" + id + ", ratingAndReviewsList="
-	            + ratingAndReviewsList + ", title=" + title + ", subTitle="
-	            + subTitle + ", snippet=" + snippet + ", summary=" + summary
-	            + ", address=" + address + ", phone=" + phone
-	            + ", averageRating=" + averageRating + ", schoolImage="
-	            + schoolImage + "]";
+	    return "School Id : " + id + ", Rating And Reviews List : [ "
+	            + ratingAndReviewsList + "], Title : " + title + ", Age Range : "
+	            + ageRange + ", Price Range : " + priceRange + ", Summary : " + summary
+	            + ", Address : " + address + ", Phone : " + phone
+	            + ", Average Rating : " + averageRating + ", School Image : "
+	            + schoolImage;
     }
 	
 }

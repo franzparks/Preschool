@@ -65,15 +65,17 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		School school1 =  new School();
 		school1.setTitle("The Harker School - Preschool");
-		school1.setSubTitle("The bay\'s best");
-		school1.setSnippet("At Harker’s preschool, our early learning program for 3-, 4- and young"
-				+ " 5-year-olds emphasizes hands-on learning,"
-				+ " intentional play and developmentally appropriate classroom activities.");
 		
 		school1.setSummary("Beginnings matter. At Harker, we understand the importance of giving your "
 				+ "child the best possible foundation for an outstanding academic career. That starts with "
 				+ "choosing the right preschool to excite, nurture and challenge children so they are "
 				+ "not only ready for the next step but excited to get there.");
+		
+		school1.setAgeRange("2.5 to 5 years");
+		
+		school1.setPriceRange("$2400 to $3500");
+		
+		school1.setSchedule("07:00 AM to 6:00 PM ");
 		
 		school1.setAddress("4525 Union Ave, San Jose, CA 95124");
 		
@@ -83,12 +85,6 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		School school2 =  new School();
 		school2.setTitle("Challenger School");
-		school2.setSubTitle("The premier school in the country");
-		school2.setSnippet("Challenger School is an independent, "
-				+ "non-profit private school. To preserve our independence,"
-				+ " we do not accept public funds. However, as a non-profit entity, "
-				+ "we accept private, tax-deductible donations from those wishing to"
-				+ " contribute to our educational mission.");
 		
 		school2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
 				+ "and Texas, with more than 10,000 preschool to 8th grade students enrolled annually."
@@ -96,6 +92,12 @@ public class PreschoolApplication implements CommandLineRunner{ //
 				+ "and history. We promote individual and independent thinking, teach traditional American "
 				+ "history and values, and inspire children to embrace challenge and find joy and"
 				+ " self-worth through achievement.");
+		
+		school1.setAgeRange("2 to 5 years");
+		
+		school1.setPriceRange("$2300 to $3000");
+		
+		school1.setSchedule("07:00 AM to 6:00 PM ");
 		
 		school2.setAddress("18811 Cox Avenue Saratoga	CA 95070");
 		
@@ -106,11 +108,16 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		School school3 = new School();
 		
 		school3.setTitle("South Bay Community Preschool");
-		school3.setSubTitle("Discovering that learning is fun!");
-		school3.setSnippet("South Bay Community Preschool is a non-profit "
-				+ "organization supported by tuition only.");
+		
 		school3.setSummary("South Bay Community Preschool is a non-profit organization supported by tuition "
 				+ "only. We do not discriminate in regards to race, color, or creed. SBCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
+		
+		school1.setAgeRange("1.5 to 4 years");
+		
+		school1.setPriceRange("$1800 to $2800");
+		
+		school1.setSchedule("07:00 AM to 6:00 PM ");
+		
 		school3.setAddress("1180 Murphy Ave, San Jose, CA 95131");
 		school3.setPhone("(408) 890-5010");
 		school3.setAverageRating(3);
