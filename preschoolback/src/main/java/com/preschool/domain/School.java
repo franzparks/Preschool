@@ -47,6 +47,7 @@ public class School implements Serializable{
 	private String schedule;
 	private String address;
 	private String phone;
+	private String website;
 	private int averageRating;
 	
 	@Transient
@@ -88,6 +89,10 @@ public class School implements Serializable{
 
 	public String getPhone() {
 		return phone;
+	}
+	
+	public String getWebsite() {
+		return website;
 	}
 
 	public int getAverageRating() {
@@ -135,6 +140,10 @@ public class School implements Serializable{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
+	public void setWebsite(String website) {
+		this.website = website;
+	}
 
 	public void setAverageRating(int averageRating) {
 		this.averageRating = averageRating;
@@ -149,7 +158,7 @@ public class School implements Serializable{
 	    return "School Id : " + id + ", Rating And Reviews List : [ "
 	            + ratingAndReviewsList + "], Teacher To Student Ratio : "+teacherToStudentRatio+ ", Title " + title + ", Age Range : "
 	            + ageRange + ", Price Range : " + priceRange + ", Summary : " + summary
-	            + ", Address : " + address + ", Phone : " + phone
+	            + ", Address : " + address + ", Phone : " + phone + ", Website : "+ website
 	            + ", Average Rating : " + averageRating + ", School Image : "
 	            + schoolImage;
     }
