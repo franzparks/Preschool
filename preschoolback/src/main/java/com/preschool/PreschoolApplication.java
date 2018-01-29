@@ -130,7 +130,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school3.setPhone("(408) 890-5010");
 		
-		school1.setWebsite("http://www.southbaychurchschool.com");
+		school3.setWebsite("http://www.southbaychurchschool.com");
 		
 		school3.setAverageRating(3);
 
