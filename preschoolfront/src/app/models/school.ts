@@ -10,6 +10,7 @@ export class School {
 	schedule: string;
 	address: string;
 	phone: string;
+	website: string;
 	averageRating: number;
 	schoolImage: string;
 }
