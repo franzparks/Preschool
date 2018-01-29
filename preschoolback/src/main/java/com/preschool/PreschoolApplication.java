@@ -82,6 +82,8 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school1.setPhone("(408) 553-5700");
 		
+		school1.setWebsite("http://www.harkerpreschool.com");
+		
 		school1.setAverageRating(4);
 		
 		School school2 =  new School();
@@ -105,6 +107,8 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school2.setPhone("(408) 378-0444");
 		
+		school2.setWebsite("http://www.challengerschool.com");
+		
 		school2.setAverageRating(4);
 		
 		School school3 = new School();
@@ -123,7 +127,11 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		school3.setSchedule("07:00 AM to 6:00 PM ");
 		
 		school3.setAddress("1180 Murphy Ave, San Jose, CA 95131");
+		
 		school3.setPhone("(408) 890-5010");
+		
+		school1.setWebsite("http://www.southbaychurchschool.com");
+		
 		school3.setAverageRating(3);
 
 		
