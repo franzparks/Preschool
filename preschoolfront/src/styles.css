@@ -78,6 +78,8 @@ img.mat-card-image {
 
 }
 
+
+
 @media screen and (max-width: 480px) {
   rating {
     display: block;
@@ -659,6 +661,11 @@ md-card a,a:hover{
   
 }
 
+
+.school-title {
+  float: left;
+}
+
 .mat-card-header .mat-card-title {
     font-size: 17px !important;
     font-family: cursive;
@@ -729,4 +736,15 @@ button, input, optgroup, select, textarea {
 label {
     display: inline-block;
     margin-bottom: 1.5rem;
+}
+
+.add-to-wishlist {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .mat-card-header {
+      margin: -8px 0 0 0;
+      float: left;
+  }
 }
