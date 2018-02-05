@@ -65,4 +65,8 @@ export class SchoolDetailsComponent implements OnInit {
 
 	}
 
+  addToWishList(){
+    //use $mdToast if possible
+  }
+
 }
