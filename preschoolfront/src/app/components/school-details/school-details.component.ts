@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewContainerRef, OnInit } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
 
 import {SchoolService } from '../../services/school.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
@@ -30,8 +30,12 @@ export class SchoolDetailsComponent implements OnInit {
 		private route:ActivatedRoute,
     private schoolService: SchoolService,
     private ratingAndReviewService: RatingAndReviewService,
-    private loginService: LoginService
-	) { }
+    private loginService: LoginService,
+    private toastr: ToastsManager, 
+    vcr: ViewContainerRef
+	) {
+    this.toastr.setRootViewContainerRef(vcr);
+   }
 
 	ngOnInit() {
 
@@ -72,19 +76,19 @@ export class SchoolDetailsComponent implements OnInit {
   }
 
   showSuccess() {
-        this.toastr.success('You are awesome!', 'Success!');
-      }
-    
-      showError() {
-        this.toastr.error('This is not good!', 'Oops!');
-      }
-    
-      showWarning() {
-        this.toastr.warning('You are being warned.', 'Alert!');
-      }
-    
-      showInfo() {
-        this.toastr.info('Just some information for you.');
-      }
+    this.toastr.success('You are awesome!', 'Success!');
+  }
+
+  showError() {
+    this.toastr.error('This is not good!', 'Oops!');
+  }
+
+  showWarning() {
+    this.toastr.warning('You are being warned.', 'Alert!');
+  }
+
+  showInfo() {
+    this.toastr.info('Just some information for you.');
+  }
 
 }
