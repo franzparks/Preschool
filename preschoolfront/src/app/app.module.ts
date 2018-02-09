@@ -11,6 +11,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -56,6 +57,7 @@ import { SchoolListComponent } from './components/school-list/school-list.compon
     BrowserAnimationsModule,
     RatingModule,
     MaterialModule,
+    ToastModule.forRoot()
     //NgbModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     

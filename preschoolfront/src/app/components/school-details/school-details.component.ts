@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+
 import {SchoolService } from '../../services/school.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
 import { LoginService } from '../../services/login.service';
