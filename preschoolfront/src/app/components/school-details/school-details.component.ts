@@ -71,4 +71,20 @@ export class SchoolDetailsComponent implements OnInit {
     //use $mdToast if possible
   }
 
+  showSuccess() {
+        this.toastr.success('You are awesome!', 'Success!');
+      }
+    
+      showError() {
+        this.toastr.error('This is not good!', 'Oops!');
+      }
+    
+      showWarning() {
+        this.toastr.warning('You are being warned.', 'Alert!');
+      }
+    
+      showInfo() {
+        this.toastr.info('Just some information for you.');
+      }
+
 }
