@@ -7,6 +7,7 @@ import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
 import {SchoolService } from '../../services/school.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
 import { LoginService } from '../../services/login.service';
+import { ToasterService } from '../../services.toaster.service';
 
 import  {RatingAndReview} from '../../models/rating-and-review';
 import  {School} from '../../models/school';
@@ -31,7 +32,8 @@ export class SchoolDetailsComponent implements OnInit {
     private schoolService: SchoolService,
     private ratingAndReviewService: RatingAndReviewService,
     private loginService: LoginService,
-    private toastr: ToastsManager
+    private toastr : ToasterService,
+    //private toastr: ToastsManager
     
 	) {}
 
