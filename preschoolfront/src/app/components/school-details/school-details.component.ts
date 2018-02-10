@@ -63,43 +63,20 @@ export class SchoolDetailsComponent implements OnInit {
       this.loginService.checkSession().subscribe(
         res => {
           this.loggedIn = true;
+          this.toastr.success('You have added successfully logged in!');
         },
         err => {
           this.loggedIn =false;
+          this.toastr.info('You have logged out');
         }
       );
 
 	}
 
   addToWishList(){
-    //use $mdToast if possible
-  }
-//, { toastLife: 5000, positionClass: 'toast-center-center'}
-  showSuccess() {
-    this.toastr.success('You are awesome!');
-  }
-  /*showSuccess() {
-    let options = new ToastOptions({
-        positionClass: 'toast-top-right',
-        animate: 'flyRight',
-        dismiss: 'click',
-        toastLife:8000
-    })
-
-    //let toastManager: ToastsManager = new ToastsManager(this.componentFactoryResolver, this.appl, options);
-    toastManager.success('message', 'title', { toastLife: 5000, dismiss: 'auto', positionClass: 'toast-top-right'});
-}*/
-
-  /*showError() {
-    this.toastr.error('This is not good!', 'Oops!');
+    this.toastr.success('You have added this school to your wish list!');
   }
 
-  showWarning() {
-    this.toastr.warning('You are being warned.', 'Alert!');
-  }
 
-  showInfo() {
-    this.toastr.info('Just some information for you.');
-  }*/
 
 }

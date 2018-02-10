@@ -676,7 +676,9 @@ md-card a,a:hover{
 .top-margin{
   margin-top: 50px;
 }
-
+#toast-top-right > div{
+  height : 66px;
+}
   
 
 /*input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.materialize-textarea {
