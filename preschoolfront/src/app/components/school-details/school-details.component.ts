@@ -63,11 +63,11 @@ export class SchoolDetailsComponent implements OnInit {
       this.loginService.checkSession().subscribe(
         res => {
           this.loggedIn = true;
-          this.toastr.success('You have added successfully logged in!');
+          //this.toastr.success('You have added successfully logged in!');
         },
         err => {
           this.loggedIn =false;
-          this.toastr.info('You have logged out');
+          //this.toastr.info('You have logged out');
         }
       );
 
