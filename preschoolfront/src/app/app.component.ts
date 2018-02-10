@@ -7,8 +7,6 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  //selector: 'toastr-component',
-  //template: '<button class="btn btn-default" (click)="showSuccess()">Show Success</button>'
 })
 
 export class AppComponent {
