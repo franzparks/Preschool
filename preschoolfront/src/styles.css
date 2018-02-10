@@ -679,6 +679,18 @@ md-card a,a:hover{
 #toast-top-right > div{
   height : 66px;
 }
+
+.top-schools-summary {
+  overflow: hidden;
+  height: 150px;
+}
+.top-schools-titles {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
   
 
 /*input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.materialize-textarea {
