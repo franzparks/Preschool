@@ -1,4 +1,4 @@
-import { Component, ViewContainerRef, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
@@ -31,11 +31,9 @@ export class SchoolDetailsComponent implements OnInit {
     private schoolService: SchoolService,
     private ratingAndReviewService: RatingAndReviewService,
     private loginService: LoginService,
-    private toastr: ToastsManager, 
-    vcr: ViewContainerRef
-	) {
-    this.toastr.setRootViewContainerRef(vcr);
-   }
+    private toastr: ToastsManager
+    
+	) {}
 
 	ngOnInit() {
 
@@ -74,12 +72,23 @@ export class SchoolDetailsComponent implements OnInit {
   addToWishList(){
     //use $mdToast if possible
   }
-
+//, { toastLife: 5000, positionClass: 'toast-center-center'}
   showSuccess() {
     this.toastr.success('You are awesome!', 'Success!');
   }
+  /*showSuccess() {
+    let options = new ToastOptions({
+        positionClass: 'toast-top-right',
+        animate: 'flyRight',
+        dismiss: 'click',
+        toastLife:8000
+    })
 
-  showError() {
+    //let toastManager: ToastsManager = new ToastsManager(this.componentFactoryResolver, this.appl, options);
+    toastManager.success('message', 'title', { toastLife: 5000, dismiss: 'auto', positionClass: 'toast-top-right'});
+}*/
+
+  /*showError() {
     this.toastr.error('This is not good!', 'Oops!');
   }
 
@@ -89,6 +98,6 @@ export class SchoolDetailsComponent implements OnInit {
 
   showInfo() {
     this.toastr.info('Just some information for you.');
-  }
+  }*/
 
 }

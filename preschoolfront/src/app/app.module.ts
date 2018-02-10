@@ -57,6 +57,7 @@ import { SchoolListComponent } from './components/school-list/school-list.compon
     BrowserAnimationsModule,
     RatingModule,
     MaterialModule,
+    //ToastModule
     ToastModule.forRoot()
     //NgbModule
     //InMemoryWebApiModule.forRoot(InMemoryDataService)

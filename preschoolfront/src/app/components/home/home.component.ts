@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 
 import { Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
+
+//import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
 
 import { School } from '../../models/school';
 import {SchoolService } from '../../services/school.service';
