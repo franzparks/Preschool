@@ -7,7 +7,7 @@ import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
 import {SchoolService } from '../../services/school.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
 import { LoginService } from '../../services/login.service';
-import { ToasterService } from '../../services.toaster.service';
+import { ToasterService } from '../../services/toaster.service';
 
 import  {RatingAndReview} from '../../models/rating-and-review';
 import  {School} from '../../models/school';
@@ -76,7 +76,7 @@ export class SchoolDetailsComponent implements OnInit {
   }
 //, { toastLife: 5000, positionClass: 'toast-center-center'}
   showSuccess() {
-    this.toastr.success('You are awesome!', 'Success!');
+    this.toastr.success('You are awesome!');
   }
   /*showSuccess() {
     let options = new ToastOptions({
