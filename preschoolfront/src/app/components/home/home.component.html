@@ -43,7 +43,7 @@
         <!--Second row-->
         <div class="row">
             <!--First columnn-->
-    <div class="col-md-4">
+    <div class="col-md-4" *ngFor="let school of topSchools">
         <!--Card-->
         <md-card class="card  product-card ovf-hidden hoverable">      
 
@@ -57,13 +57,6 @@
             </div>
             <!--/.Card image-->
             <!--Rating-->
-            <!--<a class="btn btn-small rating btn-primary waves-effect waves-light">
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star</i>
-                <i class="material-icons">star_border</i>
-            </a>-->
             
             <rating [(ngModel)]="starsCount"  [readonly]="true" 
                     [titles]="['one', 'two', 'three', 'four', 'five']" >
@@ -84,7 +77,7 @@
             <!--Card content-->
             <div class="card-block">
                 <!--Title-->
-                <h4 class="card-title ">Sample School </h4>
+                <h4 class="card-title ">{{school.title}}</h4>
 
                 <!--Text-->
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -120,23 +113,7 @@
     </div>
     <!--First columnn-->
 
-    <!--Second columnn-->
-    <div class="col-md-4">
-        <!--Card-->
-        
-        <!--/.Card-->
-    </div>
-    <!--Second columnn-->
-
-    <!--Third columnn-->
-    <div class="col-md-4">
-        <!--Card-->
-        
-        <!--/.Card-->
-    </div>
-    <!--Third columnn-->
         </div>
-        <!--/.Second row-->
     </div>
     <!--/.Main layout-->
 

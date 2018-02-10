@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
 	starsCount : number = 3;
 
-	schools: School[] = [];
+	topSchools: School[] = [];
 
 	constructor(
 		private schoolService : SchoolService,
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
 		this.schoolService.getSchoolList().subscribe(
 			res => {
 				console.log(res);
-				this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+				this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		
       		},
