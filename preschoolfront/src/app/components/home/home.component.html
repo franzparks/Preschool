@@ -80,8 +80,8 @@
                 <h4 class="card-title ">{{school.title}}</h4>
 
                 <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a  class="btn btn-ptc wow fadeInRight" data-wow-delay="0.2s" >
+                <p class="card-text">{{school.summary}}</p>
+                <a  class="btn btn-ptc wow fadeInRight" data-wow-delay="0.2s" (click)="getSchoolDetails(school.id)" >
                 Read more</a>
             </div>
 
