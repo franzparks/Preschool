@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
 
+import { ToasterService } from '../../services/toaster.service';
+
 import {Router} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {UserService} from '../../services/user.service';
@@ -33,7 +35,8 @@ export class MyAccountComponent implements OnInit {
   		private loginService: LoginService,
   		private userService: UserService,
   		private router: Router,
-      private _location: Location
+      private _location: Location,
+      private toastr : ToasterService,
   	) { }
 
   	onLogin() {
@@ -44,6 +47,7 @@ export class MyAccountComponent implements OnInit {
   			this.loggedIn = true;
   			//location.reload();
         this._location.back();
+        this.toastr.success('You have successfully logged in!');
         //location.reload();
   			//this.router.navigate(['/home']);
   		}, 
