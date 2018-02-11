@@ -66,10 +66,12 @@
             <!--/.Rating-->
            
             <div class="action-buttons">
-                <a class="btn-floating  activator waves-effect waves-light" (click)="isClassVisible = !isClassVisible;" ><i class="fa fa-share-alt"></i></a>
+                <!--<a class="btn-floating  activator waves-effect waves-light" (click)="isClassVisible = !isClassVisible;" ><i class="fa fa-share-alt"></i></a>-->
                 <a class="btn-floating red waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" 
-                title="Add to wishlist" 
-                 data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a>
+                    title="Add to wishlist" 
+                     data-original-title="Add to wishlist" (click)="addToWishList()">
+                     <i class="fa fa-heart"></i>
+                </a>
                  
             </div>
             
@@ -86,14 +88,14 @@
             </div>
 
             <div class="cta"></div>
-            <div class="card-reveal " [ngClass]="{'socialShares': isClassVisible }">
+            <!--<div class="card-reveal " [ngClass]="{'socialShares': isClassVisible }">
                 <div class="content text-xs-center">
 
                     <h4 class="card-title">Social shares <i class="fa fa-close" (click)="isClassVisible = !isClassVisible;"></i></h4>
-                    <hr>
+                    <hr>-->
 
                     <!--Social Icons-->
-                    <ul class="inline-ul">
+                    <!--<ul class="inline-ul">
                         <li><a class="btn-floating btn-small btn-fb waves-effect waves-light"><i class="fa fa-facebook"> </i></a></li>
                         <li><a class="btn-floating btn-small btn-tw waves-effect waves-light"><i class="fa fa-twitter"> </i></a></li>
                         <li><a class="btn-floating btn-small btn-gplus waves-effect waves-light"><i class="fa fa-google-plus"> </i></a></li>
@@ -104,7 +106,7 @@
                     </ul>
 
                 </div>
-            </div>
+            </div>-->
             <!--Card Reveal-->
            
              

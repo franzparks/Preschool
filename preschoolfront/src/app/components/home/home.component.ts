@@ -3,7 +3,7 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
-//import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
+import { ToasterService } from '../../services/toaster.service';
 
 import { School } from '../../models/school';
 import {SchoolService } from '../../services/school.service';
@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
 		private schoolService : SchoolService,
 		private router:Router,
 		private http:Http,
-		private route:ActivatedRoute
+		private route:ActivatedRoute,
+		private toastr : ToasterService,
 	) { }
 
 	ngOnInit() {
@@ -42,6 +43,10 @@ export class HomeComponent implements OnInit {
 
 	getSchoolDetails(id: String){
 		this.router.navigate(['/school/', id]);
+	}
+
+	addToWishList(){
+		this.toastr.success('You have added this school to your wish list!');
 	}
 	  
 
