@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Params, ActivatedRoute,Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 import { AddRatingService } from '../../services/add-rating.service';
 import { LoginService } from '../../services/login.service';
@@ -24,6 +25,7 @@ export class RatingComponent implements OnInit {
   		private route:ActivatedRoute,
       private loginService: LoginService,
       private toastr : ToasterService,
+      private _location: Location
    
   	) { }
 
@@ -39,6 +41,10 @@ export class RatingComponent implements OnInit {
   			console.log(error);
   		});
   	}
+
+    onCancel(){
+      this._location.back();
+    }
 
   	ngOnInit() {
   		this.ratingAdded=false;
