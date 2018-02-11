@@ -44,6 +44,7 @@ export class MyAccountComponent implements OnInit {
   			this.loggedIn = true;
   			//location.reload();
         this._location.back();
+        //location.reload();
   			//this.router.navigate(['/home']);
   		}, 
   		error => {

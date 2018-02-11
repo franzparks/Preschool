@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Params, ActivatedRoute,Router } from '@angular/router';
 
 import { AddRatingService } from '../../services/add-rating.service';
+import { LoginService } from '../../services/login.service';
+import { ToasterService } from '../../services/toaster.service';
 
 import{RatingAndReview} from '../../models/rating-and-review';
 
@@ -19,7 +21,10 @@ export class RatingComponent implements OnInit {
   	constructor(
   		private addRatingService:AddRatingService,
   		private router: Router,
-  		private route:ActivatedRoute
+  		private route:ActivatedRoute,
+      private loginService: LoginService,
+      private toastr : ToasterService,
+   
   	) { }
 
   	onSubmit(){
@@ -39,6 +44,18 @@ export class RatingComponent implements OnInit {
   		this.ratingAdded=false;
   		this.route.params.forEach((params: Params) => {
   			this.schoolId = Number.parseInt(params['id']);
+
+        //check if user is logged in
+      this.loginService.checkSession().subscribe(
+        res => {
+          //this.loggedIn = true;
+          this.toastr.success('You have successfully logged in!');
+        },
+        err => {
+          
+          this.router.navigate(['/my-account/']);
+        }
+      );
   		});
   	}
 

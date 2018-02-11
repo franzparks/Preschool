@@ -2,7 +2,7 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
-import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
+//import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
 
 import {SchoolService } from '../../services/school.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
@@ -33,7 +33,7 @@ export class SchoolDetailsComponent implements OnInit {
     private ratingAndReviewService: RatingAndReviewService,
     private loginService: LoginService,
     private toastr : ToasterService,
-    //private toastr: ToastsManager
+   
     
 	) {}
 
@@ -63,11 +63,12 @@ export class SchoolDetailsComponent implements OnInit {
       this.loginService.checkSession().subscribe(
         res => {
           this.loggedIn = true;
-          //this.toastr.success('You have added successfully logged in!');
+          //this.toastr.success('You have successfully logged in!');
         },
         err => {
           this.loggedIn =false;
           //this.toastr.info('You have logged out');
+          
         }
       );
 
