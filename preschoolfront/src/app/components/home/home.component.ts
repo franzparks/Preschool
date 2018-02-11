@@ -7,6 +7,7 @@ import { ToasterService } from '../../services/toaster.service';
 
 import { School } from '../../models/school';
 import {SchoolService } from '../../services/school.service';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit {
 
 	topSchools: School[] = [];
 
-	loggedIn:boolean;
+	loggedIn = false;
 
 	constructor(
 		private schoolService : SchoolService,
@@ -29,19 +30,32 @@ export class HomeComponent implements OnInit {
 		private http:Http,
 		private route:ActivatedRoute,
 		private toastr : ToasterService,
+		private loginService: LoginService
 	) { }
 
 	ngOnInit() {
 		this.schoolService.getSchoolList().subscribe(
 			res => {
 				console.log(res);
-				this.loggedIn = true;
 				this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		
       		},
       		error => console.log(error)
 		)
+
+		//check if user is logged in
+      this.loginService.checkSession().subscribe(
+        res => {
+          this.loggedIn = true;
+          //this.toastr.success('You have successfully logged in!');
+        },
+        err => {
+          this.loggedIn =false;
+          //this.toastr.info('You have logged out');
+          
+        }
+      );
 	}
 
 	getSchoolDetails(id: String){
