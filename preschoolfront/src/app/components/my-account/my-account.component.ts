@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
+
 import {Router} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {UserService} from '../../services/user.service';
@@ -30,7 +32,8 @@ export class MyAccountComponent implements OnInit {
   	constructor(
   		private loginService: LoginService,
   		private userService: UserService,
-  		private router: Router
+  		private router: Router,
+      private _location: Location
   	) { }
 
   	onLogin() {
@@ -39,8 +42,9 @@ export class MyAccountComponent implements OnInit {
   			console.log(res);
   			localStorage.setItem("xAuthToken", res.json().token);
   			this.loggedIn = true;
-  			location.reload();
-  			this.router.navigate(['/home']);
+  			//location.reload();
+        this._location.back();
+  			//this.router.navigate(['/home']);
   		}, 
   		error => {
   			this.loggedIn = false;
