@@ -75,7 +75,12 @@ export class SchoolDetailsComponent implements OnInit {
 	}
 
   addToWishList(){
-    this.toastr.success('You have added this school to your wish list!');
+    if(this.loggedIn){
+      this.toastr.success('You have added this school to your wish list!');
+    }else{
+      this.router.navigate(['/my-account']);
+    }
+    
   }
 
 
