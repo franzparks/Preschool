@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
 
 	topSchools: School[] = [];
 
+	loggedIn:boolean;
+
 	constructor(
 		private schoolService : SchoolService,
 		private router:Router,
@@ -33,6 +35,7 @@ export class HomeComponent implements OnInit {
 		this.schoolService.getSchoolList().subscribe(
 			res => {
 				console.log(res);
+				this.loggedIn = true;
 				this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		
@@ -46,8 +49,11 @@ export class HomeComponent implements OnInit {
 	}
 
 	addToWishList(){
-		this.toastr.success('You have added this school to your wish list!');
-	}
-	  
+		if(this.loggedIn){
+	      this.toastr.success('You have added this school to your wish list!');
+	    }else{
+	      this.router.navigate(['/my-account']);
+		}
 
+	}
 }
