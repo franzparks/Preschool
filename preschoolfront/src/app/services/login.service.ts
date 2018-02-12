@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable,EventEmitter } from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import {AppConst} from '../constants/app-consts';
@@ -8,7 +8,11 @@ import {Router} from '@angular/router';
 export class LoginService {
 
   private serverPath:string = AppConst.serverPath;
-   
+
+  loggedIn: boolean;
+  loggedInUpdated:EventEmitter<any> = new EventEmitter();
+
+
 	constructor(
 		private http:Http, private router:Router
 	) { }
@@ -33,6 +37,15 @@ export class LoginService {
   	});
     console.log("session headers: " + headers['x-auth-token']);
   	return this.http.get(encodeURI(url), {headers: headers});
+  }
+
+  setLoggedIn(loggedIn) {
+    this.loggedIn = loggedIn;
+    this.loggedInUpdated.emit(this.loggedIn);
+  }
+
+  getLoggedIn() {
+    return this.loggedIn;
   }
 
   logout() {

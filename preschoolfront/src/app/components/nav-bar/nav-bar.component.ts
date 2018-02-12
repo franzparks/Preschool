@@ -28,12 +28,19 @@ export class NavBarComponent implements OnInit {
   		this.loginService.checkSession().subscribe(
   		res => {
   			console.log("successfully logged in: "+ res);
-  			this.loggedIn = true;
+  			//this.loggedIn = true;
+        this.loginService.setLoggedIn(true);
   		},
   		err => {
   			console.log("error loggin in: "+ err);
   			this.loggedIn =false;
   		});
+
+      this.loginService.loggedInUpdated.subscribe(
+      (loggedIn) => {
+        this.loggedIn = this.loginService.getLoggedIn();
+      }
+    );
  	}
   	
     toggleState() { // click handler

@@ -54,6 +54,7 @@ export class RatingComponent implements OnInit {
         //check if user is logged in
       this.loginService.checkSession().subscribe(
         res => {
+          this.loginService.setLoggedIn(true);
           //this.loggedIn = true;
           //this.toastr.success('You have successfully logged in!');
         },
