@@ -47,6 +47,7 @@ private static final long serialVersionUID = 902783495L;
 	private String email;
 	private String phone;
 	private boolean enabled = true;
+	private List<Integer> wishList;
 	
 	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonIgnore
@@ -85,6 +86,10 @@ private static final long serialVersionUID = 902783495L;
 
 	public boolean isEnabled() {
 		return enabled;
+	}
+	
+	public List<Integer> getWishList() {
+		return wishList;
 	}
 
 	public Set<UserRole> getUserRoles() {
@@ -125,6 +130,10 @@ private static final long serialVersionUID = 902783495L;
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+	
+	public void setWishList(List<Integer> wishList) {
+		this.wishList = wishList;
 	}
 
 	public void setUserRoles(Set<UserRole> userRoles) {
