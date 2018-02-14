@@ -32,6 +32,7 @@ import { AddRatingService } from './services/add-rating.service';
 import { RatingAndReviewService } from './services/rating-and-review.service';
 import { UploadImageService } from './services/upload-image.service';
 import { ToasterService } from './services/toaster.service';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 
 
@@ -49,7 +50,8 @@ import { ToasterService } from './services/toaster.service';
     RatingComponent,
     AddNewSchoolComponent,
     FooterComponent,
-    SchoolListComponent
+    SchoolListComponent,
+    WishListComponent
     
   ],
   imports: [
