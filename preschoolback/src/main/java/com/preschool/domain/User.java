@@ -4,6 +4,7 @@
 package com.preschool.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -47,7 +48,7 @@ private static final long serialVersionUID = 902783495L;
 	private String email;
 	private String phone;
 	private boolean enabled = true;
-	private List<Integer> wishList;
+	private String wishList;
 	
 	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonIgnore
@@ -88,7 +89,7 @@ private static final long serialVersionUID = 902783495L;
 		return enabled;
 	}
 	
-	public List<Integer> getWishList() {
+	public String getWishList() {
 		return wishList;
 	}
 
@@ -132,7 +133,7 @@ private static final long serialVersionUID = 902783495L;
 		this.enabled = enabled;
 	}
 	
-	public void setWishList(List<Integer> wishList) {
+	public void setWishList(String wishList) {
 		this.wishList = wishList;
 	}
 
@@ -172,7 +173,7 @@ private static final long serialVersionUID = 902783495L;
     public String toString() {
 	    return "User [id=" + id + ", username=" + username + ", firstName="
 	            + firstName + ", lastName=" + lastName + ", email=" + email
-	            + ", phone=" + phone + "]";
+	            + ", phone=" + phone + ", wishList="+wishList+"]";
     }
 
 }
