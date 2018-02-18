@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+
+import { School } from '../../models/school';
+import {SchoolService } from '../../services/school.service';
 
 @Component({
   selector: 'app-wish-list',
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishListComponent implements OnInit {
 
-  constructor() { }
+	Math: any;
 
-  ngOnInit() {
-  }
+	imageNumber : number = Math.floor((Math.random() * 20) + 1);
+
+	schools: School[] = [];
+
+  	constructor(
+	  	private schoolService : SchoolService,
+		private http:Http
+
+  	) { }
+
+  	ngOnInit() {
+  		this.Math = Math;
+  		this.schoolService.getSchoolList().subscribe(
+			res => {
+				this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		//console.log(JSON.parse(JSON.stringify(res))._body);
+      		},
+      		error => console.log(error)
+		)
+  	}
 
 }
