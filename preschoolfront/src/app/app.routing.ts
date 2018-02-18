@@ -8,6 +8,7 @@ import { SchoolDetailsComponent } from './components/school-details/school-detai
 import { RatingComponent } from './components/rating/rating.component';
 import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
 import { SchoolListComponent } from './components/school-list/school-list.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
 
 
 
@@ -28,7 +29,12 @@ const appRoutes: Routes = [
 	{
 		path: 'my-account',
 		component: MyAccountComponent
-	},{
+	},
+	{
+		path: 'my-wishlist',
+		component: WishListComponent
+	},
+	{
 		path: 'school-reviews',
 		component: SchoolListComponent
 	},{

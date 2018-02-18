@@ -20,7 +20,10 @@
 	                
 	            </ul>
 	            <ul class="navbar-nav">
-	               
+
+	               	<li  class="nav-right" *ngIf="loggedIn">
+	                    <a class="nav-link" routerlink="/my-wishlist" href="/my-wishlist" >Wishlist</a>
+	                </li>
 	                <li  class="nav-right" *ngIf="loggedIn">
 	                    <a class="nav-link" routerlink="/my-profile" href="/my-profile" >My Profile</a>
 	                </li>

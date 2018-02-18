@@ -23,7 +23,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SchoolListComponent } from './components/school-list/school-list.component';
-
+import { WishListComponent } from './components/wish-list/wish-list.component';
 
 import { SchoolService } from './services/school.service';
 import { UserService } from './services/user.service';
@@ -32,7 +32,7 @@ import { AddRatingService } from './services/add-rating.service';
 import { RatingAndReviewService } from './services/rating-and-review.service';
 import { UploadImageService } from './services/upload-image.service';
 import { ToasterService } from './services/toaster.service';
-import { WishListComponent } from './wish-list/wish-list.component';
+
 
 
 
