@@ -26,6 +26,18 @@ export class SchoolService {
     //return this.http.get(url, {headers: tokenHeader});
 	}
 
+  getWishList(wishList: string){
+    //return this.http.get(encodeURI(this.serverPath+'/school/schoolList'), { withCredentials: true });
+    wishList = '123';
+    let url = this.serverPath+ '/school/wishList/'+wishList;
+
+    let tokenHeader = new Headers({
+      'Content-Type' : 'application/json',
+      'x-auth-token' : localStorage.getItem("xAuthToken")
+    });
+    return this.http.get(encodeURI(url), {headers: tokenHeader});
+  }
+
 	getSchool(id: number) {
 
   	let url = this.serverPath+'/school/'+id;

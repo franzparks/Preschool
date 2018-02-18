@@ -7,5 +7,5 @@ export class User {
 	public email: string
 	public phone: string;
 	public enabled: boolean;
-	public wishList: number[];
+	public wishList: string;
 }
