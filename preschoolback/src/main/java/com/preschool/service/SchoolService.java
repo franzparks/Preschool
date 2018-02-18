@@ -12,7 +12,10 @@ import com.preschool.domain.School;
  *
  */
 public interface SchoolService {
+	
 	List<School> findAll();
+	
+	List<School> findWishList(String iDs);
 	
 	School findOne(Long id);
 	

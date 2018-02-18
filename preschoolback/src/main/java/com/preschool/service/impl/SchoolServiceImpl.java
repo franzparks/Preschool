@@ -3,6 +3,7 @@
  */
 package com.preschool.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,24 @@ public class SchoolServiceImpl implements SchoolService{
 	@Override
     public List<School> findAll() {    
 	    return  schoolRepository.findAll();
+    }
+	
+	@Override
+    public List<School> findWishList(String iDs) { 
+		System.out.println(iDs);
+		String[] listOfIDs = iDs.split("");
+		List<School> schoolList = schoolRepository.findAll();
+		List<School> schoolsWishList = new ArrayList<>();
+		for(School school : schoolList){
+			for(int i = 0; i < listOfIDs.length; i++){
+				if(school.getId() == Long.parseLong(listOfIDs[i])){
+					schoolsWishList.add(school);
+				}
+			}
+			
+		}
+		System.out.println(schoolsWishList);
+	    return  schoolsWishList;
     }
 	
 

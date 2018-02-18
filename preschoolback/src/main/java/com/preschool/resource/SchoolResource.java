@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -101,6 +102,12 @@ public class SchoolResource {
 	@RequestMapping("/schoolList")
 	public List<School> getSchoolList() {
 		return schoolService.findAll(); //.subList(0, 5);
+	}
+	
+	@RequestMapping("/wishList/{wishList}")
+	public List<School> getWishList(@PathVariable("wishList") String wishList) {
+		System.out.println(" here : "+wishList);
+		return schoolService.findWishList(wishList); 
 	}
 	
 	@RequestMapping(value="/update", method=RequestMethod.POST)
