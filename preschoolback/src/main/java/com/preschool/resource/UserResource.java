@@ -161,6 +161,26 @@ public class UserResource {
 		return new ResponseEntity("Update Success", HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/updateUserWishList", method=RequestMethod.POST)
+	public ResponseEntity updateUserWishList(
+				@RequestBody HashMap<String, Object> mapper) throws Exception{
+		
+		int id = (Integer) mapper.get("id");
+		String wishList = (String) mapper.get("wishList");
+		
+		User currentUser = userService.findById(Long.valueOf(id));
+		
+		if(currentUser == null) {
+			throw new Exception ("User not found");
+		}
+		
+		currentUser.setWishList(wishList);
+		
+		userService.save(currentUser);
+		
+		return new ResponseEntity("Update Success", HttpStatus.OK);
+	}
+	
 	@RequestMapping("/getCurrentUser")
 	public User getCurrentUser(Principal principal) {
 		User user = new User();
