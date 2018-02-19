@@ -22,6 +22,8 @@ export class WishListComponent implements OnInit {
 
 	schools: School[] = [];
 	user: User
+	wishList: string
+	updateSuccess: boolean;
 
   	constructor(
 	  	private schoolService : SchoolService,
@@ -52,6 +54,19 @@ export class WishListComponent implements OnInit {
 	  		})
 	    
   	}
+
+  	updateWishList(){
+  		this.userService.updateUserWishList(this.user, this.wishList).subscribe(
+  		res => {
+  			console.log(res.text());
+  			this.updateSuccess=true;
+  		},
+  		error => {
+  			console.log(error.text());
+  			//let errorMessage = error.text();
+  		});
+  	}
+
 
   	getSchoolDetails(id: String){
 		this.router.navigate(['/school/', id]);
