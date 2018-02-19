@@ -45,6 +45,20 @@ export class UserService {
 	    return this.http.post(encodeURI(url), JSON.stringify(userInfo), {headers:tokenHeader});
   	}
 
+  	updateUserWishList(user: User, wishList: string) {
+	    let url = this.serverPath + "/user/updateUserWishList";
+	    let userInfo = {
+	      "id" : user.id,
+	      "wishList" : user.wishList
+	    };
+
+	    let tokenHeader = new Headers({
+	      'Content-Type' : 'application/json',
+	      'x-auth-token' : localStorage.getItem("xAuthToken")
+	    });
+	    return this.http.post(encodeURI(url), JSON.stringify(userInfo), {headers:tokenHeader});
+  	}
+
   	retrievePassword(email:string) {
 	  	let url = this.serverPath+'/user/forgetPassword';
 	  	let userInfo = {
