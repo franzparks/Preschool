@@ -26,6 +26,11 @@ export class SchoolDetailsComponent implements OnInit {
 	school: School = new School();
   reviewsList: RatingAndReview[];
   loggedIn:boolean;
+  addedToWishList:boolean;
+
+  user: User;
+
+  buttonText: string = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
 
 	constructor(
 		private router:Router,
@@ -67,6 +72,7 @@ export class SchoolDetailsComponent implements OnInit {
         res => {
           this.loggedIn = true;
           this.loginService.setLoggedIn(true);
+          this.getCurrentUser();
         },
         err => {
           this.loggedIn =false;
@@ -77,14 +83,70 @@ export class SchoolDetailsComponent implements OnInit {
 
 	}
 
-  addToWishList(){
-    if(this.loggedIn){
+  updateWishList(){
+
+    if(this.addedToWishList){
+      // remove from wishlist
+      this.removeFromWishList();
+    }else{
+      // add to wishlist 
+      this.addToWishList();
+    }
+
+
+    /*if(this.loggedIn){
       this.toastr.success('You have added this school to your wish list!');
     }else{
       this.router.navigate(['/my-account']);
-    }
+    }*/
     
   }
+
+  addToWishList(){
+    if(this.user.wishList && this.user.wishList.length > 1){
+      this.user.wishList += ',' + this.schoolId;
+    }else{
+      this.user.wishList = '' + this.schoolId;
+    }
+    
+    this.userService.updateUserWishList(this.user).subscribe(
+      res => {
+        this.user = res.json();
+        this.toastr.success('You have added this school to your wish list!');
+        this.addedToWishList = true;
+      },
+      err => {
+        console.log(err);
+      });
+  }
+
+  removeFromWishList(){
+    if(this.user.wishList && this.user.wishList.length > 1){
+      //this.user.wishList.splice(this.schoolId + ',' ); 
+    }else if(this.user.wishList.length == 1){
+      this.user.wishList = '';
+    }
+    
+    this.userService.updateUserWishList(this.user).subscribe(
+      res => {
+        this.user = res.json();
+        this.toastr.success('You have removed this school from your wish list!');
+        this.addedToWishList = false;
+      },
+      err => {
+        console.log(err);
+      });
+  }
+
+  getCurrentUser() {
+    this.userService.getCurrentUser().subscribe(
+      res => {
+        this.user = res.json();
+      },
+      err => {
+        console.log(err);
+      });
+    }
 
 
 

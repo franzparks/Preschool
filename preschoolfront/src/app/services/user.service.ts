@@ -45,7 +45,7 @@ export class UserService {
 	    return this.http.post(encodeURI(url), JSON.stringify(userInfo), {headers:tokenHeader});
   	}
 
-  	updateUserWishList(user: User, wishList: string) {
+  	updateUserWishList(user: User) {
 	    let url = this.serverPath + "/user/updateUserWishList";
 	    let userInfo = {
 	      "id" : user.id,

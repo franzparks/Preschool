@@ -55,7 +55,7 @@ export class WishListComponent implements OnInit {
 	    
   	}
 
-  	updateWishList(){
+  	/*updateWishList(){
   		this.userService.updateUserWishList(this.user, this.wishList).subscribe(
 	  		res => {
 	  			console.log(res.text());
@@ -65,7 +65,7 @@ export class WishListComponent implements OnInit {
 	  			console.log(error.text());
 	  			//let errorMessage = error.text();
 	  		});
-  	}
+  	}*/
 
 
   	getSchoolDetails(id: String){
