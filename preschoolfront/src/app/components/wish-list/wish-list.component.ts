@@ -48,23 +48,23 @@ export class WishListComponent implements OnInit {
 	      		error => console.log(error)
 		)
 
-	  		},
-	  		err => {
-	  			console.log(err);
-	  		})
+  		},
+  		err => {
+  			console.log(err);
+  		})
 	    
   	}
 
   	updateWishList(){
   		this.userService.updateUserWishList(this.user, this.wishList).subscribe(
-  		res => {
-  			console.log(res.text());
-  			this.updateSuccess=true;
-  		},
-  		error => {
-  			console.log(error.text());
-  			//let errorMessage = error.text();
-  		});
+	  		res => {
+	  			console.log(res.text());
+	  			this.updateSuccess=true;
+	  		},
+	  		error => {
+	  			console.log(error.text());
+	  			//let errorMessage = error.text();
+	  		});
   	}
 
 
