@@ -30,7 +30,7 @@ export class SchoolDetailsComponent implements OnInit {
 
   user: User;
 
-  buttonText: string = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
+  buttonText: string = 'Add To Wishlist';
 
 	constructor(
 		private router:Router,
@@ -85,6 +85,11 @@ export class SchoolDetailsComponent implements OnInit {
 
   updateWishList(){
 
+
+    if(!this.loggedIn){
+      this.router.navigate(['/my-account']);
+    }
+    
     if(this.addedToWishList){
       // remove from wishlist
       this.removeFromWishList();
@@ -93,7 +98,7 @@ export class SchoolDetailsComponent implements OnInit {
       this.addToWishList();
     }
 
-
+    //this.buttonText = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
     /*if(this.loggedIn){
       this.toastr.success('You have added this school to your wish list!');
     }else{
@@ -111,11 +116,14 @@ export class SchoolDetailsComponent implements OnInit {
     
     this.userService.updateUserWishList(this.user).subscribe(
       res => {
-        this.user = res.json();
+        //this.user = res.json();
+        console.log(res);
         this.toastr.success('You have added this school to your wish list!');
         this.addedToWishList = true;
+        this.buttonText = 'Remove From Wishlist';
       },
       err => {
+        this.toastr.error('Error occured, school could not be added to your wish list');
         console.log(err);
       });
   }
@@ -123,15 +131,22 @@ export class SchoolDetailsComponent implements OnInit {
   removeFromWishList(){
     if(this.user.wishList && this.user.wishList.length > 1){
       //this.user.wishList.splice(this.schoolId + ',' ); 
-    }else if(this.user.wishList.length == 1){
+      let wishlist = this.user.wishList;
+      //let index = wishlist.indexOf(this.schoolId);
+      console.log("new wishlist : "+wishlist);
+      wishlist = wishlist.replace(this.schoolId + ',', '');
+      this.user.wishList = wishlist;
+
+    }else if(this.user.wishList.length === 1){
       this.user.wishList = '';
     }
     
     this.userService.updateUserWishList(this.user).subscribe(
       res => {
-        this.user = res.json();
+        //this.user = res.json();
         this.toastr.success('You have removed this school from your wish list!');
         this.addedToWishList = false;
+        this.buttonText = 'Add To Wishlist';
       },
       err => {
         console.log(err);
