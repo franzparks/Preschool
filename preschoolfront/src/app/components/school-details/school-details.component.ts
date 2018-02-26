@@ -46,50 +46,55 @@ export class SchoolDetailsComponent implements OnInit {
 	) {}
 
 	ngOnInit() {
-
+    console.log(":::on init called!:::::");
 		this.route.params.forEach((params: Params) => {
-  			this.schoolId = Number.parseInt(params['id']);
-  		});
+			this.schoolId = Number.parseInt(params['id']);
+		});
 
-  		this.schoolService.getSchool(this.schoolId).subscribe(
+		this.schoolService.getSchool(this.schoolId).subscribe(
   		res => {
-  			this.school=res.json(); 
+  			this.school = res.json(); 
   		},
   		error => {
   			console.log(error);
-  		});
+  		}
+    );
 
-      this.ratingAndReviewService.getReviewsList(this.schoolId).subscribe(
+    this.ratingAndReviewService.getReviewsList(this.schoolId).subscribe(
       res => {
         this.reviewsList=res.json(); 
       },
       error => {
         console.log(error);
-      });
+      }
+    );
 
-      //check if user is logged in
-      this.loginService.checkSession().subscribe(
-        res => {
-          this.loggedIn = true;
-          this.loginService.setLoggedIn(true);
-          this.getCurrentUser();
-        },
-        err => {
-          this.loggedIn =false;
-          //this.toastr.info('You have logged out');
-          
-        }
-      );
+    //check if user is logged in
+    this.loginService.checkSession().subscribe(
+      res => {
+        this.loggedIn = true;
+        this.loginService.setLoggedIn(true);
+      },
+      err => {
+        this.loggedIn = false;
+        //this.toastr.info('You have logged out');
+      }
+    );
 
+    // get current user 
+    this.getCurrentUser();
+
+    //this.buttonText = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
+    //console.log(this.addedToWishList);
 	}
 
   updateWishList(){
 
-
     if(!this.loggedIn){
       this.router.navigate(['/my-account']);
+      return;
     }
-    
+
     if(this.addedToWishList){
       // remove from wishlist
       this.removeFromWishList();
@@ -98,12 +103,7 @@ export class SchoolDetailsComponent implements OnInit {
       this.addToWishList();
     }
 
-    //this.buttonText = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
-    /*if(this.loggedIn){
-      this.toastr.success('You have added this school to your wish list!');
-    }else{
-      this.router.navigate(['/my-account']);
-    }*/
+    this.getCurrentUser();
     
   }
 
@@ -116,8 +116,9 @@ export class SchoolDetailsComponent implements OnInit {
     
     this.userService.updateUserWishList(this.user).subscribe(
       res => {
-        //this.user = res.json();
+        this.user = res.json();
         console.log(res);
+        console.log("new wishlist : "+this.user.wishList);
         this.toastr.success('You have added this school to your wish list!');
         this.addedToWishList = true;
         this.buttonText = 'Remove From Wishlist';
@@ -130,20 +131,16 @@ export class SchoolDetailsComponent implements OnInit {
 
   removeFromWishList(){
     if(this.user.wishList && this.user.wishList.length > 1){
-      //this.user.wishList.splice(this.schoolId + ',' ); 
       let wishlist = this.user.wishList;
-      //let index = wishlist.indexOf(this.schoolId);
-      console.log("new wishlist : "+wishlist);
       wishlist = wishlist.replace(this.schoolId + ',', '');
       this.user.wishList = wishlist;
-
     }else if(this.user.wishList.length === 1){
       this.user.wishList = '';
     }
-    
+    console.log("new wishlist : "+this.user.wishList);
     this.userService.updateUserWishList(this.user).subscribe(
       res => {
-        //this.user = res.json();
+        this.user = res.json();
         this.toastr.success('You have removed this school from your wish list!');
         this.addedToWishList = false;
         this.buttonText = 'Add To Wishlist';
@@ -154,14 +151,50 @@ export class SchoolDetailsComponent implements OnInit {
   }
 
   getCurrentUser() {
+    console.log(":::get current user called!:::::");
     this.userService.getCurrentUser().subscribe(
       res => {
         this.user = res.json();
+        //this.checkUserWishlist();
+
+        let id = ''+this.schoolId;
+        let index = -1; 
+
+        if(this.user.wishList){
+          index = this.user.wishList.indexOf(id);
+        }
+
+        if(index >= 0){
+          this.addedToWishList =  true;
+        }else{
+          this.addedToWishList = false;
+        }
+        this.buttonText = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
+        console.log("::: index ::::: "+index);
       },
       err => {
         console.log(err);
       });
+
+    console.log("::: addedToWishList ::::: "+this.addedToWishList);
+    console.log(":::button text::::: "+this.buttonText);
+  }
+
+  checkUserWishlist(){
+    let id = ''+this.schoolId;
+    let index; 
+
+    if(this.user.wishList){
+      index = this.user.wishList.indexOf(id);
     }
+
+    if(index && index >= 0){
+      this.addedToWishList =  true;
+    }else{
+      this.addedToWishList = false;
+    }
+    this.buttonText = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
+  }
 
 
 

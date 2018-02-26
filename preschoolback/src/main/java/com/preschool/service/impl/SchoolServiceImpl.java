@@ -30,10 +30,18 @@ public class SchoolServiceImpl implements SchoolService{
 	
 	@Override
     public List<School> findWishList(String iDs) { 
-		System.out.println(iDs);
-		String[] listOfIDs = iDs.split(",");
-		List<School> schoolList = schoolRepository.findAll();
 		List<School> schoolsWishList = new ArrayList<>();
+		
+		if(iDs == null) return schoolsWishList;
+		
+		if(iDs.length() == 1){
+			School school = schoolRepository.findOne(Long.valueOf(iDs));
+			schoolsWishList.add(school);
+			return schoolsWishList;
+		}
+		String[] listOfIDs = iDs.split(",");
+		
+		List<School> schoolList = schoolRepository.findAll();
 		for(School school : schoolList){
 			for(int i = 0; i < listOfIDs.length; i++){
 				if(school.getId() == Long.parseLong(listOfIDs[i])){
