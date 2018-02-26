@@ -108,10 +108,11 @@ export class SchoolDetailsComponent implements OnInit {
   }
 
   addToWishList(){
-    if(this.user.wishList && this.user.wishList.length > 1){
-      this.user.wishList += ',' + this.schoolId;
+    let currentSchoolId = '' + this.schoolId;
+    if(this.user.wishList &&  this.user.wishList.length >= 1){
+      this.user.wishList += ',' + currentSchoolId;
     }else{
-      this.user.wishList = '' + this.schoolId;
+      this.user.wishList = currentSchoolId;
     }
     
     this.userService.updateUserWishList(this.user).subscribe(
@@ -128,11 +129,18 @@ export class SchoolDetailsComponent implements OnInit {
         console.log(err);
       });
   }
-
+ 
   removeFromWishList(){
     if(this.user.wishList && this.user.wishList.length > 1){
       let wishlist = this.user.wishList;
-      wishlist = wishlist.replace(this.schoolId + ',', '');
+      let index = wishlist.indexOf(''+this.schoolId);
+
+      if(index === 0){ //if id is at the beginning
+        wishlist = wishlist.replace(this.schoolId + ',', '');
+      }else{
+        wishlist = wishlist.replace(','+this.schoolId, '');
+      }
+      
       this.user.wishList = wishlist;
     }else if(this.user.wishList.length === 1){
       this.user.wishList = '';
@@ -151,26 +159,11 @@ export class SchoolDetailsComponent implements OnInit {
   }
 
   getCurrentUser() {
-    console.log(":::get current user called!:::::");
+    //console.log(":::get current user called!:::::");
     this.userService.getCurrentUser().subscribe(
       res => {
         this.user = res.json();
-        //this.checkUserWishlist();
-
-        let id = ''+this.schoolId;
-        let index = -1; 
-
-        if(this.user.wishList){
-          index = this.user.wishList.indexOf(id);
-        }
-
-        if(index >= 0){
-          this.addedToWishList =  true;
-        }else{
-          this.addedToWishList = false;
-        }
-        this.buttonText = this.addedToWishList ? 'Remove From Wishlist' : 'Add To Wishlist';
-        console.log("::: index ::::: "+index);
+        this.checkUserWishlist();
       },
       err => {
         console.log(err);
@@ -188,7 +181,7 @@ export class SchoolDetailsComponent implements OnInit {
       index = this.user.wishList.indexOf(id);
     }
 
-    if(index && index >= 0){
+    if(index >= 0){
       this.addedToWishList =  true;
     }else{
       this.addedToWishList = false;
