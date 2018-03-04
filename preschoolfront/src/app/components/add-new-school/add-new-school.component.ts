@@ -44,6 +44,7 @@ export class AddNewSchoolComponent implements OnInit {
       //check if user is logged in
       this.loginService.checkSession().subscribe(
         res => {
+          this.loginService.setLoggedIn(true);
         },
         err => {
           //got login page if not logged in

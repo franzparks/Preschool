@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit {
       this.loginService.checkSession().subscribe(
         res => {
           this.loggedIn = true;
+          this.loginService.setLoggedIn(true);
           //this.toastr.success('You have successfully logged in!');
         },
         err => {
