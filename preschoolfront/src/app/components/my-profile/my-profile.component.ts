@@ -21,6 +21,7 @@ export class MyProfileComponent implements OnInit {
 	user: User = new User();
 	updateSuccess: boolean;
 	newPassword: string;
+  confirmNewPassword: string;
 	incorrectPassword: boolean;
 	currentPassword: string;
 
@@ -37,7 +38,10 @@ export class MyProfileComponent implements OnInit {
   	this.userService.updateUserInfo(this.user, this.newPassword, this.currentPassword).subscribe(
   		res => {
   			console.log(res.text());
+        this.loginService.setLoggedIn(true);
   			this.updateSuccess=true;
+        this.router.navigate(['/my-account']);
+
   		},
   		error => {
   			console.log(error.text());

@@ -79,15 +79,16 @@
                                         <div class="form-group">
                                             <label for="txtNewPassword">
                                                 New Password *
-                                            </label>&nbsp;<span id="checkPasswordMatch" class="error-entry-alert"></span>
-                                            <input type="password" class="form-control" id="txtNewPassword" name="txtNewPassword" />
+                                            </label>&nbsp;
+                                            <span id="checkPasswordMatch" class="error-entry-alert"></span>
+                                            <input type="password" class="form-control" id="txtNewPassword" name="txtNewPassword" [(ngModel)]="newPassword"/>
                                         </div>
                                         <div class="form-group">
                                             <label for="txtConfirmPassword">
                                                 Confirm New Password *
                                             </label>
                                             <input type="password" class="form-control" id="txtConfirmPassword" name="txtNewPassword" 
-                                            [(ngModel)]="newPassword"/>
+                                            [(ngModel)]="confirmNewPassword"/>
                                         </div>
                                         <button md-raised-button type="submit" class="mat-primary button-color" id="udpateuserInfoButton">Save</button>
                                     </form>
