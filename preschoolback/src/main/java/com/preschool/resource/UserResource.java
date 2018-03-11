@@ -137,21 +137,21 @@ public class UserResource {
 		
 		SecurityConfig securityConfig = new SecurityConfig();
 		
+		BCryptPasswordEncoder passwordEncoder = SecurityUtility.passwordEncoder();
+		String dbPassword = currentUser.getPassword();
 		
-			BCryptPasswordEncoder passwordEncoder = SecurityUtility.passwordEncoder();
-			String dbPassword = currentUser.getPassword();
-			
-			if(null != currentPassword)
+		if(null != currentPassword){
 			if(passwordEncoder.matches(currentPassword, dbPassword)) {
 				if(newPassword != null && !newPassword.isEmpty() && !newPassword.equals("")) {
 					currentUser.setPassword(passwordEncoder.encode(newPassword));
 				}
-				currentUser.setEmail(email);
+				
 			} else {
 				return new ResponseEntity<String>("Incorrect current password!", HttpStatus.BAD_REQUEST);
 			}
+		}
 		
-		
+		currentUser.setEmail(email);	
 		currentUser.setFirstName(firstName);
 		currentUser.setLastName(lastName);
 		currentUser.setUsername(username);
