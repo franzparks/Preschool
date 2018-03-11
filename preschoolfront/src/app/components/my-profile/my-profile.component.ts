@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AppConst } from '../../constants/app-consts';
 import { UserService } from '../../services/user.service';
 import { LoginService } from '../../services/login.service';
+import { ToasterService } from '../../services/toaster.service';
+
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 
@@ -30,6 +32,7 @@ export class MyProfileComponent implements OnInit {
 	constructor(
 		  private loginService: LoginService,
   		private userService: UserService,
+      private toastr : ToasterService,
   		private router: Router
 	) { }
 
@@ -40,7 +43,8 @@ export class MyProfileComponent implements OnInit {
   			console.log(res.text());
         this.loginService.setLoggedIn(true);
   			this.updateSuccess=true;
-        this.router.navigate(['/my-account']);
+        //this.toastr.success('You have successfully updated your info, you are now logged in!');
+        //this.router.navigate(['/my-account']);
 
   		},
   		error => {
@@ -63,18 +67,19 @@ export class MyProfileComponent implements OnInit {
     }
 
     ngOnInit() {
-		this.loginService.checkSession().subscribe(
-  		res => {
-  			this.loggedIn = true;
-  		},
-  		error => {
-  			this.loggedIn = false;
-  			console.log("inactive session");
-  			this.router.navigate(['/my-account']);
-  		});
+  		this.loginService.checkSession().subscribe(
+    		res => {
+    			this.loggedIn = true;
+          this.loginService.setLoggedIn(true);
+    		},
+    		error => {
+    			this.loggedIn = false;
+    			console.log("inactive session");
+    			this.router.navigate(['/my-account']);
+    		});
 
-  		this.getCurrentUser();
-  	}
+    		this.getCurrentUser();
+    	}
 
 
 }
