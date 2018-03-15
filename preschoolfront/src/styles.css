@@ -12,6 +12,13 @@ body,
     height: 100%;
 }
 
+.title-text {
+  font-size: 1.425rem;
+  line-height: 2.8rem;
+  color: #2e3d49;
+  margin-bottom: 0;
+}
+
 .main-banner {
     background: url("https://mdbootstrap.com/images/regular/city/img%20(1).jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -22,4 +29,59 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.primary-color {
+  background-color: #405d75; 
+}
+
+.product-card .action-buttons {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.product-card .rating {
+  /*position: absolute;
+  margin-top: -16px;
+  right: 10px;
+  background-color: #0d47a1;
+  padding: .4rem 1rem;
+  font-size: .8rem;*/
+
+  /*line-height: 1;*/
+  display: inline-block;
+  /*font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;*/
+}
+
+
+/*span.rating {
+    color: #ffa000;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 2;
+}*/
+
+.product-card .action-buttons .btn-floating .fa, .product-card .action-buttons .btn-floating .material-icons {
+    font-size: 14px;
+    margin-top: 1px;
+}
+.product-card .action-buttons .btn-floating {
+    display: block;
+    background-color: #4285F4;
+    height: 37px;
+    width: 37px;
+    line-height: 0;
 }

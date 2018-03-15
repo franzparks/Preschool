@@ -9,94 +9,82 @@
     
 </div>
 <main>
-
     <div class="container">
-
-
-    <div class="row">
-        <div class="col-md-7">
-            <!--Featured image -->
-            <div class="overlay hm-white-light z-depth-1-half">
-                <img src="https://mdbootstrap.com/images/proffesions/slides/socialmedia/img%20(2).jpg" class="img-fluid " alt="">
-             <div class="mask"></div>
-        </div>
-        <br>
-        </div>
-
-        <!--Main information-->
-        <div class="col-md-5">
-            <h2 class="h2-responsive wow fadeInDown" data-wow-delay="0.2s">Do you work for a school or play center?</h2>
-            <hr>
-            <p class="wow fadeInDown">You have come to the right place to (re)introduce your center to the world!
-
-            </p>
-            <a routerlink="/add-new-school" href="/add-new-school" class="btn btn-ptc btn-lg wow fadeInLeft"
-            data-wow-delay="0.2s">Claim your center!</a>
-        </div>
-    </div>
-        <!--/.First row-->
-<div class="divider-new">
-        <h2 class="h2-responsive">Top Rated</h2>
-    </div>
-
-        <!--Second row-->
         <div class="row">
-            <!--First columnn-->
-    <div class="col-md-4" *ngFor="let school of topSchools">
-        <!--Card-->
-        <md-card class="card  product-card ovf-hidden hoverable">      
-
-            <!--Card image-->
-            <div class="view overlay hm-white-slight">
-                <img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">
-                
-                <a href="#">
-                    <div class="mask waves-effect waves-light"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
-            <!--Rating-->
-            
-            <rating [(ngModel)]="starsCount"  [readonly]="true" 
-                    [titles]="['one', 'two', 'three', 'four', 'five']" >
-            </rating>  
-            
-            
-            <!--/.Rating-->
-           
-            <div class="action-buttons">
-                <!--<a class="btn-floating  activator waves-effect waves-light" (click)="isClassVisible = !isClassVisible;" ><i class="fa fa-share-alt"></i></a>-->
-                <a class="btn-floating red waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" 
-                    title="Add to wishlist" 
-                     data-original-title="Add to wishlist" (click)="addToWishList()">
-                     <i class="fa fa-heart"></i>
-                </a>
-                 
-            </div>
-            
-            
-            <!--Card content-->
-            <div class="card-block">
-                <!--Title-->
-                <h4 class="card-title top-schools-titles">{{school.title}}</h4>
-
-                <!--Text-->
-                <p class="card-text top-schools-summary">{{school.summary}}</p>
-                <a  class="btn btn-ptc wow fadeInRight" data-wow-delay="0.2s" (click)="getSchoolDetails(school.id)" >
-                Read more</a>
+            <div class="col-md-7">
+                <!--Featured image -->
+                <div class="">
+                    <img src="https://mdbootstrap.com/images/proffesions/slides/socialmedia/img%20(2).jpg" class="img-fluid " alt="">
+                </div>  
             </div>
 
-            <div class="cta"></div>
+            <!--Main information-->
+            <div class="col-md-5">
+                <h2 class="title-text">Do you work for a school or play center?</h2>
+                <hr>
+                <p class="">You have come to the right place to (re)introduce your center to the world!
+                </p>
+
+                <a routerlink="/add-new-school" href="/add-new-school" class="claim-button primary-color">Claim your center!</a>
+            </div>
+        </div>
+        
+        <div class="divider-new">
+            <h2 class="h2-responsive">Top Rated</h2>
+        </div>
+
+        
+        <div class="row">
             
-             
-        </md-card>
-        <!--/.Card-->
-    </div>
-    <!--First columnn-->
+            <div class="col-md-4" *ngFor="let school of topSchools">
+                <!--Card-->
+                <div class="card  product-card ovf-hidden hoverable">      
+                    <!--Card image-->
+                    <div class="main-banner">
+                        <img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">
+                        
+                        <a href="#">
+                            <div class="mask waves-effect waves-light"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+                    <!--Rating-->
+                    
+                    <rating [(ngModel)]="starsCount"  [readonly]="true" 
+                            [titles]="['one', 'two', 'three', 'four', 'five']" >
+                    </rating>  
+                    
+                    
+                    <!--/.Rating-->
+                   
+                    <div class="action-buttons">
+                        <!--<a class="btn-floating  activator waves-effect waves-light" (click)="isClassVisible = !isClassVisible;" ><i class="fa fa-share-alt"></i></a>-->
+                        <a class="btn-floating red waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" 
+                            title="Add to wishlist" 
+                             data-original-title="Add to wishlist" (click)="addToWishList()">
+                             <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+                    
+                    
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Title-->
+                        <h4 class="card-title top-schools-titles">{{school.title}}</h4>
+
+                        <!--Text-->
+                        <p class="card-text top-schools-summary">{{school.summary}}</p>
+                        <a  class="btn btn-ptc wow fadeInRight" data-wow-delay="0.2s" (click)="getSchoolDetails(school.id)" >
+                        Read more</a>
+                    </div> 
+                     
+                </div>
+            
+            </div>
 
         </div>
     </div>
-    <!--/.Main layout-->
+   
 
 </main>
 
