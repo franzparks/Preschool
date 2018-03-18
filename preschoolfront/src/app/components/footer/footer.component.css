@@ -1,3 +1,4 @@
+
 footer {
 	padding-top: 32px;
     padding-top: 2rem;
@@ -38,6 +39,30 @@ footer {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
+.footer-social-icons svg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.btn-twitter {
+    color: #00aced;
+    background-image: url("/assets/icons/twitter.svg");
+}
+
+.btn-facebook {
+    color: #3b5998;
+    background-image: url("/assets/icons/facebook.svg");
+}
+
+/*svg#facebook-square {
+	width: 26.25px;
+	height: 26.25px;
+}*/
 
 .logo {
     display: -webkit-box;
