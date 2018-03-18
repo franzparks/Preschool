@@ -68,3 +68,24 @@ a.primary-color {
 	background: #666;
 	margin: 0 0 0 .45em;
 }
+
+.top-rated-schools {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.top-rated-schools .col-md-4 {
+	flex: 1;
+}
+
+.top-schools-summary {
+  overflow: hidden;
+  height: 150px;
+}
+.top-schools-titles {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
