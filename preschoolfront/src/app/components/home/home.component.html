@@ -2,13 +2,15 @@
 <div class="main-banner">
    
     <div class="form-inline">
-        <form class="waves-effect waves-light">
+        <form class="">
             <input class="form-control school-search" type="text" placeholder="Search...">
         </form>
     </div>
     
 </div>
+
 <main>
+
     <div class="container">
         <div class="row">
             <div class="col-md-7">
@@ -38,7 +40,7 @@
             
             <div class="col-md-4" *ngFor="let school of topSchools">
                 <!--Card-->
-                <div class="card  product-card ovf-hidden hoverable">      
+                <div class="card">      
                     <!--Card image-->
                     <div class="main-banner">
                         <img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">
@@ -57,14 +59,13 @@
                     
                     <!--/.Rating-->
                    
-                    <div class="action-buttons">
-                        <!--<a class="btn-floating  activator waves-effect waves-light" (click)="isClassVisible = !isClassVi.sible;" ><i class="fa fa-share-alt"></i></a>-->
+                    <!--<div class="action-buttons">
                         <a class="social-share" data-toggle="tooltip" data-placement="bottom" 
                             title="Add to wishlist" 
                              data-original-title="Add to wishlist" (click)="addToWishList()">
                              <i class="fa fa-heart"></i>
                         </a>
-                    </div>
+                    </div>-->
                     
                     
                     <!--Card content-->
