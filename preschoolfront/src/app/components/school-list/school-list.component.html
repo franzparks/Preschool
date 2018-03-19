@@ -2,10 +2,10 @@
  <div class="divider"></div>
 <div class="card-panel horizontal-listing">
     <div class="container-fluid">
-        <div class="card product-card ovf-hidden container" *ngFor="let school of schools">
+        <div class="card container" *ngFor="let school of schools">
         
         <!--Card image-->
-        <div class="overlay hm-white-slight flex-item">
+        <div class="flex-item">
             <img src="https://mdbootstrap.com/images/regular/city/img%20({{imageNumber}}).jpg" 
             class="img-fluid" alt="">
             <!--{{Math.floor((Math.random() * 20) + 1)}}-->
@@ -23,7 +23,7 @@
             <h4 class="card-title">{{school.title}}</h4>
             <!--Text-->
             <p class="card-text">{{school.summary}}</p>
-            <button class="btn btn-ptc" (click)="getSchoolDetails(school.id)" >Read more</button>
+            <button class="claim-button primary-color" (click)="getSchoolDetails(school.id)" >Read more</button>
             <rating [(ngModel)]="starsCount" 
                     [titles]="['one', 'two', 'three', 'four', 'five']">
             </rating>
