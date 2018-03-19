@@ -89,3 +89,32 @@ a.primary-color {
   white-space: nowrap;
   width: 100%;
 }
+
+.social-share {
+	display: block;
+    background-color: #4285F4;
+    height: 37px;
+    width: 37px;
+   
+    border-radius: 50%;
+    transition: .3s;
+    margin: 10px;
+
+    margin-top: 1px;
+
+    text-align: center !important;
+    line-height: 37px;
+
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
+}
+
+a.social-share {
+	color: #fff;
+}
