@@ -65,9 +65,9 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		School school1 =  new School();
 		school1.setTeacherToStudentRatio("1 to 4");
-		school1.setTitle("The Harker School - Preschool");
+		school1.setTitle("The Great School - Preschool");
 		
-		school1.setSummary("Beginnings matter. At Harker, we understand the importance of giving your "
+		school1.setSummary("Beginnings matter. At Great, we understand the importance of giving your "
 				+ "child the best possible foundation for an outstanding academic career. That starts with "
 				+ "choosing the right preschool to excite, nurture and challenge children so they are "
 				+ "not only ready for the next step but excited to get there.");
@@ -78,21 +78,21 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school1.setSchedule("07:00 AM to 6:00 PM ");
 		
-		school1.setAddress("4525 Union Ave, San Jose, CA 95124");
+		school1.setAddress("4527 Union Ave, San Jose, CA 95144");
 		
-		school1.setPhone("(408) 553-5700");
+		school1.setPhone("(408) 553-5721");
 		
-		school1.setWebsite("http://www.harkerpreschool.com");
+		school1.setWebsite("http://www.eyaseyes.com");
 		
 		school1.setAverageRating(4);
 		
 		School school2 =  new School();
 		school2.setTeacherToStudentRatio("1 to 5");
-		school2.setTitle("Challenger School");
+		school2.setTitle("TheOother Great School");
 		
 		school2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
 				+ "and Texas, with more than 10,000 preschool to 8th grade students enrolled annually."
-				+"Challenger emphasizes the bedrock of knowledge: reading, composition, math, "
+				+"Our school emphasizes the bedrock of knowledge: reading, composition, math, "
 				+ "and history. We promote individual and independent thinking, teach traditional American "
 				+ "history and values, and inspire children to embrace challenge and find joy and"
 				+ " self-worth through achievement.");
@@ -103,11 +103,11 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school2.setSchedule("07:00 AM to 6:00 PM ");
 		
-		school2.setAddress("18811 Cox Avenue Saratoga	CA 95070");
+		school2.setAddress("18831 Cox Avenue Saratoga	CA 95070");
 		
-		school2.setPhone("(408) 378-0444");
+		school2.setPhone("(408) 378-1367");
 		
-		school2.setWebsite("http://www.challengerschool.com");
+		school2.setWebsite("http://www.eyaseyes.com");
 		
 		school2.setAverageRating(4);
 		
@@ -115,10 +115,10 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school3.setTeacherToStudentRatio("1 to 4");
 		
-		school3.setTitle("South Bay Community Preschool");
+		school3.setTitle("South Bay Great Community Preschool");
 		
-		school3.setSummary("South Bay Community Preschool is a non-profit organization supported by tuition "
-				+ "only. We do not discriminate in regards to race, color, or creed. SBCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
+		school3.setSummary("South Bay Great Community Preschool is a non-profit organization supported by tuition "
+				+ "only. We do not discriminate in regards to race, color, or creed. SBGCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
 		
 		school3.setAgeRange("1.5 to 4 years");
 		
@@ -128,9 +128,9 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school3.setAddress("1180 Murphy Ave, San Jose, CA 95131");
 		
-		school3.setPhone("(408) 890-5010");
+		school3.setPhone("(408) 890-5111");
 		
-		school3.setWebsite("http://www.southbaychurchschool.com");
+		school3.setWebsite("http://www.eyaseyes.com");
 		
 		school3.setAverageRating(3);
 
