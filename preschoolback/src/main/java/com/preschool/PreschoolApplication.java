@@ -88,7 +88,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		School school2 =  new School();
 		school2.setTeacherToStudentRatio("1 to 5");
-		school2.setTitle("TheOother Great School");
+		school2.setTitle("The Other Great School");
 		
 		school2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
 				+ "and Texas, with more than 10,000 preschool to 8th grade students enrolled annually."
