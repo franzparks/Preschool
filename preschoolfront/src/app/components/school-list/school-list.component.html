@@ -23,7 +23,7 @@
             <h4 class="card-title">{{school.title}}</h4>
             <!--Text-->
             <p class="card-text">{{school.summary}}</p>
-            <button class="claim-button primary-color" (click)="getSchoolDetails(school.id)" >Read more</button>
+            <button  class="claim-button button-color" (click)="getSchoolDetails(school.id)" >Read more</button>
             <rating [(ngModel)]="starsCount" 
                     [titles]="['one', 'two', 'three', 'four', 'five']">
             </rating>
