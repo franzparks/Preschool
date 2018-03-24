@@ -15,26 +15,28 @@
             </a>
             
         </div>
-        <!--/.Card image-->
-
-        <!--Card content-->
+        
         <div class="card-block flex-item">
-            <!--Title-->
+           
             <h4 class="card-title">{{school.title}}</h4>
-            <!--Text-->
+            
             <p class="card-text">{{school.summary}}</p>
-            <button  class="claim-button button-color" (click)="getSchoolDetails(school.id)" >Read more</button>
-            <rating [(ngModel)]="starsCount" 
-                    [titles]="['one', 'two', 'three', 'four', 'five']">
-            </rating>
 
-            <span class="reviews-text">1000 reviews</span>
+            <div class="controls">
+                <button  class="claim-button button-color" (click)="getSchoolDetails(school.id)" >Read more</button>
+                <rating [(ngModel)]="starsCount" 
+                        [titles]="['one', 'two', 'three', 'four', 'five']">
+                </rating>
+
+                <span class="reviews-text">1000 reviews</span>
+            
+            </div>
             
         </div>
-        <!--/.Card content-->
+        
 
         </div>
-        <!--/.Card-->
+       
 
     </div>
 </div>

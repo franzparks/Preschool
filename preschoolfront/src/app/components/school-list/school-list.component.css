@@ -93,6 +93,10 @@
   width: 100%;
 }
 
+.controls{
+
+}
+
 @media screen and (max-width: 765px) {
   .card.container{
     flex-direction: column;
@@ -104,5 +108,16 @@
   .flex-item {
     width: 100%;
     height: auto;
+  }
+
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .controls button {
+    order: 2;
+    margin-top: 10px;
   }
 }
