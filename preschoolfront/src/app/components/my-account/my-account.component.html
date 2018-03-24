@@ -34,8 +34,9 @@
 								<input type="password" class="form-control" id="password" name="password" 
 								[(ngModel)]="credential.password" required="required" autofocus="autofocus">
 							</div>
-
-							<button  type="submit" class="button-color">Log In</button>
+							<div class="form-group">
+								<button  type="submit" class="button-color">Log In</button>
+							</div>
 						</form>
 						
 					</div>
@@ -63,7 +64,9 @@
 								[(ngModel)]="email" required="required" >
 								
 							</div>
-							<button type="submit" class="button-color">Create new account</button>
+							<div class="form-group">
+								<button type="submit" class="button-color">Create new account</button>
+							</div>
 						</form>
 						
 					</div>
@@ -80,7 +83,9 @@
 								[(ngModel)]="recoverEmail"  required="required" >
 								
 							</div>
-							<button type="submit" class="button-color">Submit</button>
+							<div class="form-group">
+								<button type="submit" class="button-color">Submit</button>
+							</div>
 						</form>
 						
 					</div>
