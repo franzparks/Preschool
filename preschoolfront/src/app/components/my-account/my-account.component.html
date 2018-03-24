@@ -35,49 +35,54 @@
 								[(ngModel)]="credential.password" required="required" autofocus="autofocus">
 							</div>
 
-							<button  type="submit" class="mat-primary button-color">Log In</button>
+							<button  type="submit" class="button-color">Log In</button>
 						</form>
 						
 					</div>
 
 
 					<div class="form-tab-body" *ngIf="selectedTab === 'new-account'" >
-						<div style="margin-top: 20px;">
-							<div class="alert alert-info" *ngIf="emailSent">An email has been sent to the email address you just registered. Please validate your email address and update your password info.
-							</div>
-							<form (ngSubmit)="onNewAccount()" class="waves-effect waves-light">
-								<div class="form-group">
-									<label for="newUsername">New Username *</label>&nbsp;<span *ngIf="usernameExists" style="color:red;">Username already exists. Choose a different one.</span>
-									<input type="text" class="form-control" id="newUsername" name="username" 
-									[(ngModel)]="username" required="required" >
-									
-								</div>
-								<div class="form-group">
-									<label for="email">Email Address *</label>&nbsp;<span *ngIf="emailExists" style="color:red;">Email already exists. Choose a different one.</span>
-									<input type="email" class="form-control" id="email" name="email"
-									[(ngModel)]="email" required="required" >
-									
-								</div>
-								<button md-raised-button type="submit" class="mat-primary button-color">Create new account</button>
-							</form>
+						
+						<div class="alert alert-info" *ngIf="emailSent">An email has been sent to the email address you just registered. Please validate your email address and update your password info.
 						</div>
+						<form (ngSubmit)="onNewAccount()">
+							<div class="form-group">
+								<label for="newUsername">New Username *</label>
+								&nbsp;
+								<span *ngIf="usernameExists" class="input-error">Username already exists. Choose a different one.</span>
+
+								<input type="text" class="form-control" id="newUsername" name="username" 
+								[(ngModel)]="username" required="required" >
+								
+							</div>
+							<div class="form-group">
+								<label for="email">Email Address *</label>
+									&nbsp;<span *ngIf="emailExists" class="input-error">Email already exists. Choose a different one.</span>
+
+								<input type="email" class="form-control" id="email" name="email"
+								[(ngModel)]="email" required="required" >
+								
+							</div>
+							<button type="submit" class="button-color">Create new account</button>
+						</form>
+						
 					</div>
 
 
 					<div class="form-tab-body" *ngIf="selectedTab === 'forgot-password'" >
-						<div style="margin-top: 20px;">
-							<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
-							<div class="alert alert-success" *ngIf="forgotPasswordEmailSent">Email sent.</div>
-							<form (ngSubmit)="onForgotPassword()" class="waves-effect waves-light">
-								<div class="form-group">
-									<label for="recoverEmail">Your Email Address *</label>
-									<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" 
-									[(ngModel)]="recoverEmail"  required="required" >
-									
-								</div>
-								<button type="submit" class="button-color">Submit</button>
-							</form>
-						</div>
+					
+						<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
+						<div class="alert alert-success" *ngIf="forgotPasswordEmailSent">Email sent.</div>
+						<form (ngSubmit)="onForgotPassword()">
+							<div class="form-group">
+								<label for="recoverEmail">Your Email Address *</label>
+								<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" 
+								[(ngModel)]="recoverEmail"  required="required" >
+								
+							</div>
+							<button type="submit" class="button-color">Submit</button>
+						</form>
+						
 					</div>
 
 				</div>
