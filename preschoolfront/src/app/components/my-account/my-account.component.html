@@ -16,13 +16,13 @@
 
 					</div>
 
-					<div class="form-tab-body" label="Login">
+					<div class="form-tab-body" *ngIf="selectedTab === 'login'" >
 						
-						<div  *ngIf="loginError" style="color:red;">
+						<div  *ngIf="loginError" class="input-error">
 							Incorrect username or password.
 						</div>
 
-						<form (ngSubmit)="onLogin()" class="">
+						<form (ngSubmit)="onLogin()">
 							<div class="form-group">
 								<label for ="username">Username *</label>
 								<input type="text" class="form-control" id="username" name="username" 

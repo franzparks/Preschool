@@ -29,16 +29,6 @@ label {
     flex-shrink: 0;
 }
 
-.form-header .form-login {
-    
-}
-.form-header .form-new-account {
-    
-}
-
-.form-header .form-forgot-password {
-    
-}
 .form-selected-tab {
 	box-shadow: inset 3px 4px 3px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
     background-color: #a6a6a6cf;
@@ -70,4 +60,8 @@ label {
 
 .form-control {
 	border-radius: 0.25rem;
+}
+
+.input-error {
+	color:red;
 }
