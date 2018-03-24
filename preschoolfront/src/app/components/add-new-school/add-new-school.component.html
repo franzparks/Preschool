@@ -39,25 +39,25 @@
 										</div>
 
 										<div class="form-group">
-										Image &nbsp;
-										<input id="tile" type="file" id="schoolImage" name="schoolImage" class="form-control" 
-										(change)="uploadImageService.fileChangeEvent($event)">
-										<br><br>
-
+											<label for="schoolImage">Image</label>
+											<input type="file" id="schoolImage" name="schoolImage" class="form-control-file" 
+											(change)="uploadImageService.fileChangeEvent($event)">
 										</div>
 
-										<div class="form-group">
+										
+										<div class="form-buttons">
+											<div class="form-group">
+												<button type="submit" class="form-control button-color" >Add School</button>
+											</div>
 											
-											<button class="button-color" type="submit">Add School</button>
-											
-											<a class="mat-warn" routerLink="/">Cancel</a>
-											
-										</div>
+											<div class="form-group">
+												<a type="submit" class="form-control button-color"  routerLink="/">Cancel</a>
+											</div>
+										</div>	
+										
 									</form>
 								</div>
-								<div class="row" [hidden]="!schoolAdded">
-									<h3 style="margin-top: 50px;">School added successfully!</h3>
-								</div>
+								
 							</div>
 						</div>
 					</div>

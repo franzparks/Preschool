@@ -5,3 +5,11 @@
 .required-fields-text {
 	font-size:small
 }
+
+.form-buttons {
+	display: flex;
+}
+
+.form-control-file {
+	background-color: gainsboro;
+}
