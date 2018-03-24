@@ -41,26 +41,25 @@
   		
    	</div>
    
-    <md-card *ngFor="let review of reviewsList">
-      	<md-card-header>
-	    	<md-card-title></md-card-title>
-	    	<md-card-subtitle></md-card-subtitle>
-	  	</md-card-header>
+    <div class="component-details" *ngFor="let review of reviewsList">
+      	<div class="details-header">
+	    	<div class="details-header-title"></div>
+	  	</div>
 	  	
-		 <md-card-content>
+		 <div>
 		    <p>User</p>
 		    <p>
 		    	Review: {{review.message}}
 		    </p>
 		    
-  		</md-card-content>
-  		<md-card-actions>
-	  		<div>
-    			<rating [(ngModel)]="school.averageRating"
-            		[titles]="['one', 'two', 'three', 'four', 'five']">
-    			</rating>
-    			{{review.date | date:'fullDate'}}
-			</div>
-  		</md-card-actions>
-   	</md-card>
+  		</div>
+  		
+  		<div class="actions-wrapper">
+			<rating [(ngModel)]="school.averageRating"
+        		[titles]="['one', 'two', 'three', 'four', 'five']">
+			</rating>
+			{{review.date | date:'fullDate'}}
+		</div>
+		
+   	</div>
 </div>
