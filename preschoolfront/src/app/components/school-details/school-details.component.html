@@ -2,13 +2,16 @@
 
 <div class="app-content">
 
-	<md-card>
-      	<md-card-header class="school-title">
-	    	<md-card-title>{{school.title}}</md-card-title>
-	  	</md-card-header>
-	  	<md-card-header class="add-to-wishlist">
-	  		<button md-raised-button class="button-color" (click)="updateWishList()">{{buttonText}}</button>	
-	  	</md-card-header>
+	<div class="component-details">
+
+      	<div class="details-header">
+      		<div class="details-header-title">
+      			{{school.title}}
+      		</div>
+      		<div>
+      			<button class="button-color" (click)="updateWishList()">{{buttonText}}</button>
+      		</div>
+      	</div>
 
 	  	<img md-card-image src="https://mdbootstrap.com/images/proffesions/slides/socialmedia/img%20(2).jpg"><!--{{school.schoolImage}}-->
 		 <md-card-content>
@@ -36,7 +39,7 @@
 			</div>
     		
   		</md-card-actions>
-   	</md-card>
+   	</div>
    
     <md-card *ngFor="let review of reviewsList">
       	<md-card-header>
