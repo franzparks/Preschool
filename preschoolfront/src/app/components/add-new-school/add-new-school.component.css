@@ -13,3 +13,6 @@
 .form-control-file {
 	background-color: gainsboro;
 }
+.cancel-button {
+	background-color: #ca4848 !important; 
+}

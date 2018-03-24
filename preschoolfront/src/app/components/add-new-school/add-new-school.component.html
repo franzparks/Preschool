@@ -7,8 +7,10 @@
 						<div class="form-tab-body-wrapper">
 							<div class="form-tab-body">
 								<div [hidden]="schoolAdded">
-									<h3>New Center Information</h3>
-									<span class="required-fields-text">* is a required field</span>
+									<div class="form-group">
+										<h3>New Center Information</h3>
+										<span class="required-fields-text">* is a required field</span>
+									</div>
 
 									<form (ngSubmit)="onSubmit()">
 										<div class="form-group">
@@ -47,11 +49,11 @@
 										
 										<div class="form-buttons">
 											<div class="form-group">
-												<button type="submit" class="form-control button-color" >Add School</button>
+												<button type="submit" class="button-color" >Add School</button>
 											</div>
 											
 											<div class="form-group">
-												<a type="submit" class="form-control button-color"  routerLink="/">Cancel</a>
+												<button type="submit" class="button-color cancel-button"  routerLink="/">Cancel</button>
 											</div>
 										</div>	
 										
