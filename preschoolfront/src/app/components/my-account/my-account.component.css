@@ -62,3 +62,13 @@ label {
 .input-error {
 	color:red;
 }
+
+@media (min-width: 600px){
+	.form-header {
+		justify-content: space-between;
+	}
+	.form-header button {
+		flex: 1;
+    	margin: 1px;
+	}
+}
