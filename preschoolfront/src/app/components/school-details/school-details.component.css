@@ -1,3 +1,11 @@
+img {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
+
 .app-content {
   padding: 16px;
 }
@@ -24,7 +32,8 @@
 
 	transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
     will-change: box-shadow;
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding: 24px;
     border-radius: 2px;
@@ -50,3 +59,31 @@
     flex-basis: 50%;
     flex: 1;
 }
+
+.component-image {
+    width: calc(100% + 48px);
+    margin: 0 -24px 16px -24px;
+}
+
+
+@media (max-width: 600px){
+	.component-details {
+	    padding: 24px 16px;
+	    flex-direction: column;
+	}
+
+	.details-header{
+	    -ms-flex-direction: column;
+    	flex-direction: column;
+    	flex-wrap: wrap;
+    	padding-left: 0;
+	}
+
+	.component-image {
+		width: calc(100% + 32px);
+    	margin: 16px -16px;
+	}
+	
+}
+
+
