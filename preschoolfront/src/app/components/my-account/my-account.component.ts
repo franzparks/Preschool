@@ -31,7 +31,7 @@ export class MyAccountComponent implements OnInit {
   	forgotPasswordEmailSent: boolean;
   	recoverEmail:string; 
 
-    isLoginSelected:boolean = true; 
+    selectedTab:string = 'login'; 
 
   	constructor(
   		private loginService: LoginService,
@@ -103,6 +103,11 @@ export class MyAccountComponent implements OnInit {
   			this.loggedIn = false;
   		});
   	}
+
+    onSelectTab(tab: string){
+      console.log(tab);
+      this.selectedTab = tab;
+    }
 
 
 }

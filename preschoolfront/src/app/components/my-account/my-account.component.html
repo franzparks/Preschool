@@ -5,10 +5,17 @@
 			<div class="panel-body">
 				<div class="form-tab-body-wrapper">
 					<div class="form-header">
-						<button [ngClass]="{'form-selected-tab' : isLoginSelected}" class="form-login">Login</button>
-						<button class="form-new-account">New Account</button>
-						<button class="form-forgot-password">Forgot Password</button>
+						<button (click)="onSelectTab('login')" 
+						[ngClass]="{'form-selected-tab' : selectedTab === 'login'}" >Login</button>
+
+						<button (click)="onSelectTab('new-account')" 
+						[ngClass]="{'form-selected-tab' : selectedTab === 'new-account'}">New Account</button>
+
+						<button (click)="onSelectTab('forgot-password')" 
+						[ngClass]="{'form-selected-tab' : selectedTab === 'forgot-password'}">Forgot Password</button>
+
 					</div>
+
 					<div class="form-tab-body" label="Login">
 						
 						<div  *ngIf="loginError" style="color:red;">
