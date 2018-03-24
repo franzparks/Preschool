@@ -5,9 +5,9 @@
 			<div class="panel-body">
 				<div class="form-tab-body-wrapper">
 					<div class="form-header">
-						<button>Login</button>
-						<button>New Account</button>
-						<button>Forgot Password</button>
+						<button [ngClass]="{'form-selected-tab' : isLoginSelected}" class="form-login">Login</button>
+						<button class="form-new-account">New Account</button>
+						<button class="form-forgot-password">Forgot Password</button>
 					</div>
 					<div class="form-tab-body" label="Login">
 						

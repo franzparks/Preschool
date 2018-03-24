@@ -29,7 +29,9 @@ export class MyAccountComponent implements OnInit {
 
   	emailNotExists: boolean =false;
   	forgotPasswordEmailSent: boolean;
-  	recoverEmail:string;  
+  	recoverEmail:string; 
+
+    isLoginSelected:boolean = true; 
 
   	constructor(
   		private loginService: LoginService,
