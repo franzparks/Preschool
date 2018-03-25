@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
+
 		this.schoolService.getSchoolList().subscribe(
 			res => {
 				console.log(res);
