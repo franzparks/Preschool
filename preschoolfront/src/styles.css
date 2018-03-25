@@ -157,6 +157,10 @@ input, optgroup, select, textarea {
     transition: all .3s;
 }
 
+.form-buttons {
+  display: flex;
+}
+
 label {
     display: inline-block;
     margin-bottom: 1.5rem;
