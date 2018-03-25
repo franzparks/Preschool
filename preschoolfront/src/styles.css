@@ -324,6 +324,13 @@ label {
   color:red;
 }
 
+.empty-list-text {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+  padding: 50px;
+}
+
 @media screen and (max-width: 600px) {
   .mat-card-header {
       margin: -8px 0 0 0;
