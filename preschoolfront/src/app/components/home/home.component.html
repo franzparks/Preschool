@@ -2,8 +2,16 @@
 <div class="main-banner">
    
     <div class="form-inline">
-        <form class="">
-            <input class="form-control school-search" type="text" placeholder="Search...">
+        <form class="search-container">
+            <!--<input class="form-control school-search" type="text" placeholder="Search...">-->
+
+            <input list="search" id="search-input" name="search"  class="form-control school-search"
+            type="text" placeholder="Search..." >
+
+            <span class="dropdown-menu bd-search-results" id="search-results">
+                <a class="dropdown-item" href="/utilities/clearfix/">Clearfix</a>
+                <a class="dropdown-item" href="/content/figures/">Figures</a>
+            </span>
         </form>
     </div>
     
