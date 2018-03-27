@@ -2,16 +2,15 @@
 <div class="main-banner">
    
     <div class="form-inline">
-        <form class="search-container">
-            <!--<input class="form-control school-search" type="text" placeholder="Search...">-->
+        <form >
+            <div class="search-container">
+                <input list="search" id="search-input" name="search"  class="form-control school-search"
+                type="text" placeholder="Search..." [(ngModel)]="searchText">
 
-            <input list="search" id="search-input" name="search"  class="form-control school-search"
-            type="text" placeholder="Search..." [(ngModel)]="searchText">
-
-            <span class="dropdown-menu bd-search-results" id="search-results">
-                <a class="dropdown-item" href="" *ngFor="let school of topSchools | searchFilter : searchTerms : searchText">{{school.title}}</a>
-            
-            </span>
+                <span class="dropdown-menu bd-search-results" id="search-results">
+                    <a class="dropdown-item" href="" *ngFor="let school of topSchools | searchFilter : searchTerms : searchText">{{school.title}}</a>
+                </span>
+            </div>
         </form>
     </div>
     
