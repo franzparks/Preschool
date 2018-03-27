@@ -28,11 +28,16 @@
   flex-direction: column;
 }
 
+.search-container input {
+  flex : 1;
+}
+
 .bd-search-results {
     flex : 1;
     position: relative;
     right: 0;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     padding: 0;
     overflow: hidden;
     font-size: .9rem;
@@ -171,9 +176,5 @@ a.social-share {
     font-size: 20px;
     margin: 0;
     padding: 0;
-  }
-
-  input[name="search"] {
-    width: 250px;
   }
 }
