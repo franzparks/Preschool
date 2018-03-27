@@ -9,7 +9,7 @@
             type="text" placeholder="Search..." [(ngModel)]="searchText">
 
             <span class="dropdown-menu bd-search-results" id="search-results">
-                <a class="dropdown-item" href="" *ngFor="let school of topSchools | search : 'title,address': searchText">{{school.title}}</a>
+                <a class="dropdown-item" href="" *ngFor="let school of topSchools | searchFilter : searchTerms : searchText">{{school.title}}</a>
             
             </span>
         </form>

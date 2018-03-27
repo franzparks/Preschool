@@ -22,6 +22,10 @@ export class HomeComponent implements OnInit {
 
 	topSchools: School[] = [];
 
+	schools: School[] = [];
+
+	searchTerms: string = 'title,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
+
 	loggedIn = false;
 
 	constructor(
@@ -38,9 +42,12 @@ export class HomeComponent implements OnInit {
 		this.schoolService.getSchoolList().subscribe(
 			res => {
 				console.log(res);
-				this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		
+				//this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+
+        		if(this.schools.length > 0){
+					this.topSchools = this.schools;
+        		}
       		},
       		error => console.log(error)
 		)
