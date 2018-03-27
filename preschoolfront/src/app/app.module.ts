@@ -33,7 +33,7 @@ import { RatingAndReviewService } from './services/rating-and-review.service';
 import { UploadImageService } from './services/upload-image.service';
 import { ToasterService } from './services/toaster.service';
 
-
+import { SearchPipe} from './pipes/filter.pipe';
 
 
 
@@ -51,7 +51,8 @@ import { ToasterService } from './services/toaster.service';
     AddNewSchoolComponent,
     FooterComponent,
     SchoolListComponent,
-    WishListComponent
+    WishListComponent,
+    SearchPipe
     
   ],
   imports: [
