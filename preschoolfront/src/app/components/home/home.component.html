@@ -6,11 +6,11 @@
             <!--<input class="form-control school-search" type="text" placeholder="Search...">-->
 
             <input list="search" id="search-input" name="search"  class="form-control school-search"
-            type="text" placeholder="Search..." >
+            type="text" placeholder="Search..." [(ngModel)]="searchText">
 
             <span class="dropdown-menu bd-search-results" id="search-results">
-                <a class="dropdown-item" href="/utilities/clearfix/">Clearfix</a>
-                <a class="dropdown-item" href="/content/figures/">Figures</a>
+                <a class="dropdown-item" href="" *ngFor="let school of topSchools | search : 'title,address': searchText">{{school.title}}</a>
+            
             </span>
         </form>
     </div>
