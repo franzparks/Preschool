@@ -47,6 +47,8 @@ export class HomeComponent implements OnInit {
 
         		if(this.schools.length > 0){
 					this.topSchools = this.schools;
+					//sort by rating
+					// then get top 3
         		}
       		},
       		error => console.log(error)

@@ -7,8 +7,9 @@
                 <input list="search" id="search-input" name="search"  class="form-control school-search"
                 type="text" placeholder="Search..." [(ngModel)]="searchText">
 
-                <span class="dropdown-menu bd-search-results" id="search-results">
-                    <a class="dropdown-item" href="" *ngFor="let school of topSchools | searchFilter : searchTerms : searchText">{{school.title}}</a>
+                <span class="dropdown-menu bd-search-results" id="search-results" 
+                *ngFor="let school of topSchools | searchFilter : searchTerms : searchText">
+                    <a class="dropdown-item" href="">{{school.title}}</a>
                 </span>
             </div>
         </form>
