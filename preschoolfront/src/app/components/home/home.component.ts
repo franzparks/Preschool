@@ -50,9 +50,14 @@ export class HomeComponent implements OnInit {
         		this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
 
         		if(this.schools.length > 0){
-					this.topSchools = this.schools;
 					//sort by rating
 					// then get top 3
+
+					this.schools.sort(function (school1, school2) {
+					  return school1.averageRating - school2.averageRating;
+					});
+					console.log("schools : " + this.schools);
+					this.topSchools = Object.assign([], this.schools.slice(0,3));
         		}
       		},
       		error => console.log(error)
