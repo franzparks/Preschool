@@ -43,7 +43,7 @@ export class MyProfileComponent implements OnInit {
   			console.log(res.text());
         this.loginService.setLoggedIn(true);
   			this.updateSuccess=true;
-        //this.toastr.success('You have successfully updated your info, you are now logged in!');
+        this.toastr.success('Account successfully updated!');
         //this.router.navigate(['/my-account']);
 
   		},

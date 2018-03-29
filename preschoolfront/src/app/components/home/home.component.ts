@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
 
 		this.schoolService.getSchoolList().subscribe(
 			res => {
-				console.log(res);
+				//console.log(res);
 				//this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
 
@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
 					this.schools.sort(function (school1, school2) {
 					  return school1.averageRating - school2.averageRating;
 					});
-					console.log("schools : " + this.schools);
+					//console.log("schools : " + this.schools);
 					this.topSchools = Object.assign([], this.schools.slice(0,3));
         		}
       		},
@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
 
 	//listen for changes to the search term
 	searchUpdated(searchTerm) {
-    	console.log(searchTerm);
+    	//console.log(searchTerm);
     	if(searchTerm.length > 0 &&  this.searchResults.length === 0){
     		this.searchResults = Object.assign([], this.schools); 
     	}else if(searchTerm.length === 0 &&  this.searchResults.length > 0){
@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
     		return;
     	}
 
-    	console.log(this.searchResults);
+    	//console.log(this.searchResults);
 	}
 
 	getSchoolDetails(id: String){
