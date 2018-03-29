@@ -7,10 +7,10 @@
                 <input list="search" id="search-input" name="search"  class="form-control school-search"
                 type="text" placeholder="Search..." [(ngModel)]="searchText" (ngModelChange)="searchUpdated($event)">
 
-                <!--<span class="dropdown-menu bd-search-results" id="search-results" 
-                *ngFor="let school of topSchools | searchFilter : searchTerms : searchText1">
+                <span class="dropdown-menu bd-search-results" id="search-results" 
+                *ngFor="let school of searchResults | searchFilter : searchTerms : searchText">
                     <a class="dropdown-item" href="">{{school.title}}</a>
-                </span> -->
+                </span>
             </div>
         </form>
     </div>

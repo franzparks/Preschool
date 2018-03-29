@@ -73,6 +73,7 @@ export class HomeComponent implements OnInit {
       );
 	}
 
+	//listen for changes to the search term
 	searchUpdated(searchTerm) {
     	console.log(searchTerm);
     	if(searchTerm.length > 0 &&  this.searchResults.length === 0){
