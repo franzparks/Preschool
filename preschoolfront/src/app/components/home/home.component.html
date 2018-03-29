@@ -5,12 +5,12 @@
         <form >
             <div class="search-container">
                 <input list="search" id="search-input" name="search"  class="form-control school-search"
-                type="text" placeholder="Search..." [(ngModel)]="searchText">
+                type="text" placeholder="Search..." [(ngModel)]="searchText" (ngModelChange)="searchUpdated($event)">
 
-                <span class="dropdown-menu bd-search-results" id="search-results" 
-                *ngFor="let school of topSchools | searchFilter : searchTerms : searchText">
+                <!--<span class="dropdown-menu bd-search-results" id="search-results" 
+                *ngFor="let school of topSchools | searchFilter : searchTerms : searchText1">
                     <a class="dropdown-item" href="">{{school.title}}</a>
-                </span>
+                </span> -->
             </div>
         </form>
     </div>

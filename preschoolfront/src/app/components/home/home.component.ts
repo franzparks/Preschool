@@ -28,6 +28,8 @@ export class HomeComponent implements OnInit {
 
 	loggedIn = false;
 
+	searchText:string = 'hello';
+
 	constructor(
 		private schoolService : SchoolService,
 		private router:Router,
@@ -67,6 +69,11 @@ export class HomeComponent implements OnInit {
           
         }
       );
+	}
+
+	searchUpdated(val) {
+		console.log("here");
+    	console.log(val);
 	}
 
 	getSchoolDetails(id: String){
