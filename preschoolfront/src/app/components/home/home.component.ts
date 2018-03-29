@@ -24,11 +24,13 @@ export class HomeComponent implements OnInit {
 
 	schools: School[] = [];
 
+	searchResults: School[] = [];
+
 	searchTerms: string = 'title,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
 
 	loggedIn = false;
 
-	searchText:string = 'hello';
+	searchText:string;
 
 	constructor(
 		private schoolService : SchoolService,
@@ -71,9 +73,17 @@ export class HomeComponent implements OnInit {
       );
 	}
 
-	searchUpdated(val) {
-		console.log("here");
-    	console.log(val);
+	searchUpdated(searchTerm) {
+    	console.log(searchTerm);
+    	if(searchTerm.length > 0 &&  this.searchResults.length === 0){
+    		this.searchResults = Object.assign([], this.schools); 
+    	}else if(searchTerm.length === 0 &&  this.searchResults.length > 0){
+    		this.searchResults = [];
+    	}else{
+    		return;
+    	}
+
+    	console.log(this.searchResults);
 	}
 
 	getSchoolDetails(id: String){
