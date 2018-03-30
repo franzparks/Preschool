@@ -22,7 +22,15 @@ export class HomeComponent implements OnInit {
 
 	topSchools: School[] = [];
 
+	schools: School[] = [];
+
+	searchResults: School[] = [];
+
+	searchTerms: string = 'title,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
+
 	loggedIn = false;
+
+	searchText:string;
 
 	constructor(
 		private schoolService : SchoolService,
@@ -34,12 +42,23 @@ export class HomeComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
+
 		this.schoolService.getSchoolList().subscribe(
 			res => {
 				console.log(res);
-				this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		
+				//this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+
+        		if(this.schools.length > 0){
+					//sort by rating
+					// then get top 3
+
+					this.schools.sort(function (school1, school2) {
+					  return school1.averageRating - school2.averageRating;
+					});
+					console.log("schools : " + this.schools);
+					this.topSchools = Object.assign([], this.schools.slice(0,3));
+        		}
       		},
       		error => console.log(error)
 		)
@@ -57,6 +76,20 @@ export class HomeComponent implements OnInit {
           
         }
       );
+	}
+
+	//listen for changes to the search term
+	searchUpdated(searchTerm) {
+    	console.log(searchTerm);
+    	if(searchTerm.length > 0 &&  this.searchResults.length === 0){
+    		this.searchResults = Object.assign([], this.schools); 
+    	}else if(searchTerm.length === 0 &&  this.searchResults.length > 0){
+    		this.searchResults = [];
+    	}else{
+    		return;
+    	}
+
+    	console.log(this.searchResults);
 	}
 
 	getSchoolDetails(id: String){

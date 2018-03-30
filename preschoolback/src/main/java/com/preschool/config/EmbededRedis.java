@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import redis.embedded.RedisServer;
+import redis.embedded.RedisServerBuilder;
 
 /**
  * @author francisphiri
@@ -27,8 +28,9 @@ public class EmbededRedis {
 
     @PostConstruct
     public void startRedis() throws IOException {
-        redisServer = new RedisServer(redisPort);
-        redisServer.start();
+        redisServer = new RedisServerBuilder().setting("maxheap 512Mb").port(6370).build();
+        //new RedisServer(redisPort);
+        //redisServer.start();
     }
 
     @PreDestroy

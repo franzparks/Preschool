@@ -1,38 +1,51 @@
 <hr />
-<div class="app-content">
-	<div [hidden]="ratingAdded">
-		<!--<h4 style="margin-top: 30px;">Write A Review <span style="font-size:small">* is a required field</span></h3>-->
-		<h4 align="center">Write A Review</h4>
-		<hr />
-		<div class="container">
-			
-			<div class="col-6-md col-12-sm col-centered">
-				<form (ngSubmit)="onSubmit()" class="waves-effect waves-light">
-					<div cols="form-group">
-						<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" validate
-		        			[titles]="['one', 'two', 'three', 'four', 'five']" class="form-input">
-						</rating>
+
+<div class="container">
+	<div class="reg-form-input-group top-margin">
+	    <div class="col-xs-9 col-md-offset-1">
+	        <div class="panel-group">
+	            <div class="panel panel-default" >
+	                <div class="panel-body" >
+						<div class="form-tab-body-wrapper">
+							<div class="form-tab-body">
+								
+								<div class="form-group">
+									<h3>Write your review</h3>
+								</div>
+
+								<form (ngSubmit)="onSubmit()">
+									<div class="form-group">
+										<rating [(ngModel)]="newRatingAndReview.rating" name="rating" [required]="true" 		validate
+						        			[titles]="['one', 'two', 'three', 'four', 'five']" class="form-input">
+										</rating>
+									</div>
+
+									<div class="form-group">
+										<textarea  id="message"  aria-label="message"  rows="7" cols="70"  maxlength="150"
+										class="form-input" 
+										[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
+											
+										</textarea>
+									</div>
+
+									<div class="form-buttons">
+										<div class="form-group">
+											<button class="submit-review button-color" type="submit">Submit Review</button>
+										</div>
+										
+										<div class="form-group">
+											<button class="button-color cancel-button"  (click)="onCancel()">Cancel</button>
+										</div>
+									</div>	
+
+
+								</form>
+								
+							</div>
+						</div>
 					</div>
-
-					<div cols="form-group">
-										    
-						<textarea  id="message"  aria-label="message" md-no-resize rows="7" cols="70"  maxlength="150"
-						class="form-input" 
-						[(ngModel)]="newRatingAndReview.message" name="message" placeholder="Write your review here... ">
-							
-						</textarea>
-						<br><br>
-						<div class="review-submission">
-							<button class="submit-review button-color" md-raised-button type="submit">Submit Review</button>
-						
-							<a class="cancel-submit-review" md-raised-button (click)="onCancel()">Cancel</a>
-						</div>	
-
-					</div>
-
-				</form>
+				</div>
 			</div>
-	
-		</div>	
+		</div>
 	</div>
 </div>

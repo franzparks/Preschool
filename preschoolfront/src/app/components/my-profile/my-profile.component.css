@@ -1,0 +1,10 @@
+.edit-form-title {
+    font-size: 24px;
+}
+
+.form-header {
+    display: flex;
+    /*overflow: hidden;*/
+    position: relative;
+    justify-content: center;
+}

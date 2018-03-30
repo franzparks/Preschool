@@ -1,57 +1,70 @@
-<div class="container col-6 add-new-school-content">
-	<div [hidden]="schoolAdded">
-		<h3 style="margin-top: 30px;">New School Information <span style="font-size:small">* is a required field</span></h3>
+<div class="container">
+	<div class="reg-form-input-group top-margin">
+	    <div class="col-xs-9 col-md-offset-1">
+	        <div class="panel-group">
+	            <div class="panel panel-default" >
+	                <div class="panel-body" >
+						<div class="form-tab-body-wrapper">
+							<div class="form-tab-body">
+								<div [hidden]="schoolAdded">
+									<div class="form-group">
+										<h3>New Center Information</h3>
+										<span class="required-fields-text">* is a required field</span>
+									</div>
 
-		<form (ngSubmit)="onSubmit()" class="waves-effect waves-light1">
-			<div class="form-group">
-				<div >
-					<input mdInput id="title"  class="form-control" [(ngModel)]="newSchool.title" 
-					name="title" placeholder="Title" required="">
+									<form (ngSubmit)="onSubmit()">
+										<div class="form-group">
+											<input id="title"  class="form-control" [(ngModel)]="newSchool.title" 
+											name="title" placeholder="Title" required>
+										</div>
+										
+										<div class="form-group">
+											<input id="subTitle" class="form-control" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
+										</div>
+
+										<div class="form-group">
+											<input id="snippet" class="form-control" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">		
+										</div>
+
+
+										<div class="form-group">
+											<textarea id="summary" class="form-control" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
+										</div>
+
+										<div class="form-group">
+											<input id="address" class="form-control" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">	
+										</div>
+
+										<div class="form-group">
+											<input id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
+											 placeholder="Phone Number">
+										</div>
+
+										<div class="form-group">
+											<label for="schoolImage">Image</label>
+											<input type="file" id="schoolImage" name="schoolImage" class="form-control-file" 
+											(change)="uploadImageService.fileChangeEvent($event)">
+										</div>
+
+										
+										<div class="form-buttons">
+											<div class="form-group">
+												<button type="submit" class="button-color" >Add School</button>
+											</div>
+											
+											<div class="form-group">
+												<button type="submit" class="button-color cancel-button"  routerLink="/">Cancel</button>
+											</div>
+										</div>	
+										
+									</form>
+								</div>
+								
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			
-			<div class="form-group">
-				
-				<input mdInput id="subTitle" class="form-control" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
-			
-				<input mdInput id="snippet" class="form-control" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">
-					
-			</div>
-
-
-			<div class="form-group">
-				<textarea mdInput id="summary" class="form-control" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
-			</div>
-
-			<div class="form-group">
-				
-				<input mdInput id="address" class="form-control" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">
-					
-			</div>
-
-			<div class="form-group">
-				<input mdInput id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
-				 placeholder="Phone Number">
-			</div>
-
-			<div class="form-group">
-			Image &nbsp;
-			<input id="tile" type="file" id="schoolImage" name="schoolImage" class="form-control" 
-			(change)="uploadImageService.fileChangeEvent($event)">
-			<br><br>
-
-			</div>
-
-			<div class="form-group">
-				
-				<button class="mat-primary button-color" md-raised-button type="submit">Add School</button>
-				
-				<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
-				
-			</div>
-		</form>
-	</div>
-	<div class="row" [hidden]="!schoolAdded">
-		<h3 style="margin-top: 50px;">School added successfully!</h3>
+		</div>
 	</div>
 </div>

@@ -1,0 +1,14 @@
+.container {
+	margin-top: 70px;
+}
+
+.required-fields-text {
+	font-size:small
+}
+
+.form-control-file {
+	background-color: gainsboro;
+}
+.cancel-button {
+	background-color: #ca4848 !important; 
+}

@@ -29,7 +29,9 @@ export class MyAccountComponent implements OnInit {
 
   	emailNotExists: boolean =false;
   	forgotPasswordEmailSent: boolean;
-  	recoverEmail:string;  
+  	recoverEmail:string; 
+
+    selectedTab:string = 'login'; 
 
   	constructor(
   		private loginService: LoginService,
@@ -101,6 +103,11 @@ export class MyAccountComponent implements OnInit {
   			this.loggedIn = false;
   		});
   	}
+
+    onSelectTab(tab: string){
+      console.log(tab);
+      this.selectedTab = tab;
+    }
 
 
 }
