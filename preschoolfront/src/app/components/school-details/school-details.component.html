@@ -47,7 +47,7 @@
 	  	</div>
 	  	
 		 <div>
-		    <p>User</p>
+		    <p>User : Anonymous</p>
 		    <p>
 		    	Review: {{review.message}}
 		    </p>
@@ -55,7 +55,7 @@
   		</div>
   		
   		<div class="actions-wrapper">
-			<rating [(ngModel)]="review.rating" [readonly]="true"
+			<rating [(ngModel)]="review.userRating" [readonly]="true"
         		[titles]="['one', 'two', 'three', 'four', 'five']">
 			</rating>
 			{{review.date | date:'fullDate'}}
