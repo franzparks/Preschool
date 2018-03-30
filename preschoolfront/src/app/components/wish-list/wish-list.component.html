@@ -3,7 +3,7 @@
 <div class="card-panel horizontal-listing">
     <div class="container-fluid">
         <div class="container" *ngIf="schools.length === 0">
-            <p class="empty-list-text">You have no items in your wishlist</p>
+            <p class="empty-list-text">You have no items on your wishlist</p>
         </div>
         <div class="card container" *ngFor="let school of schools">
         
@@ -27,7 +27,7 @@
 
                 <div class="controls">
                     <button class="button-color" (click)="getSchoolDetails(school.id)" >Read more</button>
-                    <rating [(ngModel)]="starsCount" [readonly]="true"
+                    <rating [(ngModel)]="school.averageRating" [readonly]="true"
                             [titles]="['one', 'two', 'three', 'four', 'five']">
                     </rating>
 
