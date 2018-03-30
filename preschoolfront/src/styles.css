@@ -337,22 +337,28 @@ label {
       float: left;
   }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .navbar .container {
     width: 100%;
   }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .navbar .container {
     width: 100%;
   }
 }
 
-@media (max-width: 575px){
+@media screen and (max-width: 575px){
   .navbar-toggleable>.container {
     padding-right: 0; 
     padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .form-header button{
+    flex: 1;
   }
 }
 
