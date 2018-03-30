@@ -30,7 +30,7 @@
   		
   		<div class="actions-wrapper">
     		
-			<rating [(ngModel)]="school.averageRating"
+			<rating [(ngModel)]="school.averageRating" [readonly]="true"
         		[titles]="['one', 'two', 'three', 'four', 'five']">
 			</rating>
 			<span class="reviews-text"> 100 reviews</span>

@@ -28,7 +28,7 @@
 
             <div class="controls">
                 <button  class="claim-button button-color" (click)="getSchoolDetails(school.id)" >Read more</button>
-                <rating [(ngModel)]="starsCount" 
+                <rating [(ngModel)]="starsCount" [readonly]="true"
                         [titles]="['one', 'two', 'three', 'four', 'five']">
                 </rating>
 
