@@ -33,7 +33,7 @@
 			<rating [(ngModel)]="school.averageRating" [readonly]="true"
         		[titles]="['one', 'two', 'three', 'four', 'five']">
 			</rating>
-			<span class="reviews-text"> {{reviewsList.length}} reviews</span>
+			<span class="reviews-text"> {{reviewsList.length}} {{reviewsList.length !== 1 ? 'reviews' : 'review' }}</span>
 			<button   routerLink="write-review"  class="review-button button-color" >Write a Review</button>
 			<!--<button  routerLink="/my-account"  class="review-button button-color" *ngIf="!loggedIn">Login to write a Review</button>-->
 		</div>
