@@ -84,7 +84,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school1.setWebsite("http://www.eyaseyes.com");
 		
-		school1.setAverageRating(4);
+		//school1.setAverageRating(4);
 		
 		School school2 =  new School();
 		school2.setTeacherToStudentRatio("1 to 5");
@@ -109,7 +109,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school2.setWebsite("http://www.eyaseyes.com");
 		
-		school2.setAverageRating(4);
+		//school2.setAverageRating(4);
 		
 		School school3 = new School();
 		
@@ -132,7 +132,7 @@ public class PreschoolApplication implements CommandLineRunner{ //
 		
 		school3.setWebsite("http://www.eyaseyes.com");
 		
-		school3.setAverageRating(3);
+		//school3.setAverageRating(3);
 
 		
 		schoolService.save(school1);

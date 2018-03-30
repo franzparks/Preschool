@@ -24,7 +24,7 @@ export class SchoolDetailsComponent implements OnInit {
 
 	schoolId : number;
 	school: School = new School();
-  reviewsList: RatingAndReview[];
+  reviewsList: RatingAndReview[] = [];
   loggedIn:boolean;
   addedToWishList:boolean;
 
@@ -63,6 +63,7 @@ export class SchoolDetailsComponent implements OnInit {
     this.ratingAndReviewService.getReviewsList(this.schoolId).subscribe(
       res => {
         this.reviewsList=res.json(); 
+        console.log(this.reviewsList);
       },
       error => {
         console.log(error);

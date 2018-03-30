@@ -79,7 +79,8 @@ public class SchoolServiceImpl implements SchoolService{
     public void updateSchool(School school, int userRating) {
 	    
 		int averageRating = school.getAverageRating() + userRating;
-		averageRating = (int) Math.floor(averageRating / school.getRatingAndReviewsList().size());
+		int totalNumberOfRatings =  school.getRatingAndReviewsList().size();
+		averageRating = totalNumberOfRatings == 0 ? totalNumberOfRatings : (int) Math.floor(averageRating /totalNumberOfRatings);
 		school.setAverageRating(averageRating);
 		schoolRepository.save(school);
     }
