@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.preschool.config.repository.SchoolRepository;
+import com.preschool.domain.RatingAndReview;
 import com.preschool.domain.School;
 import com.preschool.service.SchoolService;
 
@@ -76,11 +77,23 @@ public class SchoolServiceImpl implements SchoolService{
     }
 
 	@Override
-    public void updateSchool(School school, int userRating) {
-	    
-		int averageRating = school.getAverageRating() + userRating;
-		int totalNumberOfRatings =  school.getRatingAndReviewsList().size();
-		averageRating = totalNumberOfRatings == 0 ? totalNumberOfRatings : (int) Math.floor(averageRating /totalNumberOfRatings);
+    public void updateAverageSchoolRating(School school, RatingAndReview ratingAndReview) {
+		
+		int averageRating = 0;	
+		int totalRatings = 0;
+		int sumOfRatings = 0;
+		
+		List<RatingAndReview> ratingAndReviewsList = school.getRatingAndReviewsList();
+		ratingAndReviewsList.add(ratingAndReview);
+		school.setRatingAndReviewsList(ratingAndReviewsList);
+		
+		totalRatings =  school.getRatingAndReviewsList().size();
+		
+		for(RatingAndReview review : school.getRatingAndReviewsList()) {
+			sumOfRatings += review.getUserRating();
+		}
+		
+		averageRating = totalRatings == 0 ? sumOfRatings : (int) Math.floor(sumOfRatings / totalRatings);
 		school.setAverageRating(averageRating);
 		schoolRepository.save(school);
     }

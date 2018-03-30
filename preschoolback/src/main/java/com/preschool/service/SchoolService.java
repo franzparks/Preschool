@@ -5,6 +5,7 @@ package com.preschool.service;
 
 import java.util.List;
 
+import com.preschool.domain.RatingAndReview;
 import com.preschool.domain.School;
 
 /**
@@ -25,5 +26,5 @@ public interface SchoolService {
 	
 	void removeOne(Long id);
 
-	void updateSchool(School school, int userRating);
+	void updateAverageSchoolRating(School school,RatingAndReview ratingAndReview);
 }

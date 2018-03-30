@@ -67,12 +67,14 @@ public class RatingAndReviewResource {
 		User user = userService.findByUsername(principal.getName());
 		
 		ratingAndReview.setUser(user);
+		
 		School school = schoolService.findOne(new Long(ratingAndReview.getGivenSchoolId()));
-		schoolService.updateSchool(school, ratingAndReview.getUserRating());
 		ratingAndReview.setSchool(school);
 		ratingAndReview.setDate(new Date());
 		ratingAndReviewService.save(ratingAndReview);
 		System.out.println("sent review :: "+ratingAndReview);
+		
+		schoolService.updateAverageSchoolRating(school, ratingAndReview);
 		
 		return new ResponseEntity("Review Added Successfully!", HttpStatus.OK);
 	}
