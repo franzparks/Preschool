@@ -45,6 +45,8 @@ private static final long serialVersionUID=425345L;
 	
 	private int givenSchoolId;
 	
+	private int userRating;
+	
 	
 	public Long getId() {
 		return id;
@@ -65,6 +67,11 @@ private static final long serialVersionUID=425345L;
 	public int getGivenSchoolId(){
 		return this.givenSchoolId;
 	}
+	
+	public int getUserRating(){
+		return this.userRating;
+	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -83,6 +90,10 @@ private static final long serialVersionUID=425345L;
 	
 	public void setGivenSchoolId(int givenSchoolId){
 		this.givenSchoolId = givenSchoolId;
+	}
+	
+	public void setUserRating(int userRating){
+		this.userRating = userRating;
 	}
 	
 }
