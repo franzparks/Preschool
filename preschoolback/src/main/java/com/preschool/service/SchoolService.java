@@ -24,4 +24,6 @@ public interface SchoolService {
 	List<School> blurrySearch(String title);
 	
 	void removeOne(Long id);
+
+	void updateSchool(School school, int userRating);
 }

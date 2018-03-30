@@ -61,8 +61,8 @@ public class SchoolServiceImpl implements SchoolService{
     }
 
 	@Override
-    public School save(School book) {
-	    return schoolRepository.save(book);
+    public School save(School school) {
+	    return schoolRepository.save(school);
     }
 
 	@Override
@@ -73,6 +73,15 @@ public class SchoolServiceImpl implements SchoolService{
 	@Override
     public void removeOne(Long id) {
 		schoolRepository.delete(id); 
+    }
+
+	@Override
+    public void updateSchool(School school, int userRating) {
+	    
+		int averageRating = school.getAverageRating() + userRating;
+		averageRating = (int) Math.floor(averageRating / school.getRatingAndReviewsList().size());
+		school.setAverageRating(averageRating);
+		schoolRepository.save(school);
     }
 	
 }
