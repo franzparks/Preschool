@@ -259,6 +259,9 @@ md-card a,a:hover{
     background-size: 100% 100%;
 }
 
+.star-icon {
+  color: #45526E !important;
+}
 
 form {
   padding: 5px;
