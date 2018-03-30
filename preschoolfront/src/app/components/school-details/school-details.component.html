@@ -55,7 +55,7 @@
   		</div>
   		
   		<div class="actions-wrapper">
-			<rating [(ngModel)]="review.rating"
+			<rating [(ngModel)]="review.rating" [readonly]="true"
         		[titles]="['one', 'two', 'three', 'four', 'five']">
 			</rating>
 			{{review.date | date:'fullDate'}}
