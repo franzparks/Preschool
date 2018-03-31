@@ -4,10 +4,14 @@ import { Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
 import { School } from '../../models/school';
+//import  {RatingAndReview} from '../../models/rating-and-review';
+import { User } from '../../models/user';
+
 import {SchoolService } from '../../services/school.service';
 import { UserService } from '../../services/user.service';
 import { LoginService } from '../../services/login.service';
-import { User } from '../../models/user';
+//import {RatingAndReviewService } from '../../services/rating-and-review.service';
+
 
 @Component({
   selector: 'app-wish-list',
@@ -21,6 +25,7 @@ export class WishListComponent implements OnInit {
 	imageNumber : number = Math.floor((Math.random() * 20) + 1);
 
 	schools: School[] = [];
+	//reviewsList: RatingAndReview[] = [];
 	user: User
 	wishList: string
 	updateSuccess: boolean;
@@ -28,6 +33,7 @@ export class WishListComponent implements OnInit {
   	constructor(
 	  	private schoolService : SchoolService,
 	  	private userService: UserService,
+	  	//private ratingAndReviewService: RatingAndReviewService,
 		private router:Router,
 		private http:Http,
 		private route:ActivatedRoute
@@ -52,6 +58,9 @@ export class WishListComponent implements OnInit {
   		err => {
   			console.log(err);
   		})
+
+ 
+
 	    
   	}
 

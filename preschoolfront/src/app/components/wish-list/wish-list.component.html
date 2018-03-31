@@ -31,7 +31,9 @@
                             [titles]="['one', 'two', 'three', 'four', 'five']">
                     </rating>
 
-                    <span class="reviews-text">1000 reviews</span>
+                    <span class="reviews-text">
+                        {{reviewsList.length}} {{reviewsList.length !== 1 ? 'reviews' : 'review' }}
+                    </span>
                 </div>
                 
             </div>

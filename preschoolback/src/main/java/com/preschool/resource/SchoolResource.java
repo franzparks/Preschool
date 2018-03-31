@@ -101,7 +101,9 @@ public class SchoolResource {
 	
 	@RequestMapping("/schoolList")
 	public List<School> getSchoolList() {
-		return schoolService.findAll(); //.subList(0, 5);
+		List<School> allSchools = schoolService.findAll();
+		System.out.println(allSchools);
+		return allSchools; //.subList(0, 5);
 	}
 	
 	@RequestMapping("/wishList/{wishList}")

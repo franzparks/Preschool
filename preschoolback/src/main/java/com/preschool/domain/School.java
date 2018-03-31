@@ -13,6 +13,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
@@ -26,6 +28,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 
 @Entity
+@NamedEntityGraph(name = "School.detail",
+attributeNodes = @NamedAttributeNode("ratingAndReviewsList"))
 public class School implements Serializable{
 	
 	private static final long serialVersionUID=425345L;

@@ -3,7 +3,10 @@ import { Http } from '@angular/http';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
 import { School } from '../../models/school';
+//import  {RatingAndReview} from '../../models/rating-and-review';
+
 import {SchoolService } from '../../services/school.service';
+//import {RatingAndReviewService } from '../../services/rating-and-review.service';
 
 @Component({
   selector: 'app-school-list',
@@ -19,9 +22,11 @@ export class SchoolListComponent implements OnInit {
 	imageNumber : number = Math.floor((Math.random() * 20) + 1);
 
 	schools: School[] = [];
+	
 
 	constructor(
 	  	private schoolService : SchoolService,
+	  	//private ratingAndReviewService: RatingAndReviewService,
 		private router:Router,
 		private http:Http,
 		private route:ActivatedRoute
@@ -34,6 +39,7 @@ export class SchoolListComponent implements OnInit {
 				this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		//this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
         		//console.log(JSON.parse(JSON.stringify(res))._body);
+        		console.log(this.schools);
       		},
       		error => console.log(error)
 		)
