@@ -39,14 +39,21 @@
 												<option [ngValue]="Other">Other</option>
 											</select>
 										</div>
-										
 
 										<div class="form-group">
-											<textarea id="summary" class="form-control" [(ngModel)]="newCenter.summary" name="summary" placeholder="Summary" required></textarea>
+											<input id="ratio" class="form-control" required [(ngModel)]="newCenter.teacherToStudentRatio" name="ratio" placeholder="Teacher Student Ratio">	
 										</div>
 
 										<div class="form-group">
-											<input id="ratio" class="form-control" required [(ngModel)]="newCenter.ratio" name="ratio" placeholder="Teacher Student Ratio">	
+											<input id="ageRange" class="form-control" required [(ngModel)]="newCenter.ageRange" name="ageRange" placeholder="Age Range">	
+										</div>
+
+										<div class="form-group">
+											<input id="priceRange" class="form-control" required [(ngModel)]="newCenter.priceRange" name="priceRange" placeholder="Price Range">	
+										</div>
+
+										<div class="form-group">
+											<input id="schedule" class="form-control" required [(ngModel)]="newCenter.schedule" name="schedule" placeholder="Schedule">	
 										</div>
 
 										<div class="form-group">
@@ -61,6 +68,10 @@
 										<div class="form-group">
 											<input id="website"  [(ngModel)]="newCenter.website" name="website" class="form-control"
 											 placeholder="Website">
+										</div>
+
+										<div class="form-group">
+											<textarea id="summary" class="form-control" [(ngModel)]="newCenter.summary" name="summary" placeholder="Summary" required></textarea>
 										</div>
 
 										<div class="form-group">
