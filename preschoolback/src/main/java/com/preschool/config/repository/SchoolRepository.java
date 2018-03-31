@@ -20,6 +20,6 @@ public interface SchoolRepository extends CrudRepository<School, Long>{
 	List<School> findByTitleContaining(String keyword);
 	
 	//fetch reviews
-	@EntityGraph(value = "School.detail", type = EntityGraphType.FETCH)
+	@EntityGraph(value = "School.detail", type = EntityGraphType.LOAD)
 	List<School> findAll();
 }
