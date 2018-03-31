@@ -6,29 +6,47 @@
 	                <div class="panel-body" >
 						<div class="form-tab-body-wrapper">
 							<div class="form-tab-body">
-								<div [hidden]="schoolAdded">
+								<div [hidden]="centerAdded">
 									<div class="form-group">
 										<h3>New Center Information</h3>
-										<span class="required-fields-text">* is a required field</span>
+										<!--<span class="required-fields-text">* is a required field</span>-->
 									</div>
 
 									<form (ngSubmit)="onSubmit()">
 										<div class="form-group">
 											<input id="title"  class="form-control" [(ngModel)]="newSchool.title" 
-											name="title" placeholder="Title" required>
+											name="title" placeholder="Center name" required>
 										</div>
 										
 										<div class="form-group">
-											<input id="subTitle" class="form-control" required [(ngModel)]="newSchool.subTitle" name="subTitle" placeholder="Sub Title">
+											<label for="centerType">Select center type:</label>
+											<select id="centerType" class="form-control select-container">
+												<option class="select-option">Preschool</option>
+												<option class="select-option">Enrichment Class</option>
+												<option class="select-option">Kids Activities</option>
+												<option class="select-option">Play Center</option>
+											</select>
 										</div>
 
 										<div class="form-group">
-											<input id="snippet" class="form-control" required [(ngModel)]="newSchool.snippet" name="snippet" placeholder="Snippet">		
+											<label for="category">Select category/philosphy:</label>
+											<select id="centerType" class="form-control">
+												<option>Academic Based</option>
+												<option>Montessori</option>
+												<option>Play Based</option>
+												<option>Reggio Emilia</option>
+												<option>Waldorf</option>
+												<option>Other</option>
+											</select>
 										</div>
-
+										
 
 										<div class="form-group">
 											<textarea id="summary" class="form-control" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
+										</div>
+
+										<div class="form-group">
+											<input id="address" class="form-control" required [(ngModel)]="newSchool.address" name="address" placeholder="Teacher Student Ratio">	
 										</div>
 
 										<div class="form-group">
@@ -38,6 +56,11 @@
 										<div class="form-group">
 											<input id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
 											 placeholder="Phone Number">
+										</div>
+
+										<div class="form-group">
+											<input id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
+											 placeholder="Website">
 										</div>
 
 										<div class="form-group">
