@@ -29,6 +29,7 @@ export class RatingComponent implements OnInit {
   		private router: Router,
   		private route:ActivatedRoute,
       private loginService: LoginService,
+      private userService: UserService,
       private toastr : ToasterService,
       private _location: Location
    
@@ -68,7 +69,21 @@ export class RatingComponent implements OnInit {
           this.router.navigate(['/my-account/']);
         }
       );
+
+      this.getCurrentUser();
+
   		});
   	}
+
+    getCurrentUser() {
+    this.userService.getCurrentUser().subscribe(
+      res => {
+        this.user = res.json();
+      },
+      err => {
+        console.log(err);
+      });
+    }
+
 
 }
