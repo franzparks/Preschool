@@ -54,9 +54,9 @@ export class HomeComponent implements OnInit {
 					// then get top 3
 
 					this.schools.sort(function (school1, school2) {
-					  return school1.averageRating - school2.averageRating;
+					  return school2.averageRating - school1.averageRating;
 					});
-					//console.log("schools : " + this.schools);
+					console.log("schools : " + this.schools);
 					this.topSchools = Object.assign([], this.schools.slice(0,3));
         		}
       		},
