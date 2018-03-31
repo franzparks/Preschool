@@ -14,52 +14,52 @@
 
 									<form (ngSubmit)="onSubmit()">
 										<div class="form-group">
-											<input id="title"  class="form-control" [(ngModel)]="newSchool.title" 
-											name="title" placeholder="Center name" required>
+											<input id="name"  class="form-control" [(ngModel)]="newCenter.name" 
+											name="name" placeholder="Center name" required>
 										</div>
 										
 										<div class="form-group">
 											<label for="centerType">Select center type:</label>
-											<select id="centerType" class="form-control select-container1">
-												<option class="select-option">Preschool</option>
-												<option class="select-option">Enrichment Class</option>
-												<option class="select-option">Kids Activities</option>
-												<option class="select-option">Play Center</option>
+											<select id="centerType" class="form-control" [(ngModel)]="newCenter.type">
+												<option [ngValue]="Preschool">Preschool</option>
+												<option [ngValue]="Enrichment-Class">Enrichment Class</option>
+												<option [ngValue]="Kids-Activities">Kids' Activities</option>
+												<option [ngValue]="Play-Center">Play Center</option>
 											</select>
 										</div>
 
-										<div class="form-group">
+										<div class="form-group" *ngIf="newCenter.type === 'Preschool'">
 											<label for="category">Select category/philosphy:</label>
-											<select id="centerType" class="form-control">
-												<option>Academic Based</option>
-												<option>Montessori</option>
-												<option>Play Based</option>
-												<option>Reggio Emilia</option>
-												<option>Waldorf</option>
-												<option>Other</option>
+											<select id="centerType" class="form-control" [(ngModel)]="newCenter.category">
+												<option [ngValue]="Academic-Based">Academic Based</option>
+												<option [ngValue]="Montessori">Montessori</option>
+												<option [ngValue]="Play-Based">Play Based</option>
+												<option [ngValue]="Reggio-Emilia">Reggio Emilia</option>
+												<option [ngValue]="Waldorf">Waldorf</option>
+												<option [ngValue]="Other">Other</option>
 											</select>
 										</div>
 										
 
 										<div class="form-group">
-											<textarea id="summary" class="form-control" [(ngModel)]="newSchool.summary" name="summary" placeholder="Summary" required></textarea>
+											<textarea id="summary" class="form-control" [(ngModel)]="newCenter.summary" name="summary" placeholder="Summary" required></textarea>
 										</div>
 
 										<div class="form-group">
-											<input id="address" class="form-control" required [(ngModel)]="newSchool.address" name="address" placeholder="Teacher Student Ratio">	
+											<input id="ratio" class="form-control" required [(ngModel)]="newCenter.ratio" name="ratio" placeholder="Teacher Student Ratio">	
 										</div>
 
 										<div class="form-group">
-											<input id="address" class="form-control" required [(ngModel)]="newSchool.address" name="address" placeholder="Address">	
+											<input id="address" class="form-control" required [(ngModel)]="newCenter.address" name="address" placeholder="Address">	
 										</div>
 
 										<div class="form-group">
-											<input id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
+											<input id="phone" type="phone" [(ngModel)]="newCenter.phone" name="phone" class="form-control"
 											 placeholder="Phone Number">
 										</div>
 
 										<div class="form-group">
-											<input id="phone" type="phone" [(ngModel)]="newSchool.phone" name="phone" class="form-control"
+											<input id="website"  [(ngModel)]="newCenter.website" name="website" class="form-control"
 											 placeholder="Website">
 										</div>
 
