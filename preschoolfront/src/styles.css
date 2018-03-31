@@ -179,6 +179,12 @@ md-card a,a:hover{
   float: right;
 }
 
+.reviews-text {
+  padding-left: 7px;
+  font-size: 1.0em;
+  font-family: inherit;
+}
+
 .button-color {
   background: #45526E !important;
   color: #fff !important;
@@ -261,6 +267,7 @@ md-card a,a:hover{
 
 .star-icon {
   color: #45526E !important;
+  font-size: 1.6em !important;
 }
 
 form {

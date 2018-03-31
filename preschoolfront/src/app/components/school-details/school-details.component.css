@@ -69,6 +69,10 @@ img {
 	
 }
 
+.star-icon {
+  font-size: 1.6em !important;
+}
+
 
 @media (max-width: 600px){
 	.app-content {
