@@ -36,7 +36,9 @@ export class RatingComponent implements OnInit {
   	) { }
 
   	onSubmit(){
+
   		this.newRatingAndReview.givenSchoolId = this.schoolId;
+      this.newRatingAndReview.reviewer = this.user.firstName + " " + this.user.lastName;
   		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
   		res => {
   			this.ratingAdded=true;
