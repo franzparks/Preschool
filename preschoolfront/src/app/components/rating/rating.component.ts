@@ -5,8 +5,11 @@ import {Location} from '@angular/common';
 import { AddRatingService } from '../../services/add-rating.service';
 import { LoginService } from '../../services/login.service';
 import { ToasterService } from '../../services/toaster.service';
+import { UserService } from '../../services/user.service';
 
 import{RatingAndReview} from '../../models/rating-and-review';
+import { User } from '../../models/user';
+
 
 @Component({
   selector: 'app-rating',
@@ -18,6 +21,8 @@ export class RatingComponent implements OnInit {
 	  ratingAdded: boolean;
 	  newRatingAndReview: RatingAndReview = new RatingAndReview();
 	  schoolId: number;
+
+    user: User;
 
   	constructor(
   		private addRatingService:AddRatingService,
