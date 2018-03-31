@@ -41,6 +41,8 @@ private static final long serialVersionUID=425345L;
 	
 	private String message;
 	
+	private String reviewer;
+	
 	private Date date;
 	
 	private int givenSchoolId;
@@ -59,6 +61,9 @@ private static final long serialVersionUID=425345L;
 	}
 	public String getMessage() {
 		return message;
+	}
+	public String getReviewer() {
+		return reviewer;
 	}
 	public Date getDate() {
 		return date;
@@ -83,6 +88,9 @@ private static final long serialVersionUID=425345L;
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public void setReviewer(String reviewer) {
+		this.reviewer = reviewer;
 	}
 	public void setDate(Date date) {
 		this.date = date;

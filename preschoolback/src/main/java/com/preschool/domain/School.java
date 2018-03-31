@@ -39,7 +39,6 @@ public class School implements Serializable{
 	private Long id;
 	
 	@OneToMany(mappedBy = "school", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	//@JsonIgnore
 	private List<RatingAndReview> ratingAndReviewsList;
 	
 	private String title;
