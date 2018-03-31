@@ -19,6 +19,7 @@ import { User } from '../../models/user';
 export class RatingComponent implements OnInit {
 
 	  ratingAdded: boolean;
+    reviewAnonymously: boolean = true;
 	  newRatingAndReview: RatingAndReview = new RatingAndReview();
 	  schoolId: number;
 
@@ -38,7 +39,7 @@ export class RatingComponent implements OnInit {
   	onSubmit(){
 
   		this.newRatingAndReview.givenSchoolId = this.schoolId;
-      this.newRatingAndReview.reviewer = this.user.firstName + " " + this.user.lastName;
+      this.newRatingAndReview.reviewer = this.reviewAnonymously ? 'Anonymous' : this.user.firstName + " " + this.user.lastName;
   		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
   		res => {
   			this.ratingAdded=true;

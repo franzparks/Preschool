@@ -14,6 +14,13 @@
 								</div>
 
 								<form (ngSubmit)="onSubmit()">
+
+									<div class="form-group">
+				                        <label for="reviewer-checkbox"> Review anonymously </label>
+				                        <input type="checkbox" name="reviewer-checkbox" id="reviewer-checkbox" 
+				                        class="checkbox-inline" [(ngModel)]="reviewAnonymously" [value]="reviewAnonymously"/>
+									</div>
+
 									<div class="form-group">
 										<rating [(ngModel)]="newRatingAndReview.userRating" name="rating" [required]="true" 		validate
 						        			[titles]="['one', 'two', 'three', 'four', 'five']" class="form-input">
