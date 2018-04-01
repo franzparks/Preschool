@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.preschool.domain;
+package com.center.domain;
 
 import java.io.Serializable;
 import java.util.List;
@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 
 @Entity
-@NamedEntityGraph(name = "School.detail",
+@NamedEntityGraph(name = "Center.detail",
 attributeNodes = @NamedAttributeNode("ratingAndReviewsList"))
-public class School implements Serializable{
+public class Center implements Serializable{
 	
 	private static final long serialVersionUID=425345L;
 	
@@ -38,12 +38,12 @@ public class School implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@OneToMany(mappedBy = "school", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@OneToMany(mappedBy = "center", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private List<RatingAndReview> ratingAndReviewsList;
 	
-	private String title;
-	@Column(columnDefinition="text")
-	private String summary;
+	private String name;
+	private String type;
+	private String category;
 	private String teacherToStudentRatio;
 	private String ageRange;
 	private String priceRange;
@@ -51,10 +51,12 @@ public class School implements Serializable{
 	private String address;
 	private String phone;
 	private String website;
+	@Column(columnDefinition="text")
+	private String summary;
 	private int averageRating;
 	
 	@Transient
-	private MultipartFile schoolImage;
+	private MultipartFile centerImage;
 
 	public Long getId() {
 		return id;
@@ -66,8 +68,29 @@ public class School implements Serializable{
 	public String getTeacherToStudentRatio() {
 		return teacherToStudentRatio;
 	}
-	public String getTitle() {
-		return title;
+	
+	public String getName() {
+		return name;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getSummary() {
@@ -102,8 +125,8 @@ public class School implements Serializable{
 		return averageRating;
 	}
 
-	public MultipartFile getSchoolImage() {
-		return schoolImage;
+	public MultipartFile getCenterImage() {
+		return centerImage;
 	}
 
 	public void setId(Long id) {
@@ -115,9 +138,6 @@ public class School implements Serializable{
 	}
 	public void setTeacherToStudentRatio(String teacherToStudentRatio) {
 		this.teacherToStudentRatio = teacherToStudentRatio;
-	}
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	public void setSummary(String summary) {
@@ -152,19 +172,23 @@ public class School implements Serializable{
 		this.averageRating = averageRating;
 	}
 
-	public void setSchoolImage(MultipartFile schoolImage) {
-		this.schoolImage = schoolImage;
+	public void setCenterImage(MultipartFile centerImage) {
+		this.centerImage = centerImage;
 	}
 
 	@Override
     public String toString() {
-	    return "School Id : " + id + ", Rating And Reviews List : [ "
-	            + ratingAndReviewsList + "], Teacher To Student Ratio : "+teacherToStudentRatio+ ", Title " + title + ", Age Range : "
-	            + ageRange + ", Price Range : " + priceRange + ", Summary : " + summary
-	            + ", Address : " + address + ", Phone : " + phone + ", Website : "+ website
-	            + ", Average Rating : " + averageRating + ", School Image : "
-	            + schoolImage;
+	    return "Center [id=" + id + ", ratingAndReviewsList="
+	            + ratingAndReviewsList + ", name=" + name + ", type=" + type
+	            + ", category=" + category + ", teacherToStudentRatio="
+	            + teacherToStudentRatio + ", ageRange=" + ageRange
+	            + ", priceRange=" + priceRange + ", schedule=" + schedule
+	            + ", address=" + address + ", phone=" + phone + ", website="
+	            + website + ", summary=" + summary + ", averageRating="
+	            + averageRating + "]";
     }
+
+	
 	
 }
 

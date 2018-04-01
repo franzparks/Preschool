@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.preschool.domain;
+package com.center.domain;
 
 import java.util.Date;
 
@@ -31,9 +31,9 @@ private static final long serialVersionUID=425345L;
 	private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name="school_id")
+	@JoinColumn(name="center_id")
 	@JsonIgnore
-	private School school;
+	private Center center;
 	
 	@ManyToOne
 	@JsonIgnore
@@ -45,7 +45,7 @@ private static final long serialVersionUID=425345L;
 	
 	private Date date;
 	
-	private int givenSchoolId;
+	private int givenCenterId;
 	
 	private int userRating;
 	
@@ -53,8 +53,8 @@ private static final long serialVersionUID=425345L;
 	public Long getId() {
 		return id;
 	}
-	public School getSchool() {
-		return school;
+	public Center getCenter() {
+		return center;
 	}
 	public User getUser() {
 		return user;
@@ -69,8 +69,8 @@ private static final long serialVersionUID=425345L;
 		return date;
 	}
 	
-	public int getGivenSchoolId(){
-		return this.givenSchoolId;
+	public int getGivenCenterId(){
+		return this.givenCenterId;
 	}
 	
 	public int getUserRating(){
@@ -80,8 +80,8 @@ private static final long serialVersionUID=425345L;
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public void setSchool(School school) {
-		this.school = school;
+	public void setCenter(Center center) {
+		this.center = center;
 	}
 	public void setUser(User user) {
 		this.user = user;
@@ -96,8 +96,8 @@ private static final long serialVersionUID=425345L;
 		this.date = date;
 	}
 	
-	public void setGivenSchoolId(int givenSchoolId){
-		this.givenSchoolId = givenSchoolId;
+	public void setGivenCenterId(int givenCenterId){
+		this.givenCenterId = givenCenterId;
 	}
 	
 	public void setUserRating(int userRating){
