@@ -38,8 +38,10 @@ export class AddNewCenterComponent implements OnInit {
     			this.centerAdded=true;
     			this.newCenter = new Center();
           this.toastr.success('Center successfully added!');
+
     		},
     		error => {
+          this.toastr.error('Error occured, center could not registered!');
     			console.log(error);
     		}
     	);

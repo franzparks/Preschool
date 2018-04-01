@@ -121,7 +121,7 @@ export class CenterDetailsComponent implements OnInit {
         this.user = res.json();
         console.log(res);
         console.log("new wishlist : "+this.user.wishList);
-        this.toastr.success('You have added this center to your wish list!');
+        this.toastr.success('Center added to your wish list!');
         this.addedToWishList = true;
         this.buttonText = 'Remove From Wishlist';
       },
@@ -150,7 +150,7 @@ export class CenterDetailsComponent implements OnInit {
     this.userService.updateUserWishList(this.user).subscribe(
       res => {
         this.user = res.json();
-        this.toastr.success('You have removed this center from your wish list!');
+        this.toastr.success('Center removed from your wish list!');
         this.addedToWishList = false;
         this.buttonText = 'Add To Wishlist';
       },
