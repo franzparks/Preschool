@@ -67,7 +67,7 @@ public class EyasApplication implements CommandLineRunner{ //
 		center1.setType("Preschool");
 		center1.setCategory("Academic Based");
 		center1.setTeacherToStudentRatio("1 to 4");
-		center1.setName("The Great School - Preschool");
+		center1.setName("The Grand Master School - Preschool");
 		
 		center1.setSummary("Beginnings matter. At the Great School Preschool, we understand the importance of giving your "
 				+ "child the best possible foundation for an outstanding academic career. That starts with "
@@ -119,7 +119,7 @@ public class EyasApplication implements CommandLineRunner{ //
 		
 		center3.setTeacherToStudentRatio("1 to 4");
 		
-		center3.setName("South Bay Great Community Center");
+		center3.setName("South Bay Community Center");
 		
 		center3.setSummary("South Bay Great Community Center is a non-profit organization supported by tuition "
 				+ "only. We do not discriminate in regards to race, color, or creed. SBGCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
