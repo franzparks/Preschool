@@ -7,6 +7,7 @@ import {CenterService} from '../../services/center.service';
 import {UploadImageService} from '../../services/upload-image.service';
 
 import { LoginService } from '../../services/login.service';
+import { ToasterService } from '../../services/toaster.service';
 
 @Component({
   selector: 'app-add-new-center',
@@ -24,6 +25,7 @@ export class AddNewCenterComponent implements OnInit {
   		private centerService:CenterService,
   		public uploadImageService:UploadImageService,
       private loginService: LoginService,
+      private toastr : ToasterService,
       private router: Router
   	) { }
 
@@ -35,6 +37,7 @@ export class AddNewCenterComponent implements OnInit {
     			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
     			this.centerAdded=true;
     			this.newCenter = new Center();
+          this.toastr.success('Center successfully added!');
     		},
     		error => {
     			console.log(error);
