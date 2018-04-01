@@ -16,6 +16,8 @@ import { LoginService } from '../../services/login.service';
 export class AddNewCenterComponent implements OnInit {
 
 	  newCenter: Center = new Center();
+    selectedType: string = 'Preschool';
+    selectedCategory: string = 'Academic Based';
   	centerAdded: boolean;
 
   	constructor(

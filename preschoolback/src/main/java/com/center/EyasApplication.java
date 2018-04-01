@@ -91,7 +91,7 @@ public class EyasApplication implements CommandLineRunner{ //
 		
 		center2.setTeacherToStudentRatio("1 to 5");
 		center2.setName("The Great East Bay Center");
-		center1.setType("Play Center");
+		center2.setType("Play Center");
 		center2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
 				+ "and Texas, with more than 10,000 preschool to 8th grade students enrolled annually."
 				+"Our center emphasizes the bedrock of knowledge: reading, composition, math, "
@@ -122,7 +122,7 @@ public class EyasApplication implements CommandLineRunner{ //
 		center3.setName("South Bay Community Center");
 		
 		center3.setSummary("South Bay Great Community Center is a non-profit organization supported by tuition "
-				+ "only. We do not discriminate in regards to race, color, or creed. SBGCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
+				+ "only. We do not discriminate in regards to race, color, or creed. SBGCC is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
 		
 		center3.setAgeRange("1.5 to 4 years");
 		

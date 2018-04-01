@@ -21,29 +21,31 @@
 										<div class="form-group">
 											<label for="centerType">Select center type:</label>
 											<select id="centerType" class="form-control" 
-											[(ngModel)]="newCenter.type" name="centerType">
-												<option [ngValue]="Preschool">Preschool</option>
-												<option [ngValue]="Enrichment-Class">Enrichment Class</option>
-												<option [ngValue]="Kids-Activities">Kids' Activities</option>
-												<option [ngValue]="Play-Center">Play Center</option>
+												[(ngModel)]="selectedType" name="centerType">
+												<option >Preschool</option>
+												<option >Enrichment Class</option>
+												<option >Kids Activities</option>
+												<option >Play Center</option>
 											</select>
 										</div>
 
-										<div class="form-group" *ngIf="newCenter.type === 'Preschool'">
-											<label for="category">Select category/philosphy:</label>
-											<select id="category" class="form-control" 
-											[(ngModel)]="newCenter.category" name="category">
-												<option [ngValue]="Academic-Based">Academic Based</option>
-												<option [ngValue]="Montessori">Montessori</option>
-												<option [ngValue]="Play-Based">Play Based</option>
-												<option [ngValue]="Reggio-Emilia">Reggio Emilia</option>
-												<option [ngValue]="Waldorf">Waldorf</option>
-												<option [ngValue]="Other">Other</option>
+										<div class="form-group" *ngIf="selectedType === 'Preschool'">
+											<label for="schoolCategory">Select category/philosphy:</label>
+											<select id="schoolCategory" class="form-control" 
+											[(ngModel)]="selectedCategory" name="schoolCategory">
+												<option >Academic Based</option>
+												<option >Montessori</option>
+												<option >Play Based</option>
+												<option >Reggio Emilia</option>
+												<option >Waldorf</option>
+												<option >Other</option>
 											</select>
+
 										</div>
 
 										<div class="form-group">
-											<input id="ratio" class="form-control" required [(ngModel)]="newCenter.teacherToStudentRatio" name="ratio" placeholder="Teacher Student Ratio">	
+											<input id="ratio" class="form-control" required 
+											[(ngModel)]="newCenter.teacherToStudentRatio" name="ratio" placeholder="Teacher Student Ratio">	
 										</div>
 
 										<div class="form-group">
