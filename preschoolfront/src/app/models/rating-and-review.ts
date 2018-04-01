@@ -1,5 +1,5 @@
 export class RatingAndReview {
-	givenSchoolId: number;
+	givenCenterId: number;
 	message: string;
 	userRating:number;
 	reviewer:string;
