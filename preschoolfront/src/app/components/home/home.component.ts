@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
 	searchResults: Center[] = [];
 
-	searchTerms: string = 'title,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
+	searchTerms: string = 'name,category,type,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
 
 	loggedIn = false;
 
