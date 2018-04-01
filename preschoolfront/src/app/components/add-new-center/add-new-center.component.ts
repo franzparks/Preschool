@@ -28,16 +28,18 @@ export class AddNewCenterComponent implements OnInit {
   	) { }
 
   	onSubmit() {
-  	this.centerService.sendCenter(this.newCenter).subscribe(
-  		res => {
-  			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
-  			this.centerAdded=true;
-  			this.newCenter = new Center();
-  		},
-  		error => {
-  			console.log(error);
-  		}
-  	);
+      this.newCenter.type = this.selectedType;
+      this.newCenter.category = this.selectedCategory;
+    	this.centerService.sendCenter(this.newCenter).subscribe(
+    		res => {
+    			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
+    			this.centerAdded=true;
+    			this.newCenter = new Center();
+    		},
+    		error => {
+    			console.log(error);
+    		}
+    	);
   }
 
   	ngOnInit() {
