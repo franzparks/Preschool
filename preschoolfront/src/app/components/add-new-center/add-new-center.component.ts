@@ -34,10 +34,11 @@ export class AddNewCenterComponent implements OnInit {
       this.newCenter.category = this.selectedCategory;
     	this.centerService.sendCenter(this.newCenter).subscribe(
     		res => {
-    			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
+          let id = JSON.parse(JSON.parse(JSON.stringify(res))._body).id;
+    			this.uploadImageService.upload(id);
     			this.centerAdded=true;
           this.toastr.success('Center successfully added!');
-          this.router.navigate(['/center/', this.newCenter.id]);
+          this.router.navigate(['/center/', id]);
           this.newCenter = new Center();
     		},
     		error => {
