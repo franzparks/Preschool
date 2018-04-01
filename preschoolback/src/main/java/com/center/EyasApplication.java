@@ -64,12 +64,14 @@ public class EyasApplication implements CommandLineRunner{ //
 		userService.createUser(user2, userRoles);
 		
 		Center center1 =  new Center();
+		center1.setType("Preschool");
+		center1.setCategory("Academic Based");
 		center1.setTeacherToStudentRatio("1 to 4");
-		center1.setName("The Great Center - Precenter");
+		center1.setName("The Great School - Preschool");
 		
-		center1.setSummary("Beginnings matter. At Great, we understand the importance of giving your "
+		center1.setSummary("Beginnings matter. At the Great School Preschool, we understand the importance of giving your "
 				+ "child the best possible foundation for an outstanding academic career. That starts with "
-				+ "choosing the right center to excite, nurture and challenge children so they are "
+				+ "choosing the right school to excite, nurture and challenge children so they are "
 				+ "not only ready for the next step but excited to get there.");
 		
 		center1.setAgeRange("2.5 to 5 years");
@@ -83,13 +85,13 @@ public class EyasApplication implements CommandLineRunner{ //
 		center1.setPhone("(408) 553-5721");
 		
 		center1.setWebsite("http://www.eyaseyes.com");
-		
-		//center1.setUserRating(4);
+
 		
 		Center center2 =  new Center();
-		center2.setTeacherToStudentRatio("1 to 5");
-		center2.setName("The Other Great Center");
 		
+		center2.setTeacherToStudentRatio("1 to 5");
+		center2.setName("The Great East Bay Center");
+		center1.setType("Play Center");
 		center2.setSummary("We operate 25 campuses in California, Idaho, Nevada, Utah, "
 				+ "and Texas, with more than 10,000 preschool to 8th grade students enrolled annually."
 				+"Our center emphasizes the bedrock of knowledge: reading, composition, math, "
@@ -113,11 +115,13 @@ public class EyasApplication implements CommandLineRunner{ //
 		
 		Center center3 = new Center();
 		
+		center3.setType("Kids Activities Center");
+		
 		center3.setTeacherToStudentRatio("1 to 4");
 		
-		center3.setName("South Bay Great Community Precenter");
+		center3.setName("South Bay Great Community Center");
 		
-		center3.setSummary("South Bay Great Community Precenter is a non-profit organization supported by tuition "
+		center3.setSummary("South Bay Great Community Center is a non-profit organization supported by tuition "
 				+ "only. We do not discriminate in regards to race, color, or creed. SBGCP is licensed for 75 children ages 2 to 5 years old, by the State of California, Department of Health.");
 		
 		center3.setAgeRange("1.5 to 4 years");
