@@ -12,7 +12,7 @@
 										<!--<span class="required-fields-text">* is a required field</span>-->
 									</div>
 
-									<form (ngSubmit)="onSubmit()">
+									<form (ngSubmit)="onSubmit()" name="new-center-form">
 										<div class="form-group">
 											<input id="name"  class="form-control" [(ngModel)]="newCenter.name" 
 											name="name" placeholder="Center name" required>
@@ -20,7 +20,8 @@
 										
 										<div class="form-group">
 											<label for="centerType">Select center type:</label>
-											<select id="centerType" class="form-control" [(ngModel)]="newCenter.type">
+											<select id="centerType" class="form-control" 
+											[(ngModel)]="newCenter.type" name="centerType">
 												<option [ngValue]="Preschool">Preschool</option>
 												<option [ngValue]="Enrichment-Class">Enrichment Class</option>
 												<option [ngValue]="Kids-Activities">Kids' Activities</option>
@@ -30,7 +31,8 @@
 
 										<div class="form-group" *ngIf="newCenter.type === 'Preschool'">
 											<label for="category">Select category/philosphy:</label>
-											<select id="centerType" class="form-control" [(ngModel)]="newCenter.category">
+											<select id="category" class="form-control" 
+											[(ngModel)]="newCenter.category" name="category">
 												<option [ngValue]="Academic-Based">Academic Based</option>
 												<option [ngValue]="Montessori">Montessori</option>
 												<option [ngValue]="Play-Based">Play Based</option>
