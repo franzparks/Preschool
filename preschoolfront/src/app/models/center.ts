@@ -14,5 +14,5 @@ export class Center {
 	website: string;
 	summary: string;
 	averageRating: number;
-	schoolImage: string;
+	centerImage: string;
 }
