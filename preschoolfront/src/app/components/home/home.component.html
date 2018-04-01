@@ -9,7 +9,7 @@
 
                 <span class="dropdown-menu bd-search-results" id="search-results" 
                 *ngFor="let center of searchResults | searchFilter : searchTerms : searchText">
-                    <span class="dropdown-item" (click)="getCenterDetails(center.id)">{{center.title}}</span>
+                    <span class="dropdown-item" (click)="getCenterDetails(center.id)">{{center.name}}</span>
                 </span>
             </div>
         </form>
