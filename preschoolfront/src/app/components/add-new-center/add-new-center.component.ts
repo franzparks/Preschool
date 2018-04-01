@@ -36,9 +36,9 @@ export class AddNewCenterComponent implements OnInit {
     		res => {
     			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
     			this.centerAdded=true;
-    			this.newCenter = new Center();
           this.toastr.success('Center successfully added!');
-
+          this.router.navigate(['/center/', this.newCenter.id]);
+          this.newCenter = new Center();
     		},
     		error => {
           this.toastr.error('Error occured, center could not registered!');
