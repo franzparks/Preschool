@@ -2,11 +2,11 @@
  <div class="divider"></div>
 <div class="card-panel horizontal-listing">
     <div class="container-fluid">
-        <div class="container" *ngIf="schools.length === 0">
+        <div class="container" *ngIf="centers.length === 0">
             <p class="empty-list-text">Centers can not currently be retrieved. This issue will be resolved as soon as possible. We apologize for the inconvenience. </p>
         </div>
 
-        <div class="card container" *ngFor="let school of schools">
+        <div class="card container" *ngFor="let center of centers">
         
         <!--Card image-->
         <div class="flex-item">
@@ -22,18 +22,18 @@
         
         <div class="card-block flex-item">
            
-            <h4 class="card-title">{{school.title}}</h4>
+            <h4 class="card-title">{{center.title}}</h4>
             
-            <p class="card-text">{{school.summary}}</p>
+            <p class="card-text">{{center.summary}}</p>
 
             <div class="controls">
-                <button  class="claim-button button-color" (click)="getSchoolDetails(school.id)" >Read more</button>
-                <rating [(ngModel)]="school.averageRating" [readonly]="true"
+                <button  class="claim-button button-color" (click)="getCenterDetails(center.id)" >Read more</button>
+                <rating [(ngModel)]="center.averageRating" [readonly]="true"
                         [titles]="['one', 'two', 'three', 'four', 'five']">
                 </rating>
 
                 <span class="reviews-text">
-                    {{school.ratingAndReviewsList.length}} {{school.ratingAndReviewsList.length !== 1 ? 'reviews' : 'review' }}
+                    {{center.ratingAndReviewsList.length}} {{center.ratingAndReviewsList.length !== 1 ? 'reviews' : 'review' }}
                 </span>
             
             </div>

@@ -4,26 +4,26 @@ import {Params, ActivatedRoute, Router} from '@angular/router';
 
 //import { ToastsManager , ToastOptions} from 'ng2-toastr/ng2-toastr';
 
-import {SchoolService } from '../../services/school.service';
+import {CenterService } from '../../services/center.service';
 import {RatingAndReviewService } from '../../services/rating-and-review.service';
 import { LoginService } from '../../services/login.service';
 import { UserService } from '../../services/user.service';
 import { ToasterService } from '../../services/toaster.service';
 
 import  {RatingAndReview} from '../../models/rating-and-review';
-import  {School} from '../../models/school';
+import  {Center} from '../../models/center';
 import { User } from '../../models/user';
 
 
 @Component({
-  selector: 'app-school-details',
-  templateUrl: './school-details.component.html',
-  styleUrls: ['./school-details.component.css']
+  selector: 'app-center-details',
+  templateUrl: './center-details.component.html',
+  styleUrls: ['./center-details.component.css']
 })
-export class SchoolDetailsComponent implements OnInit {
+export class CenterDetailsComponent implements OnInit {
 
-	schoolId : number;
-	school: School = new School();
+	centerId : number;
+	center: Center = new Center();
   reviewsList: RatingAndReview[] = [];
   loggedIn:boolean;
   addedToWishList:boolean;
@@ -36,7 +36,7 @@ export class SchoolDetailsComponent implements OnInit {
 		private router:Router,
 		private http:Http,
 		private route:ActivatedRoute,
-    private schoolService: SchoolService,
+    private centerService: CenterService,
     private userService: UserService,
     private ratingAndReviewService: RatingAndReviewService,
     private loginService: LoginService,
@@ -48,19 +48,19 @@ export class SchoolDetailsComponent implements OnInit {
 	ngOnInit() {
     console.log(":::on init called!:::::");
 		this.route.params.forEach((params: Params) => {
-			this.schoolId = Number.parseInt(params['id']);
+			this.centerId = Number.parseInt(params['id']);
 		});
 
-		this.schoolService.getSchool(this.schoolId).subscribe(
+		this.centerService.getCenter(this.centerId).subscribe(
   		res => {
-  			this.school = res.json(); 
+  			this.center = res.json(); 
   		},
   		error => {
   			console.log(error);
   		}
     );
 
-    this.ratingAndReviewService.getReviewsList(this.schoolId).subscribe(
+    this.ratingAndReviewService.getReviewsList(this.centerId).subscribe(
       res => {
         this.reviewsList=res.json(); 
         console.log(this.reviewsList);
@@ -109,11 +109,11 @@ export class SchoolDetailsComponent implements OnInit {
   }
 
   addToWishList(){
-    let currentSchoolId = '' + this.schoolId;
+    let currentCenterId = '' + this.centerId;
     if(this.user.wishList &&  this.user.wishList.length >= 1){
-      this.user.wishList += ',' + currentSchoolId;
+      this.user.wishList += ',' + currentCenterId;
     }else{
-      this.user.wishList = currentSchoolId;
+      this.user.wishList = currentCenterId;
     }
     
     this.userService.updateUserWishList(this.user).subscribe(
@@ -121,12 +121,12 @@ export class SchoolDetailsComponent implements OnInit {
         this.user = res.json();
         console.log(res);
         console.log("new wishlist : "+this.user.wishList);
-        this.toastr.success('You have added this school to your wish list!');
+        this.toastr.success('You have added this center to your wish list!');
         this.addedToWishList = true;
         this.buttonText = 'Remove From Wishlist';
       },
       err => {
-        this.toastr.error('Error occured, school could not be added to your wish list');
+        this.toastr.error('Error occured, center could not be added to your wish list');
         console.log(err);
       });
   }
@@ -134,12 +134,12 @@ export class SchoolDetailsComponent implements OnInit {
   removeFromWishList(){
     if(this.user.wishList && this.user.wishList.length > 1){
       let wishlist = this.user.wishList;
-      let index = wishlist.indexOf(''+this.schoolId);
+      let index = wishlist.indexOf(''+this.centerId);
 
       if(index === 0){ //if id is at the beginning
-        wishlist = wishlist.replace(this.schoolId + ',', '');
+        wishlist = wishlist.replace(this.centerId + ',', '');
       }else{
-        wishlist = wishlist.replace(','+this.schoolId, '');
+        wishlist = wishlist.replace(','+this.centerId, '');
       }
       
       this.user.wishList = wishlist;
@@ -150,7 +150,7 @@ export class SchoolDetailsComponent implements OnInit {
     this.userService.updateUserWishList(this.user).subscribe(
       res => {
         this.user = res.json();
-        this.toastr.success('You have removed this school from your wish list!');
+        this.toastr.success('You have removed this center from your wish list!');
         this.addedToWishList = false;
         this.buttonText = 'Add To Wishlist';
       },
@@ -175,7 +175,7 @@ export class SchoolDetailsComponent implements OnInit {
   }
 
   checkUserWishlist(){
-    let id = ''+this.schoolId;
+    let id = ''+this.centerId;
     let index; 
 
     if(this.user.wishList){

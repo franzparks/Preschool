@@ -6,32 +6,33 @@
 
       	<div class="details-header">
       		<div class="details-header-title">
-      			{{school.title}}
+      			{{center.name}}
       		</div>
       		<div>
       			<button class="button-color" (click)="updateWishList()">{{buttonText}}</button>
       		</div>
       	</div>
 
-	  	<img class="component-image" src="https://mdbootstrap.com/images/proffesions/slides/socialmedia/img%20(2).jpg"><!--{{school.schoolImage}}-->
+	  	<img class="component-image" src="https://mdbootstrap.com/images/proffesions/slides/socialmedia/img%20(2).jpg"><!--{{center.centerImage}}-->
 		 <div>
 		
 		    <p>
-		    	{{school.summary}}
+		    	{{center.summary}}
 		    </p>
-		    <p><strong>Type : </strong>Preschool</p>
-		    <p><strong>Teacher Student Ratio : </strong>{{school.teacherToStudentRatio}}</p>
-		    <p><strong>Age Range : </strong>{{school.ageRange}}</p>
-		    <p><strong>Price Range : </strong>{{school.priceRange}}</p>
-		    <p><strong>Daily Schedule : </strong>{{school.schedule}}</p>
-		    <p><strong>Address : </strong>{{school.address}}</p>
-		    <p><strong>Phone : </strong>{{school.phone}}</p>
-		    <p><strong>Our Website : </strong><a href="{{school.website}}">{{school.website}}</a></p>
+		    <p><strong>Type : </strong>{{center.type}}</p>
+		    <p *ngIf="center.type === 'Precenter'"><strong>Category/Philosophy : </strong>{{center.category}}</p>
+		    <p><strong>Teacher Student Ratio : </strong>{{center.teacherToStudentRatio}}</p>
+		    <p><strong>Age Range : </strong>{{center.ageRange}}</p>
+		    <p><strong>Price Range : </strong>{{center.priceRange}}</p>
+		    <p><strong>Daily Schedule : </strong>{{center.schedule}}</p>
+		    <p><strong>Address : </strong>{{center.address}}</p>
+		    <p><strong>Phone : </strong>{{center.phone}}</p>
+		    <p><strong>Website : </strong><a href="{{center.website}}">{{center.website}}</a></p>
   		</div>
   		
   		<div class="actions-wrapper">
     		
-			<rating [(ngModel)]="school.averageRating" [readonly]="true"
+			<rating [(ngModel)]="center.averageRating" [readonly]="true"
         		[titles]="['one', 'two', 'three', 'four', 'five']">
 			</rating>
 			<span class="reviews-text"> {{reviewsList.length}} {{reviewsList.length !== 1 ? 'reviews' : 'review' }}</span>

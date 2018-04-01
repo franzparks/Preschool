@@ -3,20 +3,20 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import  {School} from '../models/school';
+import  {Center} from '../models/center';
 import {AppConst} from '../constants/app-consts';
 
 @Injectable()
-export class SchoolService {
+export class CenterService {
 
   private serverPath = AppConst.serverPath;
 
 
 	constructor(private http: Http) { }
 
-	getSchoolList() {
-  	return this.http.get(encodeURI(this.serverPath+'/school/schoolList'), { withCredentials: true });
-    /*let url = this.serverPath+ '/school/schoolList';
+	getCenterList() {
+  	return this.http.get(encodeURI(this.serverPath+'/center/centerList'), { withCredentials: true });
+    /*let url = this.serverPath+ '/center/centerList';
 
     let tokenHeader = new Headers({
       'Content-Type' : 'application/json',
@@ -28,7 +28,7 @@ export class SchoolService {
 
   getWishList(wishList: string){
     
-    let url = this.serverPath+ '/school/wishList/'+wishList;
+    let url = this.serverPath+ '/center/wishList/'+wishList;
 
     let tokenHeader = new Headers({
       'Content-Type' : 'application/json',
@@ -37,9 +37,9 @@ export class SchoolService {
     return this.http.get(encodeURI(url), {headers: tokenHeader});
   }
 
-	getSchool(id: number) {
+	getCenter(id: number) {
 
-  	let url = this.serverPath+'/school/'+id;
+  	let url = this.serverPath+'/center/'+id;
   
   	let tokenHeader = new Headers({
   		'Content-Type' : 'application/json',
@@ -48,16 +48,16 @@ export class SchoolService {
   	return this.http.get(encodeURI(url), {headers: tokenHeader});
   }
 
-  sendSchool(school:School) {
+  sendCenter(center:Center) {
 
-    let url = this.serverPath+ '/school/add';
+    let url = this.serverPath+ '/center/add';
     
     let headers = new Headers ({
       'Content-Type': 'application/json',
       'x-auth-token' : localStorage.getItem('xAuthToken')
     });
 
-    return this.http.post(encodeURI(url), JSON.stringify(school), {headers: headers});
+    return this.http.post(encodeURI(url), JSON.stringify(center), {headers: headers});
   }
 
 }

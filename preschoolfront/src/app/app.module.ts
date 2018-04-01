@@ -18,14 +18,14 @@ import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
-import { SchoolDetailsComponent } from './components/school-details/school-details.component';
+import { CenterDetailsComponent } from './components/center-details/center-details.component';
 import { RatingComponent } from './components/rating/rating.component';
-import { AddNewSchoolComponent } from './components/add-new-school/add-new-school.component';
+import { AddNewCenterComponent } from './components/add-new-center/add-new-center.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SchoolListComponent } from './components/school-list/school-list.component';
+import { CenterListComponent } from './components/center-list/center-list.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 
-import { SchoolService } from './services/school.service';
+import { CenterService } from './services/center.service';
 import { UserService } from './services/user.service';
 import { LoginService } from './services/login.service';
 import { AddRatingService } from './services/add-rating.service';
@@ -46,11 +46,11 @@ import { SearchPipe} from './pipes/filter.pipe';
     NavBarComponent,
     MyProfileComponent,
     MyAccountComponent,
-    SchoolDetailsComponent,
+    CenterDetailsComponent,
     RatingComponent,
-    AddNewSchoolComponent,
+    AddNewCenterComponent,
     FooterComponent,
-    SchoolListComponent,
+    CenterListComponent,
     WishListComponent,
     SearchPipe
     
@@ -69,7 +69,7 @@ import { SearchPipe} from './pipes/filter.pipe';
     //InMemoryWebApiModule.forRoot(InMemoryDataService)
     
   ],
-  providers: [SchoolService,UserService,LoginService,
+  providers: [CenterService,UserService,LoginService,
   AddRatingService,RatingAndReviewService,UploadImageService,ToasterService],
   bootstrap: [AppComponent]
 })

@@ -4,12 +4,12 @@
     <div class="form-inline">
         <form >
             <div class="search-container">
-                <input list="search" id="search-input" name="search"  class="form-control school-search"
+                <input list="search" id="search-input" name="search"  class="form-control center-search"
                 type="text" placeholder="Search..." [(ngModel)]="searchText" (ngModelChange)="searchUpdated($event)">
 
                 <span class="dropdown-menu bd-search-results" id="search-results" 
-                *ngFor="let school of searchResults | searchFilter : searchTerms : searchText">
-                    <span class="dropdown-item" (click)="getSchoolDetails(school.id)">{{school.title}}</span>
+                *ngFor="let center of searchResults | searchFilter : searchTerms : searchText">
+                    <span class="dropdown-item" (click)="getCenterDetails(center.id)">{{center.title}}</span>
                 </span>
             </div>
         </form>
@@ -30,12 +30,12 @@
 
             <!--Main information-->
             <div class="col-md-5">
-                <h2 class="title-text">Do you work for a school or play center?</h2>
+                <h2 class="title-text">Do you work for a school, kids activity class,enrichment class or play center?</h2>
                 <hr>
                 <p class="">You have come to the right place to (re)introduce your center to the world!
                 </p>
 
-                <a routerlink="/add-new-school" href="/add-new-school" class="claim-button primary-color">Claim your center!</a>
+                <a routerlink="/add-new-center" href="/add-new-center" class="claim-button primary-color">Claim your center!</a>
             </div>
         </div>
         
@@ -44,12 +44,12 @@
         </div>
 
         
-        <div class="row top-rated-schools">
-            <div class="col-sm-12" *ngIf="topSchools.length === 0">
+        <div class="row top-rated-centers">
+            <div class="col-sm-12" *ngIf="topCenters.length === 0">
                 <p class="empty-list-text">Centers can not currently be retrieved. This issue will be resolved as soon as possible. We apologize for the inconvenience. </p>
             </div>
 
-            <div class="col-md-4" *ngFor="let school of topSchools">
+            <div class="col-md-4" *ngFor="let center of topCenters">
                 <!--Card-->
                 <div class="card">      
                     <!--Card image-->
@@ -63,7 +63,7 @@
                     <!--/.Card image-->
                     <!--Rating-->
                     
-                    <rating [(ngModel)]="school.averageRating"  [readonly]="true"
+                    <rating [(ngModel)]="center.averageRating"  [readonly]="true"
                             [titles]="['one', 'two', 'three', 'four', 'five']" >
                     </rating>  
                     
@@ -82,11 +82,11 @@
                     <!--Card content-->
                     <div class="card-block">
                         <!--Title-->
-                        <h4 class="card-title top-schools-titles">{{school.title}}</h4>
+                        <h4 class="card-title top-centers-titles">{{center.title}}</h4>
 
                         <!--Text-->
-                        <p class="card-text top-schools-summary">{{school.summary}}</p>
-                        <a  class="claim-button primary-color" data-wow-delay="0.2s" (click)="getSchoolDetails(school.id)" >
+                        <p class="card-text top-centers-summary">{{center.summary}}</p>
+                        <a  class="claim-button primary-color" data-wow-delay="0.2s" (click)="getCenterDetails(center.id)" >
                         Read more</a>
                     </div> 
                      

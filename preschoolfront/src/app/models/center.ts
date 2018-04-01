@@ -1,5 +1,5 @@
 import {RatingAndReview} from './rating-and-review';
-export class School {
+export class Center {
 	id: number;
 	ratingAndReviewsList: RatingAndReview;
 	name:string;

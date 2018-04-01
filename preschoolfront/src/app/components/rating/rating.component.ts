@@ -21,7 +21,7 @@ export class RatingComponent implements OnInit {
 	  ratingAdded: boolean;
     reviewAnonymously: boolean = true;
 	  newRatingAndReview: RatingAndReview = new RatingAndReview();
-	  schoolId: number;
+	  centerId: number;
 
     user: User;
 
@@ -38,13 +38,13 @@ export class RatingComponent implements OnInit {
 
   	onSubmit(){
 
-  		this.newRatingAndReview.givenSchoolId = this.schoolId;
+  		this.newRatingAndReview.givenCenterId = this.centerId;
       this.newRatingAndReview.reviewer = this.reviewAnonymously ? 'Anonymous' : this.user.firstName + " " + this.user.lastName;
   		this.addRatingService.sendReview(this.newRatingAndReview).subscribe(
   		res => {
   			this.ratingAdded=true;
   			this.newRatingAndReview = new RatingAndReview();
-  			this.router.navigate(['/school/', this.schoolId]);
+  			this.router.navigate(['/center/', this.centerId]);
   		},
   		error => {
   			console.log(error);
@@ -58,7 +58,7 @@ export class RatingComponent implements OnInit {
   	ngOnInit() {
   		this.ratingAdded=false;
   		this.route.params.forEach((params: Params) => {
-  			this.schoolId = Number.parseInt(params['id']);
+  			this.centerId = Number.parseInt(params['id']);
 
         //check if user is logged in
       this.loginService.checkSession().subscribe(

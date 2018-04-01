@@ -1,36 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
-import { School } from '../../models/school';
+import { Center } from '../../models/center';
 
-import {SchoolService} from '../../services/school.service';
+import {CenterService} from '../../services/center.service';
 import {UploadImageService} from '../../services/upload-image.service';
 
 import { LoginService } from '../../services/login.service';
 
 @Component({
-  selector: 'app-add-new-school',
-  templateUrl: './add-new-school.component.html',
-  styleUrls: ['./add-new-school.component.css']
+  selector: 'app-add-new-center',
+  templateUrl: './add-new-center.component.html',
+  styleUrls: ['./add-new-center.component.css']
 })
-export class AddNewSchoolComponent implements OnInit {
+export class AddNewCenterComponent implements OnInit {
 
-	  newSchool: School = new School();
-  	schoolAdded: boolean;
+	  newCenter: Center = new Center();
+  	centerAdded: boolean;
 
   	constructor(
-  		private schoolService:SchoolService,
+  		private centerService:CenterService,
   		public uploadImageService:UploadImageService,
       private loginService: LoginService,
       private router: Router
   	) { }
 
   	onSubmit() {
-  	this.schoolService.sendSchool(this.newSchool).subscribe(
+  	this.centerService.sendCenter(this.newCenter).subscribe(
   		res => {
   			this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
-  			this.schoolAdded=true;
-  			this.newSchool = new School();
+  			this.centerAdded=true;
+  			this.newCenter = new Center();
   		},
   		error => {
   			console.log(error);
@@ -39,7 +39,7 @@ export class AddNewSchoolComponent implements OnInit {
   }
 
   	ngOnInit() {
-  		this.schoolAdded=false;
+  		this.centerAdded=false;
 
       //check if user is logged in
       this.loginService.checkSession().subscribe(
