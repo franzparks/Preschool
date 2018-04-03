@@ -10,7 +10,6 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 })
 
 export class AppComponent {
-  title = 'Preschool';
 
   constructor(public toastr: ToastsManager, private vRef: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vRef);

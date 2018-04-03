@@ -26,6 +26,9 @@ nav button {
   box-shadow: none;
   min-width: 5px;
 }
+textarea {
+  min-height: 100px;
+}
 
 button {
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
@@ -179,6 +182,12 @@ md-card a,a:hover{
   float: right;
 }
 
+.reviews-text {
+  padding-left: 7px;
+  font-size: 1.0em;
+  font-family: inherit;
+}
+
 .button-color {
   background: #45526E !important;
   color: #fff !important;
@@ -259,6 +268,10 @@ md-card a,a:hover{
     background-size: 100% 100%;
 }
 
+.star-icon {
+  color: #45526E !important;
+  font-size: 1.6em !important;
+}
 
 form {
   padding: 5px;
@@ -337,22 +350,28 @@ label {
       float: left;
   }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .navbar .container {
     width: 100%;
   }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .navbar .container {
     width: 100%;
   }
 }
 
-@media (max-width: 575px){
+@media screen and (max-width: 575px){
   .navbar-toggleable>.container {
     padding-right: 0; 
     padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .form-header button{
+    flex: 1;
   }
 }
 

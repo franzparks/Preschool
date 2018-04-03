@@ -1,4 +1,4 @@
-.school-search {
+.center-search {
   background: #fff !important;
   border-radius: 16px !important;
   text-align: center;
@@ -116,20 +116,20 @@ a.primary-color {
 	margin: 0 0 0 .45em;
 }
 
-.top-rated-schools {
+.top-rated-centers {
 	display: flex;
 	margin-bottom: 20px;
 }
 
-.top-rated-schools .col-md-4 {
+.top-rated-centers .col-md-4 {
 	flex: 1;
 }
 
-.top-schools-summary {
+.top-centers-summary {
   overflow: hidden;
   height: 150px;
 }
-.top-schools-titles {
+.top-centers-titles {
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -169,6 +169,15 @@ a.social-share {
 .empty-list-text {
     margin: 0;
     padding: 0;
+}
+
+.card-block {
+  padding-top: 0.5rem;
+}
+
+rating {
+  padding-left: 18px;
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 600px){

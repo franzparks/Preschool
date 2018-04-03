@@ -5,8 +5,8 @@ import {Params, ActivatedRoute, Router} from '@angular/router';
 
 import { ToasterService } from '../../services/toaster.service';
 
-import { School } from '../../models/school';
-import {SchoolService } from '../../services/school.service';
+import { Center } from '../../models/center';
+import {CenterService } from '../../services/center.service';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -20,20 +20,20 @@ export class HomeComponent implements OnInit {
 
 	starsCount : number = 3;
 
-	topSchools: School[] = [];
+	topCenters: Center[] = [];
 
-	schools: School[] = [];
+	centers: Center[] = [];
 
-	searchResults: School[] = [];
+	searchResults: Center[] = [];
 
-	searchTerms: string = 'title,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
+	searchTerms: string = 'name,category,type,address, summary, ageRange, priceRange, schedule, website, phone, averageRating';
 
 	loggedIn = false;
 
 	searchText:string;
 
 	constructor(
-		private schoolService : SchoolService,
+		private centerService : CenterService,
 		private router:Router,
 		private http:Http,
 		private route:ActivatedRoute,
@@ -43,21 +43,21 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit() {
 
-		this.schoolService.getSchoolList().subscribe(
+		this.centerService.getCenterList().subscribe(
 			res => {
-				console.log(res);
-				//this.topSchools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+				//console.log(res);
+				//this.topCenters = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		this.centers = JSON.parse(JSON.parse(JSON.stringify(res))._body);
 
-        		if(this.schools.length > 0){
+        		if(this.centers.length > 0){
 					//sort by rating
 					// then get top 3
 
-					this.schools.sort(function (school1, school2) {
-					  return school1.averageRating - school2.averageRating;
+					this.centers.sort(function (center1, center2) {
+					  return center2.averageRating - center1.averageRating;
 					});
-					console.log("schools : " + this.schools);
-					this.topSchools = Object.assign([], this.schools.slice(0,3));
+					console.log("centers : " + this.centers);
+					this.topCenters = Object.assign([], this.centers.slice(0,3));
         		}
       		},
       		error => console.log(error)
@@ -80,25 +80,25 @@ export class HomeComponent implements OnInit {
 
 	//listen for changes to the search term
 	searchUpdated(searchTerm) {
-    	console.log(searchTerm);
+    	//console.log(searchTerm);
     	if(searchTerm.length > 0 &&  this.searchResults.length === 0){
-    		this.searchResults = Object.assign([], this.schools); 
+    		this.searchResults = Object.assign([], this.centers); 
     	}else if(searchTerm.length === 0 &&  this.searchResults.length > 0){
     		this.searchResults = [];
     	}else{
     		return;
     	}
 
-    	console.log(this.searchResults);
+    	//console.log(this.searchResults);
 	}
 
-	getSchoolDetails(id: String){
-		this.router.navigate(['/school/', id]);
+	getCenterDetails(id: String){
+		this.router.navigate(['/center/', id]);
 	}
 
 	addToWishList(){
 		if(this.loggedIn){
-	      this.toastr.success('You have added this school to your wish list!');
+	      this.toastr.success('You have added this center to your wish list!');
 	    }else{
 	      this.router.navigate(['/my-account']);
 		}

@@ -11,18 +11,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.preschool.config.repository.SchoolRepository;
+import com.center.EyasApplication;
+import com.center.config.repository.CenterRepository;
 
 /**
  * @author francisphiri
  *
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = PreschoolApplication.class)
+@SpringBootTest(classes = EyasApplication.class)
 public class JPAIntegrationTest {
 	
 	@Autowired
-	private SchoolRepository schoolRepository;
+	private CenterRepository schoolRepository;
 	
 	@Test
     public void givenSchoolRepository_whenSaveAndRetreiveSchool_thenOK() {

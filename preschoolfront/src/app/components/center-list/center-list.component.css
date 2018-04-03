@@ -1,0 +1,120 @@
+.divider {
+	margin-top: 65px;
+}
+
+.horizontal-listing .row:first-of-type {
+    border-top: none;
+}
+
+.horizontal-listing .row {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.horizontal-listing a {
+    color: #000;
+    font-weight: 300;
+}
+.horizontal-listing img {
+    margin: 16px 10px 15px 5px;
+}
+
+.horizontal-listing .title {
+    padding-bottom: 10px;
+    color: #000;
+}
+
+.horizontal-listing .item-details a {
+    color: #9e9e9e;
+}
+.horizontal-listing ul li {
+    display: inline;
+}
+
+.card.container{
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.flex-item {
+  width: 40%;
+  height: auto;
+}
+
+
+
+.tab-header-color {
+  background: #b1b9c7 !important;
+  /*color: #fff !important;*/
+}
+.panel-body {
+  margin-top:20px;
+}
+
+.mat-card-content p{
+  padding-left: 16px;
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+  padding-left: 16px;
+  
+}
+
+
+.school-title {
+  float: left;
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 19px !important;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+
+#toast-top-right > div{
+  height : 66px;
+}
+
+.top-schools-summary {
+  overflow: hidden;
+  height: 150px;
+}
+.top-schools-titles {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 765px) {
+  .card.container{
+    flex-direction: column;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .flex-item {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .controls button {
+    order: 2;
+    margin-top: 10px;
+  }
+}

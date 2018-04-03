@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { LoginService } from '../../services/login.service';
-import {SchoolService} from '../../services/school.service';
-import {School} from '../../models/school';
+import {CenterService} from '../../services/center.service';
+import {Center} from '../../models/center';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,14 +14,14 @@ export class NavBarComponent implements OnInit {
     public  sCollapsed = false;
 	  loggedIn:boolean;
   	keyword: string;
-  	schoolList:School[] =[];
+  	centerList:Center[] =[];
 
     public isIn = true;
 
   	constructor(
   		private loginService: LoginService,
     	private router: Router,
-    	private schoolService: SchoolService
+    	private centerService: CenterService
   	) { }
 
   	ngOnInit() {

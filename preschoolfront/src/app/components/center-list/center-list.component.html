@@ -1,0 +1,48 @@
+ <!--1 Coulm horizontal listing-->
+ <div class="divider"></div>
+<div class="card-panel horizontal-listing">
+    <div class="container-fluid">
+        <div class="container" *ngIf="centers.length === 0">
+            <p class="empty-list-text">Centers can not currently be retrieved. This issue will be resolved as soon as possible. We apologize for the inconvenience. </p>
+        </div>
+
+        <div class="card container" *ngFor="let center of centers">
+        
+        <!--Card image-->
+        <div class="flex-item">
+            <img src="https://mdbootstrap.com/images/regular/city/img%20({{imageNumber}}).jpg" 
+            class="img-fluid" alt="">
+            <!--{{Math.floor((Math.random() * 20) + 1)}}-->
+            <!--<img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">-->
+            <a href="#">
+                <div class="mask waves-effect waves-light"></div>
+            </a>
+            
+        </div>
+        
+        <div class="card-block flex-item">
+           
+            <h4 class="card-title">{{center.name}}</h4>
+            
+            <p class="card-text">{{center.summary}}</p>
+
+            <div class="controls">
+                <button  class="claim-button button-color" (click)="getCenterDetails(center.id)" >Read more</button>
+                <rating [(ngModel)]="center.averageRating" [readonly]="true"
+                        [titles]="['one', 'two', 'three', 'four', 'five']">
+                </rating>
+
+                <span class="reviews-text">
+                    {{center.ratingAndReviewsList.length}} {{center.ratingAndReviewsList.length !== 1 ? 'reviews' : 'review' }}
+                </span>
+            
+            </div>
+            
+        </div>
+        
+
+        </div>
+       
+
+    </div>
+</div>

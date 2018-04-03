@@ -3,11 +3,15 @@ import { Http } from '@angular/http';
 
 import {Params, ActivatedRoute, Router} from '@angular/router';
 
-import { School } from '../../models/school';
-import {SchoolService } from '../../services/school.service';
+import { Center } from '../../models/center';
+
+import { User } from '../../models/user';
+
+import {CenterService } from '../../services/center.service';
 import { UserService } from '../../services/user.service';
 import { LoginService } from '../../services/login.service';
-import { User } from '../../models/user';
+
+
 
 @Component({
   selector: 'app-wish-list',
@@ -20,14 +24,16 @@ export class WishListComponent implements OnInit {
 
 	imageNumber : number = Math.floor((Math.random() * 20) + 1);
 
-	schools: School[] = [];
+	centers: Center[] = [];
+	//reviewsList: RatingAndReview[] = [];
 	user: User
 	wishList: string
 	updateSuccess: boolean;
 
   	constructor(
-	  	private schoolService : SchoolService,
+	  	private centerService : CenterService,
 	  	private userService: UserService,
+	  	//private ratingAndReviewService: RatingAndReviewService,
 		private router:Router,
 		private http:Http,
 		private route:ActivatedRoute
@@ -41,9 +47,9 @@ export class WishListComponent implements OnInit {
 	  		res => {
 	  			this.user = res.json();
 
-	  			this.schoolService.getWishList(this.user.wishList).subscribe(
+	  			this.centerService.getWishList(this.user.wishList).subscribe(
 				res => {
-					this.schools = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+					this.centers = JSON.parse(JSON.parse(JSON.stringify(res))._body);
 	      		},
 	      		error => console.log(error)
 		)
@@ -52,6 +58,9 @@ export class WishListComponent implements OnInit {
   		err => {
   			console.log(err);
   		})
+
+ 
+
 	    
   	}
 
@@ -68,8 +77,8 @@ export class WishListComponent implements OnInit {
   	}*/
 
 
-  	getSchoolDetails(id: String){
-		this.router.navigate(['/school/', id]);
+  	getCenterDetails(id: String){
+		this.router.navigate(['/center/', id]);
 	}
 
 }

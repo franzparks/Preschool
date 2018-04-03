@@ -1,6 +1,7 @@
 export class RatingAndReview {
-	givenSchoolId: number;
+	givenCenterId: number;
 	message: string;
-	rating:number;
+	userRating:number;
+	reviewer:string;
 	date: string;
 }

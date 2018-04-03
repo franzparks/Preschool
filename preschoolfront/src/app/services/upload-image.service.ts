@@ -13,18 +13,18 @@ export class UploadImageService {
 		this.filesToUpload = [];
 	}
 
-	upload(schoolId: number) {
-		this.makeFileRequest(encodeURI(this.serverPath+"/school/add/image?id="+schoolId), [], this.filesToUpload).then((result) => {
+	upload(centerId: number) {
+		this.makeFileRequest(encodeURI(this.serverPath+"/center/add/image?id="+centerId), [], this.filesToUpload).then((result) => {
 			console.log(result);
 		}, (error) => {
 			console.log(error);
 		});
 	}
 
-  	modify(schoolId: number) {
+  	modify(centerId: number) {
     	console.log(this.filesToUpload);
     	if (this.filesToUpload.length > 0 ) {
-      		this.makeFileRequest(encodeURI(this.serverPath+"/school/update/image?id="+schoolId), [], this.filesToUpload).then((result) => {
+      		this.makeFileRequest(encodeURI(this.serverPath+"/center/update/image?id="+centerId), [], this.filesToUpload).then((result) => {
       			console.log(result);
     		}, (error) => {
       			console.log(error);
