@@ -67,13 +67,13 @@ button {
   color: #2e3d49;
   margin-bottom: 0;
 }
-
+/*https://mdbootstrap.com/images/regular/city/img%20(1).jpg*/
 .main-banner {
-    background: url("https://mdbootstrap.com/images/regular/city/img%20(1).jpg")no-repeat center center fixed;
-    -webkit-background-size: cover;
+    background: url("/assets/image/main.JPG")no-repeat center center fixed;
+    /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 
     display: flex;
     flex-basis: 100%;
