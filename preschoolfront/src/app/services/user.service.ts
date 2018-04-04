@@ -60,7 +60,7 @@ export class UserService {
   	}
 
   	retrievePassword(email:string) {
-	  	let url = this.serverPath+'/user/forgetPassword';
+	  	let url = this.serverPath+'/user/forgotPassword';
 	  	let userInfo = {
 	  		"email" : email
 	  	}
