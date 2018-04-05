@@ -68,6 +68,7 @@ export class MyAccountComponent implements OnInit {
 	  		res => {
 	  			//console.log(res);
 	  			this.emailSent = true;
+          this.onSelectTab("login");
 	  		}, 
 	  		error => {
 	  			console.log(error.text());
@@ -85,6 +86,7 @@ export class MyAccountComponent implements OnInit {
   		res => {
   			//console.log(res);
   			this.forgotPasswordEmailSent = true;
+        this.onSelectTab("login");
   		},
   		error => {
   			//console.log("error message for email : "+error.text());

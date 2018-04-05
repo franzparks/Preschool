@@ -21,6 +21,12 @@
 						<div  *ngIf="loginError" class="input-error">
 							Incorrect username or password.
 						</div>
+						<div class="alert alert-success" *ngIf="forgotPasswordEmailSent">
+							Temporary password has been sent to your email. You may use that to log in
+						</div> 
+						<div class="alert alert-info" *ngIf="emailSent">
+							An email has been sent to the email address you just registered. Please validate your email address and update your password info.
+						</div>
 
 						<form (ngSubmit)="onLogin()">
 							<div class="form-group">
