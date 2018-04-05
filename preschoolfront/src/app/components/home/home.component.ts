@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 			res => {
 				//console.log(res);
 				//this.topCenters = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		this.centers = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		//this.centers = JSON.parse(JSON.parse(JSON.stringify(res))._body);
 
         		if(this.centers.length > 0){
 					//sort by rating
