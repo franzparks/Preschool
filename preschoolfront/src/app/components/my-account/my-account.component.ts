@@ -51,7 +51,7 @@ export class MyAccountComponent implements OnInit {
         this._location.back();
         this.toastr.success('You have successfully logged in!');
         //location.reload();
-  			//this.router.navigate(['/home']);
+  			this.router.navigate(['/home']);
   		}, 
   		error => {
   			this.loggedIn = false;
