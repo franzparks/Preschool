@@ -44,7 +44,7 @@ export class MyAccountComponent implements OnInit {
   	onLogin() {
   	this.loginService.sendCredential(this.credential.username, this.credential.password).subscribe(
   		res => {
-  			console.log(res);
+  			//console.log(res);
   			localStorage.setItem("xAuthToken", res.json().token);
   			this.loggedIn = true;
   			//location.reload();
@@ -66,7 +66,7 @@ export class MyAccountComponent implements OnInit {
 
 	  	this.userService.newUser(this.username, this.email).subscribe(
 	  		res => {
-	  			console.log(res);
+	  			//console.log(res);
 	  			this.emailSent = true;
 	  		}, 
 	  		error => {
@@ -83,11 +83,11 @@ export class MyAccountComponent implements OnInit {
 
   	this.userService.retrievePassword(this.recoverEmail).subscribe(
   		res => {
-  			console.log(res);
+  			//console.log(res);
   			this.forgotPasswordEmailSent = true;
   		},
   		error => {
-  			console.log("error message for email : "+error.text());
+  			//console.log("error message for email : "+error.text());
   			let errorMessage = error.text();
   			if(errorMessage==="User with given email not found") this.emailNotExists=true;
   		});
@@ -98,6 +98,7 @@ export class MyAccountComponent implements OnInit {
   		this.loginService.checkSession().subscribe(
   		res => {
   			this.loggedIn = true;
+        this.router.navigate(['/home']);
   		},
   		error => {
   			this.loggedIn = false;
@@ -105,7 +106,7 @@ export class MyAccountComponent implements OnInit {
   	}
 
     onSelectTab(tab: string){
-      console.log(tab);
+      //console.log(tab);
       this.selectedTab = tab;
     }
 
