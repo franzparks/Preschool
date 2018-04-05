@@ -74,8 +74,8 @@
 
 					<div class="form-tab-body" *ngIf="selectedTab === 'forgot-password'" >
 					
-						<div class="alert alert-warning" *ngIf="emailNotExists">Email doesn't exists.</div>
-						<div class="alert alert-success" *ngIf="forgotPasswordEmailSent">Email sent.</div>
+						<div class="alert alert-warning" *ngIf="emailNotExists">User with given email not found.</div>
+						<div class="alert alert-success" *ngIf="forgotPasswordEmailSent">Temporary password sent to email.</div>
 						<form (ngSubmit)="onForgotPassword()">
 							<div class="form-group">
 								<label for="recoverEmail">Your Email Address *</label>
