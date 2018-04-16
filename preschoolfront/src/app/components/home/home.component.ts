@@ -46,8 +46,8 @@ export class HomeComponent implements OnInit {
 		this.centerService.getCenterList().subscribe(
 			res => {
 				//console.log(res);
-				//this.topCenters = JSON.parse(JSON.parse(JSON.stringify(res))._body);
-        		//this.centers = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+				this.topCenters = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+        		this.centers = JSON.parse(JSON.parse(JSON.stringify(res))._body);
 
         		if(this.centers.length > 0){
 					//sort by rating
@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
 
 	//listen for changes to the search term
 	searchUpdated(searchTerm) {
-    	//console.log(searchTerm);
+    	console.log(searchTerm);
     	if(searchTerm.length > 0 &&  this.searchResults.length === 0){
     		this.searchResults = Object.assign([], this.centers); 
     	}else if(searchTerm.length === 0 &&  this.searchResults.length > 0){

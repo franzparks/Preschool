@@ -4,11 +4,15 @@
     <div class="form-inline">
         <form >
             <div class="search-container">
-                <input list="search" id="search-input" name="search"  class="form-control center-search"
-                type="text" placeholder="Search..." [(ngModel)]="searchText" (ngModelChange)="searchUpdated($event)">
+                <div class="search-input-items">
+                    <input list="search" id="search-input" name="search"  class="form-control center-search"
+                    type="text" placeholder="Preschool, Play Center, Enrichment Center..." [(ngModel)]="searchText" (ngModelChange)="searchUpdated($event)">
+                    <button type="submit" class="search_form_button">
+                    <span class="search_icon_image"></span></button>
+                </div>
 
                 <span class="dropdown-menu bd-search-results" id="search-results" 
-                *ngFor="let center of searchResults | searchFilter : searchTerms : searchText">
+                *ngFor="let center of  searchResults | searchFilter : searchTerms : searchText">
                     <span class="dropdown-item" (click)="getCenterDetails(center.id)">{{center.name}}</span>
                 </span>
             </div>
